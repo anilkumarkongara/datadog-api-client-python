@@ -6126,7 +6126,11 @@ and should be formatted to a single line then URL encoded.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the organization.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 <li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format of <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – Usage Summary by tag name.</p></li>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
+configured for usage attribution</a>.
+In this scenario the API returns the total usage, not broken down by tags.</p>
+</p></li>
 <li><p><strong>total_usage_sum</strong> (<em>float</em><em>, </em><em>optional</em>) – Total product usage for the given tags within the hour.</p></li>
 <li><p><strong>updated_at</strong> (<em>str</em><em>, </em><em>optional</em>) – Shows the most recent hour in the current month for all organizations where usages are calculated.</p></li>
 <li><p><strong>usage_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.hourly_usage_attribution_usage_type.HourlyUsageAttributionUsageType" title="datadog_api_client.v1.model.hourly_usage_attribution_usage_type.HourlyUsageAttributionUsageType"><em>HourlyUsageAttributionUsageType</em></a><em>, </em><em>optional</em>) – Supported products for hourly usage attribution requests.</p></li>
@@ -8789,8 +8793,12 @@ the list of groups your monitor is broken down on.</p>
 <li><p><strong>month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: [YYYY-MM].</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the organization.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
-<li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – Usage Summary by tag name.</p></li>
+<li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
+configured for usage attribution</a>.
+In this scenario the API returns the total usage, not broken down by tags.</p>
+</p></li>
 <li><p><strong>updated_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime of the most recent update to the usage values.</p></li>
 <li><p><strong>values</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monthly_usage_attribution_values.MonthlyUsageAttributionValues" title="datadog_api_client.v1.model.monthly_usage_attribution_values.MonthlyUsageAttributionValues"><em>MonthlyUsageAttributionValues</em></a><em>, </em><em>optional</em>) – Fields in Usage Summary by tag(s).</p></li>
 </ul>
@@ -14459,8 +14467,12 @@ If the <cite>target_type</cite> is <cite>tag</cite>, this parameter may not be s
 <li><p><strong>month</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC, precise to month: [YYYY-MM].</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the organization.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
-<li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;-&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;-&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – Usage Summary by tag name.</p></li>
+<li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
+configured for usage attribution</a>.
+In this scenario the API returns the total usage, not broken down by tags.</p>
+</p></li>
 <li><p><strong>updated_at</strong> (<em>str</em><em>, </em><em>optional</em>) – Shows the the most recent hour in the current months for all organizations for which all usages were calculated.</p></li>
 <li><p><strong>values</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_values.UsageAttributionValues" title="datadog_api_client.v1.model.usage_attribution_values.UsageAttributionValues"><em>UsageAttributionValues</em></a><em>, </em><em>optional</em>) – Fields in Usage Summary by tag(s).</p></li>
 </ul>
@@ -14558,7 +14570,10 @@ If the <cite>target_type</cite> is <cite>tag</cite>, this parameter may not be s
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">UsageAttributionTagNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Usage Summary by tag name.</p>
+<p>Tag keys and values.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
+configured for usage attribution</a>.
+In this scenario the API returns the total usage, not broken down by tags.</p>
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v1.model.usage_attribution_values">
