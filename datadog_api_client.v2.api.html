@@ -2423,6 +2423,57 @@ for more examples.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_assignee">
+<span class="sig-name descname"><span class="pre">edit_security_monitoring_signal_assignee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_assignee_update_request.SecurityMonitoringSignalAssigneeUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_assignee_update_request.SecurityMonitoringSignalAssigneeUpdateRequest"><span class="pre">SecurityMonitoringSignalAssigneeUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse"><span class="pre">SecurityMonitoringSignalTriageUpdateResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_assignee" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the triage assignee of a security signal.</p>
+<p>Modify the triage assignee of a security signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>signal_id</strong> (<em>str</em>) – The ID of the signal.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_assignee_update_request.SecurityMonitoringSignalAssigneeUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_assignee_update_request.SecurityMonitoringSignalAssigneeUpdateRequest"><em>SecurityMonitoringSignalAssigneeUpdateRequest</em></a>) – Attributes describing the signal update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse">SecurityMonitoringSignalTriageUpdateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_incidents">
+<span class="sig-name descname"><span class="pre">edit_security_monitoring_signal_incidents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_incidents_update_request.SecurityMonitoringSignalIncidentsUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_incidents_update_request.SecurityMonitoringSignalIncidentsUpdateRequest"><span class="pre">SecurityMonitoringSignalIncidentsUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse"><span class="pre">SecurityMonitoringSignalTriageUpdateResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_incidents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the related incidents of a security signal.</p>
+<p>Change the related incidents for a security signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>signal_id</strong> (<em>str</em>) – The ID of the signal.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_incidents_update_request.SecurityMonitoringSignalIncidentsUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_incidents_update_request.SecurityMonitoringSignalIncidentsUpdateRequest"><em>SecurityMonitoringSignalIncidentsUpdateRequest</em></a>) – Attributes describing the signal update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse">SecurityMonitoringSignalTriageUpdateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_state">
+<span class="sig-name descname"><span class="pre">edit_security_monitoring_signal_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_state_update_request.SecurityMonitoringSignalStateUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_state_update_request.SecurityMonitoringSignalStateUpdateRequest"><span class="pre">SecurityMonitoringSignalStateUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse"><span class="pre">SecurityMonitoringSignalTriageUpdateResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.edit_security_monitoring_signal_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the triage state of a security signal.</p>
+<p>Change the triage state of a security signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>signal_id</strong> (<em>str</em>) – The ID of the signal.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_state_update_request.SecurityMonitoringSignalStateUpdateRequest" title="datadog_api_client.v2.model.security_monitoring_signal_state_update_request.SecurityMonitoringSignalStateUpdateRequest"><em>SecurityMonitoringSignalStateUpdateRequest</em></a>) – Attributes describing the signal update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse" title="datadog_api_client.v2.model.security_monitoring_signal_triage_update_response.SecurityMonitoringSignalTriageUpdateResponse">SecurityMonitoringSignalTriageUpdateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.get_security_filter">
 <span class="sig-name descname"><span class="pre">get_security_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">security_filter_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_filter_response.SecurityFilterResponse" title="datadog_api_client.v2.model.security_filter_response.SecurityFilterResponse"><span class="pre">SecurityFilterResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.get_security_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a security filter.</p>
