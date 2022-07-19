@@ -444,6 +444,18 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.full_application_key_attributes" class="md-nav__link">full_application_key_attributes</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage" class="md-nav__link">hourly_usage</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_attributes" class="md-nav__link">hourly_usage_attributes</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_measurement" class="md-nav__link">hourly_usage_measurement</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_metadata" class="md-nav__link">hourly_usage_metadata</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_pagination" class="md-nav__link">hourly_usage_pagination</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_response" class="md-nav__link">hourly_usage_response</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_type" class="md-nav__link">hourly_usage_type</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.http_log" class="md-nav__link">http_log</a>
@@ -1488,6 +1500,18 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.full_application_key" class="md-nav__link">full_application_key</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.full_application_key_attributes" class="md-nav__link">full_application_key_attributes</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage" class="md-nav__link">hourly_usage</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_attributes" class="md-nav__link">hourly_usage_attributes</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_measurement" class="md-nav__link">hourly_usage_measurement</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_metadata" class="md-nav__link">hourly_usage_metadata</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_pagination" class="md-nav__link">hourly_usage_pagination</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_response" class="md-nav__link">hourly_usage_response</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.hourly_usage_type" class="md-nav__link">hourly_usage_type</a>
         </li>
@@ -3789,6 +3813,107 @@ Note: Specify either timezone or time offset, not both. Otherwise, the query fai
 <li><p><strong>last4</strong> (<em>str</em><em>, </em><em>optional</em>) – The last four characters of the application key.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the application key.</p></li>
 <li><p><strong>scopes</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Array of scopes to grant the application key. This feature is in private beta, please contact Datadog support to enable scopes for your application keys.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage">
+<span id="hourly-usage"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage">hourly_usage<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage.HourlyUsage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage.HourlyUsage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Hourly usage for a product family for an org.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.hourly_usage_attributes.HourlyUsageAttributes" title="datadog_api_client.v2.model.hourly_usage_attributes.HourlyUsageAttributes"><em>HourlyUsageAttributes</em></a><em>, </em><em>optional</em>) – Attributes of hourly usage for a product family for an org for a time period.</p></li>
+<li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – Unique ID of the response.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.usage_time_series_type.UsageTimeSeriesType" title="datadog_api_client.v2.model.usage_time_series_type.UsageTimeSeriesType"><em>UsageTimeSeriesType</em></a><em>, </em><em>optional</em>) – Type of usage data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage_attributes">
+<span id="hourly-usage-attributes"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage_attributes">hourly_usage_attributes<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage_attributes" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage_attributes.HourlyUsageAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsageAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage_attributes.HourlyUsageAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Attributes of hourly usage for a product family for an org for a time period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measurements</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.hourly_usage_measurement.HourlyUsageMeasurement" title="datadog_api_client.v2.model.hourly_usage_measurement.HourlyUsageMeasurement"><em>HourlyUsageMeasurement</em></a><em>]</em><em>, </em><em>optional</em>) – List of the measured usage values for the product family for the org for the time period.</p></li>
+<li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
+<li><p><strong>product_family</strong> (<em>str</em><em>, </em><em>optional</em>) – The product for which usage is being reported.</p></li>
+<li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
+<li><p><strong>region</strong> (<em>str</em><em>, </em><em>optional</em>) – The region of the Datadog instance that the organization belongs to.</p></li>
+<li><p><strong>timestamp</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Datetime in ISO-8601 format, UTC. The hour for the usage.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage_measurement">
+<span id="hourly-usage-measurement"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage_measurement">hourly_usage_measurement<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage_measurement" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage_measurement.HourlyUsageMeasurement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsageMeasurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage_measurement.HourlyUsageMeasurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Usage amount for a given usage type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>usage_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of usage.</p></li>
+<li><p><strong>value</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number measured for the given usage_type during the hour.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage_metadata">
+<span id="hourly-usage-metadata"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage_metadata">hourly_usage_metadata<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage_metadata" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage_metadata.HourlyUsageMetadata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsageMetadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage_metadata.HourlyUsageMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>The object containing document metadata.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pagination</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.hourly_usage_pagination.HourlyUsagePagination" title="datadog_api_client.v2.model.hourly_usage_pagination.HourlyUsagePagination"><em>HourlyUsagePagination</em></a><em>, </em><em>optional</em>) – The metadata for the current pagination.</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage_pagination">
+<span id="hourly-usage-pagination"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage_pagination">hourly_usage_pagination<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage_pagination" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage_pagination.HourlyUsagePagination">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsagePagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage_pagination.HourlyUsagePagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>The metadata for the current pagination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>next_record_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The cursor to get the next results (if any). To make the next request, use the same parameters and add <code class="docutils literal notranslate"><span class="pre">next_record_id</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.hourly_usage_response">
+<span id="hourly-usage-response"></span><h2 id="module-datadog_api_client.v2.model.hourly_usage_response">hourly_usage_response<a class="headerlink" href="#module-datadog_api_client.v2.model.hourly_usage_response" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.hourly_usage_response.HourlyUsageResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HourlyUsageResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.hourly_usage_response.HourlyUsageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Hourly usage response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.hourly_usage.HourlyUsage" title="datadog_api_client.v2.model.hourly_usage.HourlyUsage"><em>HourlyUsage</em></a><em>]</em><em>, </em><em>optional</em>) – Response containing hourly usage.</p></li>
+<li><p><strong>meta</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.hourly_usage_metadata.HourlyUsageMetadata" title="datadog_api_client.v2.model.hourly_usage_metadata.HourlyUsageMetadata"><em>HourlyUsageMetadata</em></a><em>, </em><em>optional</em>) – The object containing document metadata.</p></li>
 </ul>
 </dd>
 </dl>
