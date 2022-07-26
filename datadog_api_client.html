@@ -2183,7 +2183,7 @@ dict. None if unset.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ModelComposed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.ModelComposed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#datadog_api_client.model_utils.OpenApiModel" title="datadog_api_client.model_utils.OpenApiModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpenApiModel</span></code></a></p>
 <p>The parent class of models whose type == object in their swagger/openapi
-and have oneOf/allOf/anyOf.</p>
+and have oneOf.</p>
 <p>When one sets a property we use var_name_to_model_instances to store the value in
 the correct class instances + run any type checking + validation code.
 When one gets a property we use var_name_to_model_instances to get the value
@@ -2193,7 +2193,7 @@ constraints on the value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>_composed_schemas</strong> – Stores the anyOf/allOf/oneOf classes.</p></li>
+<li><p><strong>_composed_schemas</strong> – Stores the oneOf classes.</p></li>
 <li><p><strong>_composed_instances</strong> – Stores a list of instances of the composed schemas
 defined in _composed_schemas. When properties are accessed in the self instance,
 they are returned from the self._data_store or the data stores in the instances
@@ -2215,15 +2215,6 @@ variable names in the input data are pythonic names, e.g. snake case (default).<
 <li><p><strong>_configuration</strong> (<a class="reference internal" href="#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
 file_type parameter.  If passed, type conversion is attempted If omitted no
 type conversion is done.</p></li>
-<li><p><strong>_visited_composed_classes</strong> (<em>tuple</em>) – This stores a tuple of classes
-that we have traveled through so that if we see that class again we will not
-use its discriminator again.  When traveling through a discriminator, the
-composed schema that is is traveled through is added to this set.  For example
-if Animal has a discriminator petType and we pass in “Dog”, and the class Dog
-allOf includes Animal, we move through Animal once using the discriminator, and
-pick Dog.  Then in Dog, we will make an instance of the Animal class but this
-time we won’t travel through its discriminator because we passed in
-_visited_composed_classes = (Animal,)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2262,15 +2253,6 @@ variable names in the input data are pythonic names, e.g. snake case (default).<
 <li><p><strong>_configuration</strong> (<a class="reference internal" href="#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
 file_type parameter.  If passed, type conversion is attempted If omitted no
 type conversion is done.</p></li>
-<li><p><strong>_visited_composed_classes</strong> (<em>tuple</em>) – This stores a tuple of classes
-that we have traveled through so that if we see that class again we will not
-use its discriminator again.  When traveling through a discriminator, the
-composed schema that is is traveled through is added to this set.  For example
-if Animal has a discriminator petType and we pass in “Dog”, and the class Dog
-allOf includes Animal, we move through Animal once using the discriminator, and
-pick Dog.  Then in Dog, we will make an instance of the Animal class but this
-time we won’t travel through its discriminator because we passed in
-_visited_composed_classes = (Animal,)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2310,15 +2292,6 @@ variable names in the input data are pythonic names, e.g. snake case (default).<
 <li><p><strong>_configuration</strong> (<a class="reference internal" href="#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
 file_type parameter.  If passed, type conversion is attempted If omitted no
 type conversion is done.</p></li>
-<li><p><strong>_visited_composed_classes</strong> (<em>tuple</em>) – This stores a tuple of classes
-that we have traveled through so that if we see that class again we will not
-use its discriminator again.  When traveling through a discriminator, the
-composed schema that is is traveled through is added to this set.  For example
-if Animal has a discriminator petType and we pass in “Dog”, and the class Dog
-allOf includes Animal, we move through Animal once using the discriminator, and
-pick Dog.  Then in Dog, we will make an instance of the Animal class but this
-time we won’t travel through its discriminator because we passed in
-_visited_composed_classes = (Animal,)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2367,15 +2340,6 @@ variable names in the input data are pythonic names, e.g. snake case (default).<
 <li><p><strong>_configuration</strong> (<a class="reference internal" href="#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
 file_type parameter.  If passed, type conversion is attempted If omitted no
 type conversion is done.</p></li>
-<li><p><strong>_visited_composed_classes</strong> (<em>tuple</em>) – This stores a tuple of classes
-that we have traveled through so that if we see that class again we will not
-use its discriminator again.  When traveling through a discriminator, the
-composed schema that is is traveled through is added to this set.  For example
-if Animal has a discriminator petType and we pass in “Dog”, and the class Dog
-allOf includes Animal, we move through Animal once using the discriminator, and
-pick Dog.  Then in Dog, we will make an instance of the Animal class but this
-time we won’t travel through its discriminator because we passed in
-_visited_composed_classes = (Animal,)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2399,15 +2363,6 @@ variable names in the input data are pythonic names, e.g. snake case (default).<
 <li><p><strong>_configuration</strong> (<a class="reference internal" href="#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
 file_type parameter.  If passed, type conversion is attempted If omitted no
 type conversion is done.</p></li>
-<li><p><strong>_visited_composed_classes</strong> (<em>tuple</em>) – This stores a tuple of classes
-that we have traveled through so that if we see that class again we will not
-use its discriminator again.  When traveling through a discriminator, the
-composed schema that is is traveled through is added to this set.  For example
-if Animal has a discriminator petType and we pass in “Dog”, and the class Dog
-allOf includes Animal, we move through Animal once using the discriminator, and
-pick Dog.  Then in Dog, we will make an instance of the Animal class but this
-time we won’t travel through its discriminator because we passed in
-_visited_composed_classes = (Animal,)</p></li>
 </ul>
 </dd>
 </dl>
@@ -2553,50 +2508,6 @@ variable names in PEP-8 snake case.</p></li>
 </dl>
 </dd></dl>
 <dl class="py function">
-<dt class="sig sig-object py" id="datadog_api_client.model_utils.get_allof_instances">
-<span class="sig-name descname"><span class="pre">get_allof_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constant_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_allof_instances" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> – The class we are handling.</p></li>
-<li><p><strong>model_args</strong> (<em>dict</em>) – var_name to var_value used to make instances.</p></li>
-<li><p><strong>constant_args</strong> (<em>dict</em>) – <dl class="simple">
-<dt>metadata arguments:</dt><dd><p>_check_type
-_path_to_item
-_spec_property_naming
-_configuration
-_visited_composed_classes</p>
-</dd>
-</dl>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="datadog_api_client.model_utils.get_anyof_instances">
-<span class="sig-name descname"><span class="pre">get_anyof_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constant_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_anyof_instances" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>self</strong> – the class we are handling</p></li>
-<li><p><strong>model_args</strong> (<em>dict</em>) – var_name to var_value
-The input data, e.g. the payload that must match at least one
-anyOf child schema in the OpenAPI document.</p></li>
-<li><p><strong>constant_args</strong> (<em>dict</em>) – var_name to var_value
-args that every model requires, including configuration, server
-and path to item.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py function">
 <dt class="sig sig-object py" id="datadog_api_client.model_utils.get_attribute_from_path">
 <span class="sig-name descname"><span class="pre">get_attribute_from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_attribute_from_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an attribute at <cite>path</cite> from the passed object.</p>
@@ -2605,35 +2516,6 @@ and path to item.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.model_utils.get_discarded_args">
 <span class="sig-name descname"><span class="pre">get_discarded_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">composed_instances</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_discarded_args" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gathers the args that were discarded by configuration.discard_unknown_keys</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="datadog_api_client.model_utils.get_discriminated_classes">
-<span class="sig-name descname"><span class="pre">get_discriminated_classes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_discriminated_classes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns all the classes that a discriminator converts to.</p>
-</dd></dl>
-<dl class="py function">
-<dt class="sig sig-object py" id="datadog_api_client.model_utils.get_discriminator_class">
-<span class="sig-name descname"><span class="pre">get_discriminator_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discr_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discr_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls_visited</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.get_discriminator_class" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the child class specified by the discriminator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_class</strong> (<a class="reference internal" href="#datadog_api_client.model_utils.OpenApiModel" title="datadog_api_client.model_utils.OpenApiModel"><em>OpenApiModel</em></a>) – The model class.</p></li>
-<li><p><strong>discr_name</strong> (<em>str</em>) – The name of the discriminator property.</p></li>
-<li><p><strong>discr_value</strong> – The discriminator value.</p></li>
-<li><p><strong>cls_visited</strong> (<em>list</em>) – List of model classes that have been visited.  Used to
-determine the discriminator class without visiting circular references
-indefinitely.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The chosen child class that will be used to deserialize the data,
-for example dog.Dog. If a class is not found, None is returned.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>class/None</p>
-</dd>
-</dl>
 </dd></dl>
 <dl class="py function">
 <dt class="sig sig-object py" id="datadog_api_client.model_utils.get_oneof_instance">
@@ -2673,8 +2555,7 @@ Notes:
 list or dict.</p></li>
 <li><p><strong>spec_property_naming</strong> (<em>bool</em>) – if True these values came from the server, and
 we use the data types in our endpoints.  If False, we are client side and we
-need to include oneOf and discriminator classes inside the data types in our
-endpoints</p></li>
+need to include oneOf classes inside the data types in our endpoints.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return (valid_classes, dict_valid_class_to_child_types_mixed)<span class="colon">:</span></dt>
@@ -2729,7 +2610,7 @@ as requested in the configuration.</p>
 <div><ol class="arabic simple">
 <li><p>The OAS ‘nullable’ attribute has been specified,</p></li>
 <li><p>The type is the ‘null’ type,</p></li>
-<li><p>The type is a anyOf/oneOf composed schema, and a child schema is
+<li><p>The type is a oneOf composed schema, and a child schema is
 the ‘null’ type.</p></li>
 </ol>
 </div></blockquote>
@@ -2869,13 +2750,11 @@ file_type items.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.model_utils.validate_get_composed_info">
 <span class="sig-name descname"><span class="pre">validate_get_composed_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constant_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.model_utils.validate_get_composed_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>For composed schemas, generate schema instances for all schemas in the
-oneOf/anyOf/allOf definition. If additional properties are allowed, also assign
+oneOf definition. If additional properties are allowed, also assign
 those properties on all matched schemas that contain additionalProperties.
 Openapi schemas are python classes.</p>
 <p>Exceptions are raised if:
-- 0 or &gt; 1 oneOf schema matches the model_args input data
-- no anyOf schema matches the model_args input data
-- any of the allOf schemas do not match the model_args input data</p>
+- 0 or &gt; 1 oneOf schema matches the model_args input data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -2958,7 +2837,7 @@ additional_properties_type. This list can include self</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.1.0.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
