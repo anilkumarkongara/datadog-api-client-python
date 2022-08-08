@@ -1176,6 +1176,10 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth" class="md-nav__link">synthetics_basic_auth</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest" class="md-nav__link">synthetics_basic_auth_digest</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest_type" class="md-nav__link">synthetics_basic_auth_digest_type</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_ntlm" class="md-nav__link">synthetics_basic_auth_ntlm</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_ntlm_type" class="md-nav__link">synthetics_basic_auth_ntlm_type</a>
@@ -2725,6 +2729,10 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_assertion_type" class="md-nav__link">synthetics_assertion_type</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth" class="md-nav__link">synthetics_basic_auth</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest" class="md-nav__link">synthetics_basic_auth_digest</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest_type" class="md-nav__link">synthetics_basic_auth_digest_type</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_basic_auth_ntlm" class="md-nav__link">synthetics_basic_auth_ntlm</a>
         </li>
@@ -12159,6 +12167,39 @@ which property they apply, and upon which target.</p>
 <li><p><strong>domain</strong> (<em>str</em><em>, </em><em>optional</em>) – Domain for the authentication to use when performing the test.</p></li>
 <li><p><strong>workstation</strong> (<em>str</em><em>, </em><em>optional</em>) – Workstation for the authentication to use when performing the test.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.synthetics_basic_auth_digest">
+<span id="synthetics-basic-auth-digest"></span><h2 id="module-datadog_api_client.v1.model.synthetics_basic_auth_digest">synthetics_basic_auth_digest<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_basic_auth_digest.SyntheticsBasicAuthDigest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsBasicAuthDigest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_basic_auth_digest.SyntheticsBasicAuthDigest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object to handle digest authentication when performing the test.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>password</strong> (<em>str</em>) – Password to use for the digest authentication.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_basic_auth_digest_type.SyntheticsBasicAuthDigestType" title="datadog_api_client.v1.model.synthetics_basic_auth_digest_type.SyntheticsBasicAuthDigestType"><em>SyntheticsBasicAuthDigestType</em></a><em>, </em><em>optional</em>) – The type of basic authentication to use when performing the test.</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – Username to use for the digest authentication.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.synthetics_basic_auth_digest_type">
+<span id="synthetics-basic-auth-digest-type"></span><h2 id="module-datadog_api_client.v1.model.synthetics_basic_auth_digest_type">synthetics_basic_auth_digest_type<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_basic_auth_digest_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_basic_auth_digest_type.SyntheticsBasicAuthDigestType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsBasicAuthDigestType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_basic_auth_digest_type.SyntheticsBasicAuthDigestType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The type of basic authentication to use when performing the test.</p>
+<p>Note that value can be passed either in args or in kwargs, but not in both.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “digest”. Must be one of [“digest”].</p>
 </dd>
 </dl>
 </dd></dl>
