@@ -2375,6 +2375,56 @@ Sort order is <strong>descending</strong> if the field is prefixed by a negative
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.create_rum_application">
+<span class="sig-name descname"><span class="pre">create_rum_application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_create_request.RUMApplicationCreateRequest" title="datadog_api_client.v2.model.rum_application_create_request.RUMApplicationCreateRequest"><span class="pre">RUMApplicationCreateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse"><span class="pre">RUMApplicationResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.create_rum_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new RUM application.</p>
+<p>Create a new RUM application in your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse">RUMApplicationResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.delete_rum_application">
+<span class="sig-name descname"><span class="pre">delete_rum_application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.delete_rum_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a RUM application.</p>
+<p>Delete an existing RUM application in your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – RUM application ID.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.get_rum_application">
+<span class="sig-name descname"><span class="pre">get_rum_application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse"><span class="pre">RUMApplicationResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.get_rum_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a RUM application.</p>
+<p>Get the RUM application with given ID in your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – RUM application ID.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse">RUMApplicationResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.get_rum_applications">
+<span class="sig-name descname"><span class="pre">get_rum_applications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_applications_response.RUMApplicationsResponse" title="datadog_api_client.v2.model.rum_applications_response.RUMApplicationsResponse"><span class="pre">RUMApplicationsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.get_rum_applications" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the RUM applications.</p>
+<p>List all the RUM applications in your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_applications_response.RUMApplicationsResponse" title="datadog_api_client.v2.model.rum_applications_response.RUMApplicationsResponse">RUMApplicationsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events">
 <span class="sig-name descname"><span class="pre">list_rum_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">datetime</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_sort.RUMSort" title="datadog_api_client.v2.model.rum_sort.RUMSort"><span class="pre">RUMSort</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_events_response.RUMEventsResponse" title="datadog_api_client.v2.model.rum_events_response.RUMEventsResponse"><span class="pre">RUMEventsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.list_rum_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of RUM events.</p>
@@ -2445,6 +2495,20 @@ Sort order is <strong>descending</strong> if the field is prefixed by a negative
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_event.RUMEvent" title="datadog_api_client.v2.model.rum_event.RUMEvent">RUMEvent</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.rum_api.RUMApi.update_rum_application">
+<span class="sig-name descname"><span class="pre">update_rum_application</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_update_request.RUMApplicationUpdateRequest" title="datadog_api_client.v2.model.rum_application_update_request.RUMApplicationUpdateRequest"><span class="pre">RUMApplicationUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse"><span class="pre">RUMApplicationResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.rum_api.RUMApi.update_rum_application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a RUM application.</p>
+<p>Update the RUM application with given ID in your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – RUM application ID.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" title="datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse">RUMApplicationResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
