@@ -918,6 +918,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_page" class="md-nav__link">notebooks_response_page</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.on_missing_data_option" class="md-nav__link">on_missing_data_option</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.org_downgraded_response" class="md-nav__link">org_downgraded_response</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.organization" class="md-nav__link">organization</a>
@@ -2471,6 +2473,8 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_meta" class="md-nav__link">notebooks_response_meta</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notebooks_response_page" class="md-nav__link">notebooks_response_page</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.on_missing_data_option" class="md-nav__link">on_missing_data_option</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.org_downgraded_response" class="md-nav__link">org_downgraded_response</a>
         </li>
@@ -9307,6 +9311,10 @@ Not applicable if <code class="docutils literal notranslate"><span class="pre">r
 <li><p><strong>evaluation_delay</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the value is set to <code class="docutils literal notranslate"><span class="pre">300</span></code> (5min),
 the timeframe is set to <code class="docutils literal notranslate"><span class="pre">last_5m</span></code> and the time is 7:00, the monitor evaluates data from 6:50 to 6:55.
 This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor always has data during evaluation.</p></li>
+<li><p><strong>group_retention_duration</strong> (<em>str</em><em>, </em><em>optional</em>) – The time span after which groups with missing data are dropped from the monitor state.
+The minimum value is one hour, and the maximum value is 72 hours.
+Example values are: “60m”, “1h”, and “2d”.
+This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.</p></li>
 <li><p><strong>groupby_simple_monitor</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the log alert monitor triggers a single alert or multiple alerts when any group breaches a threshold.</p></li>
 <li><p><strong>include_tags</strong> (<em>bool</em><em>, </em><em>optional</em>) – <p>A Boolean indicating whether notifications from this monitor automatically inserts its triggering tags into the title.</p>
 <p><strong>Examples</strong></p>
@@ -9334,6 +9342,11 @@ Datadog recommends at least 2x the monitor timeframe for query alerts or 2 minut
 If omitted, 2x the evaluation timeframe is used for query alerts, and 24 hours is used for service checks.</p></li>
 <li><p><strong>notify_audit</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether tagged users is notified on changes to this monitor.</p></li>
 <li><p><strong>notify_no_data</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether this monitor notifies when data stops reporting.</p></li>
+<li><p><strong>on_missing_data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" title="datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption"><em>OnMissingDataOption</em></a><em>, </em><em>optional</em>) – Controls how groups or monitors are treated if an evaluation does not return any data points.
+The default option results in different behavior depending on the monitor query type.
+For monitors using Count queries, an empty monitor evaluation is treated as 0 and is compared to the threshold conditions.
+For monitor using any query type other than Count, for example Gauge or Rate, the monitor shows the last known status.
+This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.</p></li>
 <li><p><strong>renotify_interval</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of minutes after the last notification before a monitor re-notifies on the current status.
 It only re-notifies if it’s not resolved.</p></li>
 <li><p><strong>renotify_occurrences</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of times re-notification messages should be sent on the current status at the provided re-notification interval.</p></li>
@@ -10746,6 +10759,39 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of notebooks that would be returned if the request was not filtered by <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code> parameters.</p></li>
 <li><p><strong>total_filtered_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of notebooks returned.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.on_missing_data_option">
+<span id="on-missing-data-option"></span><h2 id="module-datadog_api_client.v1.model.on_missing_data_option">on_missing_data_option<a class="headerlink" href="#module-datadog_api_client.v1.model.on_missing_data_option" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OnMissingDataOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<dl class="simple">
+<dt>Controls how groups or monitors are treated if an evaluation does not return any data points.</dt><dd><p>The default option results in different behavior depending on the monitor query type.
+For monitors using Count queries, an empty monitor evaluation is treated as 0 and is compared to the threshold conditions.
+For monitor using any query type other than Count, for example Gauge or Rate, the monitor shows the last known status.
+This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“default”, “show_no_data”, “show_and_notify_no_data”, “resolve”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
