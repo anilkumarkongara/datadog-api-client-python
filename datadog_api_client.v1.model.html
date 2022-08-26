@@ -9345,7 +9345,7 @@ If omitted, 2x the evaluation timeframe is used for query alerts, and 24 hours i
 <li><p><strong>on_missing_data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" title="datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption"><em>OnMissingDataOption</em></a><em>, </em><em>optional</em>) – Controls how groups or monitors are treated if an evaluation does not return any data points.
 The default option results in different behavior depending on the monitor query type.
 For monitors using Count queries, an empty monitor evaluation is treated as 0 and is compared to the threshold conditions.
-For monitor using any query type other than Count, for example Gauge or Rate, the monitor shows the last known status.
+For monitors using any query type other than Count, for example Gauge, Measure, or Rate, the monitor shows the last known status.
 This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.</p></li>
 <li><p><strong>renotify_interval</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of minutes after the last notification before a monitor re-notifies on the current status.
 It only re-notifies if it’s not resolved.</p></li>
@@ -10773,7 +10773,7 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <dl class="simple">
 <dt>Controls how groups or monitors are treated if an evaluation does not return any data points.</dt><dd><p>The default option results in different behavior depending on the monitor query type.
 For monitors using Count queries, an empty monitor evaluation is treated as 0 and is compared to the threshold conditions.
-For monitor using any query type other than Count, for example Gauge or Rate, the monitor shows the last known status.
+For monitors using any query type other than Count, for example Gauge, Measure, or Rate, the monitor shows the last known status.
 This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tracking, Event, Logs, and RUM monitors.</p>
 </dd>
 </dl>
