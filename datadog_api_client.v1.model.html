@@ -15356,7 +15356,10 @@ certificates.</p></li>
 <li><p><strong>ci</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_ci_options.SyntheticsTestCiOptions" title="datadog_api_client.v1.model.synthetics_test_ci_options.SyntheticsTestCiOptions"><em>SyntheticsTestCiOptions</em></a><em>, </em><em>optional</em>) – CI/CD options for a Synthetic test.</p></li>
 <li><p><strong>device_ids</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID" title="datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID"><em>SyntheticsDeviceID</em></a><em>]</em><em>, </em><em>optional</em>) – For browser test, array with the different device IDs used to run the test.</p></li>
 <li><p><strong>disable_cors</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to disable CORS mechanism.</p></li>
+<li><p><strong>disable_csp</strong> (<em>bool</em><em>, </em><em>optional</em>) – Disable Content Security Policy for browser tests.</p></li>
 <li><p><strong>follow_redirects</strong> (<em>bool</em><em>, </em><em>optional</em>) – For API HTTP test, whether or not the test should follow redirects.</p></li>
+<li><p><strong>ignore_server_certificate_error</strong> (<em>bool</em><em>, </em><em>optional</em>) – Ignore server certificate error.</p></li>
+<li><p><strong>initial_navigation_timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – Timeout before declaring the initial step as failed (in seconds) for browser tests.</p></li>
 <li><p><strong>min_failure_duration</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum amount of time in failure required to trigger an alert.</p></li>
 <li><p><strong>min_location_failed</strong> (<em>int</em><em>, </em><em>optional</em>) – Minimum number of locations in failure required to trigger
 an alert.</p></li>
@@ -15488,6 +15491,7 @@ type conversion is done.</p></li>
 <li><p><strong>basic_auth</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth" title="datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth"><em>SyntheticsBasicAuth</em></a><em>, </em><em>optional</em>) – Object to handle basic authentication when performing the test.</p></li>
 <li><p><strong>body</strong> (<em>str</em><em>, </em><em>optional</em>) – Body to include in the test.</p></li>
 <li><p><strong>certificate</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate" title="datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate"><em>SyntheticsTestRequestCertificate</em></a><em>, </em><em>optional</em>) – Client certificate to use when performing the test request.</p></li>
+<li><p><strong>certificate_domains</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – By default, the client certificate is applied on the domain of the starting URL for browser tests. If you want your client certificate to be applied on other domains instead, add them in <code class="docutils literal notranslate"><span class="pre">certificateDomains</span></code>.</p></li>
 <li><p><strong>dns_server</strong> (<em>str</em><em>, </em><em>optional</em>) – DNS server to use for DNS tests.</p></li>
 <li><p><strong>dns_server_port</strong> (<em>int</em><em>, </em><em>optional</em>) – DNS server port to use for DNS tests.</p></li>
 <li><p><strong>follow_redirects</strong> (<em>bool</em><em>, </em><em>optional</em>) – Specifies whether or not the request follows redirects.</p></li>
