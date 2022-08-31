@@ -14616,7 +14616,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code> , name of the header to use to extract the value.</p></li>
-<li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a>) – Details of the parser to use for the global variable.</p></li>
+<li><p><strong>local_variable_name</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">local_variable</span></code> , name of the local variable to use to extract the value.</p></li>
+<li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a><em>, </em><em>optional</em>) – Details of the parser to use for the global variable.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a>) – Property of the Synthetics Test Response to use for a Synthetics global variable.</p></li>
 </ul>
 </dd>
@@ -14633,7 +14634,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“http_body”, “http_header”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“http_body”, “http_header”, “local_variable”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
