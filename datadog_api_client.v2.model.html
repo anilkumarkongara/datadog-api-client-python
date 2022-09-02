@@ -768,6 +768,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric" class="md-nav__link">metric</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_active_configuration_type" class="md-nav__link">metric_active_configuration_type</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_all_tags" class="md-nav__link">metric_all_tags</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_all_tags_attributes" class="md-nav__link">metric_all_tags_attributes</a>
@@ -843,6 +845,14 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_resource" class="md-nav__link">metric_resource</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_series" class="md-nav__link">metric_series</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_aggregations" class="md-nav__link">metric_suggested_aggregations</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations" class="md-nav__link">metric_suggested_tags_and_aggregations</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response" class="md-nav__link">metric_suggested_tags_and_aggregations_response</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_attributes" class="md-nav__link">metric_suggested_tags_attributes</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_tag_configuration" class="md-nav__link">metric_tag_configuration</a>
         </li>
@@ -1887,6 +1897,8 @@
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric" class="md-nav__link">metric</a>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_active_configuration_type" class="md-nav__link">metric_active_configuration_type</a>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_all_tags" class="md-nav__link">metric_all_tags</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_all_tags_attributes" class="md-nav__link">metric_all_tags_attributes</a>
@@ -1962,6 +1974,14 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_resource" class="md-nav__link">metric_resource</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_series" class="md-nav__link">metric_series</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_aggregations" class="md-nav__link">metric_suggested_aggregations</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations" class="md-nav__link">metric_suggested_tags_and_aggregations</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response" class="md-nav__link">metric_suggested_tags_and_aggregations_response</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_suggested_tags_attributes" class="md-nav__link">metric_suggested_tags_attributes</a>
         </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.metric_tag_configuration" class="md-nav__link">metric_tag_configuration</a>
         </li>
@@ -7229,6 +7249,33 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v2.model.metric_active_configuration_type">
+<span id="metric-active-configuration-type"></span><h2 id="module-datadog_api_client.v2.model.metric_active_configuration_type">metric_active_configuration_type<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_active_configuration_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.metric_active_configuration_type.MetricActiveConfigurationType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricActiveConfigurationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metric_active_configuration_type.MetricActiveConfigurationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The metric actively queried configuration resource type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “actively_queried_configurations”. Must be one of [“actively_queried_configurations”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v2.model.metric_all_tags">
 <span id="metric-all-tags"></span><h2 id="module-datadog_api_client.v2.model.metric_all_tags">metric_all_tags<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_all_tags" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -7995,6 +8042,81 @@ See <a class="reference external" href="https://docs.datadoghq.com/developers/me
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of tags associated with the metric.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_intake_type.MetricIntakeType" title="datadog_api_client.v2.model.metric_intake_type.MetricIntakeType"><em>MetricIntakeType</em></a><em>, </em><em>optional</em>) – The type of metric. The available types are <code class="docutils literal notranslate"><span class="pre">0</span></code> (unspecified), <code class="docutils literal notranslate"><span class="pre">1</span></code> (count), <code class="docutils literal notranslate"><span class="pre">2</span></code> (rate), and <code class="docutils literal notranslate"><span class="pre">3</span></code> (gauge).</p></li>
 <li><p><strong>unit</strong> (<em>str</em><em>, </em><em>optional</em>) – The unit of point value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.metric_suggested_aggregations">
+<span id="metric-suggested-aggregations"></span><h2 id="module-datadog_api_client.v2.model.metric_suggested_aggregations">metric_suggested_aggregations<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_suggested_aggregations" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.metric_suggested_aggregations.MetricSuggestedAggregations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricSuggestedAggregations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metric_suggested_aggregations.MetricSuggestedAggregations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>List of aggregation combinations that have been actively queried.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations">
+<span id="metric-suggested-tags-and-aggregations"></span><h2 id="module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations">metric_suggested_tags_and_aggregations<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.metric_suggested_tags_and_aggregations.MetricSuggestedTagsAndAggregations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricSuggestedTagsAndAggregations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metric_suggested_tags_and_aggregations.MetricSuggestedTagsAndAggregations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object for a single metric’s actively queried tags and aggregations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_suggested_tags_attributes.MetricSuggestedTagsAttributes" title="datadog_api_client.v2.model.metric_suggested_tags_attributes.MetricSuggestedTagsAttributes"><em>MetricSuggestedTagsAttributes</em></a><em>, </em><em>optional</em>) – Object containing the definition of a metric’s actively queried tags and aggregations.</p></li>
+<li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – The metric name for this resource.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_active_configuration_type.MetricActiveConfigurationType" title="datadog_api_client.v2.model.metric_active_configuration_type.MetricActiveConfigurationType"><em>MetricActiveConfigurationType</em></a><em>, </em><em>optional</em>) – The metric actively queried configuration resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response">
+<span id="metric-suggested-tags-and-aggregations-response"></span><h2 id="module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response">metric_suggested_tags_and_aggregations_response<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response.MetricSuggestedTagsAndAggregationsResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricSuggestedTagsAndAggregationsResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metric_suggested_tags_and_aggregations_response.MetricSuggestedTagsAndAggregationsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Response object that includes a single metric’s actively queried tags and aggregations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_suggested_tags_and_aggregations.MetricSuggestedTagsAndAggregations" title="datadog_api_client.v2.model.metric_suggested_tags_and_aggregations.MetricSuggestedTagsAndAggregations"><em>MetricSuggestedTagsAndAggregations</em></a><em>, </em><em>optional</em>) – Object for a single metric’s actively queried tags and aggregations.</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.metric_suggested_tags_attributes">
+<span id="metric-suggested-tags-attributes"></span><h2 id="module-datadog_api_client.v2.model.metric_suggested_tags_attributes">metric_suggested_tags_attributes<a class="headerlink" href="#module-datadog_api_client.v2.model.metric_suggested_tags_attributes" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.metric_suggested_tags_attributes.MetricSuggestedTagsAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricSuggestedTagsAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metric_suggested_tags_attributes.MetricSuggestedTagsAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object containing the definition of a metric’s actively queried tags and aggregations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>active_aggregations</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_suggested_aggregations.MetricSuggestedAggregations" title="datadog_api_client.v2.model.metric_suggested_aggregations.MetricSuggestedAggregations"><em>MetricSuggestedAggregations</em></a><em>, </em><em>optional</em>) – List of aggregation combinations that have been actively queried.</p></li>
+<li><p><strong>active_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of tag keys that have been actively queried.</p></li>
 </ul>
 </dd>
 </dl>
