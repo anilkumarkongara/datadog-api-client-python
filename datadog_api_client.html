@@ -2319,8 +2319,11 @@ type conversion is done.</p></li>
 <p>The parent class of models whose type != object in their
 swagger/openapi.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>allowed_values</strong> – Set of allowed values.</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -2354,9 +2357,6 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Variables<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>allowed_values</strong> – The key is the name of the attribute. The value is a dict
-with a capitalized key describing the allowed value and an allowed
-value. These dicts store the allowed enum values.</p></li>
 <li><p><strong>attribute_map</strong> – The key is attribute name and the value is json
 key in definition.</p></li>
 <li><p><strong>validations</strong> – The key is the name of the attribute. The value is a dict
