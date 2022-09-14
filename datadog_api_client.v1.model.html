@@ -6776,7 +6776,7 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “apm_host_usage”, “appsec_usage”, “browser_usage”, “container_usage”, “cspm_containers_usage”, “cspm_hosts_usage”, “custom_timeseries_usage”, “cws_containers_usage”, “cws_hosts_usage”, “dbm_hosts_usage”, “dbm_queries_usage”, “estimated_indexed_logs_usage”, “estimated_ingested_logs_usage”, “estimated_indexed_spans_usage”, “estimated_ingested_spans_usage”, “fargate_usage”, “functions_usage”, “indexed_logs_usage”, “infra_host_usage”, “invocations_usage”, “npm_host_usage”, “profiled_container_usage”, “profiled_host_usage”, “snmp_usage”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “apm_fargate_usage”, “apm_host_usage”, “appsec_usage”, “browser_usage”, “container_usage”, “cspm_containers_usage”, “cspm_hosts_usage”, “custom_timeseries_usage”, “cws_containers_usage”, “cws_hosts_usage”, “dbm_hosts_usage”, “dbm_queries_usage”, “estimated_indexed_logs_usage”, “estimated_ingested_logs_usage”, “estimated_indexed_spans_usage”, “estimated_ingested_spans_usage”, “fargate_usage”, “functions_usage”, “indexed_logs_usage”, “infra_host_usage”, “invocations_usage”, “npm_host_usage”, “profiled_container_usage”, “profiled_host_usage”, “snmp_usage”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -9894,7 +9894,7 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “api_percentage”, “apm_host_usage”, “apm_host_percentage”, “appsec_usage”, “appsec_percentage”, “browser_usage”, “browser_percentage”, “container_usage”, “container_percentage”, “cspm_containers_percentage”, “cspm_containers_usage”, “cspm_hosts_percentage”, “cspm_hosts_usage”, “custom_timeseries_usage”, “custom_timeseries_percentage”, “cws_containers_percentage”, “cws_containers_usage”, “cws_hosts_percentage”, “cws_hosts_usage”, “dbm_hosts_percentage”, “dbm_hosts_usage”, “dbm_queries_percentage”, “dbm_queries_usage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”, “fargate_usage”, “fargate_percentage”, “functions_usage”, “functions_percentage”, “indexed_logs_usage”, “indexed_logs_percentage”, “infra_host_usage”, “infra_host_percentage”, “invocations_usage”, “invocations_percentage”, “npm_host_usage”, “npm_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “snmp_usage”, “snmp_percentage”, “*”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“api_usage”, “api_percentage”, “apm_fargate_usage”, “apm_fargate_percentage”, “apm_host_usage”, “apm_host_percentage”, “appsec_usage”, “appsec_percentage”, “browser_usage”, “browser_percentage”, “container_usage”, “container_percentage”, “cspm_containers_percentage”, “cspm_containers_usage”, “cspm_hosts_percentage”, “cspm_hosts_usage”, “custom_timeseries_usage”, “custom_timeseries_percentage”, “cws_containers_percentage”, “cws_containers_usage”, “cws_hosts_percentage”, “cws_hosts_usage”, “dbm_hosts_percentage”, “dbm_hosts_usage”, “dbm_queries_percentage”, “dbm_queries_usage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”, “fargate_usage”, “fargate_percentage”, “functions_usage”, “functions_percentage”, “indexed_logs_usage”, “indexed_logs_percentage”, “infra_host_usage”, “infra_host_percentage”, “invocations_usage”, “invocations_percentage”, “npm_host_usage”, “npm_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “snmp_usage”, “snmp_percentage”, “*”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -9923,6 +9923,8 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>api_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of synthetic API test usage by tag(s).</p></li>
 <li><p><strong>api_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The synthetic API test usage by tag(s).</p></li>
+<li><p><strong>apm_fargate_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of APM ECS Fargate task usage by tag(s).</p></li>
+<li><p><strong>apm_fargate_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The APM ECS Fargate task usage by tag(s).</p></li>
 <li><p><strong>apm_host_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of APM host usage by tag(s).</p></li>
 <li><p><strong>apm_host_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The APM host usage by tag(s).</p></li>
 <li><p><strong>appsec_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of Application Security Monitoring host usage by tag(s).</p></li>
@@ -16895,7 +16897,7 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “custom_timeseries_usage”. Must be one of [“api_percentage”, “snmp_usage”, “apm_host_usage”, “api_usage”, “appsec_usage”, “appsec_percentage”, “container_usage”, “custom_timeseries_percentage”, “container_percentage”, “apm_host_percentage”, “npm_host_percentage”, “browser_percentage”, “browser_usage”, “infra_host_percentage”, “snmp_percentage”, “npm_host_usage”, “infra_host_usage”, “custom_timeseries_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “custom_timeseries_usage”. Must be one of [“api_percentage”, “snmp_usage”, “apm_host_usage”, “api_usage”, “appsec_usage”, “appsec_percentage”, “container_usage”, “custom_timeseries_percentage”, “container_percentage”, “apm_host_percentage”, “npm_host_percentage”, “browser_percentage”, “browser_usage”, “infra_host_percentage”, “snmp_percentage”, “npm_host_usage”, “infra_host_usage”, “custom_timeseries_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”, “apm_fargate_usage”, “apm_fargate_percentage”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -16922,7 +16924,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“custom_timeseries_usage”, “container_usage”, “snmp_percentage”, “apm_host_usage”, “browser_usage”, “npm_host_percentage”, “infra_host_usage”, “custom_timeseries_percentage”, “container_percentage”, “api_usage”, “apm_host_percentage”, “infra_host_percentage”, “snmp_usage”, “browser_percentage”, “api_percentage”, “npm_host_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “fargate_usage”, “fargate_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “dbm_hosts_usage”, “dbm_hosts_percentage”, “dbm_queries_usage”, “dbm_queries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “appsec_usage”, “appsec_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”, “*”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“custom_timeseries_usage”, “container_usage”, “snmp_percentage”, “apm_host_usage”, “browser_usage”, “npm_host_percentage”, “infra_host_usage”, “custom_timeseries_percentage”, “container_percentage”, “api_usage”, “apm_host_percentage”, “infra_host_percentage”, “snmp_usage”, “browser_percentage”, “api_percentage”, “npm_host_usage”, “lambda_functions_usage”, “lambda_functions_percentage”, “lambda_invocations_usage”, “lambda_invocations_percentage”, “fargate_usage”, “fargate_percentage”, “profiled_host_usage”, “profiled_host_percentage”, “profiled_container_usage”, “profiled_container_percentage”, “dbm_hosts_usage”, “dbm_hosts_percentage”, “dbm_queries_usage”, “dbm_queries_percentage”, “estimated_indexed_logs_usage”, “estimated_indexed_logs_percentage”, “estimated_ingested_logs_usage”, “estimated_ingested_logs_percentage”, “appsec_usage”, “appsec_percentage”, “estimated_indexed_spans_usage”, “estimated_indexed_spans_percentage”, “estimated_ingested_spans_usage”, “estimated_ingested_spans_percentage”, “apm_fargate_usage”, “apm_fargate_percentage”, “*”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -16963,6 +16965,8 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>api_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of synthetic API test usage by tag(s).</p></li>
 <li><p><strong>api_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The synthetic API test usage by tag(s).</p></li>
+<li><p><strong>apm_fargate_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of APM ECS Fargate task usage by tag(s).</p></li>
+<li><p><strong>apm_fargate_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The APM ECS Fargate task usage by tag(s).</p></li>
 <li><p><strong>apm_host_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of APM host usage by tag(s).</p></li>
 <li><p><strong>apm_host_usage</strong> (<em>float</em><em>, </em><em>optional</em>) – The APM host usage by tag(s).</p></li>
 <li><p><strong>appsec_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of Application Security Monitoring host usage by tag(s).</p></li>
@@ -17433,6 +17437,7 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>apm_fargate_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The high-water mark of APM ECS Fargate tasks during the given hour.</p></li>
 <li><p><strong>avg_profiled_fargate_tasks</strong> (<em>int</em><em>, </em><em>optional</em>) – The average profiled task count for Fargate Profiling.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
@@ -18264,6 +18269,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>agent_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all agent hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>apm_azure_app_service_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Azure app services using APM over all hours in the current date all organizations.</p></li>
+<li><p><strong>apm_fargate_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all APM ECS Fargate tasks over all hours in the current date for all organizations.</p></li>
 <li><p><strong>apm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct APM hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>audit_logs_lines_indexed_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of audit logs lines indexed over all hours in the current date for all organizations.</p></li>
 <li><p><strong>avg_profiled_fargate_tasks</strong> (<em>int</em><em>, </em><em>optional</em>) – The average profiled task count for Fargate Profiling.</p></li>
@@ -18344,6 +18350,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>agent_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all agent hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>apm_azure_app_service_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Azure app services using APM over all hours in the current date for the given org.</p></li>
+<li><p><strong>apm_fargate_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all APM ECS Fargate tasks over all hours in the current months for the given org.</p></li>
 <li><p><strong>apm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct APM hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>audit_logs_lines_indexed_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all audit logs lines indexed over all hours in the current date for the given org.</p></li>
 <li><p><strong>avg_profiled_fargate_tasks</strong> (<em>int</em><em>, </em><em>optional</em>) – The average profiled task count for Fargate Profiling.</p></li>
@@ -18426,6 +18433,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>agent_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all agent hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>apm_azure_app_service_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Azure app services using APM over all hours in the current months all organizations.</p></li>
+<li><p><strong>apm_fargate_count_avg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all APM ECS Fargate tasks over all hours in the current months for all organizations.</p></li>
 <li><p><strong>apm_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct APM hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>audit_logs_lines_indexed_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all audit logs lines indexed over all hours in the current months for all organizations.</p></li>
 <li><p><strong>avg_profiled_fargate_tasks_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all profiled Fargate tasks over all hours in the current months for all organizations.</p></li>
