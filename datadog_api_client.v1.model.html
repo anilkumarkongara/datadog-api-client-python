@@ -4621,7 +4621,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>available_values</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The list of values that the template variable drop-down is limited to.</p></li>
-<li><p><strong>default</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The default value for the template variable on dashboard load.</p></li>
+<li><p><strong>default</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – (deprecated) The default value for the template variable on dashboard load. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">defaults</span></code>.</p></li>
+<li><p><strong>defaults</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – One or many default values for template variables on load. If more than one default is specified, they will be unioned together with <code class="docutils literal notranslate"><span class="pre">OR</span></code>. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the variable.</p></li>
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The tag prefix associated with the variable. Only tags with this prefix appear in the variable drop-down.</p></li>
 </ul>
@@ -4657,7 +4658,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the variable.</p></li>
-<li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – The value of the template variable within the saved view.</p></li>
+<li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – (deprecated) The value of the template variable within the saved view. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p></li>
+<li><p><strong>values</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – One or many template variable values within the saved view, which will be unioned together using <code class="docutils literal notranslate"><span class="pre">OR</span></code> if more than one is specified. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
