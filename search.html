@@ -55,6 +55,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -267,28 +268,357 @@
     
     
       <a href="datadog_api_client.html#module-datadog_api_client.api_client" class="md-nav__link">api_client</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.api_client.ApiClient" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiClient</span></code></a>
       
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.api_client.AsyncApiClient" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">AsyncApiClient</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.api_client.ThreadedApiClient" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ThreadedApiClient</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.api_client.user_agent" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">user_agent()</span></code></a>
+      
+    
+    </li></ul>
     
     </li>
     <li class="md-nav__item">
     
     
       <a href="datadog_api_client.html#module-datadog_api_client.configuration" class="md-nav__link">configuration</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.configuration.Configuration" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration</span></code></a>
       
+    
+    </li></ul>
     
     </li>
     <li class="md-nav__item">
     
     
       <a href="datadog_api_client.html#module-datadog_api_client.exceptions" class="md-nav__link">exceptions</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ApiAttributeError" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiAttributeError</span></code></a>
       
     
     </li>
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.model_utils" class="md-nav__link">model_utils</a>
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ApiException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiException</span></code></a>
       
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ApiKeyError" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiKeyError</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ApiTypeError" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiTypeError</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ApiValueError" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiValueError</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ForbiddenException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ForbiddenException</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.NotFoundException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.OpenApiException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OpenApiException</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.ServiceException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceException</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.UnauthorizedException" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UnauthorizedException</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.exceptions.render_path" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">render_path()</span></code></a>
+      
+    
+    </li></ul>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#module-datadog_api_client.model_utils" class="md-nav__link">model_utils</a>
+      <ul class="md-nav__list"> 
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.ModelComposed" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ModelComposed</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ModelNormal</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ModelSimple</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.OpenApiModel" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OpenApiModel</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.UnparsedObject" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UnparsedObject</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UnsetType</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.allows_single_value_input" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">allows_single_value_input()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.attempt_convert_item" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">attempt_convert_item()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.change_keys_js_to_python" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">change_keys_js_to_python()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.check_allowed_values" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">check_allowed_values()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.check_validations" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">check_validations()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.composed_model_input_classes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">composed_model_input_classes()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.deserialize_file" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">deserialize_file()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.deserialize_model" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">deserialize_model()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.deserialize_primitive" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">deserialize_primitive()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_attribute_from_path" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_attribute_from_path()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_discarded_args" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_discarded_args()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_oneof_instance" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_oneof_instance()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_required_type_classes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_required_type_classes()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_simple_class" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_simple_class()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.get_valid_classes_phrase" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">get_valid_classes_phrase()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.is_json_validation_enabled" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">is_json_validation_enabled()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.is_type_nullable" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">is_type_nullable()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.is_valid_type" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">is_valid_type()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.model_to_dict" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">model_to_dict()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.order_response_types" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">order_response_types()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.remove_uncoercible" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">remove_uncoercible()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.set_attribute_from_path" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">set_attribute_from_path()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.type_error_message" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">type_error_message()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.validate_and_convert_types" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">validate_and_convert_types()</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="datadog_api_client.html#datadog_api_client.model_utils.validate_get_composed_info" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">validate_get_composed_info()</span></code></a>
+      
+    
+    </li></ul>
     
     </li>
     <li class="md-nav__item">
@@ -361,7 +691,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.2.1.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
