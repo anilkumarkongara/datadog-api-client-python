@@ -10731,7 +10731,7 @@ key performance metrics, which enable you to monitor the health of your infrastr
 <li><p><strong>created_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Creation date of the dashboard.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Description of the dashboard.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the dashboard.</p></li>
-<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether this dashboard is read-only. If True, only the author and admins can make changes to it. Prefer using <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> to manage write authorization.</p></li>
+<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether this dashboard is read-only. If True, only the author and admins can make changes to it. Prefer using <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> to manage write authorization. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>layout_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType" title="datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType"><em>DashboardLayoutType</em></a>) – Layout type of the dashboard.</p></li>
 <li><p><strong>modified_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Modification date of the dashboard.</p></li>
 <li><p><strong>notify_list</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – List of handles of users to notify when changes are made to this dashboard.</p></li>
@@ -11019,7 +11019,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>available_values</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The list of values that the template variable drop-down is limited to.</p></li>
-<li><p><strong>default</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – (deprecated) The default value for the template variable on dashboard load. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">defaults</span></code>.</p></li>
+<li><p><strong>default</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – (deprecated) The default value for the template variable on dashboard load. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">defaults</span></code>. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>defaults</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – One or many default values for template variables on load. If more than one default is specified, they will be unioned together with <code class="docutils literal notranslate"><span class="pre">OR</span></code>. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the variable.</p></li>
 <li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The tag prefix associated with the variable. Only tags with this prefix appear in the variable drop-down.</p></li>
@@ -11056,7 +11056,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the variable.</p></li>
-<li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – (deprecated) The value of the template variable within the saved view. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p></li>
+<li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – (deprecated) The value of the template variable within the saved view. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">values</span></code>. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>values</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – One or many template variable values within the saved view, which will be unioned together using <code class="docutils literal notranslate"><span class="pre">OR</span></code> if more than one is specified. Cannot be used in conjunction with <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p></li>
 </ul>
 </dd>
@@ -11203,7 +11203,7 @@ Unlike the heat map, a distribution graph’s x-axis is quantity rather than tim
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>legend_size</strong> (<em>str</em><em>, </em><em>optional</em>) – (Deprecated) The widget legend was replaced by a tooltip and sidebar.</p></li>
+<li><p><strong>legend_size</strong> (<em>str</em><em>, </em><em>optional</em>) – (Deprecated) The widget legend was replaced by a tooltip and sidebar. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>markers</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.widget_marker.WidgetMarker" title="datadog_api_client.v1.model.widget_marker.WidgetMarker"><em>WidgetMarker</em></a><em>]</em><em>, </em><em>optional</em>) – List of markers.</p></li>
 <li><p><strong>requests</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.distribution_widget_request.DistributionWidgetRequest" title="datadog_api_client.v1.model.distribution_widget_request.DistributionWidgetRequest"><em>DistributionWidgetRequest</em></a><em>]</em>) – <p>Array of one request object to display in the widget.</p>
 <dl class="simple">
@@ -11211,7 +11211,7 @@ Unlike the heat map, a distribution graph’s x-axis is quantity rather than tim
 </dd>
 </dl>
 </p></li>
-<li><p><strong>show_legend</strong> (<em>bool</em><em>, </em><em>optional</em>) – (Deprecated) The widget legend was replaced by a tooltip and sidebar.</p></li>
+<li><p><strong>show_legend</strong> (<em>bool</em><em>, </em><em>optional</em>) – (Deprecated) The widget legend was replaced by a tooltip and sidebar. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>time</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_time.WidgetTime" title="datadog_api_client.v1.model.widget_time.WidgetTime"><em>WidgetTime</em></a><em>, </em><em>optional</em>) – Time setting for the widget.</p></li>
 <li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title of the widget.</p></li>
 <li><p><strong>title_align</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_text_align.WidgetTextAlign" title="datadog_api_client.v1.model.widget_text_align.WidgetTextAlign"><em>WidgetTextAlign</em></a><em>, </em><em>optional</em>) – How to align the text on the widget.</p></li>
@@ -13906,7 +13906,7 @@ value when you use both products.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>columns</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Which columns to display on the widget.</p></li>
 <li><p><strong>indexes</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of index names to query in the stream. Use [] to query all indexes at once.</p></li>
-<li><p><strong>logset</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the log set to use.</p></li>
+<li><p><strong>logset</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the log set to use. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>message_display</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_message_display.WidgetMessageDisplay" title="datadog_api_client.v1.model.widget_message_display.WidgetMessageDisplay"><em>WidgetMessageDisplay</em></a><em>, </em><em>optional</em>) – Amount of log lines to display</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Query to filter the log stream with.</p></li>
 <li><p><strong>show_date_column</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the date column or not</p></li>
@@ -15758,7 +15758,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_options_aggregation.MonitorOptionsAggregation" title="datadog_api_client.v1.model.monitor_options_aggregation.MonitorOptionsAggregation"><em>MonitorOptionsAggregation</em></a><em>, </em><em>optional</em>) – Type of aggregation performed in the monitor query.</p></li>
-<li><p><strong>device_ids</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID" title="datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID"><em>MonitorDeviceID</em></a><em>]</em><em>, </em><em>optional</em>) – IDs of the device the Synthetics monitor is running on.</p></li>
+<li><p><strong>device_ids</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID" title="datadog_api_client.v1.model.monitor_device_id.MonitorDeviceID"><em>MonitorDeviceID</em></a><em>]</em><em>, </em><em>optional</em>) – IDs of the device the Synthetics monitor is running on. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>enable_logs_sample</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to send a log sample when the log monitor triggers.</p></li>
 <li><p><strong>escalation_message</strong> (<em>str</em><em>, </em><em>optional</em>) – We recommend using the <a class="reference external" href="https://docs.datadoghq.com/monitors/notify/?tab=is_alert#renotify">is_renotify</a> ,
 block in the original message instead.
@@ -15779,7 +15779,7 @@ This option is only available for APM Trace Analytics, Audit Trail, CI, Error Tr
 <li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code> , <code class="docutils literal notranslate"><span class="pre">[Triggered]</span> <span class="pre">Monitor</span> <span class="pre">Title</span></code></p></li>
 </ul>
 </p></li>
-<li><p><strong>locked</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the monitor is locked (only editable by creator and admins). Use <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> instead.</p></li>
+<li><p><strong>locked</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the monitor is locked (only editable by creator and admins). Use <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> instead. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>min_failure_duration</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – How long the test should be in failure before alerting (integer, number of seconds, max 7200).</p></li>
 <li><p><strong>min_location_failed</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The minimum number of locations in failure at the same time during
 at least one moment in the <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code> period ( <code class="docutils literal notranslate"><span class="pre">min_location_failed</span></code> and <code class="docutils literal notranslate"><span class="pre">min_failure_duration</span></code>
@@ -15791,7 +15791,7 @@ are part of the advanced alerting rules - integer, &gt;= 1).</p></li>
 <li><p><strong>new_host_delay</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>Time (in seconds) to allow a host to boot and applications
 to fully start before starting the evaluation of monitor results.
 Should be a non negative integer.</p>
-<p>Use new_group_delay instead.</p>
+<p>Use new_group_delay instead. <strong>Deprecated</strong>.</p>
 </p></li>
 <li><p><strong>no_data_timeframe</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of minutes before a monitor notifies after data stops reporting.
 Datadog recommends at least 2x the monitor timeframe for query alerts or 2 minutes for service checks.
@@ -15810,8 +15810,8 @@ It only re-notifies if it’s not resolved.</p></li>
 <li><p><strong>require_full_window</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether this monitor needs a full window of data before it’s evaluated.
 We highly recommend you set this to <code class="docutils literal notranslate"><span class="pre">false</span></code> for sparse metrics,
 otherwise some evaluations are skipped. Default is false.</p></li>
-<li><p><strong>silenced</strong> (<em>{str:</em><em> (</em><em>int</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Information about the downtime applied to the monitor.</p></li>
-<li><p><strong>synthetics_check_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the corresponding Synthetic check.</p></li>
+<li><p><strong>silenced</strong> (<em>{str:</em><em> (</em><em>int</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Information about the downtime applied to the monitor. <strong>Deprecated</strong>.</p></li>
+<li><p><strong>synthetics_check_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the corresponding Synthetic check. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>threshold_windows</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_threshold_window_options.MonitorThresholdWindowOptions" title="datadog_api_client.v1.model.monitor_threshold_window_options.MonitorThresholdWindowOptions"><em>MonitorThresholdWindowOptions</em></a><em>, </em><em>optional</em>) – Alerting time window options.</p></li>
 <li><p><strong>thresholds</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_thresholds.MonitorThresholds" title="datadog_api_client.v1.model.monitor_thresholds.MonitorThresholds"><em>MonitorThresholds</em></a><em>, </em><em>optional</em>) – List of the different monitor threshold available.</p></li>
 <li><p><strong>timeout_h</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of hours of the monitor not reporting data before it automatically resolves from a triggered state. The minimum allowed value is 0 hours. The maximum allowed value is 24 hours.</p></li>
@@ -16071,14 +16071,14 @@ the list of groups your monitor is broken down on.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>color_preference</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_color_preference.WidgetColorPreference" title="datadog_api_client.v1.model.widget_color_preference.WidgetColorPreference"><em>WidgetColorPreference</em></a><em>, </em><em>optional</em>) – Which color to use on the widget.</p></li>
-<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of monitors to display.</p></li>
+<li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of monitors to display. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>display_format</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_monitor_summary_display_format.WidgetMonitorSummaryDisplayFormat" title="datadog_api_client.v1.model.widget_monitor_summary_display_format.WidgetMonitorSummaryDisplayFormat"><em>WidgetMonitorSummaryDisplayFormat</em></a><em>, </em><em>optional</em>) – What to display on the widget.</p></li>
 <li><p><strong>hide_zero_counts</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show counts of 0 or not.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – Query to filter the monitors with.</p></li>
 <li><p><strong>show_last_triggered</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the time that has elapsed since the monitor/group triggered.</p></li>
 <li><p><strong>show_priority</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the priorities column.</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_monitor_summary_sort.WidgetMonitorSummarySort" title="datadog_api_client.v1.model.widget_monitor_summary_sort.WidgetMonitorSummarySort"><em>WidgetMonitorSummarySort</em></a><em>, </em><em>optional</em>) – Widget sorting methods.</p></li>
-<li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – The start of the list. Typically 0.</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – The start of the list. Typically 0. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>summary_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_summary_type.WidgetSummaryType" title="datadog_api_client.v1.model.widget_summary_type.WidgetSummaryType"><em>WidgetSummaryType</em></a><em>, </em><em>optional</em>) – Which summary type should be used.</p></li>
 <li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title of the widget.</p></li>
 <li><p><strong>title_align</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_text_align.WidgetTextAlign" title="datadog_api_client.v1.model.widget_text_align.WidgetTextAlign"><em>WidgetTextAlign</em></a><em>, </em><em>optional</em>) – How to align the text on the widget.</p></li>
@@ -17281,13 +17281,13 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>billing</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_billing.OrganizationBilling" title="datadog_api_client.v1.model.organization_billing.OrganizationBilling"><em>OrganizationBilling</em></a><em>, </em><em>optional</em>) – A JSON array of billing type.</p></li>
+<li><p><strong>billing</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_billing.OrganizationBilling" title="datadog_api_client.v1.model.organization_billing.OrganizationBilling"><em>OrganizationBilling</em></a><em>, </em><em>optional</em>) – A JSON array of billing type. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>created</strong> (<em>str</em><em>, </em><em>optional</em>) – Date of the organization creation.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of the organization.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the new child-organization, limited to 32 characters.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">public_id</span></code> of the organization you are operating within.</p></li>
 <li><p><strong>settings</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings.OrganizationSettings" title="datadog_api_client.v1.model.organization_settings.OrganizationSettings"><em>OrganizationSettings</em></a><em>, </em><em>optional</em>) – A JSON array of settings.</p></li>
-<li><p><strong>subscription</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_subscription.OrganizationSubscription" title="datadog_api_client.v1.model.organization_subscription.OrganizationSubscription"><em>OrganizationSubscription</em></a><em>, </em><em>optional</em>) – Subscription definition.</p></li>
+<li><p><strong>subscription</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_subscription.OrganizationSubscription" title="datadog_api_client.v1.model.organization_subscription.OrganizationSubscription"><em>OrganizationSubscription</em></a><em>, </em><em>optional</em>) – Subscription definition. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>trial</strong> (<em>bool</em><em>, </em><em>optional</em>) – Only available for MSP customers. Allows child organizations to be created on a trial plan.</p></li>
 </ul>
 </dd>
@@ -17318,9 +17318,9 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>billing</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_billing.OrganizationBilling" title="datadog_api_client.v1.model.organization_billing.OrganizationBilling"><em>OrganizationBilling</em></a><em>, </em><em>optional</em>) – A JSON array of billing type.</p></li>
+<li><p><strong>billing</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_billing.OrganizationBilling" title="datadog_api_client.v1.model.organization_billing.OrganizationBilling"><em>OrganizationBilling</em></a><em>, </em><em>optional</em>) – A JSON array of billing type. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the new child-organization, limited to 32 characters.</p></li>
-<li><p><strong>subscription</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_subscription.OrganizationSubscription" title="datadog_api_client.v1.model.organization_subscription.OrganizationSubscription"><em>OrganizationSubscription</em></a><em>, </em><em>optional</em>) – Subscription definition.</p></li>
+<li><p><strong>subscription</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_subscription.OrganizationSubscription" title="datadog_api_client.v1.model.organization_subscription.OrganizationSubscription"><em>OrganizationSubscription</em></a><em>, </em><em>optional</em>) – Subscription definition. <strong>Deprecated</strong>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -19189,12 +19189,12 @@ This can also represent the SLI value for a specific monitor in multi-monitor SL
 <li><p><strong>monitor_modified</strong> (<em>int</em><em>, </em><em>optional</em>) – For <code class="docutils literal notranslate"><span class="pre">monitor</span></code> based SLOs, this is the last modified timestamp in epoch seconds of the monitor.</p></li>
 <li><p><strong>monitor_type</strong> (<em>str</em><em>, </em><em>optional</em>) – For <code class="docutils literal notranslate"><span class="pre">monitor</span></code> based SLOs, this describes the type of monitor.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – For groups in a grouped SLO, this is the group name. For monitors in a multi-monitor SLO, this is the monitor name.</p></li>
-<li><p><strong>precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp. Use <code class="docutils literal notranslate"><span class="pre">span_precision</span></code> instead.</p></li>
+<li><p><strong>precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp. Use <code class="docutils literal notranslate"><span class="pre">span_precision</span></code> instead. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>preview</strong> (<em>bool</em><em>, </em><em>optional</em>) – For <code class="docutils literal notranslate"><span class="pre">monitor</span></code> based SLOs, when <code class="docutils literal notranslate"><span class="pre">true</span></code> this indicates that a replay is in progress to give an accurate uptime
 calculation.</p></li>
 <li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
 <li><p><strong>span_precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp.</p></li>
-<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead.</p></li>
+<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead. <strong>Deprecated</strong>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -19307,7 +19307,7 @@ This can also represent the SLI value for a specific monitor in multi-monitor SL
 calculation.</p></li>
 <li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
 <li><p><strong>span_precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp.</p></li>
-<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead.</p></li>
+<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead. <strong>Deprecated</strong>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -23214,11 +23214,11 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>color_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_color_by.TreeMapColorBy" title="datadog_api_client.v1.model.tree_map_color_by.TreeMapColorBy"><em>TreeMapColorBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to determine color in the widget.</p></li>
+<li><p><strong>color_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_color_by.TreeMapColorBy" title="datadog_api_client.v1.model.tree_map_color_by.TreeMapColorBy"><em>TreeMapColorBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to determine color in the widget. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>custom_links</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.widget_custom_link.WidgetCustomLink" title="datadog_api_client.v1.model.widget_custom_link.WidgetCustomLink"><em>WidgetCustomLink</em></a><em>]</em><em>, </em><em>optional</em>) – List of custom links.</p></li>
-<li><p><strong>group_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_group_by.TreeMapGroupBy" title="datadog_api_client.v1.model.tree_map_group_by.TreeMapGroupBy"><em>TreeMapGroupBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to group elements in the widget.</p></li>
+<li><p><strong>group_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_group_by.TreeMapGroupBy" title="datadog_api_client.v1.model.tree_map_group_by.TreeMapGroupBy"><em>TreeMapGroupBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to group elements in the widget. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>requests</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.tree_map_widget_request.TreeMapWidgetRequest" title="datadog_api_client.v1.model.tree_map_widget_request.TreeMapWidgetRequest"><em>TreeMapWidgetRequest</em></a><em>]</em>) – List of treemap widget requests.</p></li>
-<li><p><strong>size_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_size_by.TreeMapSizeBy" title="datadog_api_client.v1.model.tree_map_size_by.TreeMapSizeBy"><em>TreeMapSizeBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to determine size in the widget.</p></li>
+<li><p><strong>size_by</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_size_by.TreeMapSizeBy" title="datadog_api_client.v1.model.tree_map_size_by.TreeMapSizeBy"><em>TreeMapSizeBy</em></a><em>, </em><em>optional</em>) – (deprecated) The attribute formerly used to determine size in the widget. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>time</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_time.WidgetTime" title="datadog_api_client.v1.model.widget_time.WidgetTime"><em>WidgetTime</em></a><em>, </em><em>optional</em>) – Time setting for the widget.</p></li>
 <li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title of your widget.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.tree_map_widget_definition_type.TreeMapWidgetDefinitionType" title="datadog_api_client.v1.model.tree_map_widget_definition_type.TreeMapWidgetDefinitionType"><em>TreeMapWidgetDefinitionType</em></a>) – Type of the treemap widget.</p></li>
