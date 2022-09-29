@@ -752,9 +752,11 @@
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.create_incident"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.create_incident()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.delete_incident"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.delete_incident()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.get_incident"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.get_incident()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incident_attachments"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incident_attachments()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incidents()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents_with_pagination"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incidents_with_pagination()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident_attachments"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident_attachments()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1434,6 +1436,78 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.idp_metadata_form_data">idp_metadata_form_data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.idp_metadata_form_data.IdPMetadataFormData"><code class="docutils literal notranslate"><span class="pre">IdPMetadataFormData</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_attachment_type">incident_attachment_attachment_type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_attachment_type.IncidentAttachmentAttachmentType"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentAttachmentType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_attributes">incident_attachment_attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_attributes.IncidentAttachmentAttributes"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_data">incident_attachment_data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_data.IncidentAttachmentData"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentData</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_link_attachment_type">incident_attachment_link_attachment_type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_link_attachment_type.IncidentAttachmentLinkAttachmentType"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentLinkAttachmentType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_link_attributes">incident_attachment_link_attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_link_attributes.IncidentAttachmentLinkAttributes"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentLinkAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_link_attributes_attachment_object">incident_attachment_link_attributes_attachment_object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_link_attributes_attachment_object.IncidentAttachmentLinkAttributesAttachmentObject"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentLinkAttributesAttachmentObject</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_postmortem_attachment_type">incident_attachment_postmortem_attachment_type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_postmortem_attachment_type.IncidentAttachmentPostmortemAttachmentType"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentPostmortemAttachmentType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_postmortem_attributes">incident_attachment_postmortem_attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_postmortem_attributes.IncidentAttachmentPostmortemAttributes"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentPostmortemAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_related_object">incident_attachment_related_object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_related_object.IncidentAttachmentRelatedObject"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentRelatedObject</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_relationships">incident_attachment_relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_relationships.IncidentAttachmentRelationships"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentRelationships</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_type">incident_attachment_type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_type.IncidentAttachmentType"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_update_attributes">incident_attachment_update_attributes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_update_attributes.IncidentAttachmentUpdateAttributes"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentUpdateAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_update_data">incident_attachment_update_data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_update_data.IncidentAttachmentUpdateData"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentUpdateData</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_update_request">incident_attachment_update_request</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_update_request.IncidentAttachmentUpdateRequest"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentUpdateRequest</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachment_update_response">incident_attachment_update_response</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_update_response.IncidentAttachmentUpdateResponse"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentUpdateResponse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachments_postmortem_attributes_attachment_object">incident_attachments_postmortem_attributes_attachment_object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachments_postmortem_attributes_attachment_object.IncidentAttachmentsPostmortemAttributesAttachmentObject"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentsPostmortemAttributesAttachmentObject</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachments_response">incident_attachments_response</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachments_response.IncidentAttachmentsResponse"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentsResponse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_attachments_response_included_item">incident_attachments_response_included_item</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachments_response_included_item.IncidentAttachmentsResponseIncludedItem"><code class="docutils literal notranslate"><span class="pre">IncidentAttachmentsResponseIncludedItem</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.incident_create_attributes">incident_create_attributes</a><ul>
@@ -2342,6 +2416,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.query_sort_order">query_sort_order</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><code class="docutils literal notranslate"><span class="pre">QuerySortOrder</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_incident_attachment">relationship_to_incident_attachment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_incident_attachment.RelationshipToIncidentAttachment"><code class="docutils literal notranslate"><span class="pre">RelationshipToIncidentAttachment</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_incident_attachment_data">relationship_to_incident_attachment_data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_incident_attachment_data.RelationshipToIncidentAttachmentData"><code class="docutils literal notranslate"><span class="pre">RelationshipToIncidentAttachmentData</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_incident_integration_metadata_data">relationship_to_incident_integration_metadata_data</a><ul>
