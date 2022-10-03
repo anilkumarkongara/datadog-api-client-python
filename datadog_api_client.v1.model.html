@@ -15797,6 +15797,11 @@ Should be a non negative integer.</p>
 Datadog recommends at least 2x the monitor timeframe for query alerts or 2 minutes for service checks.
 If omitted, 2x the evaluation timeframe is used for query alerts, and 24 hours is used for service checks.</p></li>
 <li><p><strong>notify_audit</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether tagged users is notified on changes to this monitor.</p></li>
+<li><p><strong>notify_by</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Controls what granularity a monitor alerts on. Only available for multi-alerts.
+For instance, a monitor grouped by <code class="docutils literal notranslate"><span class="pre">cluster</span></code> , <code class="docutils literal notranslate"><span class="pre">namespace</span></code> , <code class="docutils literal notranslate"><span class="pre">pod</span></code> can be configured to only notify on each
+new <code class="docutils literal notranslate"><span class="pre">cluster</span></code> violating the alert conditions by setting <code class="docutils literal notranslate"><span class="pre">notify_by</span></code> to <code class="docutils literal notranslate"><span class="pre">["cluster"]</span></code>. Tags mentioned
+in <code class="docutils literal notranslate"><span class="pre">notify_by</span></code> have to be a subset of the grouping tags in the query.
+For example, a query grouped by <code class="docutils literal notranslate"><span class="pre">cluster</span></code> , <code class="docutils literal notranslate"><span class="pre">namespace</span></code> cannot notify on <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p></li>
 <li><p><strong>notify_no_data</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether this monitor notifies when data stops reporting.</p></li>
 <li><p><strong>on_missing_data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" title="datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption"><em>OnMissingDataOption</em></a><em>, </em><em>optional</em>) – Controls how groups or monitors are treated if an evaluation does not return any data points.
 The default option results in different behavior depending on the monitor query type.
