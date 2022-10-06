@@ -9580,15 +9580,15 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ddsource</strong> (<em>str</em><em>, </em><em>optional</em>) – The integration name associated with your log: the technology from which the log originated.
 When it matches an integration name, Datadog automatically installs the corresponding parsers and facets.
-See <a class="reference external" href="https://docs.datadoghq.com/logs/log_collection/#reserved-attributes">reserved attributes</a>.</p></li>
+See <a class="reference external" href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#reserved-attributes">reserved attributes</a>.</p></li>
 <li><p><strong>ddtags</strong> (<em>str</em><em>, </em><em>optional</em>) – Tags associated with your logs.</p></li>
 <li><p><strong>hostname</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the originating host of the log.</p></li>
-<li><p><strong>message</strong> (<em>str</em>) – The message <a class="reference external" href="https://docs.datadoghq.com/logs/log_collection/#reserved-attributes">reserved attribute</a>
+<li><p><strong>message</strong> (<em>str</em>) – The message <a class="reference external" href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#reserved-attributes">reserved attribute</a>
 of your log. By default, Datadog ingests the value of the message attribute as the body of the log entry.
 That value is then highlighted and displayed in the Logstream, where it is indexed for full text search.</p></li>
 <li><p><strong>service</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The name of the application or service generating the log events.
 It is used to switch from Logs to APM, so make sure you define the same value when you use both products.
-See <a class="reference external" href="https://docs.datadoghq.com/logs/log_collection/#reserved-attributes">reserved attributes</a>.</p>
+See <a class="reference external" href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#reserved-attributes">reserved attributes</a>.</p>
 </p></li>
 </ul>
 </dd>
