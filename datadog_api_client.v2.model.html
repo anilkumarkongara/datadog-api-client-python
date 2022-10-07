@@ -3315,6 +3315,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_response_query" class="md-nav__link">security_monitoring_signal_rule_response_query</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleResponseQuery</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_type" class="md-nav__link">security_monitoring_signal_rule_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_type.SecurityMonitoringSignalRuleType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleType</span></code></a>
@@ -7054,6 +7060,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_response" class="md-nav__link">security_monitoring_signal_rule_response</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_response.SecurityMonitoringSignalRuleResponse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleResponse</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_response_query" class="md-nav__link">security_monitoring_signal_rule_response_query</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleResponseQuery</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -17190,7 +17202,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_signal_rule_query.SecurityMonitoringSignalRuleQuery">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringSignalRuleQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_signal_rule_query.SecurityMonitoringSignalRuleQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Query for matching rule on signals</p>
+<p>Query for matching rule on signals.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -17227,11 +17239,33 @@ type conversion is done.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – Message for generated signals.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the rule.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_options.SecurityMonitoringRuleOptions" title="datadog_api_client.v2.model.security_monitoring_rule_options.SecurityMonitoringRuleOptions"><em>SecurityMonitoringRuleOptions</em></a><em>, </em><em>optional</em>) – Options on rules.</p></li>
-<li><p><strong>queries</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_rule_query.SecurityMonitoringSignalRuleQuery" title="datadog_api_client.v2.model.security_monitoring_signal_rule_query.SecurityMonitoringSignalRuleQuery"><em>SecurityMonitoringSignalRuleQuery</em></a><em>]</em><em>, </em><em>optional</em>) – Queries for selecting logs which are part of the rule.</p></li>
+<li><p><strong>queries</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery" title="datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery"><em>SecurityMonitoringSignalRuleResponseQuery</em></a><em>]</em><em>, </em><em>optional</em>) – Queries for selecting logs which are part of the rule.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags for generated signals.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_rule_type.SecurityMonitoringSignalRuleType" title="datadog_api_client.v2.model.security_monitoring_signal_rule_type.SecurityMonitoringSignalRuleType"><em>SecurityMonitoringSignalRuleType</em></a><em>, </em><em>optional</em>) – The rule type.</p></li>
 <li><p><strong>update_author_id</strong> (<em>int</em><em>, </em><em>optional</em>) – User ID of the user who updated the rule.</p></li>
 <li><p><strong>version</strong> (<em>int</em><em>, </em><em>optional</em>) – The version of the rule.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.security_monitoring_signal_rule_response_query">
+<span id="security-monitoring-signal-rule-response-query"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_signal_rule_response_query">security_monitoring_signal_rule_response_query<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_response_query" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringSignalRuleResponseQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_signal_rule_response_query.SecurityMonitoringSignalRuleResponseQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Query for matching rule on signals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation" title="datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation"><em>SecurityMonitoringRuleQueryAggregation</em></a><em>, </em><em>optional</em>) – The aggregation type.</p></li>
+<li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
+<li><p><strong>correlated_query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of the rule query used to retrieve the correlated field.</p></li>
+<li><p><strong>default_rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Default Rule ID to match on signals.</p></li>
+<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the new value aggregations.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
+<li><p><strong>rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Rule ID to match on signals.</p></li>
 </ul>
 </dd>
 </dl>
