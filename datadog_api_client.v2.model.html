@@ -17680,9 +17680,9 @@ This time is calculated from the first seen timestamp.</p></li>
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation" title="datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation"><em>SecurityMonitoringRuleQueryAggregation</em></a><em>, </em><em>optional</em>) – The aggregation type.</p></li>
 <li><p><strong>distinct_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Field for which the cardinality is measured. Sent as an array.</p></li>
 <li><p><strong>group_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
-<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The target field to aggregate over when using the sum or max
-aggregations.</p></li>
-<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the new value aggregations.</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – (Deprecated) The target field to aggregate over when using the sum or max
+aggregations. <cite>metrics</cite> field should be used instead.</p></li>
+<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the sum, max, geo data, or new value aggregations. The sum, max, and geo data aggregations only accept one value in this list, whereas the new value aggregation accepts up to five values.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – Query to run on logs.</p></li>
 <li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
@@ -18131,7 +18131,7 @@ type conversion is done.</p></li>
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation" title="datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation"><em>SecurityMonitoringRuleQueryAggregation</em></a><em>, </em><em>optional</em>) – The aggregation type.</p></li>
 <li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
 <li><p><strong>correlated_query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of the rule query used to retrieve the correlated field.</p></li>
-<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the new value aggregations.</p></li>
+<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
 <li><p><strong>rule_id</strong> (<em>str</em>) – Rule ID to match on signals.</p></li>
 </ul>
@@ -18185,7 +18185,7 @@ type conversion is done.</p></li>
 <li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
 <li><p><strong>correlated_query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of the rule query used to retrieve the correlated field.</p></li>
 <li><p><strong>default_rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Default Rule ID to match on signals.</p></li>
-<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the new value aggregations.</p></li>
+<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
 <li><p><strong>rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Rule ID to match on signals.</p></li>
 </ul>
@@ -18501,9 +18501,9 @@ type conversion is done.</p></li>
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation" title="datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation"><em>SecurityMonitoringRuleQueryAggregation</em></a><em>, </em><em>optional</em>) – The aggregation type.</p></li>
 <li><p><strong>distinct_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Field for which the cardinality is measured. Sent as an array.</p></li>
 <li><p><strong>group_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
-<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – The target field to aggregate over when using the sum or max
-aggregations.</p></li>
-<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the new value aggregations.</p></li>
+<li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – (Deprecated) The target field to aggregate over when using the sum or max
+aggregations. <code class="docutils literal notranslate"><span class="pre">metrics</span></code> field should be used instead. <strong>Deprecated</strong>.</p></li>
+<li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the sum, max, geo data, or new value aggregations. The sum, max, and geo data aggregations only accept one value in this list, whereas the new value aggregation accepts up to five values.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – Query to run on logs.</p></li>
 </ul>
