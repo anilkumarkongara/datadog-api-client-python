@@ -24611,10 +24611,13 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>apm_scanned_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of bytes scanned of APM usage across all usage types by the Sensitive Data Scanner from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>events_scanned_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of bytes scanned of Events usage across all usage types by the Sensitive Data Scanner from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>logs_scanned_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of bytes scanned of logs usage by the Sensitive Data Scanner from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
+<li><p><strong>rum_scanned_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of bytes scanned of RUM usage across all usage types by the Sensitive Data Scanner from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>total_scanned_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of bytes scanned across all usage types by the Sensitive Data Scanner from the start of the given hour’s month until the given hour.</p></li>
 </ul>
 </dd>
@@ -24875,7 +24878,10 @@ type conversion is done.</p></li>
 <li><p><strong>rum_session_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser RUM Lite Sessions over all hours in the current date for all organizations</p></li>
 <li><p><strong>rum_total_session_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of RUM Sessions (browser and mobile) over all hours in the current date for all organizations.</p></li>
 <li><p><strong>rum_units_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser and mobile RUM units over all hours in the current date for all organizations.</p></li>
+<li><p><strong>sds_apm_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all APM bytes scanned with sensitive data scanner over all hours in the current date for all organizations.</p></li>
+<li><p><strong>sds_events_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all event stream events bytes scanned with sensitive data scanner over all hours in the current date for all organizations.</p></li>
 <li><p><strong>sds_logs_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned of logs usage by the Sensitive Data Scanner over all hours in the current month for all organizations.</p></li>
+<li><p><strong>sds_rum_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all RUM bytes scanned with sensitive data scanner over all hours in the current date for all organizations.</p></li>
 <li><p><strong>sds_total_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned across all usage types by the Sensitive Data Scanner over all hours in the current month for all organizations.</p></li>
 <li><p><strong>synthetics_browser_check_calls_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all Synthetic browser tests over all hours in the current date for all organizations.</p></li>
 <li><p><strong>synthetics_check_calls_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all Synthetic API tests over all hours in the current date for all organizations.</p></li>
@@ -24958,7 +24964,10 @@ type conversion is done.</p></li>
 <li><p><strong>rum_session_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser RUM Lite Sessions over all hours in the current date for the given org.</p></li>
 <li><p><strong>rum_total_session_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of RUM Sessions (browser and mobile) over all hours in the current date for the given org.</p></li>
 <li><p><strong>rum_units_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser and mobile RUM units over all hours in the current date for the given org.</p></li>
+<li><p><strong>sds_apm_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all APM bytes scanned with sensitive data scanner over all hours in the current date for the given org.</p></li>
+<li><p><strong>sds_events_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all event stream events bytes scanned with sensitive data scanner over all hours in the current date for the given org.</p></li>
 <li><p><strong>sds_logs_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned of logs usage by the Sensitive Data Scanner over all hours in the current month for the given org.</p></li>
+<li><p><strong>sds_rum_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all RUM bytes scanned with sensitive data scanner over all hours in the current date for the given org.</p></li>
 <li><p><strong>sds_total_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned across all usage types by the Sensitive Data Scanner over all hours in the current month for the given org.</p></li>
 <li><p><strong>synthetics_browser_check_calls_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all Synthetic browser tests over all hours in the current date for the given org.</p></li>
 <li><p><strong>synthetics_check_calls_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all Synthetic API tests over all hours in the current date for the given org.</p></li>
@@ -25046,7 +25055,10 @@ type conversion is done.</p></li>
 <li><p><strong>rum_session_count_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser RUM Lite Sessions over all hours in the current months for all organizations.</p></li>
 <li><p><strong>rum_total_session_count_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of RUM Sessions (browser and mobile) over all hours in the current months for all organizations.</p></li>
 <li><p><strong>rum_units_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all browser and mobile RUM units over all hours in the current months for all organizations.</p></li>
+<li><p><strong>sds_apm_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all APM bytes scanned with sensitive data scanner in the current months for all organizations.</p></li>
+<li><p><strong>sds_events_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all event stream events bytes scanned with sensitive data scanner in the current months for all organizations.</p></li>
 <li><p><strong>sds_logs_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned of logs usage by the Sensitive Data Scanner over all hours in the current month for all organizations.</p></li>
+<li><p><strong>sds_rum_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all RUM bytes scanned with sensitive data scanner in the current months for all organizations.</p></li>
 <li><p><strong>sds_total_scanned_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all bytes scanned across all usage types by the Sensitive Data Scanner over all hours in the current month for all organizations.</p></li>
 <li><p><strong>start_date</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Shows the first date of usage in the current months for all organizations.</p></li>
 <li><p><strong>synthetics_browser_check_calls_count_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all Synthetic browser tests over all hours in the current months for all organizations.</p></li>
