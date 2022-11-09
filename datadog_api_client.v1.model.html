@@ -3679,6 +3679,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_request_body_type" class="md-nav__link">synthetics_test_request_body_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestRequestBodyType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_request_certificate" class="md-nav__link">synthetics_test_request_certificate</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestRequestCertificate</span></code></a>
@@ -8651,6 +8657,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_request" class="md-nav__link">synthetics_test_request</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_request.SyntheticsTestRequest" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestRequest</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_request_body_type" class="md-nav__link">synthetics_test_request_body_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestRequestBodyType</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -22437,6 +22449,7 @@ type conversion is done.</p></li>
 <li><p><strong>allow_insecure</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows loading insecure content for an HTTP request in a multistep test step.</p></li>
 <li><p><strong>basic_auth</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth" title="datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth"><em>SyntheticsBasicAuth</em></a><em>, </em><em>optional</em>) – Object to handle basic authentication when performing the test.</p></li>
 <li><p><strong>body</strong> (<em>str</em><em>, </em><em>optional</em>) – Body to include in the test.</p></li>
+<li><p><strong>body_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType" title="datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType"><em>SyntheticsTestRequestBodyType</em></a><em>, </em><em>optional</em>) – Type of the request body.</p></li>
 <li><p><strong>certificate</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate" title="datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate"><em>SyntheticsTestRequestCertificate</em></a><em>, </em><em>optional</em>) – Client certificate to use when performing the test request.</p></li>
 <li><p><strong>certificate_domains</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – By default, the client certificate is applied on the domain of the starting URL for browser tests. If you want your client certificate to be applied on other domains instead, add them in <code class="docutils literal notranslate"><span class="pre">certificateDomains</span></code>.</p></li>
 <li><p><strong>dns_server</strong> (<em>str</em><em>, </em><em>optional</em>) – DNS server to use for DNS tests.</p></li>
@@ -22459,6 +22472,33 @@ the same IP address and TCP port number.</p></li>
 <li><p><strong>should_track_hops</strong> (<em>bool</em><em>, </em><em>optional</em>) – Turns on a traceroute probe to discover all gateways along the path to the host destination.</p></li>
 <li><p><strong>timeout</strong> (<em>float</em><em>, </em><em>optional</em>) – Timeout in seconds for the test.</p></li>
 <li><p><strong>url</strong> (<em>str</em><em>, </em><em>optional</em>) – URL to perform the test with.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.synthetics_test_request_body_type">
+<span id="synthetics-test-request-body-type"></span><h2 id="module-datadog_api_client.v1.model.synthetics_test_request_body_type">synthetics_test_request_body_type<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_test_request_body_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTestRequestBodyType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>Type of the request body.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“text/plain”, “application/json”, “text/xml”, “text/html”, “application/x-www-form-urlencoded”, “graphql”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
