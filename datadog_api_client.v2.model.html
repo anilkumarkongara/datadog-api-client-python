@@ -18037,9 +18037,10 @@ Note: At most 100 buckets are allowed, the number of buckets is (max - min)/inte
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>_from</strong> (<em>str</em><em>, </em><em>optional</em>) – The minimum time for the requested events; supports date, math, and regular timestamps (in milliseconds).</p></li>
+<li><p><strong>_from</strong> (<em>str</em><em>, </em><em>optional</em>) – The minimum time for the requested events; supports date (in <a class="reference external" href="https://www.w3.org/TR/NOTE-datetime">ISO 8601</a> format with full date, hours, minutes, and the <code class="docutils literal notranslate"><span class="pre">Z</span></code> UTC indicator - seconds and fractional seconds are optional), math, and regular timestamps (in milliseconds).</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – The search query following the RUM search syntax.</p></li>
-<li><p><strong>to</strong> (<em>str</em><em>, </em><em>optional</em>) – The maximum time for the requested events; supports date, math, and regular timestamps (in milliseconds).</p></li>
+<li><p><strong>to</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The maximum time for the requested events; supports date (in <a class="reference external" href="https://www.w3.org/TR/NOTE-datetime">ISO 8601</a> format with full date, hours, minutes, and the <code class="docutils literal notranslate"><span class="pre">Z</span></code> UTC indicator - seconds and fractional seconds are optional), math, and regular timestamps (in milliseconds).</p>
+</p></li>
 </ul>
 </dd>
 </dl>
