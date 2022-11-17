@@ -24004,6 +24004,7 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <li><p><strong>azure_host_count</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of Cloud Security Posture Management Azure hosts during a given hour.</p></li>
 <li><p><strong>compliance_host_count</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of Cloud Security Posture Management hosts during a given hour.</p></li>
 <li><p><strong>container_count</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of Cloud Security Posture Management containers during a given hour.</p></li>
+<li><p><strong>gcp_host_count</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of Cloud Security Posture Management GCP hosts during a given hour.</p></li>
 <li><p><strong>host_count</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of Cloud Security Posture Management hosts during a given hour.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
@@ -25048,6 +25049,7 @@ type conversion is done.</p></li>
 <li><p><strong>cspm_azure_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management Azure hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>cspm_container_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of Cloud Security Posture Management containers over all hours in the current date for all organizations.</p></li>
 <li><p><strong>cspm_container_hwm</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the high-water mark of Cloud Security Posture Management containers over all hours in the current date for all organizations.</p></li>
+<li><p><strong>cspm_gcp_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management GCP hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>cspm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>custom_ts_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of distinct custom metrics over all hours in the current date for all organizations.</p></li>
 <li><p><strong>cws_container_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all distinct Cloud Workload Security containers over all hours in the current date for all organizations.</p></li>
@@ -25133,6 +25135,7 @@ type conversion is done.</p></li>
 <li><p><strong>cspm_azure_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management Azure hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>cspm_container_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of Cloud Security Posture Management containers over all hours in the current date for the given org.</p></li>
 <li><p><strong>cspm_container_hwm</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the high-water mark of Cloud Security Posture Management containers over all hours in the current date for the given org.</p></li>
+<li><p><strong>cspm_gcp_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management GCP hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>cspm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>custom_ts_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of distinct custom metrics over all hours in the current date for the given org.</p></li>
 <li><p><strong>cws_container_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all distinct Cloud Workload Security containers over all hours in the current date for the given org.</p></li>
@@ -25221,6 +25224,7 @@ type conversion is done.</p></li>
 <li><p><strong>cspm_azure_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management Azure hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>cspm_container_avg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of Cloud Security Posture Management containers over all hours in the current months for all organizations.</p></li>
 <li><p><strong>cspm_container_hwm_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of the the high-water marks of Cloud Security Posture Management containers over all hours in the current months for all organizations.</p></li>
+<li><p><strong>cspm_gcp_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management GCP hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>cspm_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Cloud Security Posture Management hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>custom_ts_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of distinct custom metrics over all hours in the current months for all organizations.</p></li>
 <li><p><strong>cws_containers_avg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all distinct Cloud Workload Security containers over all hours in the current months for all organizations.</p></li>
