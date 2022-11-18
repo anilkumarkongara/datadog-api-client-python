@@ -2419,6 +2419,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.reference_table_logs_lookup_processor" class="md-nav__link">reference_table_logs_lookup_processor</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.reference_table_logs_lookup_processor.ReferenceTableLogsLookupProcessor" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ReferenceTableLogsLookupProcessor</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.response_meta_attributes" class="md-nav__link">response_meta_attributes</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.response_meta_attributes.ResponseMetaAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ResponseMetaAttributes</span></code></a>
@@ -7397,6 +7403,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.query_value_widget_request" class="md-nav__link">query_value_widget_request</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.query_value_widget_request.QueryValueWidgetRequest" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">QueryValueWidgetRequest</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.reference_table_logs_lookup_processor" class="md-nav__link">reference_table_logs_lookup_processor</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.reference_table_logs_lookup_processor.ReferenceTableLogsLookupProcessor" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ReferenceTableLogsLookupProcessor</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -14951,6 +14963,7 @@ skip the operation if an attribute is missing.</p></li>
 <li><p><strong>default_lookup</strong> (<em>str</em><em>, </em><em>optional</em>) – Value to set the target attribute if the source value is not found in the list.</p></li>
 <li><p><strong>lookup_table</strong> (<em>[</em><em>str</em><em>]</em>) – Mapping table of values for the source attribute and their associated target attribute values,
 formatted as <cite>[“source_key1,target_value1”, “source_key2,target_value2”]</cite></p></li>
+<li><p><strong>lookup_enrichment_table</strong> (<em>str</em>) – Name of the Reference Table for the source attribute and their associated target attribute values.</p></li>
 </ul>
 </dd>
 </dl>
@@ -17801,6 +17814,33 @@ type conversion is done.</p></li>
 <li><p><strong>response_format</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.formula_and_function_response_format.FormulaAndFunctionResponseFormat" title="datadog_api_client.v1.model.formula_and_function_response_format.FormulaAndFunctionResponseFormat"><em>FormulaAndFunctionResponseFormat</em></a><em>, </em><em>optional</em>) – Timeseries or Scalar response.</p></li>
 <li><p><strong>rum_query</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.log_query_definition.LogQueryDefinition" title="datadog_api_client.v1.model.log_query_definition.LogQueryDefinition"><em>LogQueryDefinition</em></a><em>, </em><em>optional</em>) – The log query.</p></li>
 <li><p><strong>security_query</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.log_query_definition.LogQueryDefinition" title="datadog_api_client.v1.model.log_query_definition.LogQueryDefinition"><em>LogQueryDefinition</em></a><em>, </em><em>optional</em>) – The log query.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.reference_table_logs_lookup_processor">
+<span id="reference-table-logs-lookup-processor"></span><h2 id="module-datadog_api_client.v1.model.reference_table_logs_lookup_processor">reference_table_logs_lookup_processor<a class="headerlink" href="#module-datadog_api_client.v1.model.reference_table_logs_lookup_processor" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.reference_table_logs_lookup_processor.ReferenceTableLogsLookupProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ReferenceTableLogsLookupProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.reference_table_logs_lookup_processor.ReferenceTableLogsLookupProcessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p><strong>Note</strong> : Reference Tables are in public beta.
+Use the Lookup Processor to define a mapping between a log attribute
+and a human readable value saved in a Reference Table.
+For example, you can use the Lookup Processor to map an internal service ID
+into a human readable service name. Alternatively, you could also use it to check
+if the MAC address that just attempted to connect to the production
+environment belongs to your list of stolen machines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the processor is enabled.</p></li>
+<li><p><strong>lookup_enrichment_table</strong> (<em>str</em>) – Name of the Reference Table for the source attribute and their associated target attribute values.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the processor.</p></li>
+<li><p><strong>source</strong> (<em>str</em>) – Source attribute used to perform the lookup.</p></li>
+<li><p><strong>target</strong> (<em>str</em>) – Name of the attribute that contains the corresponding value in the mapping list.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_lookup_processor_type.LogsLookupProcessorType" title="datadog_api_client.v1.model.logs_lookup_processor_type.LogsLookupProcessorType"><em>LogsLookupProcessorType</em></a>) – Type of logs lookup processor.</p></li>
 </ul>
 </dd>
 </dl>
