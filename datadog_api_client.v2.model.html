@@ -2187,6 +2187,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.logs_metric_update_compute" class="md-nav__link">logs_metric_update_compute</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsMetricUpdateCompute</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.logs_metric_update_data" class="md-nav__link">logs_metric_update_data</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.logs_metric_update_data.LogsMetricUpdateData" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsMetricUpdateData</span></code></a>
@@ -6484,6 +6490,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.logs_metric_update_attributes" class="md-nav__link">logs_metric_update_attributes</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.logs_metric_update_attributes.LogsMetricUpdateAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsMetricUpdateAttributes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.logs_metric_update_compute" class="md-nav__link">logs_metric_update_compute</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsMetricUpdateCompute</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -14288,6 +14300,8 @@ POST endpoint.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation_type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_metric_compute_aggregation_type.LogsMetricComputeAggregationType" title="datadog_api_client.v2.model.logs_metric_compute_aggregation_type.LogsMetricComputeAggregationType"><em>LogsMetricComputeAggregationType</em></a>) – The type of aggregation to use.</p></li>
+<li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include or exclude percentile aggregations for distribution metrics.
+Only present when the <code class="docutils literal notranslate"><span class="pre">aggregation_type</span></code> is <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p></li>
 <li><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path to the value the log-based metric will aggregate on (only used if the aggregation type is a “distribution”).</p></li>
 </ul>
 </dd>
@@ -14445,6 +14459,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation_type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_metric_response_compute_aggregation_type.LogsMetricResponseComputeAggregationType" title="datadog_api_client.v2.model.logs_metric_response_compute_aggregation_type.LogsMetricResponseComputeAggregationType"><em>LogsMetricResponseComputeAggregationType</em></a><em>, </em><em>optional</em>) – The type of aggregation to use.</p></li>
+<li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include or exclude percentile aggregations for distribution metrics.
+Only present when the <code class="docutils literal notranslate"><span class="pre">aggregation_type</span></code> is <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p></li>
 <li><p><strong>path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path to the value the log-based metric will aggregate on (only used if the aggregation type is a “distribution”).</p></li>
 </ul>
 </dd>
@@ -14564,9 +14580,25 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>compute</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute" title="datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute"><em>LogsMetricUpdateCompute</em></a><em>, </em><em>optional</em>) – The compute rule to compute the log-based metric.</p></li>
 <li><p><strong>filter</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_metric_filter.LogsMetricFilter" title="datadog_api_client.v2.model.logs_metric_filter.LogsMetricFilter"><em>LogsMetricFilter</em></a><em>, </em><em>optional</em>) – The log-based metric filter. Logs matching this filter will be aggregated in this metric.</p></li>
 <li><p><strong>group_by</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.logs_metric_group_by.LogsMetricGroupBy" title="datadog_api_client.v2.model.logs_metric_group_by.LogsMetricGroupBy"><em>LogsMetricGroupBy</em></a><em>]</em><em>, </em><em>optional</em>) – The rules for the group by.</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.logs_metric_update_compute">
+<span id="logs-metric-update-compute"></span><h2 id="module-datadog_api_client.v2.model.logs_metric_update_compute">logs_metric_update_compute<a class="headerlink" href="#module-datadog_api_client.v2.model.logs_metric_update_compute" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsMetricUpdateCompute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.logs_metric_update_compute.LogsMetricUpdateCompute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>The compute rule to compute the log-based metric.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include or exclude percentile aggregations for distribution metrics.
+Only present when the <code class="docutils literal notranslate"><span class="pre">aggregation_type</span></code> is <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -15725,7 +15757,7 @@ Additional time &amp; space combinations are also available:</p>
 <p>Can only be applied to metrics that have a <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> of <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">rate</span></code> , or <code class="docutils literal notranslate"><span class="pre">gauge</span></code>.</p>
 </p></li>
 <li><p><strong>created_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Timestamp when the tag configuration was created.</p></li>
-<li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to turn on/off percentile aggregations for distribution metrics.
+<li><p><strong>include_percentiles</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggle to include or exclude percentile aggregations for distribution metrics.
 Only present when the <code class="docutils literal notranslate"><span class="pre">metric_type</span></code> is <code class="docutils literal notranslate"><span class="pre">distribution</span></code>.</p></li>
 <li><p><strong>metric_type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metric_tag_configuration_metric_types.MetricTagConfigurationMetricTypes" title="datadog_api_client.v2.model.metric_tag_configuration_metric_types.MetricTagConfigurationMetricTypes"><em>MetricTagConfigurationMetricTypes</em></a><em>, </em><em>optional</em>) – The metric’s type.</p></li>
 <li><p><strong>modified_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Timestamp when the tag configuration was last modified.</p></li>
