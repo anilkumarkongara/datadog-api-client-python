@@ -24285,6 +24285,7 @@ This is the sum of <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>infra_azure_app_service</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Azure App Services integration
 (and were NOT running the Datadog Agent).</p></li>
+<li><p><strong>opentelemetry_apm_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts using APM reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
 <li><p><strong>opentelemetry_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -25117,6 +25118,7 @@ type conversion is done.</p></li>
 <li><p><strong>npm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct Networks hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>observability_pipelines_bytes_processed_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all observability pipelines bytes processed over all hours in the current date for the given org.</p></li>
 <li><p><strong>online_archive_events_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all online archived events over all hours in the current date for all organizations.</p></li>
+<li><p><strong>opentelemetry_apm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of APM hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for all organizations.</p></li>
 <li><p><strong>opentelemetry_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for all organizations.</p></li>
 <li><p><strong>orgs</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.usage_summary_date_org.UsageSummaryDateOrg" title="datadog_api_client.v1.model.usage_summary_date_org.UsageSummaryDateOrg"><em>UsageSummaryDateOrg</em></a><em>]</em><em>, </em><em>optional</em>) – Organizations associated with a user.</p></li>
 <li><p><strong>profiling_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all profiled hosts over all hours in the current date for all organizations.</p></li>
@@ -25204,6 +25206,7 @@ type conversion is done.</p></li>
 <li><p><strong>npm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct Networks hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>observability_pipelines_bytes_processed_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all observability pipelines bytes processed over all hours in the current date for the given org.</p></li>
 <li><p><strong>online_archive_events_count_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all online archived events over all hours in the current date for the given org.</p></li>
+<li><p><strong>opentelemetry_apm_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of APM hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for the given org.</p></li>
 <li><p><strong>opentelemetry_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for the given org.</p></li>
 <li><p><strong>profiling_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all profiled hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public id.</p></li>
@@ -25296,6 +25299,7 @@ type conversion is done.</p></li>
 <li><p><strong>npm_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all distinct Networks hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>observability_pipelines_bytes_processed_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all observability pipelines bytes processed over all hours in the current months for all organizations.</p></li>
 <li><p><strong>online_archive_events_count_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Sum of all online archived events over all hours in the current months for all organizations.</p></li>
+<li><p><strong>opentelemetry_apm_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of APM hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current months for all organizations.</p></li>
 <li><p><strong>opentelemetry_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current months for all organizations.</p></li>
 <li><p><strong>profiling_container_agent_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average number of profiled containers over all hours in the current months for all organizations.</p></li>
 <li><p><strong>profiling_host_count_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all profiled hosts over all hours in the current months for all organizations.</p></li>
