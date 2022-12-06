@@ -3171,6 +3171,24 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list" class="md-nav__link">rum_application_list</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list.RUMApplicationList" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationList</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list_attributes" class="md-nav__link">rum_application_list_attributes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationListAttributes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list_type" class="md-nav__link">rum_application_list_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationListType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_response" class="md-nav__link">rum_application_response</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_response.RUMApplicationResponse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationResponse</span></code></a>
@@ -7474,6 +7492,24 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_create_type" class="md-nav__link">rum_application_create_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_create_type.RUMApplicationCreateType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationCreateType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list" class="md-nav__link">rum_application_list</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list.RUMApplicationList" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationList</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list_attributes" class="md-nav__link">rum_application_list_attributes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationListAttributes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.rum_application_list_type" class="md-nav__link">rum_application_list_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RUMApplicationListType</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -17631,9 +17667,11 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>application_id</strong> (<em>str</em>) – ID of the RUM application.</p></li>
+<li><p><strong>client_token</strong> (<em>str</em>) – Client token of the RUM application.</p></li>
 <li><p><strong>created_at</strong> (<em>int</em>) – Timestamp in ms of the creation date.</p></li>
 <li><p><strong>created_by_handle</strong> (<em>str</em>) – Handle of the creator user.</p></li>
-<li><p><strong>hash</strong> (<em>str</em><em>, </em><em>optional</em>) – Client token of the RUM application.</p></li>
+<li><p><strong>hash</strong> (<em>str</em><em>, </em><em>optional</em>) – Hash of the RUM application. Optional.</p></li>
+<li><p><strong>is_active</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates if the RUM application is active.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the RUM application.</p></li>
 <li><p><strong>org_id</strong> (<em>int</em>) – Org ID of the RUM application.</p></li>
 <li><p><strong>type</strong> (<em>str</em>) – Type of the RUM application. Supported values are <code class="docutils literal notranslate"><span class="pre">browser</span></code> , <code class="docutils literal notranslate"><span class="pre">ios</span></code> , <code class="docutils literal notranslate"><span class="pre">android</span></code> , <code class="docutils literal notranslate"><span class="pre">react-native</span></code> , <code class="docutils literal notranslate"><span class="pre">flutter</span></code>.</p></li>
@@ -17703,6 +17741,75 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “rum_application_create”. Must be one of [“rum_application_create”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.rum_application_list">
+<span id="rum-application-list"></span><h2 id="module-datadog_api_client.v2.model.rum_application_list">rum_application_list<a class="headerlink" href="#module-datadog_api_client.v2.model.rum_application_list" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.rum_application_list.RUMApplicationList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RUMApplicationList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.rum_application_list.RUMApplicationList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>RUM application list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes" title="datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes"><em>RUMApplicationListAttributes</em></a>) – RUM application list attributes.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType" title="datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType"><em>RUMApplicationListType</em></a>) – RUM application list type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.rum_application_list_attributes">
+<span id="rum-application-list-attributes"></span><h2 id="module-datadog_api_client.v2.model.rum_application_list_attributes">rum_application_list_attributes<a class="headerlink" href="#module-datadog_api_client.v2.model.rum_application_list_attributes" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RUMApplicationListAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.rum_application_list_attributes.RUMApplicationListAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>RUM application list attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>application_id</strong> (<em>str</em>) – ID of the RUM application.</p></li>
+<li><p><strong>created_at</strong> (<em>int</em>) – Timestamp in ms of the creation date.</p></li>
+<li><p><strong>created_by_handle</strong> (<em>str</em>) – Handle of the creator user.</p></li>
+<li><p><strong>hash</strong> (<em>str</em><em>, </em><em>optional</em>) – Hash of the RUM application. Optional.</p></li>
+<li><p><strong>is_active</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates if the RUM application is active.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the RUM application.</p></li>
+<li><p><strong>org_id</strong> (<em>int</em>) – Org ID of the RUM application.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – Type of the RUM application. Supported values are <code class="docutils literal notranslate"><span class="pre">browser</span></code> , <code class="docutils literal notranslate"><span class="pre">ios</span></code> , <code class="docutils literal notranslate"><span class="pre">android</span></code> , <code class="docutils literal notranslate"><span class="pre">react-native</span></code> , <code class="docutils literal notranslate"><span class="pre">flutter</span></code>.</p></li>
+<li><p><strong>updated_at</strong> (<em>int</em>) – Timestamp in ms of the last update date.</p></li>
+<li><p><strong>updated_by_handle</strong> (<em>str</em>) – Handle of the updater user.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.rum_application_list_type">
+<span id="rum-application-list-type"></span><h2 id="module-datadog_api_client.v2.model.rum_application_list_type">rum_application_list_type<a class="headerlink" href="#module-datadog_api_client.v2.model.rum_application_list_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RUMApplicationListType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.rum_application_list_type.RUMApplicationListType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>RUM application list type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “rum_application”. Must be one of [“rum_application”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -17845,7 +17952,7 @@ type conversion is done.</p></li>
 <p>RUM applications response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>data</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.rum_application.RUMApplication" title="datadog_api_client.v2.model.rum_application.RUMApplication"><em>RUMApplication</em></a><em>]</em><em>, </em><em>optional</em>) – RUM applications array response.</p>
+<dd class="field-odd"><p><strong>data</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.rum_application_list.RUMApplicationList" title="datadog_api_client.v2.model.rum_application_list.RUMApplicationList"><em>RUMApplicationList</em></a><em>]</em><em>, </em><em>optional</em>) – RUM applications array response.</p>
 </dd>
 </dl>
 </dd></dl>
