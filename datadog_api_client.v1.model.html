@@ -1195,12 +1195,6 @@
         </li></ul>
             </nav>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.http_method" class="md-nav__link">http_method</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.http_method.HTTPMethod" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">HTTPMethod</span></code></a>
-        </li></ul>
-            </nav>
-        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.i_frame_widget_definition" class="md-nav__link">i_frame_widget_definition</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.i_frame_widget_definition.IFrameWidgetDefinition" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IFrameWidgetDefinition</span></code></a>
@@ -3622,6 +3616,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_step_type" class="md-nav__link">synthetics_step_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsStepType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_call_type" class="md-nav__link">synthetics_test_call_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestCallType</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -6212,12 +6212,6 @@
         </li></ul>
             </nav>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.http_method" class="md-nav__link">http_method</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.http_method.HTTPMethod" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">HTTPMethod</span></code></a>
-        </li></ul>
-            </nav>
-        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.i_frame_widget_definition" class="md-nav__link">i_frame_widget_definition</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.i_frame_widget_definition.IFrameWidgetDefinition" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IFrameWidgetDefinition</span></code></a>
@@ -8639,6 +8633,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_step_type" class="md-nav__link">synthetics_step_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsStepType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_call_type" class="md-nav__link">synthetics_test_call_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestCallType</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -13405,33 +13405,6 @@ That value is then highlighted and displayed in the Logstream, where it is index
 It is used to switch from Logs to APM, so make sure you define the same value when you use both products.
 See <a class="reference external" href="https://docs.datadoghq.com/logs/log_collection/#reserved-attributes">reserved attributes</a>.</p>
 </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-</section>
-<section id="module-datadog_api_client.v1.model.http_method">
-<span id="http-method"></span><h2 id="module-datadog_api_client.v1.model.http_method">http_method<a class="headerlink" href="#module-datadog_api_client.v1.model.http_method" title="Permalink to this heading">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="datadog_api_client.v1.model.http_method.HTTPMethod">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HTTPMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.http_method.HTTPMethod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
-<p>The HTTP method.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“GET”, “POST”, “PATCH”, “PUT”, “DELETE”, “HEAD”, “OPTIONS”].</p></li>
-<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
-will be type checked and a TypeError will be raised if the wrong type is input.
-Defaults to True.</p></li>
-<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
-the model in received_data when deserializing a response.</p></li>
-<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
-data are serialized names, as specified in the OpenAPI document.  False if the
-variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
-<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
-file_type parameter.  If passed, type conversion is attempted If omitted no
-type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
@@ -22347,6 +22320,33 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.synthetics_test_call_type">
+<span id="synthetics-test-call-type"></span><h2 id="module-datadog_api_client.v1.model.synthetics_test_call_type">synthetics_test_call_type<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_test_call_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTestCallType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The type of gRPC call to perform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“healthcheck”, “unary”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.synthetics_test_ci_options">
 <span id="synthetics-test-ci-options"></span><h2 id="module-datadog_api_client.v1.model.synthetics_test_ci_options">synthetics_test_ci_options<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_test_ci_options" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -22698,6 +22698,7 @@ type conversion is done.</p></li>
 <li><p><strong>basic_auth</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth" title="datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth"><em>SyntheticsBasicAuth</em></a><em>, </em><em>optional</em>) – Object to handle basic authentication when performing the test.</p></li>
 <li><p><strong>body</strong> (<em>str</em><em>, </em><em>optional</em>) – Body to include in the test.</p></li>
 <li><p><strong>body_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType" title="datadog_api_client.v1.model.synthetics_test_request_body_type.SyntheticsTestRequestBodyType"><em>SyntheticsTestRequestBodyType</em></a><em>, </em><em>optional</em>) – Type of the request body.</p></li>
+<li><p><strong>call_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType" title="datadog_api_client.v1.model.synthetics_test_call_type.SyntheticsTestCallType"><em>SyntheticsTestCallType</em></a><em>, </em><em>optional</em>) – The type of gRPC call to perform.</p></li>
 <li><p><strong>certificate</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate" title="datadog_api_client.v1.model.synthetics_test_request_certificate.SyntheticsTestRequestCertificate"><em>SyntheticsTestRequestCertificate</em></a><em>, </em><em>optional</em>) – Client certificate to use when performing the test request.</p></li>
 <li><p><strong>certificate_domains</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – By default, the client certificate is applied on the domain of the starting URL for browser tests. If you want your client certificate to be applied on other domains instead, add them in <code class="docutils literal notranslate"><span class="pre">certificateDomains</span></code>.</p></li>
 <li><p><strong>dns_server</strong> (<em>str</em><em>, </em><em>optional</em>) – DNS server to use for DNS tests.</p></li>
@@ -22707,7 +22708,7 @@ type conversion is done.</p></li>
 <li><p><strong>host</strong> (<em>str</em><em>, </em><em>optional</em>) – Host name to perform the test with.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – Message to send for UDP or WebSocket tests.</p></li>
 <li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_metadata.SyntheticsTestMetadata" title="datadog_api_client.v1.model.synthetics_test_metadata.SyntheticsTestMetadata"><em>SyntheticsTestMetadata</em></a><em>, </em><em>optional</em>) – Metadata to include when performing the gRPC test.</p></li>
-<li><p><strong>method</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.http_method.HTTPMethod" title="datadog_api_client.v1.model.http_method.HTTPMethod"><em>HTTPMethod</em></a><em>, </em><em>optional</em>) – The HTTP method.</p></li>
+<li><p><strong>method</strong> (<em>str</em><em>, </em><em>optional</em>) – Either the HTTP method/verb to use or a gRPC method available on the service set in the <code class="docutils literal notranslate"><span class="pre">service</span></code> field. Required if <code class="docutils literal notranslate"><span class="pre">subtype</span></code> is <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or if <code class="docutils literal notranslate"><span class="pre">subtype</span></code> is <code class="docutils literal notranslate"><span class="pre">grpc</span></code> and <code class="docutils literal notranslate"><span class="pre">callType</span></code> is <code class="docutils literal notranslate"><span class="pre">unary</span></code>.</p></li>
 <li><p><strong>no_saving_response_body</strong> (<em>bool</em><em>, </em><em>optional</em>) – Determines whether or not to save the response body.</p></li>
 <li><p><strong>number_of_packets</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of pings to use per test.</p></li>
 <li><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – Port to use when performing the test.</p></li>
@@ -22716,7 +22717,7 @@ type conversion is done.</p></li>
 <li><p><strong>servername</strong> (<em>str</em><em>, </em><em>optional</em>) – For SSL tests, it specifies on which server you want to initiate the TLS handshake,
 allowing the server to present one of multiple possible certificates on
 the same IP address and TCP port number.</p></li>
-<li><p><strong>service</strong> (<em>str</em><em>, </em><em>optional</em>) – gRPC service on which you want to perform the healthcheck.</p></li>
+<li><p><strong>service</strong> (<em>str</em><em>, </em><em>optional</em>) – The gRPC service on which you want to perform the gRPC call.</p></li>
 <li><p><strong>should_track_hops</strong> (<em>bool</em><em>, </em><em>optional</em>) – Turns on a traceroute probe to discover all gateways along the path to the host destination.</p></li>
 <li><p><strong>timeout</strong> (<em>float</em><em>, </em><em>optional</em>) – Timeout in seconds for the test.</p></li>
 <li><p><strong>url</strong> (<em>str</em><em>, </em><em>optional</em>) – URL to perform the test with.</p></li>
