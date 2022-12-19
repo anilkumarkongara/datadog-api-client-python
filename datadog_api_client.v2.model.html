@@ -11137,6 +11137,7 @@ At most, 100 buckets are allowed, the number of buckets is <code class="docutils
 <li><p><strong>complex_rule</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the rule is a complex one.
 Must be set to true if <code class="docutils literal notranslate"><span class="pre">regoRule.resourceTypes</span></code> contains more than one item. Defaults to false.</p></li>
 <li><p><strong>rego_rule</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule" title="datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule"><em>CloudConfigurationRegoRule</em></a>) – Rule details.</p></li>
+<li><p><strong>resource_type</strong> (<em>str</em>) – Main resource type to be checked by the rule. It should be specified again in <code class="docutils literal notranslate"><span class="pre">regoRule.resourceTypes</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
