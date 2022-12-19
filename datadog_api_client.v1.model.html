@@ -13129,18 +13129,18 @@ type conversion is done.</p></li>
 <li><p><strong>agent_checks</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.agent_check.AgentCheck" title="datadog_api_client.v1.model.agent_check.AgentCheck"><em>AgentCheck</em></a><em>]</em><em>, </em><em>optional</em>) – A list of Agent checks running on the host.</p></li>
 <li><p><strong>agent_version</strong> (<em>str</em><em>, </em><em>optional</em>) – The Datadog Agent version.</p></li>
 <li><p><strong>cpu_cores</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of cores.</p></li>
-<li><p><strong>fbsd_v</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
+<li><p><strong>fbsd_v</strong> (<em>[</em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
 <li><p><strong>gohai</strong> (<em>str</em><em>, </em><em>optional</em>) – JSON string containing system information.</p></li>
 <li><p><strong>install_method</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.host_meta_install_method.HostMetaInstallMethod" title="datadog_api_client.v1.model.host_meta_install_method.HostMetaInstallMethod"><em>HostMetaInstallMethod</em></a><em>, </em><em>optional</em>) – Agent install method.</p></li>
-<li><p><strong>mac_v</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
+<li><p><strong>mac_v</strong> (<em>[</em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
 <li><p><strong>machine</strong> (<em>str</em><em>, </em><em>optional</em>) – The machine architecture.</p></li>
-<li><p><strong>nix_v</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of Unix versions.</p></li>
+<li><p><strong>nix_v</strong> (<em>[</em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – Array of Unix versions.</p></li>
 <li><p><strong>platform</strong> (<em>str</em><em>, </em><em>optional</em>) – The OS platform.</p></li>
 <li><p><strong>processor</strong> (<em>str</em><em>, </em><em>optional</em>) – The processor.</p></li>
 <li><p><strong>python_v</strong> (<em>str</em><em>, </em><em>optional</em>) – The Python version.</p></li>
 <li><p><strong>socket_fqdn</strong> (<em>str</em><em>, </em><em>optional</em>) – The socket fqdn.</p></li>
 <li><p><strong>socket_hostname</strong> (<em>str</em><em>, </em><em>optional</em>) – The socket hostname.</p></li>
-<li><p><strong>win_v</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of Windows versions.</p></li>
+<li><p><strong>win_v</strong> (<em>[</em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Windows versions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -15546,7 +15546,7 @@ type conversion is done.</p></li>
 <li><p><strong>scope</strong> (<em>str</em><em>, </em><em>optional</em>) – Metric scope, comma separated list of tags.</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – Start of the time window, milliseconds since Unix epoch.</p></li>
 <li><p><strong>tag_set</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Unique tags identifying this series.</p></li>
-<li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit" title="datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit"><em>MetricsQueryUnit</em></a><em>]</em><em>, </em><em>optional</em>) – Detailed information about the metric unit.
+<li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit" title="datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit"><em>MetricsQueryUnit</em></a><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – Detailed information about the metric unit.
 First element describes the “primary unit” (for example, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ),
 second describes the “per unit” (for example, <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ).</p></li>
 </ul>
@@ -19353,7 +19353,7 @@ This is the same response type from <code class="docutils literal notranslate"><
 <li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – Query metric used.</p></li>
 <li><p><strong>query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Query index from original combined query.</p></li>
 <li><p><strong>scope</strong> (<em>str</em><em>, </em><em>optional</em>) – Query scope.</p></li>
-<li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_history_metrics_series_metadata_unit.SLOHistoryMetricsSeriesMetadataUnit" title="datadog_api_client.v1.model.slo_history_metrics_series_metadata_unit.SLOHistoryMetricsSeriesMetadataUnit"><em>SLOHistoryMetricsSeriesMetadataUnit</em></a><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An array of metric units that contains up to two unit objects.
+<li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_history_metrics_series_metadata_unit.SLOHistoryMetricsSeriesMetadataUnit" title="datadog_api_client.v1.model.slo_history_metrics_series_metadata_unit.SLOHistoryMetricsSeriesMetadataUnit"><em>SLOHistoryMetricsSeriesMetadataUnit</em></a><em>, </em><em>none_type</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An array of metric units that contains up to two unit objects.
 For example, bytes represents one unit object and bytes per second represents two unit objects.
 If a metric query only has one unit object, the second array element is null.</p></li>
 </ul>
