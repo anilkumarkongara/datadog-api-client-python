@@ -11130,14 +11130,15 @@ At most, 100 buckets are allowed, the number of buckets is <code class="docutils
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CloudConfigurationComplianceRuleOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Options for cloud_configuration rules.</p>
+<p>Options for cloud_configuration rules.
+Fields <code class="docutils literal notranslate"><span class="pre">resourceType</span></code> and <code class="docutils literal notranslate"><span class="pre">regoRule</span></code> are mandatory when managing custom <code class="docutils literal notranslate"><span class="pre">cloud_configuration</span></code> rules.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>complex_rule</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the rule is a complex one.
 Must be set to true if <code class="docutils literal notranslate"><span class="pre">regoRule.resourceTypes</span></code> contains more than one item. Defaults to false.</p></li>
-<li><p><strong>rego_rule</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule" title="datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule"><em>CloudConfigurationRegoRule</em></a>) – Rule details.</p></li>
-<li><p><strong>resource_type</strong> (<em>str</em>) – Main resource type to be checked by the rule. It should be specified again in <code class="docutils literal notranslate"><span class="pre">regoRule.resourceTypes</span></code>.</p></li>
+<li><p><strong>rego_rule</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule" title="datadog_api_client.v2.model.cloud_configuration_rego_rule.CloudConfigurationRegoRule"><em>CloudConfigurationRegoRule</em></a><em>, </em><em>optional</em>) – Rule details.</p></li>
+<li><p><strong>resource_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Main resource type to be checked by the rule. It should be specified again in <code class="docutils literal notranslate"><span class="pre">regoRule.resourceTypes</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -11226,7 +11227,8 @@ Must be set to true if <code class="docutils literal notranslate"><span class="p
 <p>Options on cloud configuration rules.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>compliance_rule_options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions" title="datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions"><em>CloudConfigurationComplianceRuleOptions</em></a>) – Options for cloud_configuration rules.</p>
+<dd class="field-odd"><p><strong>compliance_rule_options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions" title="datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions"><em>CloudConfigurationComplianceRuleOptions</em></a>) – Options for cloud_configuration rules.
+Fields <code class="docutils literal notranslate"><span class="pre">resourceType</span></code> and <code class="docutils literal notranslate"><span class="pre">regoRule</span></code> are mandatory when managing custom <code class="docutils literal notranslate"><span class="pre">cloud_configuration</span></code> rules.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -20047,7 +20049,8 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>compliance_rule_options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions" title="datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions"><em>CloudConfigurationComplianceRuleOptions</em></a><em>, </em><em>optional</em>) – Options for cloud_configuration rules.</p></li>
+<li><p><strong>compliance_rule_options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions" title="datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions"><em>CloudConfigurationComplianceRuleOptions</em></a><em>, </em><em>optional</em>) – Options for cloud_configuration rules.
+Fields <code class="docutils literal notranslate"><span class="pre">resourceType</span></code> and <code class="docutils literal notranslate"><span class="pre">regoRule</span></code> are mandatory when managing custom <code class="docutils literal notranslate"><span class="pre">cloud_configuration</span></code> rules.</p></li>
 <li><p><strong>decrease_criticality_based_on_env</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true, signals in non-production environments have a lower severity than what is defined by the rule case, which can reduce signal noise.
 The severity is decreased by one level: <code class="docutils literal notranslate"><span class="pre">CRITICAL</span></code> in production becomes <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> in non-production, <code class="docutils literal notranslate"><span class="pre">HIGH</span></code> becomes <code class="docutils literal notranslate"><span class="pre">MEDIUM</span></code> and so on. <code class="docutils literal notranslate"><span class="pre">INFO</span></code> remains <code class="docutils literal notranslate"><span class="pre">INFO</span></code>.
 The decrement is applied when the environment tag of the signal starts with <code class="docutils literal notranslate"><span class="pre">staging</span></code> , <code class="docutils literal notranslate"><span class="pre">test</span></code> or <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p></li>
