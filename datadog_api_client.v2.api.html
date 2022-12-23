@@ -597,6 +597,10 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.list_volumes_by_metric_name" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.list_volumes_by_metric_name()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_scalar_data" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.query_scalar_data()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_timeseries_data" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.query_timeseries_data()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.submit_metrics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.submit_metrics()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.update_tag_configuration" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.update_tag_configuration()</span></code></a>
@@ -1597,6 +1601,10 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.list_tags_by_metric_name" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.list_tags_by_metric_name()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.list_volumes_by_metric_name" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.list_volumes_by_metric_name()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_scalar_data" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.query_scalar_data()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_timeseries_data" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.query_timeseries_data()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.metrics_api.MetricsApi.submit_metrics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricsApi.submit_metrics()</span></code></a>
         </li>
@@ -3610,7 +3618,7 @@ Returns the log-based metric object from the request body when the request is su
 <p>The metrics endpoint allows you to:</p>
 <ul class="simple">
 <li><p>Post metrics data so it can be graphed on Datadog’s dashboards</p></li>
-<li><p>Query metrics from any time period</p></li>
+<li><p>Query metrics from any time period (timeseries and scalar)</p></li>
 <li><p>Modify tag configurations for metrics</p></li>
 <li><p>View tags and volumes for metrics</p></li>
 </ul>
@@ -3786,6 +3794,30 @@ Defaults value is 3600 (1 hour), maximum value is 1,209,600 (2 weeks).</p></li>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.metric_volumes_response.MetricVolumesResponse" title="datadog_api_client.v2.model.metric_volumes_response.MetricVolumesResponse">MetricVolumesResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi.query_scalar_data">
+<span class="sig-name descname"><span class="pre">query_scalar_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.scalar_formula_query_request.ScalarFormulaQueryRequest" title="datadog_api_client.v2.model.scalar_formula_query_request.ScalarFormulaQueryRequest"><span class="pre">ScalarFormulaQueryRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.scalar_formula_query_response.ScalarFormulaQueryResponse" title="datadog_api_client.v2.model.scalar_formula_query_response.ScalarFormulaQueryResponse"><span class="pre">ScalarFormulaQueryResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_scalar_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scalar cross product query.</p>
+<p>The internal endpoint to query scalar/table data for multiple data sources and
+process the data using formulas and functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.scalar_formula_query_response.ScalarFormulaQueryResponse" title="datadog_api_client.v2.model.scalar_formula_query_response.ScalarFormulaQueryResponse">ScalarFormulaQueryResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.metrics_api.MetricsApi.query_timeseries_data">
+<span class="sig-name descname"><span class="pre">query_timeseries_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.timeseries_formula_query_request.TimeseriesFormulaQueryRequest" title="datadog_api_client.v2.model.timeseries_formula_query_request.TimeseriesFormulaQueryRequest"><span class="pre">TimeseriesFormulaQueryRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.timeseries_formula_query_response.TimeseriesFormulaQueryResponse" title="datadog_api_client.v2.model.timeseries_formula_query_response.TimeseriesFormulaQueryResponse"><span class="pre">TimeseriesFormulaQueryResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.metrics_api.MetricsApi.query_timeseries_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timeseries cross product query.</p>
+<p>The internal endpoint to query timeseries data for multiple data sources and
+process the data by applying formulas and functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.timeseries_formula_query_response.TimeseriesFormulaQueryResponse" title="datadog_api_client.v2.model.timeseries_formula_query_response.TimeseriesFormulaQueryResponse">TimeseriesFormulaQueryResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
