@@ -18568,9 +18568,16 @@ min of all of those requests.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of tags associated with this service level objective.
 Always included in service level objective responses (but may be empty).
 Optional in create/update requests.</p></li>
+<li><p><strong>target_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The target threshold such that when the service level indicator is above this
+threshold over the given timeframe, the objective is being met.</p></li>
 <li><p><strong>thresholds</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_threshold.SLOThreshold" title="datadog_api_client.v1.model.slo_threshold.SLOThreshold"><em>SLOThreshold</em></a><em>]</em>) – The thresholds (timeframes and associated targets) for this service level
 objective object.</p></li>
+<li><p><strong>timeframe</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_timeframe.SLOTimeframe" title="datadog_api_client.v1.model.slo_timeframe.SLOTimeframe"><em>SLOTimeframe</em></a><em>, </em><em>optional</em>) – The SLO time window options.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type.SLOType" title="datadog_api_client.v1.model.slo_type.SLOType"><em>SLOType</em></a>) – The type of the service level objective.</p></li>
+<li><p><strong>warning_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The optional warning threshold such that when the service level indicator is
+below this value for the given threshold, but above the target threshold, the
+objective appears in a “warning” state. This value must be greater than the target
+threshold.</p></li>
 </ul>
 </dd>
 </dl>
@@ -18624,9 +18631,16 @@ min of all of those requests.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of tags associated with this service level objective.
 Always included in service level objective responses (but may be empty).
 Optional in create/update requests.</p></li>
+<li><p><strong>target_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The target threshold such that when the service level indicator is above this
+threshold over the given timeframe, the objective is being met.</p></li>
 <li><p><strong>thresholds</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_threshold.SLOThreshold" title="datadog_api_client.v1.model.slo_threshold.SLOThreshold"><em>SLOThreshold</em></a><em>]</em>) – The thresholds (timeframes and associated targets) for this service level
 objective object.</p></li>
+<li><p><strong>timeframe</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_timeframe.SLOTimeframe" title="datadog_api_client.v1.model.slo_timeframe.SLOTimeframe"><em>SLOTimeframe</em></a><em>, </em><em>optional</em>) – The SLO time window options.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type.SLOType" title="datadog_api_client.v1.model.slo_type.SLOType"><em>SLOType</em></a>) – The type of the service level objective.</p></li>
+<li><p><strong>warning_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The optional warning threshold such that when the service level indicator is
+below this value for the given threshold, but above the target threshold, the
+objective appears in a “warning” state. This value must be greater than the target
+threshold.</p></li>
 </ul>
 </dd>
 </dl>
@@ -19789,9 +19803,16 @@ min of all of those requests.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of tags associated with this service level objective.
 Always included in service level objective responses (but may be empty).
 Optional in create/update requests.</p></li>
+<li><p><strong>target_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The target threshold such that when the service level indicator is above this
+threshold over the given timeframe, the objective is being met.</p></li>
 <li><p><strong>thresholds</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_threshold.SLOThreshold" title="datadog_api_client.v1.model.slo_threshold.SLOThreshold"><em>SLOThreshold</em></a><em>]</em><em>, </em><em>optional</em>) – The thresholds (timeframes and associated targets) for this service level
 objective object.</p></li>
+<li><p><strong>timeframe</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_timeframe.SLOTimeframe" title="datadog_api_client.v1.model.slo_timeframe.SLOTimeframe"><em>SLOTimeframe</em></a><em>, </em><em>optional</em>) – The SLO time window options.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type.SLOType" title="datadog_api_client.v1.model.slo_type.SLOType"><em>SLOType</em></a><em>, </em><em>optional</em>) – The type of the service level objective.</p></li>
+<li><p><strong>warning_threshold</strong> (<em>float</em><em>, </em><em>optional</em>) – The optional warning threshold such that when the service level indicator is
+below this value for the given threshold, but above the target threshold, the
+objective appears in a “warning” state. This value must be greater than the target
+threshold.</p></li>
 </ul>
 </dd>
 </dl>
