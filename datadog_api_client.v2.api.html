@@ -459,6 +459,8 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incidents_with_pagination()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.search_incidents" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.search_incidents()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident_attachments" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident_attachments()</span></code></a>
@@ -1463,6 +1465,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incidents()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.list_incidents_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.list_incidents_with_pagination()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.search_incidents" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.search_incidents()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident()</span></code></a>
         </li>
@@ -2943,6 +2947,28 @@ the included attribute will contain the users related to these incident teams.</
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_response_data.IncidentResponseData" title="datadog_api_client.v2.model.incident_response_data.IncidentResponseData">IncidentResponseData</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.incidents_api.IncidentsApi.search_incidents">
+<span class="sig-name descname"><span class="pre">search_incidents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><span class="pre">IncidentRelatedObject</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder" title="datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder"><span class="pre">IncidentSearchSortOrder</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_response.IncidentSearchResponse" title="datadog_api_client.v2.model.incident_search_response.IncidentSearchResponse"><span class="pre">IncidentSearchResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.search_incidents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for incidents.</p>
+<p>Search for incidents matching a certain query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – <p>Specifies which incidents should be returned. After entering a search query in your <a class="reference external" href="https://app.datadoghq.com/incidents">Incidents page</a> ,
+use the query parameter value in the URL of the page as the value for this parameter.</p>
+<p>The query can contain any number of incident facets joined by <code class="docutils literal notranslate"><span class="pre">ANDs</span></code> , along with multiple values for each of
+those facets joined by <code class="docutils literal notranslate"><span class="pre">OR</span></code> s, for instance: <code class="docutils literal notranslate"><span class="pre">query="state:active</span> <span class="pre">AND</span> <span class="pre">severity:(SEV-2</span> <span class="pre">OR</span> <span class="pre">SEV-1)"</span></code>.</p>
+</p></li>
+<li><p><strong>include</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><em>IncidentRelatedObject</em></a><em>, </em><em>optional</em>) – Specifies which types of related objects should be included in the response.</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder" title="datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder"><em>IncidentSearchSortOrder</em></a><em>, </em><em>optional</em>) – Specifies the order of returned incidents.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_response.IncidentSearchResponse" title="datadog_api_client.v2.model.incident_search_response.IncidentSearchResponse">IncidentSearchResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
