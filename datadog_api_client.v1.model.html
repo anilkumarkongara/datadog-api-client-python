@@ -3723,6 +3723,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling" class="md-nav__link">synthetics_test_options_scheduling</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestOptionsScheduling</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe" class="md-nav__link">synthetics_test_options_scheduling_timeframe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestOptionsSchedulingTimeframe</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_pause_status" class="md-nav__link">synthetics_test_pause_status</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_pause_status.SyntheticsTestPauseStatus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestPauseStatus</span></code></a>
@@ -8773,6 +8785,18 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_options_retry" class="md-nav__link">synthetics_test_options_retry</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_options_retry.SyntheticsTestOptionsRetry" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestOptionsRetry</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling" class="md-nav__link">synthetics_test_options_scheduling</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestOptionsScheduling</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe" class="md-nav__link">synthetics_test_options_scheduling_timeframe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsTestOptionsSchedulingTimeframe</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -22772,6 +22796,7 @@ RUM data is collected from the Synthetic test’s default application.</p>
 <p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">isEnabled:</span> <span class="pre">true,</span> <span class="pre">applicationId:</span> <span class="pre">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",</span> <span class="pre">clientTokenId:</span> <span class="pre">12345</span> <span class="pre">}</span></code>
 RUM data is collected using the specified application.</p>
 </p></li>
+<li><p><strong>scheduling</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling" title="datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling"><em>SyntheticsTestOptionsScheduling</em></a><em>, </em><em>optional</em>) – Object containing timeframes and timezone used for advanced scheduling.</p></li>
 <li><p><strong>tick_every</strong> (<em>int</em><em>, </em><em>optional</em>) – The frequency at which to run the Synthetic test (in seconds).</p></li>
 </ul>
 </dd>
@@ -22808,6 +22833,41 @@ RUM data is collected using the specified application.</p>
 location as failed. Defaults to 0.</p></li>
 <li><p><strong>interval</strong> (<em>float</em><em>, </em><em>optional</em>) – Time interval between retries (in milliseconds). Defaults to
 300ms.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.synthetics_test_options_scheduling">
+<span id="synthetics-test-options-scheduling"></span><h2 id="module-datadog_api_client.v1.model.synthetics_test_options_scheduling">synthetics_test_options_scheduling<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTestOptionsScheduling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_test_options_scheduling.SyntheticsTestOptionsScheduling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object containing timeframes and timezone used for advanced scheduling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeframes</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe" title="datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe"><em>SyntheticsTestOptionsSchedulingTimeframe</em></a><em>]</em><em>, </em><em>optional</em>) – Array containing objects describing the scheduling pattern to apply to each day.</p></li>
+<li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – Timezone on which the timeframe are based.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe">
+<span id="synthetics-test-options-scheduling-timeframe"></span><h2 id="module-datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe">synthetics_test_options_scheduling_timeframe<a class="headerlink" href="#module-datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTestOptionsSchedulingTimeframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe.SyntheticsTestOptionsSchedulingTimeframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object describing a timeframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>day</strong> (<em>int</em><em>, </em><em>optional</em>) – Number representing the day of the week.</p></li>
+<li><p><strong>_from</strong> (<em>str</em><em>, </em><em>optional</em>) – The hour of the day on which scheduling starts.</p></li>
+<li><p><strong>to</strong> (<em>str</em><em>, </em><em>optional</em>) – The hour of the day on which scheduling ends.</p></li>
 </ul>
 </dd>
 </dl>
