@@ -1881,6 +1881,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.monitor_options_notification_presets" class="md-nav__link">monitor_options_notification_presets</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MonitorOptionsNotificationPresets</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.monitor_options_scheduling_options" class="md-nav__link">monitor_options_scheduling_options</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.monitor_options_scheduling_options.MonitorOptionsSchedulingOptions" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MonitorOptionsSchedulingOptions</span></code></a>
@@ -6943,6 +6949,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.monitor_options_aggregation" class="md-nav__link">monitor_options_aggregation</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.monitor_options_aggregation.MonitorOptionsAggregation" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MonitorOptionsAggregation</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.monitor_options_notification_presets" class="md-nav__link">monitor_options_notification_presets</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MonitorOptionsNotificationPresets</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -16067,6 +16079,7 @@ Should be a non negative integer.</p>
 <li><p><strong>no_data_timeframe</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of minutes before a monitor notifies after data stops reporting.
 Datadog recommends at least 2x the monitor timeframe for query alerts or 2 minutes for service checks.
 If omitted, 2x the evaluation timeframe is used for query alerts, and 24 hours is used for service checks.</p></li>
+<li><p><strong>notification_preset_name</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets" title="datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets"><em>MonitorOptionsNotificationPresets</em></a><em>, </em><em>optional</em>) – Toggles the display of additional content sent in the monitor notification.</p></li>
 <li><p><strong>notify_audit</strong> (<em>bool</em><em>, </em><em>optional</em>) – A Boolean indicating whether tagged users is notified on changes to this monitor.</p></li>
 <li><p><strong>notify_by</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Controls what granularity a monitor alerts on. Only available for monitors with groupings.
 For instance, a monitor grouped by <code class="docutils literal notranslate"><span class="pre">cluster</span></code> , <code class="docutils literal notranslate"><span class="pre">namespace</span></code> , and <code class="docutils literal notranslate"><span class="pre">pod</span></code> can be configured to only notify on each
@@ -16112,6 +16125,33 @@ otherwise some evaluations are skipped. Default is false.</p></li>
 <li><p><strong>group_by</strong> (<em>str</em><em>, </em><em>optional</em>) – Group to break down the monitor on.</p></li>
 <li><p><strong>metric</strong> (<em>str</em><em>, </em><em>optional</em>) – Metric name used in the monitor.</p></li>
 <li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – Metric type used in the monitor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.monitor_options_notification_presets">
+<span id="monitor-options-notification-presets"></span><h2 id="module-datadog_api_client.v1.model.monitor_options_notification_presets">monitor_options_notification_presets<a class="headerlink" href="#module-datadog_api_client.v1.model.monitor_options_notification_presets" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorOptionsNotificationPresets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.monitor_options_notification_presets.MonitorOptionsNotificationPresets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>Toggles the display of additional content sent in the monitor notification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “show_all”. Must be one of [“show_all”, “hide_query”, “hide_handles”, “hide_all”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
