@@ -23984,9 +23984,11 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of the rule.</p></li>
-<li><p><strong>excluded_attributes</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Attributes excluded from the scan.</p></li>
+<li><p><strong>excluded_namespaces</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Attributes excluded from the scan. If namespaces is provided, it has to be a sub-path of the namespaces array.</p></li>
 <li><p><strong>is_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the rule is enabled.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the rule.</p></li>
+<li><p><strong>namespaces</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Attributes included in the scan. If namespaces is empty or missing, all attributes except excluded_namespaces are scanned.
+If both are missing the whole event is scanned.</p></li>
 <li><p><strong>pattern</strong> (<em>str</em><em>, </em><em>optional</em>) – Not included if there is a relationship to a standard pattern.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of tags.</p></li>
 <li><p><strong>text_replacement</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.sensitive_data_scanner_text_replacement.SensitiveDataScannerTextReplacement" title="datadog_api_client.v2.model.sensitive_data_scanner_text_replacement.SensitiveDataScannerTextReplacement"><em>SensitiveDataScannerTextReplacement</em></a><em>, </em><em>optional</em>) – Object describing how the scanned event will be replaced.</p></li>
