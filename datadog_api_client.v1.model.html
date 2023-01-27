@@ -15699,8 +15699,9 @@ type conversion is done.</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – Start of the time window, milliseconds since Unix epoch.</p></li>
 <li><p><strong>tag_set</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Unique tags identifying this series.</p></li>
 <li><p><strong>unit</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit" title="datadog_api_client.v1.model.metrics_query_unit.MetricsQueryUnit"><em>MetricsQueryUnit</em></a><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – Detailed information about the metric unit.
-First element describes the “primary unit” (for example, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ),
-second describes the “per unit” (for example, <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ).</p></li>
+The first element describes the “primary unit” (for example, <code class="docutils literal notranslate"><span class="pre">bytes</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ).
+The second element describes the “per unit” (for example, <code class="docutils literal notranslate"><span class="pre">second</span></code> in <code class="docutils literal notranslate"><span class="pre">bytes</span> <span class="pre">per</span> <span class="pre">second</span></code> ).
+If the second element is not present, the API returns null.</p></li>
 </ul>
 </dd>
 </dl>
