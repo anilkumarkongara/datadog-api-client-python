@@ -13967,6 +13967,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>compute</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.list_stream_compute_items.ListStreamComputeItems" title="datadog_api_client.v1.model.list_stream_compute_items.ListStreamComputeItems"><em>ListStreamComputeItems</em></a><em>]</em><em>, </em><em>optional</em>) – Compute configuration for the List Stream Widget. Compute can be used only with the logs_transaction_stream (from 1 to 5 items) list stream source.</p></li>
 <li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.list_stream_source.ListStreamSource" title="datadog_api_client.v1.model.list_stream_source.ListStreamSource"><em>ListStreamSource</em></a>) – Source from which to query items to display in the stream.</p></li>
+<li><p><strong>event_size</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.widget_event_size.WidgetEventSize" title="datadog_api_client.v1.model.widget_event_size.WidgetEventSize"><em>WidgetEventSize</em></a><em>, </em><em>optional</em>) – Size to use to display an event.</p></li>
 <li><p><strong>group_by</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.list_stream_group_by_items.ListStreamGroupByItems" title="datadog_api_client.v1.model.list_stream_group_by_items.ListStreamGroupByItems"><em>ListStreamGroupByItems</em></a><em>]</em><em>, </em><em>optional</em>) – Group by configuration for the List Stream Widget. Group by can be used only with logs_pattern_stream (up to 3 items) or logs_transaction_stream (one group by item is required) list stream source.</p></li>
 <li><p><strong>indexes</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of indexes.</p></li>
 <li><p><strong>query_string</strong> (<em>str</em>) – Widget query.</p></li>
@@ -14013,7 +14014,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “apm_issue_stream”. Must be one of [“logs_stream”, “audit_stream”, “rum_issue_stream”, “apm_issue_stream”, “logs_pattern_stream”, “logs_transaction_stream”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “apm_issue_stream”. Must be one of [“logs_stream”, “audit_stream”, “rum_issue_stream”, “apm_issue_stream”, “logs_pattern_stream”, “logs_transaction_stream”, “event_stream”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
