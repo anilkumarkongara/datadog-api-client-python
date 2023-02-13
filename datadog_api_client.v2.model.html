@@ -19319,11 +19319,11 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MetricsDataSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
-<p>A data source that is powered by the Metrics backend.</p>
+<p>A data source that is powered by the Metrics platform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “metrics”. Must be one of [“metrics”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “metrics”. Must be one of [“metrics”, “cloud_cost”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -19351,7 +19351,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregator</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_aggregator.MetricsAggregator" title="datadog_api_client.v2.model.metrics_aggregator.MetricsAggregator"><em>MetricsAggregator</em></a>) – The type of aggregation that can be performed on metrics queries.</p></li>
-<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics backend.</p></li>
+<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics platform.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The variable name for use in formulas.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – A classic metrics query string.</p></li>
 </ul>
@@ -19369,7 +19369,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics backend.</p></li>
+<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics platform.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The variable name for use in formulas.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – A classic metrics query string.</p></li>
 </ul>
@@ -22242,7 +22242,7 @@ If the second element is not present, the API returns null.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregator</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_aggregator.MetricsAggregator" title="datadog_api_client.v2.model.metrics_aggregator.MetricsAggregator"><em>MetricsAggregator</em></a>) – The type of aggregation that can be performed on metrics queries.</p></li>
-<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics backend.</p></li>
+<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics platform.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The variable name for use in formulas.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – A classic metrics query string.</p></li>
 <li><p><strong>compute</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.events_compute.EventsCompute" title="datadog_api_client.v2.model.events_compute.EventsCompute"><em>EventsCompute</em></a>) – The instructions for what to compute for this query.</p></li>
@@ -25728,7 +25728,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics backend.</p></li>
+<li><p><strong>data_source</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.metrics_data_source.MetricsDataSource" title="datadog_api_client.v2.model.metrics_data_source.MetricsDataSource"><em>MetricsDataSource</em></a>) – A data source that is powered by the Metrics platform.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The variable name for use in formulas.</p></li>
 <li><p><strong>query</strong> (<em>str</em>) – A classic metrics query string.</p></li>
 <li><p><strong>compute</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.events_compute.EventsCompute" title="datadog_api_client.v2.model.events_compute.EventsCompute"><em>EventsCompute</em></a>) – The instructions for what to compute for this query.</p></li>
