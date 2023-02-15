@@ -2973,6 +2973,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_state" class="md-nav__link">slo_state</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_state.SLOState" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOState</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_status" class="md-nav__link">slo_status</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_status.SLOStatus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOStatus</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_threshold" class="md-nav__link">slo_threshold</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_threshold.SLOThreshold" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOThreshold</span></code></a>
@@ -8065,6 +8077,18 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_response_data" class="md-nav__link">slo_response_data</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_response_data.SLOResponseData" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOResponseData</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_state" class="md-nav__link">slo_state</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_state.SLOState" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOState</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.slo_status" class="md-nav__link">slo_status</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.slo_status.SLOStatus" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SLOStatus</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -18471,6 +18495,7 @@ to be used because this will sum up all request counts instead of averaging them
 min of all of those requests.</p></li>
 <li><p><strong>service_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags with the <code class="docutils literal notranslate"><span class="pre">service</span></code> tag key.</p></li>
 <li><p><strong>slo_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_type.SLOType" title="datadog_api_client.v1.model.slo_type.SLOType"><em>SLOType</em></a><em>, </em><em>optional</em>) – The type of the service level objective.</p></li>
+<li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_status.SLOStatus" title="datadog_api_client.v1.model.slo_status.SLOStatus"><em>SLOStatus</em></a><em>, </em><em>optional</em>) – Status of the SLO’s primary timeframe.</p></li>
 <li><p><strong>team_tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Tags with the <code class="docutils literal notranslate"><span class="pre">team</span></code> tag key.</p></li>
 <li><p><strong>thresholds</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.search_slo_threshold.SearchSLOThreshold" title="datadog_api_client.v1.model.search_slo_threshold.SearchSLOThreshold"><em>SearchSLOThreshold</em></a><em>]</em><em>, </em><em>optional</em>) – The thresholds (timeframes and associated targets) for this service level
 objective object.</p></li>
@@ -20025,10 +20050,12 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>error</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Error message if SLO status or error budget could not be calculated.</p></li>
+<li><p><strong>error_budget_remaining</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Remaining error budget of the SLO in percentage.</p></li>
 <li><p><strong>indexed_at</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp (UNIX time in seconds) of when the SLO status and error budget
 were calculated.</p></li>
-<li><p><strong>raw_error_budget_remaining</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining" title="datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining"><em>SLORawErrorBudgetRemaining</em></a><em>, </em><em>optional</em>) – Error budget remaining for an SLO.</p></li>
-<li><p><strong>span_precision</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to.</p></li>
+<li><p><strong>raw_error_budget_remaining</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining" title="datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining"><em>SLORawErrorBudgetRemaining</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Error budget remaining for an SLO.</p></li>
+<li><p><strong>span_precision</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_state.SLOState" title="datadog_api_client.v1.model.slo_state.SLOState"><em>SLOState</em></a><em>, </em><em>optional</em>) – State of the SLO.</p></li>
 <li><p><strong>status</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The status of the SLO.</p></li>
 <li><p><strong>target</strong> (<em>float</em><em>, </em><em>optional</em>) – The target of the SLO.</p></li>
 <li><p><strong>timeframe</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_timeframe.SLOTimeframe" title="datadog_api_client.v1.model.slo_timeframe.SLOTimeframe"><em>SLOTimeframe</em></a><em>, </em><em>optional</em>) – The SLO time window options.</p></li>
@@ -20129,6 +20156,56 @@ objective object.</p></li>
 below this value for the given threshold, but above the target threshold, the
 objective appears in a “warning” state. This value must be greater than the target
 threshold.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.slo_state">
+<span id="slo-state"></span><h2 id="module-datadog_api_client.v1.model.slo_state">slo_state<a class="headerlink" href="#module-datadog_api_client.v1.model.slo_state" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.slo_state.SLOState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SLOState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.slo_state.SLOState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>State of the SLO.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“breached”, “warning”, “ok”, “no_data”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.slo_status">
+<span id="slo-status"></span><h2 id="module-datadog_api_client.v1.model.slo_status">slo_status<a class="headerlink" href="#module-datadog_api_client.v1.model.slo_status" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.slo_status.SLOStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SLOStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.slo_status.SLOStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Status of the SLO’s primary timeframe.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calculation_error</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Error message if SLO status or error budget could not be calculated.</p></li>
+<li><p><strong>error_budget_remaining</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Remaining error budget of the SLO in percentage.</p></li>
+<li><p><strong>indexed_at</strong> (<em>int</em><em>, </em><em>optional</em>) – timestamp (UNIX time in seconds) of when the SLO status and error budget
+were calculated.</p></li>
+<li><p><strong>raw_error_budget_remaining</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining" title="datadog_api_client.v1.model.slo_raw_error_budget_remaining.SLORawErrorBudgetRemaining"><em>SLORawErrorBudgetRemaining</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Error budget remaining for an SLO.</p></li>
+<li><p><strong>sli</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The current service level indicator (SLI) of the SLO, also known as ‘status’. This is a percentage value from 0-100 (inclusive).</p></li>
+<li><p><strong>span_precision</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of decimal places the SLI value is accurate to.</p></li>
+<li><p><strong>state</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_state.SLOState" title="datadog_api_client.v1.model.slo_state.SLOState"><em>SLOState</em></a><em>, </em><em>optional</em>) – State of the SLO.</p></li>
 </ul>
 </dd>
 </dl>
