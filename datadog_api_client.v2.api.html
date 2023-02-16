@@ -711,6 +711,20 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.restriction_policies_api" class="md-nav__link">restriction_policies_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.delete_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.delete_restriction_policy()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.get_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.get_restriction_policy()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.update_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.update_restriction_policy()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.roles_api" class="md-nav__link">roles_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.roles_api.RolesApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RolesApi</span></code></a><nav class="md-nav">
@@ -1777,6 +1791,20 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ProcessesApi.list_processes()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.processes_api.ProcessesApi.list_processes_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ProcessesApi.list_processes_with_pagination()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.restriction_policies_api" class="md-nav__link">restriction_policies_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.delete_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.delete_restriction_policy()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.get_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.get_restriction_policy()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.update_restriction_policy" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">RestrictionPoliciesApi.update_restriction_policy()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -4484,6 +4512,70 @@ This key is provided with each valid response from the API in <code class="docut
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.process_summary.ProcessSummary" title="datadog_api_client.v2.model.process_summary.ProcessSummary">ProcessSummary</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.restriction_policies_api">
+<span id="restriction-policies-api"></span><h2 id="module-datadog_api_client.v2.api.restriction_policies_api">restriction_policies_api<a class="headerlink" href="#module-datadog_api_client.v2.api.restriction_policies_api" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RestrictionPoliciesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A restriction policy defines the access control rules for a resource, mapping a set of relations
+(such as editor and viewer) to a set of allowed principals (such as roles). The restriction policy
+determines who is authorized to perform what actions on the resource.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.delete_restriction_policy">
+<span class="sig-name descname"><span class="pre">delete_restriction_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.delete_restriction_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a restriction policy.</p>
+<p>Deletes the restriction policy associated with a specified resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resource_id</strong> (<em>str</em>) – Identifier, formatted as <code class="docutils literal notranslate"><span class="pre">type:id</span></code>. Supported types: <code class="docutils literal notranslate"><span class="pre">connection</span></code> , <code class="docutils literal notranslate"><span class="pre">dashboard</span></code> , <code class="docutils literal notranslate"><span class="pre">notebook</span></code> , <code class="docutils literal notranslate"><span class="pre">security-rule</span></code>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.get_restriction_policy">
+<span class="sig-name descname"><span class="pre">get_restriction_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse" title="datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse"><span class="pre">RestrictionPolicyResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.get_restriction_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a restriction policy.</p>
+<p>Retrieves the restriction policy associated with a specified resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>resource_id</strong> (<em>str</em>) – Identifier, formatted as <code class="docutils literal notranslate"><span class="pre">type:id</span></code>. Supported types: <code class="docutils literal notranslate"><span class="pre">connection</span></code> , <code class="docutils literal notranslate"><span class="pre">dashboard</span></code> , <code class="docutils literal notranslate"><span class="pre">notebook</span></code> , <code class="docutils literal notranslate"><span class="pre">security-rule</span></code>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse" title="datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse">RestrictionPolicyResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.update_restriction_policy">
+<span class="sig-name descname"><span class="pre">update_restriction_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_update_request.RestrictionPolicyUpdateRequest" title="datadog_api_client.v2.model.restriction_policy_update_request.RestrictionPolicyUpdateRequest"><span class="pre">RestrictionPolicyUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse" title="datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse"><span class="pre">RestrictionPolicyResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.update_restriction_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a restriction policy.</p>
+<p>Updates the restriction policy associated with a resource.</p>
+<p><strong>Supported resources</strong></p>
+<p>Restriction policies can be applied to the following resources:</p>
+<ul class="simple">
+<li><p>Connections: <code class="docutils literal notranslate"><span class="pre">connection</span></code></p></li>
+<li><p>Dashboards: <code class="docutils literal notranslate"><span class="pre">dashboard</span></code></p></li>
+<li><p>Notebooks: <code class="docutils literal notranslate"><span class="pre">notebook</span></code></p></li>
+<li><p>Security Rules: <code class="docutils literal notranslate"><span class="pre">security-rule</span></code></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_id</strong> (<em>str</em>) – Identifier, formatted as <code class="docutils literal notranslate"><span class="pre">type:id</span></code>. Supported types: <code class="docutils literal notranslate"><span class="pre">connection</span></code> , <code class="docutils literal notranslate"><span class="pre">dashboard</span></code> , <code class="docutils literal notranslate"><span class="pre">notebook</span></code> , <code class="docutils literal notranslate"><span class="pre">security-rule</span></code>.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_update_request.RestrictionPolicyUpdateRequest" title="datadog_api_client.v2.model.restriction_policy_update_request.RestrictionPolicyUpdateRequest"><em>RestrictionPolicyUpdateRequest</em></a>) – Restriction policy payload</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse" title="datadog_api_client.v2.model.restriction_policy_response.RestrictionPolicyResponse">RestrictionPolicyResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
