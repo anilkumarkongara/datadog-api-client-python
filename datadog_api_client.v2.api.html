@@ -515,6 +515,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.ip_allowlist_api" class="md-nav__link">ip_allowlist_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi.get_ip_allowlist()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.update_ip_allowlist" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi.update_ip_allowlist()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.key_management_api" class="md-nav__link">key_management_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.key_management_api.KeyManagementApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">KeyManagementApi</span></code></a><nav class="md-nav">
@@ -1607,6 +1619,18 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.incidents_api.IncidentsApi.update_incident_attachments" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IncidentsApi.update_incident_attachments()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.ip_allowlist_api" class="md-nav__link">ip_allowlist_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi.get_ip_allowlist()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.update_ip_allowlist" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPAllowlistApi.update_ip_allowlist()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -3410,6 +3434,38 @@ those facets joined by <code class="docutils literal notranslate"><span class="p
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_attachment_update_response.IncidentAttachmentUpdateResponse" title="datadog_api_client.v2.model.incident_attachment_update_response.IncidentAttachmentUpdateResponse">IncidentAttachmentUpdateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.ip_allowlist_api">
+<span id="ip-allowlist-api"></span><h2 id="module-datadog_api_client.v2.api.ip_allowlist_api">ip_allowlist_api<a class="headerlink" href="#module-datadog_api_client.v2.api.ip_allowlist_api" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IPAllowlistApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The IP allowlist API is used to manage the IP addresses that
+can access the Datadog API and UI.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist">
+<span class="sig-name descname"><span class="pre">get_ip_allowlist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse" title="datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse"><span class="pre">IPAllowlistResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get IP Allowlist.</p>
+<p>Returns the IP allowlist and its enabled or disabled state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse" title="datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse">IPAllowlistResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.update_ip_allowlist">
+<span class="sig-name descname"><span class="pre">update_ip_allowlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_update_request.IPAllowlistUpdateRequest" title="datadog_api_client.v2.model.ip_allowlist_update_request.IPAllowlistUpdateRequest"><span class="pre">IPAllowlistUpdateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse" title="datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse"><span class="pre">IPAllowlistResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.update_ip_allowlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update IP Allowlist.</p>
+<p>Edit the entries in the IP allowlist, and enable or disable it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse" title="datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse">IPAllowlistResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
