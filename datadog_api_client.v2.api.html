@@ -893,6 +893,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.synthetics_api" class="md-nav__link">synthetics_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.get_on_demand_concurrency_cap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.get_on_demand_concurrency_cap()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.set_on_demand_concurrency_cap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.set_on_demand_concurrency_cap()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.usage_metering_api" class="md-nav__link">usage_metering_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.usage_metering_api.UsageMeteringApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsageMeteringApi</span></code></a><nav class="md-nav">
@@ -1973,6 +1985,18 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.service_definition_api.ServiceDefinitionApi.get_service_definition" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionApi.get_service_definition()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.service_definition_api.ServiceDefinitionApi.list_service_definitions" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionApi.list_service_definitions()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.synthetics_api" class="md-nav__link">synthetics_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.get_on_demand_concurrency_cap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.get_on_demand_concurrency_cap()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.set_on_demand_concurrency_cap" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.set_on_demand_concurrency_cap()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -5541,6 +5565,46 @@ attribute with a minus sign.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.service_definitions_list_response.ServiceDefinitionsListResponse" title="datadog_api_client.v2.model.service_definitions_list_response.ServiceDefinitionsListResponse">ServiceDefinitionsListResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.synthetics_api">
+<span id="synthetics-api"></span><h2 id="module-datadog_api_client.v2.api.synthetics_api">synthetics_api<a class="headerlink" href="#module-datadog_api_client.v2.api.synthetics_api" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.synthetics_api.SyntheticsApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Datadog Synthetics uses simulated user requests and browser rendering to help you ensure uptime,
+identify regional issues, and track your application performance. Datadog Synthetics tests come in
+two different flavors, <a class="reference external" href="https://docs.datadoghq.com/synthetics/api_tests/">API tests</a>
+and <a class="reference external" href="https://docs.datadoghq.com/synthetics/browser_tests">browser tests</a>. You can use Datadog’s API to
+manage both test types programmatically.</p>
+<p>For more information about Synthetics, see the <a class="reference external" href="https://docs.datadoghq.com/synthetics/">Synthetics overview</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.synthetics_api.SyntheticsApi.get_on_demand_concurrency_cap">
+<span class="sig-name descname"><span class="pre">get_on_demand_concurrency_cap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse" title="datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse"><span class="pre">OnDemandConcurrencyCapResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.get_on_demand_concurrency_cap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the on-demand concurrency cap.</p>
+<p>Get the on-demand concurrency cap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse" title="datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse">OnDemandConcurrencyCapResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.synthetics_api.SyntheticsApi.set_on_demand_concurrency_cap">
+<span class="sig-name descname"><span class="pre">set_on_demand_concurrency_cap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_attributes.OnDemandConcurrencyCapAttributes" title="datadog_api_client.v2.model.on_demand_concurrency_cap_attributes.OnDemandConcurrencyCapAttributes"><span class="pre">OnDemandConcurrencyCapAttributes</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse" title="datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse"><span class="pre">OnDemandConcurrencyCapResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.set_on_demand_concurrency_cap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save new value for on-demand concurrency cap.</p>
+<p>Save new value for on-demand concurrency cap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_attributes.OnDemandConcurrencyCapAttributes" title="datadog_api_client.v2.model.on_demand_concurrency_cap_attributes.OnDemandConcurrencyCapAttributes"><em>OnDemandConcurrencyCapAttributes</em></a>) – <p>.</p>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse" title="datadog_api_client.v2.model.on_demand_concurrency_cap_response.OnDemandConcurrencyCapResponse">OnDemandConcurrencyCapResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
