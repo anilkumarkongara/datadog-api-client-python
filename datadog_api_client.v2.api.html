@@ -3446,7 +3446,10 @@ those facets joined by <code class="docutils literal notranslate"><span class="p
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IPAllowlistApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The IP allowlist API is used to manage the IP addresses that
-can access the Datadog API and UI.</p>
+can access the Datadog API and web UI. It does not block
+access to intake APIs or public dashboards.</p>
+<p>This is an enterprise-only feature. Request access by
+contacting Datadog support.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist">
 <span class="sig-name descname"><span class="pre">get_ip_allowlist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse" title="datadog_api_client.v2.model.ip_allowlist_response.IPAllowlistResponse"><span class="pre">IPAllowlistResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.ip_allowlist_api.IPAllowlistApi.get_ip_allowlist" title="Permalink to this definition">¶</a></dt>
