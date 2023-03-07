@@ -10768,7 +10768,7 @@ type conversion is done.</p></li>
 <p>Cancel downtimes according to scope.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>scope</strong> (<em>str</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
+<dd class="field-odd"><p><strong>scope</strong> (<em>str</em>) – The scope(s) to which the downtime applies and must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
 The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p>
 </dd>
@@ -11732,7 +11732,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">servic
 <li><p><strong>mute_first_recovery_notification</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the first recovery notification during a downtime should be muted.</p></li>
 <li><p><strong>parent_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the parent Downtime.</p></li>
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
-<li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
+<li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies and must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
 The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp to start the downtime.
@@ -11776,7 +11776,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">servic
 <li><p><strong>mute_first_recovery_notification</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the first recovery notification during a downtime should be muted.</p></li>
 <li><p><strong>parent_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the parent Downtime.</p></li>
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
-<li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
+<li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies and must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
 Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
 The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p></li>
 <li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp to start the downtime.
