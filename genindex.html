@@ -1107,10 +1107,10 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rules_list_response.CloudWorkloadSecurityAgentRulesListResponse">CloudWorkloadSecurityAgentRulesListResponse (class in datadog_api_client.v2.model.cloud_workload_security_agent_rules_list_response)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_type.CloudWorkloadSecurityAgentRuleType">CloudWorkloadSecurityAgentRuleType (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_type)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_update_attributes.CloudWorkloadSecurityAgentRuleUpdateAttributes">CloudWorkloadSecurityAgentRuleUpdateAttributes (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_update_attributes)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_update_data.CloudWorkloadSecurityAgentRuleUpdateData">CloudWorkloadSecurityAgentRuleUpdateData (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_update_data)</a>
@@ -1290,6 +1290,12 @@
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.create_synthetics_browser_test">create_synthetics_browser_test() (SyntheticsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.metrics_api.MetricsApi.create_tag_configuration">create_tag_configuration() (MetricsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.create_team">create_team() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.create_team_link">create_team_link() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.create_team_membership">create_team_membership() (TeamsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.users_api.UsersApi.create_user">create_user() (UsersApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.users_api.UsersApi.create_user">[1]</a>
 </li>
@@ -7366,6 +7372,13 @@
 </li>
       </ul></li>
       <li>
+    datadog_api_client.v2.api.teams_api
+
+      <ul>
+        <li><a href="datadog_api_client.v2.api.html#module-datadog_api_client.v2.api.teams_api">module</a>
+</li>
+      </ul></li>
+      <li>
     datadog_api_client.v2.api.usage_metering_api
 
       <ul>
@@ -7554,8 +7567,6 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.application_keys_type">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v2.model.audit_logs_event
 
@@ -7752,6 +7763,8 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.authn_mappings_response">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v2.model.authn_mappings_sort
 
@@ -8905,6 +8918,27 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.full_application_key_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.get_all_teams_include
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_include">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.get_all_teams_sort
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_sort">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.get_team_memberships_sort
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_team_memberships_sort">module</a>
 </li>
       </ul></li>
       <li>
@@ -11358,6 +11392,20 @@
 </li>
       </ul></li>
       <li>
+    datadog_api_client.v2.model.relationship_to_team_link_data
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_team_link_data">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.relationship_to_team_links
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_team_links">module</a>
+</li>
+      </ul></li>
+      <li>
     datadog_api_client.v2.model.relationship_to_user
 
       <ul>
@@ -11369,6 +11417,34 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_data">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.relationship_to_user_team_permission
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_permission">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.relationship_to_user_team_permission_data
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_permission_data">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.relationship_to_user_team_user
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_user">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.relationship_to_user_team_user_data
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_user_data">module</a>
 </li>
       </ul></li>
       <li>
@@ -13248,6 +13324,244 @@
 </li>
       </ul></li>
       <li>
+    datadog_api_client.v2.model.team
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_create
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_create_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_create_relationships
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_relationships">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_create_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_data
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_data">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_included
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_included">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link_create
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_create">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link_create_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_create_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_link_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_links_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_links_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_serializer_action
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_serializer_action">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_update
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_update_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_update_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_value
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_value">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_setting_values
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_values">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_permission_settings_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_settings_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_relationships
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_relationships">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_update
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_update_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_update_relationships
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_relationships">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.team_update_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.teams_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.teams_response">module</a>
+</li>
+      </ul></li>
+      <li>
     datadog_api_client.v2.model.timeseries_formula_query_request
 
       <ul>
@@ -13525,6 +13839,111 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_response_relationships">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_create
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_create">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_permission
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_permission_attributes
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission_attributes">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_permission_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_relationships
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_relationships">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_role
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_role">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_update
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_update">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_update_request
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_update_request">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_team_user_type
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_user_type">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.user_teams_response
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_teams_response">module</a>
 </li>
       </ul></li>
       <li>
@@ -13978,6 +14397,8 @@
         <li><a href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple.get">(ModelSimple method)</a>
 </li>
       </ul></li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_all_teams">get_all_teams() (TeamsApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.key_management_api.KeyManagementApi.get_api_key">get_api_key() (KeyManagementApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.key_management_api.KeyManagementApi.get_api_key">[1]</a>
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.configuration.Configuration.get_api_key_with_prefix">get_api_key_with_prefix() (Configuration method)</a>
@@ -14096,8 +14517,6 @@
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_monthly_usage_attribution">get_monthly_usage_attribution() (UsageMeteringApi method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.notebooks_api.NotebooksApi.get_notebook">get_notebook() (NotebooksApi method)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.synthetics_api.SyntheticsApi.get_on_demand_concurrency_cap">get_on_demand_concurrency_cap() (SyntheticsApi method)</a>
@@ -14108,6 +14527,8 @@
         <li><a href="datadog_api_client.html#datadog_api_client.model_utils.ModelComposed.get_oneof_instance">(ModelComposed method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.opsgenie_integration_api.OpsgenieIntegrationApi.get_opsgenie_service">get_opsgenie_service() (OpsgenieIntegrationApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.organizations_api.OrganizationsApi.get_org">get_org() (OrganizationsApi method)</a>
@@ -14155,6 +14576,16 @@
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_specified_monthly_custom_reports">get_specified_monthly_custom_reports() (UsageMeteringApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.get_synthetics_ci_batch">get_synthetics_ci_batch() (SyntheticsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_team">get_team() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_team_link">get_team_link() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_team_links">get_team_links() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_team_memberships">get_team_memberships() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_team_permission_settings">get_team_permission_settings() (TeamsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.get_test">get_test() (SyntheticsApi method)</a>
 </li>
@@ -14231,6 +14662,12 @@
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.get_webhooks_integration">get_webhooks_integration() (WebhooksIntegrationApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.get_webhooks_integration_custom_variable">get_webhooks_integration_custom_variable() (WebhooksIntegrationApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_all_teams_include.GetAllTeamsInclude">GetAllTeamsInclude (class in datadog_api_client.v2.model.get_all_teams_include)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_all_teams_sort.GetAllTeamsSort">GetAllTeamsSort (class in datadog_api_client.v2.model.get_all_teams_sort)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_team_memberships_sort.GetTeamMembershipsSort">GetTeamMembershipsSort (class in datadog_api_client.v2.model.get_team_memberships_sort)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.graph_snapshot.GraphSnapshot">GraphSnapshot (class in datadog_api_client.v1.model.graph_snapshot)</a>
 </li>
@@ -17050,6 +17487,8 @@
 </li>
         <li><a href="datadog_api_client.v2.api.html#module-datadog_api_client.v2.api.synthetics_api">datadog_api_client.v2.api.synthetics_api</a>
 </li>
+        <li><a href="datadog_api_client.v2.api.html#module-datadog_api_client.v2.api.teams_api">datadog_api_client.v2.api.teams_api</a>
+</li>
         <li><a href="datadog_api_client.v2.api.html#module-datadog_api_client.v2.api.usage_metering_api">datadog_api_client.v2.api.usage_metering_api</a>
 </li>
         <li><a href="datadog_api_client.v2.api.html#module-datadog_api_client.v2.api.users_api">datadog_api_client.v2.api.users_api</a>
@@ -17489,6 +17928,12 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.full_application_key">datadog_api_client.v2.model.full_application_key</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.full_application_key_attributes">datadog_api_client.v2.model.full_application_key_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_include">datadog_api_client.v2.model.get_all_teams_include</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_sort">datadog_api_client.v2.model.get_all_teams_sort</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_team_memberships_sort">datadog_api_client.v2.model.get_team_memberships_sort</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.group_scalar_column">datadog_api_client.v2.model.group_scalar_column</a>
 </li>
@@ -18190,9 +18635,21 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_saml_assertion_attribute_data">datadog_api_client.v2.model.relationship_to_saml_assertion_attribute_data</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_team_link_data">datadog_api_client.v2.model.relationship_to_team_link_data</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_team_links">datadog_api_client.v2.model.relationship_to_team_links</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user">datadog_api_client.v2.model.relationship_to_user</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_data">datadog_api_client.v2.model.relationship_to_user_data</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_permission">datadog_api_client.v2.model.relationship_to_user_team_permission</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_permission_data">datadog_api_client.v2.model.relationship_to_user_team_permission_data</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_user">datadog_api_client.v2.model.relationship_to_user_team_user</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_user_team_user_data">datadog_api_client.v2.model.relationship_to_user_team_user_data</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.relationship_to_users">datadog_api_client.v2.model.relationship_to_users</a>
 </li>
@@ -18730,6 +19187,74 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.tags_event_attribute">datadog_api_client.v2.model.tags_event_attribute</a>
 </li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team">datadog_api_client.v2.model.team</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_attributes">datadog_api_client.v2.model.team_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create">datadog_api_client.v2.model.team_create</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_attributes">datadog_api_client.v2.model.team_create_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_relationships">datadog_api_client.v2.model.team_create_relationships</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_create_request">datadog_api_client.v2.model.team_create_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_data">datadog_api_client.v2.model.team_data</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_included">datadog_api_client.v2.model.team_included</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link">datadog_api_client.v2.model.team_link</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_attributes">datadog_api_client.v2.model.team_link_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_create">datadog_api_client.v2.model.team_link_create</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_create_request">datadog_api_client.v2.model.team_link_create_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_response">datadog_api_client.v2.model.team_link_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_link_type">datadog_api_client.v2.model.team_link_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_links_response">datadog_api_client.v2.model.team_links_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting">datadog_api_client.v2.model.team_permission_setting</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_attributes">datadog_api_client.v2.model.team_permission_setting_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_response">datadog_api_client.v2.model.team_permission_setting_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_serializer_action">datadog_api_client.v2.model.team_permission_setting_serializer_action</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_type">datadog_api_client.v2.model.team_permission_setting_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update">datadog_api_client.v2.model.team_permission_setting_update</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update_attributes">datadog_api_client.v2.model.team_permission_setting_update_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_update_request">datadog_api_client.v2.model.team_permission_setting_update_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_value">datadog_api_client.v2.model.team_permission_setting_value</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_setting_values">datadog_api_client.v2.model.team_permission_setting_values</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_permission_settings_response">datadog_api_client.v2.model.team_permission_settings_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_relationships">datadog_api_client.v2.model.team_relationships</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_response">datadog_api_client.v2.model.team_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_type">datadog_api_client.v2.model.team_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update">datadog_api_client.v2.model.team_update</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_attributes">datadog_api_client.v2.model.team_update_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_relationships">datadog_api_client.v2.model.team_update_relationships</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.team_update_request">datadog_api_client.v2.model.team_update_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.teams_response">datadog_api_client.v2.model.teams_response</a>
+</li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.timeseries_formula_query_request">datadog_api_client.v2.model.timeseries_formula_query_request</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.timeseries_formula_query_response">datadog_api_client.v2.model.timeseries_formula_query_response</a>
@@ -18809,6 +19334,36 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_response_included_item">datadog_api_client.v2.model.user_response_included_item</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_response_relationships">datadog_api_client.v2.model.user_response_relationships</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team">datadog_api_client.v2.model.user_team</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_attributes">datadog_api_client.v2.model.user_team_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_create">datadog_api_client.v2.model.user_team_create</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission">datadog_api_client.v2.model.user_team_permission</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission_attributes">datadog_api_client.v2.model.user_team_permission_attributes</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_permission_type">datadog_api_client.v2.model.user_team_permission_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_relationships">datadog_api_client.v2.model.user_team_relationships</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_request">datadog_api_client.v2.model.user_team_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_response">datadog_api_client.v2.model.user_team_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_role">datadog_api_client.v2.model.user_team_role</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_type">datadog_api_client.v2.model.user_team_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_update">datadog_api_client.v2.model.user_team_update</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_update_request">datadog_api_client.v2.model.user_team_update_request</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_team_user_type">datadog_api_client.v2.model.user_team_user_type</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_teams_response">datadog_api_client.v2.model.user_teams_response</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.user_update_attributes">datadog_api_client.v2.model.user_update_attributes</a>
 </li>
@@ -19271,17 +19826,35 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_saml_assertion_attribute_data.RelationshipToSAMLAssertionAttributeData">RelationshipToSAMLAssertionAttributeData (class in datadog_api_client.v2.model.relationship_to_saml_assertion_attribute_data)</a>
 </li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_team_link_data.RelationshipToTeamLinkData">RelationshipToTeamLinkData (class in datadog_api_client.v2.model.relationship_to_team_link_data)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_team_links.RelationshipToTeamLinks">RelationshipToTeamLinks (class in datadog_api_client.v2.model.relationship_to_team_links)</a>
+</li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user.RelationshipToUser">RelationshipToUser (class in datadog_api_client.v2.model.relationship_to_user)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user_data.RelationshipToUserData">RelationshipToUserData (class in datadog_api_client.v2.model.relationship_to_user_data)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_users.RelationshipToUsers">RelationshipToUsers (class in datadog_api_client.v2.model.relationship_to_users)</a>
 </li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user_team_permission.RelationshipToUserTeamPermission">RelationshipToUserTeamPermission (class in datadog_api_client.v2.model.relationship_to_user_team_permission)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user_team_permission_data.RelationshipToUserTeamPermissionData">RelationshipToUserTeamPermissionData (class in datadog_api_client.v2.model.relationship_to_user_team_permission_data)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user_team_user.RelationshipToUserTeamUser">RelationshipToUserTeamUser (class in datadog_api_client.v2.model.relationship_to_user_team_user)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.relationship_to_user_team_user_data.RelationshipToUserTeamUserData">RelationshipToUserTeamUserData (class in datadog_api_client.v2.model.relationship_to_user_team_user_data)</a>
+</li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi.remove_permission_from_role">remove_permission_from_role() (RolesApi method)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.logs_archives_api.LogsArchivesApi.remove_role_from_archive">remove_role_from_archive() (LogsArchivesApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.slack_integration_api.SlackIntegrationApi.remove_slack_integration_channel">remove_slack_integration_channel() (SlackIntegrationApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team">remove_team() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team_link">remove_team_link() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team_membership">remove_team_membership() (TeamsApi method)</a>
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.model_utils.remove_uncoercible">remove_uncoercible() (in module datadog_api_client.model_utils)</a>
 </li>
@@ -19339,6 +19912,8 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_response_relationships.RoleResponseRelationships">RoleResponseRelationships (class in datadog_api_client.v2.model.role_response_relationships)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi">RolesApi (class in datadog_api_client.v2.api.roles_api)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_response.RolesResponse">RolesResponse (class in datadog_api_client.v2.model.roles_response)</a>
@@ -19347,8 +19922,6 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_type.RolesType">RolesType (class in datadog_api_client.v2.model.roles_type)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_update_attributes.RoleUpdateAttributes">RoleUpdateAttributes (class in datadog_api_client.v2.model.role_update_attributes)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_update_data.RoleUpdateData">RoleUpdateData (class in datadog_api_client.v2.model.role_update_data)</a>
@@ -20427,8 +21000,80 @@
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.target_format_type.TargetFormatType">TargetFormatType (class in datadog_api_client.v1.model.target_format_type)</a>
 </li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team.Team">Team (class in datadog_api_client.v2.model.team)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_attributes.TeamAttributes">TeamAttributes (class in datadog_api_client.v2.model.team_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_create.TeamCreate">TeamCreate (class in datadog_api_client.v2.model.team_create)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_create_attributes.TeamCreateAttributes">TeamCreateAttributes (class in datadog_api_client.v2.model.team_create_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_create_relationships.TeamCreateRelationships">TeamCreateRelationships (class in datadog_api_client.v2.model.team_create_relationships)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_create_request.TeamCreateRequest">TeamCreateRequest (class in datadog_api_client.v2.model.team_create_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_data.TeamData">TeamData (class in datadog_api_client.v2.model.team_data)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_included.TeamIncluded">TeamIncluded (class in datadog_api_client.v2.model.team_included)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link.TeamLink">TeamLink (class in datadog_api_client.v2.model.team_link)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link_attributes.TeamLinkAttributes">TeamLinkAttributes (class in datadog_api_client.v2.model.team_link_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link_create.TeamLinkCreate">TeamLinkCreate (class in datadog_api_client.v2.model.team_link_create)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link_create_request.TeamLinkCreateRequest">TeamLinkCreateRequest (class in datadog_api_client.v2.model.team_link_create_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link_response.TeamLinkResponse">TeamLinkResponse (class in datadog_api_client.v2.model.team_link_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_links_response.TeamLinksResponse">TeamLinksResponse (class in datadog_api_client.v2.model.team_links_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_link_type.TeamLinkType">TeamLinkType (class in datadog_api_client.v2.model.team_link_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting.TeamPermissionSetting">TeamPermissionSetting (class in datadog_api_client.v2.model.team_permission_setting)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_attributes.TeamPermissionSettingAttributes">TeamPermissionSettingAttributes (class in datadog_api_client.v2.model.team_permission_setting_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_response.TeamPermissionSettingResponse">TeamPermissionSettingResponse (class in datadog_api_client.v2.model.team_permission_setting_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_serializer_action.TeamPermissionSettingSerializerAction">TeamPermissionSettingSerializerAction (class in datadog_api_client.v2.model.team_permission_setting_serializer_action)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_settings_response.TeamPermissionSettingsResponse">TeamPermissionSettingsResponse (class in datadog_api_client.v2.model.team_permission_settings_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_type.TeamPermissionSettingType">TeamPermissionSettingType (class in datadog_api_client.v2.model.team_permission_setting_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_update.TeamPermissionSettingUpdate">TeamPermissionSettingUpdate (class in datadog_api_client.v2.model.team_permission_setting_update)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_update_attributes.TeamPermissionSettingUpdateAttributes">TeamPermissionSettingUpdateAttributes (class in datadog_api_client.v2.model.team_permission_setting_update_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_update_request.TeamPermissionSettingUpdateRequest">TeamPermissionSettingUpdateRequest (class in datadog_api_client.v2.model.team_permission_setting_update_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_value.TeamPermissionSettingValue">TeamPermissionSettingValue (class in datadog_api_client.v2.model.team_permission_setting_value)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_permission_setting_values.TeamPermissionSettingValues">TeamPermissionSettingValues (class in datadog_api_client.v2.model.team_permission_setting_values)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_relationships.TeamRelationships">TeamRelationships (class in datadog_api_client.v2.model.team_relationships)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_response.TeamResponse">TeamResponse (class in datadog_api_client.v2.model.team_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi">TeamsApi (class in datadog_api_client.v2.api.teams_api)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.teams_response.TeamsResponse">TeamsResponse (class in datadog_api_client.v2.model.teams_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_type.TeamType">TeamType (class in datadog_api_client.v2.model.team_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_update.TeamUpdate">TeamUpdate (class in datadog_api_client.v2.model.team_update)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_update_attributes.TeamUpdateAttributes">TeamUpdateAttributes (class in datadog_api_client.v2.model.team_update_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_update_relationships.TeamUpdateRelationships">TeamUpdateRelationships (class in datadog_api_client.v2.model.team_update_relationships)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.team_update_request.TeamUpdateRequest">TeamUpdateRequest (class in datadog_api_client.v2.model.team_update_request)</a>
+</li>
       <li><a href="datadog_api_client.html#datadog_api_client.api_client.ThreadedApiClient">ThreadedApiClient (class in datadog_api_client.api_client)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.timeseries_background.TimeseriesBackground">TimeseriesBackground (class in datadog_api_client.v1.model.timeseries_background)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.timeseries_background_type.TimeseriesBackgroundType">TimeseriesBackgroundType (class in datadog_api_client.v1.model.timeseries_background_type)</a>
@@ -20465,8 +21110,6 @@
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.timeseries_widget_definition.TimeseriesWidgetDefinition">TimeseriesWidgetDefinition (class in datadog_api_client.v1.model.timeseries_widget_definition)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.timeseries_widget_definition_type.TimeseriesWidgetDefinitionType">TimeseriesWidgetDefinitionType (class in datadog_api_client.v1.model.timeseries_widget_definition_type)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.timeseries_widget_expression_alias.TimeseriesWidgetExpressionAlias">TimeseriesWidgetExpressionAlias (class in datadog_api_client.v1.model.timeseries_widget_expression_alias)</a>
@@ -20653,6 +21296,14 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.metrics_api.MetricsApi.update_tag_configuration">update_tag_configuration() (MetricsApi method)</a>
 </li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.update_team">update_team() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.update_team_link">update_team_link() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.update_team_membership">update_team_membership() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.update_team_permission_setting">update_team_permission_setting() (TeamsApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.update_test_pause_status">update_test_pause_status() (SyntheticsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.users_api.UsersApi.update_user">update_user() (UsersApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.users_api.UsersApi.update_user">[1]</a>
@@ -20729,8 +21380,6 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.usage_data_object.UsageDataObject">UsageDataObject (class in datadog_api_client.v2.model.usage_data_object)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_dbm_hour.UsageDBMHour">UsageDBMHour (class in datadog_api_client.v1.model.usage_dbm_hour)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_dbm_response.UsageDBMResponse">UsageDBMResponse (class in datadog_api_client.v1.model.usage_dbm_response)</a>
@@ -20741,6 +21390,8 @@
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_host_hour.UsageHostHour">UsageHostHour (class in datadog_api_client.v1.model.usage_host_hour)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_hosts_response.UsageHostsResponse">UsageHostsResponse (class in datadog_api_client.v1.model.usage_hosts_response)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.usage_incident_management_hour.UsageIncidentManagementHour">UsageIncidentManagementHour (class in datadog_api_client.v1.model.usage_incident_management_hour)</a>
@@ -20928,6 +21579,36 @@
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.users_response.UsersResponse">UsersResponse (class in datadog_api_client.v2.model.users_response)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.users_type.UsersType">UsersType (class in datadog_api_client.v2.model.users_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team.UserTeam">UserTeam (class in datadog_api_client.v2.model.user_team)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_attributes.UserTeamAttributes">UserTeamAttributes (class in datadog_api_client.v2.model.user_team_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_create.UserTeamCreate">UserTeamCreate (class in datadog_api_client.v2.model.user_team_create)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_permission.UserTeamPermission">UserTeamPermission (class in datadog_api_client.v2.model.user_team_permission)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_permission_attributes.UserTeamPermissionAttributes">UserTeamPermissionAttributes (class in datadog_api_client.v2.model.user_team_permission_attributes)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_permission_type.UserTeamPermissionType">UserTeamPermissionType (class in datadog_api_client.v2.model.user_team_permission_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_relationships.UserTeamRelationships">UserTeamRelationships (class in datadog_api_client.v2.model.user_team_relationships)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_request.UserTeamRequest">UserTeamRequest (class in datadog_api_client.v2.model.user_team_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_response.UserTeamResponse">UserTeamResponse (class in datadog_api_client.v2.model.user_team_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_role.UserTeamRole">UserTeamRole (class in datadog_api_client.v2.model.user_team_role)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_teams_response.UserTeamsResponse">UserTeamsResponse (class in datadog_api_client.v2.model.user_teams_response)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_type.UserTeamType">UserTeamType (class in datadog_api_client.v2.model.user_team_type)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_update.UserTeamUpdate">UserTeamUpdate (class in datadog_api_client.v2.model.user_team_update)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_update_request.UserTeamUpdateRequest">UserTeamUpdateRequest (class in datadog_api_client.v2.model.user_team_update_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_team_user_type.UserTeamUserType">UserTeamUserType (class in datadog_api_client.v2.model.user_team_user_type)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user_update_attributes.UserUpdateAttributes">UserUpdateAttributes (class in datadog_api_client.v2.model.user_update_attributes)</a>
 </li>
