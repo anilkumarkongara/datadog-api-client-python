@@ -7835,8 +7835,6 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.ci_app_aggregation_function">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v2.model.ci_app_compute
 
@@ -7844,6 +7842,8 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.ci_app_compute">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     datadog_api_client.v2.model.ci_app_compute_type
 
@@ -8930,20 +8930,6 @@
 </li>
       </ul></li>
       <li>
-    datadog_api_client.v2.model.get_all_teams_include
-
-      <ul>
-        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_include">module</a>
-</li>
-      </ul></li>
-      <li>
-    datadog_api_client.v2.model.get_all_teams_sort
-
-      <ul>
-        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_sort">module</a>
-</li>
-      </ul></li>
-      <li>
     datadog_api_client.v2.model.get_team_memberships_sort
 
       <ul>
@@ -9914,6 +9900,20 @@
 
       <ul>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_application_keys_response">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.list_teams_include
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_teams_include">module</a>
+</li>
+      </ul></li>
+      <li>
+    datadog_api_client.v2.model.list_teams_sort
+
+      <ul>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_teams_sort">module</a>
 </li>
       </ul></li>
       <li>
@@ -14227,6 +14227,12 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.metrics_api.MetricsApi.delete_tag_configuration">delete_tag_configuration() (MetricsApi method)</a>
 </li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.delete_team">delete_team() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.delete_team_link">delete_team_link() (TeamsApi method)</a>
+</li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.delete_team_membership">delete_team_membership() (TeamsApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.delete_tests">delete_tests() (SyntheticsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.delete_webhooks_integration">delete_webhooks_integration() (WebhooksIntegrationApi method)</a>
@@ -14541,8 +14547,6 @@
         <li><a href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple.get">(ModelSimple method)</a>
 </li>
       </ul></li>
-      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.get_all_teams">get_all_teams() (TeamsApi method)</a>
-</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.key_management_api.KeyManagementApi.get_api_key">get_api_key() (KeyManagementApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.key_management_api.KeyManagementApi.get_api_key">[1]</a>
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.configuration.Configuration.get_api_key_with_prefix">get_api_key_with_prefix() (Configuration method)</a>
@@ -14808,10 +14812,6 @@
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.get_webhooks_integration">get_webhooks_integration() (WebhooksIntegrationApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.get_webhooks_integration_custom_variable">get_webhooks_integration_custom_variable() (WebhooksIntegrationApi method)</a>
-</li>
-      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_all_teams_include.GetAllTeamsInclude">GetAllTeamsInclude (class in datadog_api_client.v2.model.get_all_teams_include)</a>
-</li>
-      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_all_teams_sort.GetAllTeamsSort">GetAllTeamsSort (class in datadog_api_client.v2.model.get_all_teams_sort)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_team_memberships_sort.GetTeamMembershipsSort">GetTeamMembershipsSort (class in datadog_api_client.v2.model.get_team_memberships_sort)</a>
 </li>
@@ -15407,6 +15407,8 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.metrics_api.MetricsApi.list_tags_by_metric_name">list_tags_by_metric_name() (MetricsApi method)</a>
 </li>
+      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.list_teams">list_teams() (TeamsApi method)</a>
+</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests">list_tests() (SyntheticsApi method)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.users_api.UsersApi.list_user_organizations">list_user_organizations() (UsersApi method)</a>
@@ -15440,6 +15442,10 @@
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.list_stream_widget_definition_type.ListStreamWidgetDefinitionType">ListStreamWidgetDefinitionType (class in datadog_api_client.v1.model.list_stream_widget_definition_type)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.list_stream_widget_request.ListStreamWidgetRequest">ListStreamWidgetRequest (class in datadog_api_client.v1.model.list_stream_widget_request)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.list_teams_include.ListTeamsInclude">ListTeamsInclude (class in datadog_api_client.v2.model.list_teams_include)</a>
+</li>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.list_teams_sort.ListTeamsSort">ListTeamsSort (class in datadog_api_client.v2.model.list_teams_sort)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.log.Log">Log (class in datadog_api_client.v1.model.log)</a>
 
@@ -15493,12 +15499,12 @@
         <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.logs_api.LogsApi">(class in datadog_api_client.v2.api.logs_api)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.logs_api_error.LogsAPIError">LogsAPIError (class in datadog_api_client.v1.model.logs_api_error)</a>
 </li>
       <li><a href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.logs_api_error_response.LogsAPIErrorResponse">LogsAPIErrorResponse (class in datadog_api_client.v1.model.logs_api_error_response)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_archive.LogsArchive">LogsArchive (class in datadog_api_client.v2.model.logs_archive)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.logs_archive_attributes.LogsArchiveAttributes">LogsArchiveAttributes (class in datadog_api_client.v2.model.logs_archive_attributes)</a>
@@ -18079,10 +18085,6 @@
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.full_application_key_attributes">datadog_api_client.v2.model.full_application_key_attributes</a>
 </li>
-        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_include">datadog_api_client.v2.model.get_all_teams_include</a>
-</li>
-        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_teams_sort">datadog_api_client.v2.model.get_all_teams_sort</a>
-</li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_team_memberships_sort">datadog_api_client.v2.model.get_team_memberships_sort</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.group_scalar_column">datadog_api_client.v2.model.group_scalar_column</a>
@@ -18360,6 +18362,10 @@
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.jira_integration_metadata_issues_item">datadog_api_client.v2.model.jira_integration_metadata_issues_item</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_application_keys_response">datadog_api_client.v2.model.list_application_keys_response</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_teams_include">datadog_api_client.v2.model.list_teams_include</a>
+</li>
+        <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_teams_sort">datadog_api_client.v2.model.list_teams_sort</a>
 </li>
         <li><a href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.log">datadog_api_client.v2.model.log</a>
 </li>
@@ -20038,12 +20044,6 @@
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.slack_integration_api.SlackIntegrationApi.remove_slack_integration_channel">remove_slack_integration_channel() (SlackIntegrationApi method)</a>
 </li>
-      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team">remove_team() (TeamsApi method)</a>
-</li>
-      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team_link">remove_team_link() (TeamsApi method)</a>
-</li>
-      <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.teams_api.TeamsApi.remove_team_membership">remove_team_membership() (TeamsApi method)</a>
-</li>
       <li><a href="datadog_api_client.html#datadog_api_client.model_utils.remove_uncoercible">remove_uncoercible() (in module datadog_api_client.model_utils)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi.remove_user_from_role">remove_user_from_role() (RolesApi method)</a>
@@ -20100,10 +20100,10 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_response_relationships.RoleResponseRelationships">RoleResponseRelationships (class in datadog_api_client.v2.model.role_response_relationships)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi">RolesApi (class in datadog_api_client.v2.api.roles_api)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_response.RolesResponse">RolesResponse (class in datadog_api_client.v2.model.roles_response)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.roles_sort.RolesSort">RolesSort (class in datadog_api_client.v2.model.roles_sort)</a>
