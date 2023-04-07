@@ -25328,6 +25328,7 @@ for each hour for a given organization.</p>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>indexed_events_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of log events indexed.</p></li>
 <li><p><strong>ingested_events_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of log bytes ingested.</p></li>
+<li><p><strong>logs_forwarding_events_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of logs forwarded bytes (data available as of April 1st 2023)</p></li>
 <li><p><strong>logs_live_indexed_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of live log events indexed (data available as of December 1, 2020).</p></li>
 <li><p><strong>logs_live_ingested_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of live log bytes ingested (data available as of December 1, 2020).</p></li>
 <li><p><strong>logs_rehydrated_indexed_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of rehydrated log events indexed (data available as of December 1, 2020).</p></li>
@@ -25869,6 +25870,7 @@ type conversion is done.</p></li>
 <li><p><strong>dbm_queries_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all normalized Database Monitoring queries over all hours in the current date for all organizations.</p></li>
 <li><p><strong>fargate_tasks_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the high-watermark of all Fargate tasks over all hours in the current date for all organizations.</p></li>
 <li><p><strong>fargate_tasks_count_hwm</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all Fargate tasks over all hours in the current date for all organizations.</p></li>
+<li><p><strong>forwarding_events_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all log bytes forwarded over all hours in the current date for all organizations.</p></li>
 <li><p><strong>gcp_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all GCP hosts over all hours in the current date for all organizations.</p></li>
 <li><p><strong>heroku_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Heroku dynos over all hours in the current date for all organizations.</p></li>
 <li><p><strong>incident_management_monthly_active_users_hwm</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the high-water mark of incident management monthly active users over all hours in the current date for all organizations.</p></li>
@@ -25961,6 +25963,7 @@ type conversion is done.</p></li>
 <li><p><strong>dbm_queries_avg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all distinct Database Monitoring normalized queries over all hours in the current month for the given org.</p></li>
 <li><p><strong>fargate_tasks_count_avg</strong> (<em>int</em><em>, </em><em>optional</em>) – The average task count for Fargate.</p></li>
 <li><p><strong>fargate_tasks_count_hwm</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the high-water mark of all Fargate tasks over all hours in the current date for the given org.</p></li>
+<li><p><strong>forwarding_events_bytes_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all log bytes forwarded over all hours in the current date for the given org.</p></li>
 <li><p><strong>gcp_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all GCP hosts over all hours in the current date for the given org.</p></li>
 <li><p><strong>heroku_host_top99p</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Heroku dynos over all hours in the current date for the given org.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization id.</p></li>
@@ -26058,6 +26061,7 @@ type conversion is done.</p></li>
 <li><p><strong>end_date</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Shows the last date of usage in the current months for all organizations.</p></li>
 <li><p><strong>fargate_tasks_count_avg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the average of all Fargate tasks over all hours in the current months for all organizations.</p></li>
 <li><p><strong>fargate_tasks_count_hwm_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of the high-water marks of all Fargate tasks over all hours in the current months for all organizations.</p></li>
+<li><p><strong>forwarding_events_bytes_agg_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the sum of all logs forwarding bytes over all hours in the current months for all organizations (data available as of April 1, 2023)</p></li>
 <li><p><strong>gcp_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all GCP hosts over all hours in the current months for all organizations.</p></li>
 <li><p><strong>heroku_host_top99p_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the 99th percentile of all Heroku dynos over all hours in the current months for all organizations.</p></li>
 <li><p><strong>incident_management_monthly_active_users_hwm_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows sum of the the high-water marks of incident management monthly active users in the current months for all organizations.</p></li>
