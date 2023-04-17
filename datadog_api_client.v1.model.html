@@ -11115,7 +11115,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.check_can_delete_monitor_response_data.CheckCanDeleteMonitorResponseData" title="datadog_api_client.v1.model.check_can_delete_monitor_response_data.CheckCanDeleteMonitorResponseData"><em>CheckCanDeleteMonitorResponseData</em></a>) – Wrapper object with the list of monitor IDs.</p></li>
-<li><p><strong>errors</strong> (<em>{str:</em><em> (</em><em>[</em><em>str</em><em>]</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – A mapping of Monitor ID to strings denoting where it’s used.</p></li>
+<li><p><strong>errors</strong> (<em>{str:</em><em> (</em><em>[</em><em>str</em><em>]</em><em>,</em><em>)</em><em>}</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A mapping of Monitor ID to strings denoting where it’s used.</p></li>
 </ul>
 </dd>
 </dl>
@@ -12112,7 +12112,7 @@ or <code class="docutils literal notranslate"><span class="pre">2</span></code> 
 <li><p><strong>end</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – POSIX timestamp to end the downtime. If not provided,
 the downtime is in effect indefinitely until you cancel it.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – The downtime ID.</p></li>
-<li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – A message to include with notifications for this downtime.
+<li><p><strong>message</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A message to include with notifications for this downtime.
 Email notifications can be sent to specific users by using the same <code class="docutils literal notranslate"><span class="pre">@username</span></code> notation as events.</p></li>
 <li><p><strong>monitor_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A single monitor to which the downtime applies.
 If not provided, the downtime applies to all monitors.</p></li>
@@ -12156,7 +12156,7 @@ or <code class="docutils literal notranslate"><span class="pre">2</span></code> 
 <li><p><strong>end</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – POSIX timestamp to end the downtime. If not provided,
 the downtime is in effect indefinitely until you cancel it.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – The downtime ID.</p></li>
-<li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – A message to include with notifications for this downtime.
+<li><p><strong>message</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A message to include with notifications for this downtime.
 Email notifications can be sent to specific users by using the same <code class="docutils literal notranslate"><span class="pre">@username</span></code> notation as events.</p></li>
 <li><p><strong>monitor_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A single monitor to which the downtime applies.
 If not provided, the downtime applies to all monitors.</p></li>
@@ -13529,7 +13529,7 @@ type conversion is done.</p></li>
 <li><p><strong>last_reported_time</strong> (<em>int</em><em>, </em><em>optional</em>) – Last time the host reported a metric data point.</p></li>
 <li><p><strong>meta</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.host_meta.HostMeta" title="datadog_api_client.v1.model.host_meta.HostMeta"><em>HostMeta</em></a><em>, </em><em>optional</em>) – Metadata associated with your host.</p></li>
 <li><p><strong>metrics</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.host_metrics.HostMetrics" title="datadog_api_client.v1.model.host_metrics.HostMetrics"><em>HostMetrics</em></a><em>, </em><em>optional</em>) – Host Metrics collected.</p></li>
-<li><p><strong>mute_timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – Timeout of the mute applied to your host.</p></li>
+<li><p><strong>mute_timeout</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Timeout of the mute applied to your host.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The host name.</p></li>
 <li><p><strong>sources</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Source or cloud provider associated with your host.</p></li>
 <li><p><strong>tags_by_source</strong> (<em>{str:</em><em> (</em><em>[</em><em>str</em><em>]</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – List of tags for each source (AWS, Datadog Agent, Chef..).</p></li>
@@ -13824,7 +13824,7 @@ type conversion is done.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 <li><p><strong>region</strong> (<em>str</em><em>, </em><em>optional</em>) – The region of the Datadog instance that the organization belongs to.</p></li>
 <li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format of <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
 configured for usage attribution</a>.
 In this scenario the API returns the total usage, not broken down by tags.</p>
@@ -15376,7 +15376,7 @@ or a regional zone (for example “Europe/Paris”).</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>logs</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.log.Log" title="datadog_api_client.v1.model.log.Log"><em>Log</em></a><em>]</em><em>, </em><em>optional</em>) – Array of logs matching the request and the <code class="docutils literal notranslate"><span class="pre">nextLogId</span></code> if sent.</p></li>
-<li><p><strong>next_log_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Hash identifier of the next log to return in the list.
+<li><p><strong>next_log_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Hash identifier of the next log to return in the list.
 This parameter is used for the pagination feature.</p></li>
 <li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) – Status of the response.</p></li>
 </ul>
@@ -17064,7 +17064,7 @@ type conversion is done.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 <li><p><strong>region</strong> (<em>str</em><em>, </em><em>optional</em>) – The region of the Datadog instance that the organization belongs to.</p></li>
 <li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
 configured for usage attribution</a>.
 In this scenario the API returns the total usage, not broken down by tags.</p>
@@ -19549,7 +19549,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>handle</strong> (<em>str</em><em>, </em><em>optional</em>) – Identifier of the user who shared the dashboard.</p></li>
-<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the user who shared the dashboard.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Name of the user who shared the dashboard.</p></li>
 </ul>
 </dd>
 </dl>
@@ -20080,12 +20080,12 @@ are <code class="docutils literal notranslate"><span class="pre">FREQ</span></co
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>category</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_correction_category.SLOCorrectionCategory" title="datadog_api_client.v1.model.slo_correction_category.SLOCorrectionCategory"><em>SLOCorrectionCategory</em></a><em>, </em><em>optional</em>) – Category the SLO correction belongs to.</p></li>
-<li><p><strong>created_at</strong> (<em>int</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was created at.</p></li>
+<li><p><strong>created_at</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was created at.</p></li>
 <li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of the correction being made.</p></li>
 <li><p><strong>duration</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Length of time (in seconds) for a specified <code class="docutils literal notranslate"><span class="pre">rrule</span></code> recurring SLO correction.</p></li>
-<li><p><strong>end</strong> (<em>int</em><em>, </em><em>optional</em>) – Ending time of the correction in epoch seconds.</p></li>
-<li><p><strong>modified_at</strong> (<em>int</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was modified at.</p></li>
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Ending time of the correction in epoch seconds.</p></li>
+<li><p><strong>modified_at</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The epoch timestamp of when the correction was modified at.</p></li>
 <li><p><strong>modifier</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_correction_response_attributes_modifier.SLOCorrectionResponseAttributesModifier" title="datadog_api_client.v1.model.slo_correction_response_attributes_modifier.SLOCorrectionResponseAttributesModifier"><em>SLOCorrectionResponseAttributesModifier</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Modifier of the object.</p></li>
 <li><p><strong>rrule</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The recurrence rules as defined in the iCalendar RFC 5545. The supported rules for SLO corrections
 are <code class="docutils literal notranslate"><span class="pre">FREQ</span></code> , <code class="docutils literal notranslate"><span class="pre">INTERVAL</span></code> , <code class="docutils literal notranslate"><span class="pre">COUNT</span></code> , and <code class="docutils literal notranslate"><span class="pre">UNTIL</span></code>.</p></li>
@@ -20208,7 +20208,7 @@ are <code class="docutils literal notranslate"><span class="pre">FREQ</span></co
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – Email of the creator.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – User ID of the creator.</p></li>
-<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the creator.</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Name of the creator.</p></li>
 </ul>
 </dd>
 </dl>
@@ -20381,7 +20381,7 @@ This can also represent the SLI value for a specific monitor in multi-monitor SL
 <li><p><strong>precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp. Use <code class="docutils literal notranslate"><span class="pre">span_precision</span></code> instead. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>preview</strong> (<em>bool</em><em>, </em><em>optional</em>) – For <code class="docutils literal notranslate"><span class="pre">monitor</span></code> based SLOs, when <code class="docutils literal notranslate"><span class="pre">true</span></code> this indicates that a replay is in progress to give an accurate uptime
 calculation.</p></li>
-<li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
+<li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
 <li><p><strong>span_precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp.</p></li>
 <li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead. <strong>Deprecated</strong>.</p></li>
 </ul>
@@ -20400,7 +20400,7 @@ calculation.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.slo_history_response_data.SLOHistoryResponseData" title="datadog_api_client.v1.model.slo_history_response_data.SLOHistoryResponseData"><em>SLOHistoryResponseData</em></a><em>, </em><em>optional</em>) – An array of service level objective objects.</p></li>
-<li><p><strong>errors</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_history_response_error.SLOHistoryResponseError" title="datadog_api_client.v1.model.slo_history_response_error.SLOHistoryResponseError"><em>SLOHistoryResponseError</em></a><em>]</em><em>, </em><em>optional</em>) – A list of errors while querying the history data for the service level objective.</p></li>
+<li><p><strong>errors</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.slo_history_response_error.SLOHistoryResponseError" title="datadog_api_client.v1.model.slo_history_response_error.SLOHistoryResponseError"><em>SLOHistoryResponseError</em></a><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of errors while querying the history data for the service level objective.</p></li>
 </ul>
 </dd>
 </dl>
@@ -20494,9 +20494,9 @@ This can also represent the SLI value for a specific monitor in multi-monitor SL
 <li><p><strong>precision</strong> (<em>{str:</em><em> (</em><em>float</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – A mapping of threshold <code class="docutils literal notranslate"><span class="pre">timeframe</span></code> to number of accurate decimals, regardless of the from &amp;&amp; to timestamp.</p></li>
 <li><p><strong>preview</strong> (<em>bool</em><em>, </em><em>optional</em>) – For <code class="docutils literal notranslate"><span class="pre">monitor</span></code> based SLOs, when <code class="docutils literal notranslate"><span class="pre">true</span></code> this indicates that a replay is in progress to give an accurate uptime
 calculation.</p></li>
-<li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
+<li><p><strong>sli_value</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The current SLI value of the SLO over the history window.</p></li>
 <li><p><strong>span_precision</strong> (<em>float</em><em>, </em><em>optional</em>) – The amount of decimal places the SLI value is accurate to for the given from <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> to timestamp.</p></li>
-<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead. <strong>Deprecated</strong>.</p></li>
+<li><p><strong>uptime</strong> (<em>float</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Use <code class="docutils literal notranslate"><span class="pre">sli_value</span></code> instead. <strong>Deprecated</strong>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -24941,7 +24941,7 @@ type conversion is done.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the organization.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 <li><p><strong>tag_config_source</strong> (<em>str</em><em>, </em><em>optional</em>) – The source of the usage attribution tag configuration and the selected tags in the format <code class="docutils literal notranslate"><span class="pre">&lt;source_org_name&gt;:::&lt;selected</span> <span class="pre">tag</span> <span class="pre">1&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">2&gt;///&lt;selected</span> <span class="pre">tag</span> <span class="pre">3&gt;</span></code>.</p></li>
-<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
+<li><p><strong>tags</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames" title="datadog_api_client.v1.model.usage_attribution_tag_names.UsageAttributionTagNames"><em>UsageAttributionTagNames</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – <p>Tag keys and values.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">null</span></code> value here means that the requested tag breakdown cannot be applied because it does not match the <a class="reference external" href="https://docs.datadoghq.com/account_management/billing/usage_attribution/#getting-started">tags
 configured for usage attribution</a>.
 In this scenario the API returns the total usage, not broken down by tags.</p>
@@ -25346,10 +25346,10 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ci_pipeline_indexed_spans</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of spans for pipelines in the queried hour.</p></li>
-<li><p><strong>ci_test_indexed_spans</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of spans for tests in the queried hour.</p></li>
-<li><p><strong>ci_visibility_pipeline_committers</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the total count of all active Git committers for Pipelines in the current month. A committer is active if they commit at least 3 times in a given month.</p></li>
-<li><p><strong>ci_visibility_test_committers</strong> (<em>int</em><em>, </em><em>optional</em>) – The total count of all active Git committers for tests in the current month. A committer is active if they commit at least 3 times in a given month.</p></li>
+<li><p><strong>ci_pipeline_indexed_spans</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of spans for pipelines in the queried hour.</p></li>
+<li><p><strong>ci_test_indexed_spans</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of spans for tests in the queried hour.</p></li>
+<li><p><strong>ci_visibility_pipeline_committers</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Shows the total count of all active Git committers for Pipelines in the current month. A committer is active if they commit at least 3 times in a given month.</p></li>
+<li><p><strong>ci_visibility_test_committers</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total count of all active Git committers for tests in the current month. A committer is active if they commit at least 3 times in a given month.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 </ul>
@@ -25503,8 +25503,8 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cws_container_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of Cloud Workload Security container hours from the start of the given hour’s month until the given hour.</p></li>
-<li><p><strong>cws_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of Cloud Workload Security host hours from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>cws_container_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of Cloud Workload Security container hours from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>cws_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of Cloud Workload Security host hours from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -25537,8 +25537,8 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dbm_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of Database Monitoring host hours from the start of the given hour’s month until the given hour.</p></li>
-<li><p><strong>dbm_queries_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of normalized Database Monitoring queries from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>dbm_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of Database Monitoring host hours from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>dbm_queries_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The total number of normalized Database Monitoring queries from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -25571,13 +25571,13 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>apm_fargate_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The high-water mark of APM ECS Fargate tasks during the given hour.</p></li>
-<li><p><strong>appsec_fargate_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The Application Security Monitoring ECS Fargate tasks during the given hour.</p></li>
-<li><p><strong>avg_profiled_fargate_tasks</strong> (<em>int</em><em>, </em><em>optional</em>) – The average profiled task count for Fargate Profiling.</p></li>
+<li><p><strong>apm_fargate_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The high-water mark of APM ECS Fargate tasks during the given hour.</p></li>
+<li><p><strong>appsec_fargate_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The Application Security Monitoring ECS Fargate tasks during the given hour.</p></li>
+<li><p><strong>avg_profiled_fargate_tasks</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The average profiled task count for Fargate Profiling.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
-<li><p><strong>tasks_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of Fargate tasks run.</p></li>
+<li><p><strong>tasks_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of Fargate tasks run.</p></li>
 </ul>
 </dd>
 </dl>
@@ -25607,31 +25607,31 @@ In this scenario the API returns the total usage, not broken down by tags.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>agent_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of infrastructure hosts reporting
+<li><p><strong>agent_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of infrastructure hosts reporting
 during a given hour that were running the Datadog Agent.</p></li>
-<li><p><strong>alibaba_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through Alibaba integration
+<li><p><strong>alibaba_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through Alibaba integration
 (and were NOT running the Datadog Agent).</p></li>
-<li><p><strong>apm_azure_app_service_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of Azure App Services hosts using APM.</p></li>
-<li><p><strong>apm_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the total number of hosts using APM during the hour,
+<li><p><strong>apm_azure_app_service_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of Azure App Services hosts using APM.</p></li>
+<li><p><strong>apm_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Shows the total number of hosts using APM during the hour,
 these are counted as billable (except during trial periods).</p></li>
-<li><p><strong>aws_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the AWS integration
+<li><p><strong>aws_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the AWS integration
 (and were NOT running the Datadog Agent).</p></li>
-<li><p><strong>azure_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through Azure integration
+<li><p><strong>azure_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through Azure integration
 (and were NOT running the Datadog Agent).</p></li>
-<li><p><strong>container_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Shows the total number of containers reported by the Docker integration during the hour.</p></li>
-<li><p><strong>gcp_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Google Cloud integration
+<li><p><strong>container_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Shows the total number of containers reported by the Docker integration during the hour.</p></li>
+<li><p><strong>gcp_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Google Cloud integration
 (and were NOT running the Datadog Agent).</p></li>
-<li><p><strong>heroku_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of Heroku dynos reported by the Datadog Agent.</p></li>
-<li><p><strong>host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of billable infrastructure hosts reporting during a given hour.
+<li><p><strong>heroku_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of Heroku dynos reported by the Datadog Agent.</p></li>
+<li><p><strong>host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of billable infrastructure hosts reporting during a given hour.
 This is the sum of <code class="docutils literal notranslate"><span class="pre">agent_host_count</span></code> , <code class="docutils literal notranslate"><span class="pre">aws_host_count</span></code> , and <code class="docutils literal notranslate"><span class="pre">gcp_host_count</span></code>.</p></li>
-<li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
-<li><p><strong>infra_azure_app_service</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Azure App Services integration
+<li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
+<li><p><strong>infra_azure_app_service</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through the Azure App Services integration
 (and were NOT running the Datadog Agent).</p></li>
-<li><p><strong>opentelemetry_apm_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts using APM reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
-<li><p><strong>opentelemetry_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
+<li><p><strong>opentelemetry_apm_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts using APM reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
+<li><p><strong>opentelemetry_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts reported by Datadog exporter for the OpenTelemetry Collector.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
-<li><p><strong>vsphere_host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through vSphere integration
+<li><p><strong>vsphere_host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of hosts that reported through vSphere integration
 (and were NOT running the Datadog Agent).</p></li>
 </ul>
 </dd>
@@ -25663,7 +25663,7 @@ This is the sum of <code class="docutils literal notranslate"><span class="pre">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
-<li><p><strong>monthly_active_users</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number monthly active users from the start of the given hour’s month until the given hour.</p></li>
+<li><p><strong>monthly_active_users</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number monthly active users from the start of the given hour’s month until the given hour.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 </ul>
@@ -25795,9 +25795,9 @@ for each hour for a given organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>func_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of different functions for each region and AWS account.</p></li>
+<li><p><strong>func_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of different functions for each region and AWS account.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
-<li><p><strong>invocations_sum</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the sum of invocations of all functions.</p></li>
+<li><p><strong>invocations_sum</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the sum of invocations of all functions.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 </ul>
@@ -25901,15 +25901,15 @@ for each hour for a given organization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>billable_ingested_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of billable log bytes ingested.</p></li>
+<li><p><strong>billable_ingested_bytes</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of billable log bytes ingested.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
-<li><p><strong>indexed_events_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of log events indexed.</p></li>
-<li><p><strong>ingested_events_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of log bytes ingested.</p></li>
-<li><p><strong>logs_forwarding_events_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of logs forwarded bytes (data available as of April 1st 2023)</p></li>
-<li><p><strong>logs_live_indexed_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of live log events indexed (data available as of December 1, 2020).</p></li>
-<li><p><strong>logs_live_ingested_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of live log bytes ingested (data available as of December 1, 2020).</p></li>
-<li><p><strong>logs_rehydrated_indexed_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of rehydrated log events indexed (data available as of December 1, 2020).</p></li>
-<li><p><strong>logs_rehydrated_ingested_bytes</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of rehydrated log bytes ingested (data available as of December 1, 2020).</p></li>
+<li><p><strong>indexed_events_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of log events indexed.</p></li>
+<li><p><strong>ingested_events_bytes</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of log bytes ingested.</p></li>
+<li><p><strong>logs_forwarding_events_bytes</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of logs forwarded bytes (data available as of April 1st 2023)</p></li>
+<li><p><strong>logs_live_indexed_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of live log events indexed (data available as of December 1, 2020).</p></li>
+<li><p><strong>logs_live_ingested_bytes</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of live log bytes ingested (data available as of December 1, 2020).</p></li>
+<li><p><strong>logs_rehydrated_indexed_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of rehydrated log events indexed (data available as of December 1, 2020).</p></li>
+<li><p><strong>logs_rehydrated_ingested_bytes</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of rehydrated log bytes ingested (data available as of December 1, 2020).</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 </ul>
@@ -26035,7 +26035,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
-<li><p><strong>online_archive_events_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Total count of online archived events within the hour.</p></li>
+<li><p><strong>online_archive_events_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Total count of online archived events within the hour.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 </ul>
@@ -26067,8 +26067,8 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>avg_container_agent_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Get average number of container agents for that hour.</p></li>
-<li><p><strong>host_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the total number of profiled hosts reporting during a given hour.</p></li>
+<li><p><strong>avg_container_agent_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Get average number of container agents for that hour.</p></li>
+<li><p><strong>host_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the total number of profiled hosts reporting during a given hour.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -26166,8 +26166,8 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>browser_rum_units</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of browser RUM units.</p></li>
-<li><p><strong>mobile_rum_units</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of mobile RUM units.</p></li>
+<li><p><strong>browser_rum_units</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of browser RUM units.</p></li>
+<li><p><strong>mobile_rum_units</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The number of mobile RUM units.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
 <li><p><strong>rum_units</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Total RUM units across mobile and browser RUM.</p></li>
@@ -26240,7 +26240,7 @@ type conversion is done.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
-<li><p><strong>snmp_devices</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of SNMP devices.</p></li>
+<li><p><strong>snmp_devices</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of SNMP devices.</p></li>
 </ul>
 </dd>
 </dl>
@@ -26701,7 +26701,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>check_calls_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of Synthetics API tests run.</p></li>
+<li><p><strong>check_calls_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of Synthetics API tests run.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -26734,7 +26734,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>browser_check_calls_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Contains the number of Synthetics Browser tests run.</p></li>
+<li><p><strong>browser_check_calls_count</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains the number of Synthetics Browser tests run.</p></li>
 <li><p><strong>hour</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The hour for the usage.</p></li>
 <li><p><strong>org_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization name.</p></li>
 <li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The organization public ID.</p></li>
@@ -26874,7 +26874,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum amount of records to be returned.</p></li>
 <li><p><strong>next_record_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The cursor to get the next results (if any). To make the next request, use the same parameters and add <code class="docutils literal notranslate"><span class="pre">next_record_id</span></code>.</p></li>
-<li><p><strong>total_number_of_records</strong> (<em>int</em><em>, </em><em>optional</em>) – Total number of records.</p></li>
+<li><p><strong>total_number_of_records</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Total number of records.</p></li>
 </ul>
 </dd>
 </dl>
