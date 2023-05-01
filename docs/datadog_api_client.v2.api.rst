@@ -36,6 +36,13 @@ cloud\_workload\_security\_api
    :members:
    :show-inheritance:
 
+cloudflare\_integration\_api
+----------------------------
+
+.. automodule:: datadog_api_client.v2.api.cloudflare_integration_api
+   :members:
+   :show-inheritance:
+
 confluent\_cloud\_api
 ---------------------
 
@@ -57,6 +64,13 @@ events\_api
    :members:
    :show-inheritance:
 
+fastly\_integration\_api
+------------------------
+
+.. automodule:: datadog_api_client.v2.api.fastly_integration_api
+   :members:
+   :show-inheritance:
+
 incident\_services\_api
 -----------------------
 
@@ -75,6 +89,13 @@ incidents\_api
 --------------
 
 .. automodule:: datadog_api_client.v2.api.incidents_api
+   :members:
+   :show-inheritance:
+
+ip\_allowlist\_api
+------------------
+
+.. automodule:: datadog_api_client.v2.api.ip_allowlist_api
    :members:
    :show-inheritance:
 
@@ -113,6 +134,13 @@ metrics\_api
    :members:
    :show-inheritance:
 
+monitors\_api
+-------------
+
+.. automodule:: datadog_api_client.v2.api.monitors_api
+   :members:
+   :show-inheritance:
+
 opsgenie\_integration\_api
 --------------------------
 
@@ -131,6 +159,13 @@ processes\_api
 --------------
 
 .. automodule:: datadog_api_client.v2.api.processes_api
+   :members:
+   :show-inheritance:
+
+restriction\_policies\_api
+--------------------------
+
+.. automodule:: datadog_api_client.v2.api.restriction_policies_api
    :members:
    :show-inheritance:
 
@@ -155,6 +190,13 @@ security\_monitoring\_api
    :members:
    :show-inheritance:
 
+sensitive\_data\_scanner\_api
+-----------------------------
+
+.. automodule:: datadog_api_client.v2.api.sensitive_data_scanner_api
+   :members:
+   :show-inheritance:
+
 service\_accounts\_api
 ----------------------
 
@@ -166,6 +208,27 @@ service\_definition\_api
 ------------------------
 
 .. automodule:: datadog_api_client.v2.api.service_definition_api
+   :members:
+   :show-inheritance:
+
+spans\_metrics\_api
+-------------------
+
+.. automodule:: datadog_api_client.v2.api.spans_metrics_api
+   :members:
+   :show-inheritance:
+
+synthetics\_api
+---------------
+
+.. automodule:: datadog_api_client.v2.api.synthetics_api
+   :members:
+   :show-inheritance:
+
+teams\_api
+----------
+
+.. automodule:: datadog_api_client.v2.api.teams_api
    :members:
    :show-inheritance:
 

@@ -4,7 +4,6 @@ Create an API test returns "OK - Returns the created test details." response
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_api_test import SyntheticsAPITest
 from datadog_api_client.v1.model.synthetics_api_test_config import SyntheticsAPITestConfig
 from datadog_api_client.v1.model.synthetics_api_test_type import SyntheticsAPITestType
@@ -18,8 +17,13 @@ from datadog_api_client.v1.model.synthetics_test_ci_options import SyntheticsTes
 from datadog_api_client.v1.model.synthetics_test_details_sub_type import SyntheticsTestDetailsSubType
 from datadog_api_client.v1.model.synthetics_test_execution_rule import SyntheticsTestExecutionRule
 from datadog_api_client.v1.model.synthetics_test_options import SyntheticsTestOptions
+from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
 from datadog_api_client.v1.model.synthetics_test_options_monitor_options import SyntheticsTestOptionsMonitorOptions
 from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
+from datadog_api_client.v1.model.synthetics_test_options_scheduling import SyntheticsTestOptionsScheduling
+from datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe import (
+    SyntheticsTestOptionsSchedulingTimeframe,
+)
 from datadog_api_client.v1.model.synthetics_test_pause_status import SyntheticsTestPauseStatus
 from datadog_api_client.v1.model.synthetics_test_request import SyntheticsTestRequest
 
@@ -33,7 +37,7 @@ body = SyntheticsAPITest(
             ),
         ],
         request=SyntheticsTestRequest(
-            method=HTTPMethod.GET,
+            method="GET",
             url="https://example.com",
         ),
     ),
@@ -49,6 +53,7 @@ body = SyntheticsAPITest(
         device_ids=[
             SyntheticsDeviceID.LAPTOP_LARGE,
         ],
+        http_version=SyntheticsTestOptionsHTTPVersion.HTTP1,
         monitor_options=SyntheticsTestOptionsMonitorOptions(),
         restricted_roles=SyntheticsRestrictedRoles(
             [
@@ -60,6 +65,21 @@ body = SyntheticsAPITest(
             application_id="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             client_token_id=12345,
             is_enabled=True,
+        ),
+        scheduling=SyntheticsTestOptionsScheduling(
+            timeframes=[
+                SyntheticsTestOptionsSchedulingTimeframe(
+                    day=1,
+                    _from="07:00",
+                    to="16:00",
+                ),
+                SyntheticsTestOptionsSchedulingTimeframe(
+                    day=3,
+                    _from="07:00",
+                    to="16:00",
+                ),
+            ],
+            timezone="America/New_York",
         ),
     ),
     status=SyntheticsTestPauseStatus.LIVE,

@@ -6,17 +6,17 @@ from __future__ import annotations
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
 )
-from datadog_api_client.v2.model.user_response import UserResponse
-from datadog_api_client.v2.model.service_account_create_request import ServiceAccountCreateRequest
 from datadog_api_client.v2.model.user_invitations_response import UserInvitationsResponse
 from datadog_api_client.v2.model.user_invitations_request import UserInvitationsRequest
 from datadog_api_client.v2.model.user_invitation_response import UserInvitationResponse
 from datadog_api_client.v2.model.users_response import UsersResponse
 from datadog_api_client.v2.model.query_sort_order import QuerySortOrder
+from datadog_api_client.v2.model.user_response import UserResponse
 from datadog_api_client.v2.model.user_create_request import UserCreateRequest
 from datadog_api_client.v2.model.user_update_request import UserUpdateRequest
 from datadog_api_client.v2.model.permissions_response import PermissionsResponse
@@ -29,29 +29,8 @@ class UsersApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
-
-        self._create_service_account_endpoint = _Endpoint(
-            settings={
-                "response_type": (UserResponse,),
-                "auth": ["apiKeyAuth", "appKeyAuth"],
-                "endpoint_path": "/api/v2/service_accounts",
-                "operation_id": "create_service_account",
-                "http_method": "POST",
-                "version": "v2",
-                "servers": None,
-            },
-            params_map={
-                "body": {
-                    "required": True,
-                    "openapi_types": (ServiceAccountCreateRequest,),
-                    "location": "body",
-                },
-            },
-            headers_map={"accept": ["application/json"], "content_type": ["application/json"]},
-            api_client=api_client,
-        )
 
         self._create_user_endpoint = _Endpoint(
             settings={
@@ -296,22 +275,6 @@ class UsersApi:
             api_client=api_client,
         )
 
-    def create_service_account(
-        self,
-        body: ServiceAccountCreateRequest,
-    ) -> UserResponse:
-        """Create a service account.
-
-        Create a service account for your organization.
-
-        :type body: ServiceAccountCreateRequest
-        :rtype: UserResponse
-        """
-        kwargs: Dict[str, Any] = {}
-        kwargs["body"] = body
-
-        return self._create_service_account_endpoint.call_with_http_info(**kwargs)
-
     def create_user(
         self,
         body: UserCreateRequest,
@@ -431,7 +394,7 @@ class UsersApi:
         Get the list of all users in the organization. This list includes
         all users even if they are deactivated or unverified.
 
-        :param page_size: Size for a given page.
+        :param page_size: Size for a given page. The maximum allowed value is 5000.
         :type page_size: int, optional
         :param page_number: Specific page number to return.
         :type page_number: int, optional

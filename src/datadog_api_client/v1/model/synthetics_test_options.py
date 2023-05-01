@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import List, TYPE_CHECKING, Union
+from typing import List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -16,10 +16,12 @@ from datadog_api_client.model_utils import (
 if TYPE_CHECKING:
     from datadog_api_client.v1.model.synthetics_test_ci_options import SyntheticsTestCiOptions
     from datadog_api_client.v1.model.synthetics_device_id import SyntheticsDeviceID
+    from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
     from datadog_api_client.v1.model.synthetics_test_options_monitor_options import SyntheticsTestOptionsMonitorOptions
     from datadog_api_client.v1.model.synthetics_restricted_roles import SyntheticsRestrictedRoles
     from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
     from datadog_api_client.v1.model.synthetics_browser_test_rum_settings import SyntheticsBrowserTestRumSettings
+    from datadog_api_client.v1.model.synthetics_test_options_scheduling import SyntheticsTestOptionsScheduling
 
 
 class SyntheticsTestOptions(ModelNormal):
@@ -38,12 +40,14 @@ class SyntheticsTestOptions(ModelNormal):
     def openapi_types(_):
         from datadog_api_client.v1.model.synthetics_test_ci_options import SyntheticsTestCiOptions
         from datadog_api_client.v1.model.synthetics_device_id import SyntheticsDeviceID
+        from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
         from datadog_api_client.v1.model.synthetics_test_options_monitor_options import (
             SyntheticsTestOptionsMonitorOptions,
         )
         from datadog_api_client.v1.model.synthetics_restricted_roles import SyntheticsRestrictedRoles
         from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
         from datadog_api_client.v1.model.synthetics_browser_test_rum_settings import SyntheticsBrowserTestRumSettings
+        from datadog_api_client.v1.model.synthetics_test_options_scheduling import SyntheticsTestOptionsScheduling
 
         return {
             "accept_self_signed": (bool,),
@@ -54,6 +58,7 @@ class SyntheticsTestOptions(ModelNormal):
             "disable_cors": (bool,),
             "disable_csp": (bool,),
             "follow_redirects": (bool,),
+            "http_version": (SyntheticsTestOptionsHTTPVersion,),
             "ignore_server_certificate_error": (bool,),
             "initial_navigation_timeout": (int,),
             "min_failure_duration": (int,),
@@ -65,6 +70,7 @@ class SyntheticsTestOptions(ModelNormal):
             "restricted_roles": (SyntheticsRestrictedRoles,),
             "retry": (SyntheticsTestOptionsRetry,),
             "rum_settings": (SyntheticsBrowserTestRumSettings,),
+            "scheduling": (SyntheticsTestOptionsScheduling,),
             "tick_every": (int,),
         }
 
@@ -77,6 +83,7 @@ class SyntheticsTestOptions(ModelNormal):
         "disable_cors": "disableCors",
         "disable_csp": "disableCsp",
         "follow_redirects": "follow_redirects",
+        "http_version": "httpVersion",
         "ignore_server_certificate_error": "ignoreServerCertificateError",
         "initial_navigation_timeout": "initialNavigationTimeout",
         "min_failure_duration": "min_failure_duration",
@@ -88,6 +95,7 @@ class SyntheticsTestOptions(ModelNormal):
         "restricted_roles": "restricted_roles",
         "retry": "retry",
         "rum_settings": "rumSettings",
+        "scheduling": "scheduling",
         "tick_every": "tick_every",
     }
 
@@ -101,6 +109,7 @@ class SyntheticsTestOptions(ModelNormal):
         disable_cors: Union[bool, UnsetType] = unset,
         disable_csp: Union[bool, UnsetType] = unset,
         follow_redirects: Union[bool, UnsetType] = unset,
+        http_version: Union[SyntheticsTestOptionsHTTPVersion, UnsetType] = unset,
         ignore_server_certificate_error: Union[bool, UnsetType] = unset,
         initial_navigation_timeout: Union[int, UnsetType] = unset,
         min_failure_duration: Union[int, UnsetType] = unset,
@@ -112,6 +121,7 @@ class SyntheticsTestOptions(ModelNormal):
         restricted_roles: Union[SyntheticsRestrictedRoles, UnsetType] = unset,
         retry: Union[SyntheticsTestOptionsRetry, UnsetType] = unset,
         rum_settings: Union[SyntheticsBrowserTestRumSettings, UnsetType] = unset,
+        scheduling: Union[SyntheticsTestOptionsScheduling, UnsetType] = unset,
         tick_every: Union[int, UnsetType] = unset,
         **kwargs,
     ):
@@ -142,6 +152,9 @@ class SyntheticsTestOptions(ModelNormal):
 
         :param follow_redirects: For API HTTP test, whether or not the test should follow redirects.
         :type follow_redirects: bool, optional
+
+        :param http_version: HTTP version to use for a Synthetic test.
+        :type http_version: SyntheticsTestOptionsHTTPVersion, optional
 
         :param ignore_server_certificate_error: Ignore server certificate error for browser tests.
         :type ignore_server_certificate_error: bool, optional
@@ -188,6 +201,9 @@ class SyntheticsTestOptions(ModelNormal):
             RUM data is collected using the specified application.
         :type rum_settings: SyntheticsBrowserTestRumSettings, optional
 
+        :param scheduling: Object containing timeframes and timezone used for advanced scheduling.
+        :type scheduling: SyntheticsTestOptionsScheduling, optional
+
         :param tick_every: The frequency at which to run the Synthetic test (in seconds).
         :type tick_every: int, optional
         """
@@ -207,6 +223,8 @@ class SyntheticsTestOptions(ModelNormal):
             kwargs["disable_csp"] = disable_csp
         if follow_redirects is not unset:
             kwargs["follow_redirects"] = follow_redirects
+        if http_version is not unset:
+            kwargs["http_version"] = http_version
         if ignore_server_certificate_error is not unset:
             kwargs["ignore_server_certificate_error"] = ignore_server_certificate_error
         if initial_navigation_timeout is not unset:
@@ -229,6 +247,8 @@ class SyntheticsTestOptions(ModelNormal):
             kwargs["retry"] = retry
         if rum_settings is not unset:
             kwargs["rum_settings"] = rum_settings
+        if scheduling is not unset:
+            kwargs["scheduling"] = scheduling
         if tick_every is not unset:
             kwargs["tick_every"] = tick_every
         super().__init__(kwargs)

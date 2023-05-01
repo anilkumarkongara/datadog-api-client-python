@@ -4,7 +4,6 @@ Edit a browser test returns "OK" response
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_basic_auth_web import SyntheticsBasicAuthWeb
 from datadog_api_client.v1.model.synthetics_basic_auth_web_type import SyntheticsBasicAuthWebType
 from datadog_api_client.v1.model.synthetics_browser_test import SyntheticsBrowserTest
@@ -19,11 +18,17 @@ from datadog_api_client.v1.model.synthetics_device_id import SyntheticsDeviceID
 from datadog_api_client.v1.model.synthetics_restricted_roles import SyntheticsRestrictedRoles
 from datadog_api_client.v1.model.synthetics_step import SyntheticsStep
 from datadog_api_client.v1.model.synthetics_step_type import SyntheticsStepType
+from datadog_api_client.v1.model.synthetics_test_call_type import SyntheticsTestCallType
 from datadog_api_client.v1.model.synthetics_test_ci_options import SyntheticsTestCiOptions
 from datadog_api_client.v1.model.synthetics_test_execution_rule import SyntheticsTestExecutionRule
 from datadog_api_client.v1.model.synthetics_test_options import SyntheticsTestOptions
+from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
 from datadog_api_client.v1.model.synthetics_test_options_monitor_options import SyntheticsTestOptionsMonitorOptions
 from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
+from datadog_api_client.v1.model.synthetics_test_options_scheduling import SyntheticsTestOptionsScheduling
+from datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe import (
+    SyntheticsTestOptionsSchedulingTimeframe,
+)
 from datadog_api_client.v1.model.synthetics_test_pause_status import SyntheticsTestPauseStatus
 from datadog_api_client.v1.model.synthetics_test_request import SyntheticsTestRequest
 from datadog_api_client.v1.model.synthetics_test_request_body_type import SyntheticsTestRequestBodyType
@@ -37,6 +42,7 @@ body = SyntheticsBrowserTest(
         config_variables=[
             SyntheticsConfigVariable(
                 name="VARIABLE_NAME",
+                secure=False,
                 type=SyntheticsConfigVariableType.TEXT,
             ),
         ],
@@ -47,15 +53,16 @@ body = SyntheticsBrowserTest(
                 username="my_username",
             ),
             body_type=SyntheticsTestRequestBodyType.TEXT_PLAIN,
+            call_type=SyntheticsTestCallType.UNARY,
             certificate=SyntheticsTestRequestCertificate(
                 cert=SyntheticsTestRequestCertificateItem(),
                 key=SyntheticsTestRequestCertificateItem(),
             ),
             certificate_domains=[],
-            method=HTTPMethod.GET,
             proxy=SyntheticsTestRequestProxy(
                 url="https://example.com",
             ),
+            service="Greeter",
             url="https://example.com",
         ),
         variables=[
@@ -77,6 +84,7 @@ body = SyntheticsBrowserTest(
         device_ids=[
             SyntheticsDeviceID.LAPTOP_LARGE,
         ],
+        http_version=SyntheticsTestOptionsHTTPVersion.HTTP1,
         monitor_options=SyntheticsTestOptionsMonitorOptions(),
         restricted_roles=SyntheticsRestrictedRoles(
             [
@@ -88,6 +96,21 @@ body = SyntheticsBrowserTest(
             application_id="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             client_token_id=12345,
             is_enabled=True,
+        ),
+        scheduling=SyntheticsTestOptionsScheduling(
+            timeframes=[
+                SyntheticsTestOptionsSchedulingTimeframe(
+                    day=1,
+                    _from="07:00",
+                    to="16:00",
+                ),
+                SyntheticsTestOptionsSchedulingTimeframe(
+                    day=3,
+                    _from="07:00",
+                    to="16:00",
+                ),
+            ],
+            timezone="America/New_York",
         ),
     ),
     status=SyntheticsTestPauseStatus.LIVE,

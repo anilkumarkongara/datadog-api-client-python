@@ -18,7 +18,7 @@ body = ServiceLevelObjectiveRequest(
         "role:mysql",
     ],
     monitor_ids=[],
-    name="Example-Create_an_SLO_object_returns_OK_response",
+    name="Example-Service-Level-Objective",
     query=ServiceLevelObjectiveQuery(
         denominator="sum:httpservice.hits{!code:3xx}.as_count()",
         numerator="sum:httpservice.hits{code:2xx}.as_count()",
@@ -29,13 +29,16 @@ body = ServiceLevelObjectiveRequest(
     ],
     thresholds=[
         SLOThreshold(
-            target=95.0,
-            target_display="95.0",
+            target=97.0,
+            target_display="97.0",
             timeframe=SLOTimeframe.SEVEN_DAYS,
             warning=98.0,
             warning_display="98.0",
         ),
     ],
+    timeframe=SLOTimeframe.SEVEN_DAYS,
+    target_threshold=97.0,
+    warning_threshold=98.0,
 )
 
 configuration = Configuration()

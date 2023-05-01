@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import List, TYPE_CHECKING, Union
+from typing import List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -15,6 +15,9 @@ from datadog_api_client.model_utils import (
 
 if TYPE_CHECKING:
     from datadog_api_client.v2.model.security_monitoring_rule_case import SecurityMonitoringRuleCase
+    from datadog_api_client.v2.model.cloud_configuration_rule_compliance_signal_options import (
+        CloudConfigurationRuleComplianceSignalOptions,
+    )
     from datadog_api_client.v2.model.security_monitoring_filter import SecurityMonitoringFilter
     from datadog_api_client.v2.model.security_monitoring_rule_options import SecurityMonitoringRuleOptions
     from datadog_api_client.v2.model.security_monitoring_standard_rule_query import SecurityMonitoringStandardRuleQuery
@@ -25,6 +28,9 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
     @cached_property
     def openapi_types(_):
         from datadog_api_client.v2.model.security_monitoring_rule_case import SecurityMonitoringRuleCase
+        from datadog_api_client.v2.model.cloud_configuration_rule_compliance_signal_options import (
+            CloudConfigurationRuleComplianceSignalOptions,
+        )
         from datadog_api_client.v2.model.security_monitoring_filter import SecurityMonitoringFilter
         from datadog_api_client.v2.model.security_monitoring_rule_options import SecurityMonitoringRuleOptions
         from datadog_api_client.v2.model.security_monitoring_standard_rule_query import (
@@ -34,8 +40,10 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
 
         return {
             "cases": ([SecurityMonitoringRuleCase],),
+            "compliance_signal_options": (CloudConfigurationRuleComplianceSignalOptions,),
             "created_at": (int,),
             "creation_author_id": (int,),
+            "deprecation_date": (int,),
             "filters": ([SecurityMonitoringFilter],),
             "has_extended_title": (bool,),
             "id": (str,),
@@ -54,8 +62,10 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
 
     attribute_map = {
         "cases": "cases",
+        "compliance_signal_options": "complianceSignalOptions",
         "created_at": "createdAt",
         "creation_author_id": "creationAuthorId",
+        "deprecation_date": "deprecationDate",
         "filters": "filters",
         "has_extended_title": "hasExtendedTitle",
         "id": "id",
@@ -75,8 +85,10 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
     def __init__(
         self_,
         cases: Union[List[SecurityMonitoringRuleCase], UnsetType] = unset,
+        compliance_signal_options: Union[CloudConfigurationRuleComplianceSignalOptions, UnsetType] = unset,
         created_at: Union[int, UnsetType] = unset,
         creation_author_id: Union[int, UnsetType] = unset,
+        deprecation_date: Union[int, UnsetType] = unset,
         filters: Union[List[SecurityMonitoringFilter], UnsetType] = unset,
         has_extended_title: Union[bool, UnsetType] = unset,
         id: Union[str, UnsetType] = unset,
@@ -99,11 +111,17 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
         :param cases: Cases for generating signals.
         :type cases: [SecurityMonitoringRuleCase], optional
 
+        :param compliance_signal_options: How to generate compliance signals. Useful for cloud_configuration rules only.
+        :type compliance_signal_options: CloudConfigurationRuleComplianceSignalOptions, optional
+
         :param created_at: When the rule was created, timestamp in milliseconds.
         :type created_at: int, optional
 
         :param creation_author_id: User ID of the user who created the rule.
         :type creation_author_id: int, optional
+
+        :param deprecation_date: When the rule will be deprecated, timestamp in milliseconds.
+        :type deprecation_date: int, optional
 
         :param filters: Additional queries to filter matched events before they are processed.
         :type filters: [SecurityMonitoringFilter], optional
@@ -149,10 +167,14 @@ class SecurityMonitoringStandardRuleResponse(ModelNormal):
         """
         if cases is not unset:
             kwargs["cases"] = cases
+        if compliance_signal_options is not unset:
+            kwargs["compliance_signal_options"] = compliance_signal_options
         if created_at is not unset:
             kwargs["created_at"] = created_at
         if creation_author_id is not unset:
             kwargs["creation_author_id"] = creation_author_id
+        if deprecation_date is not unset:
+            kwargs["deprecation_date"] = deprecation_date
         if filters is not unset:
             kwargs["filters"] = filters
         if has_extended_title is not unset:

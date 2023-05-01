@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
@@ -25,7 +26,7 @@ class DowntimesApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._cancel_downtime_endpoint = _Endpoint(
@@ -134,6 +135,11 @@ class DowntimesApi:
                 "current_only": {
                     "openapi_types": (bool,),
                     "attribute": "current_only",
+                    "location": "query",
+                },
+                "with_creator": {
+                    "openapi_types": (bool,),
+                    "attribute": "with_creator",
                     "location": "query",
                 },
             },
@@ -268,6 +274,7 @@ class DowntimesApi:
         self,
         *,
         current_only: Union[bool, UnsetType] = unset,
+        with_creator: Union[bool, UnsetType] = unset,
     ) -> List[Downtime]:
         """Get all downtimes.
 
@@ -275,11 +282,16 @@ class DowntimesApi:
 
         :param current_only: Only return downtimes that are active when the request is made.
         :type current_only: bool, optional
+        :param with_creator: Return creator information.
+        :type with_creator: bool, optional
         :rtype: [Downtime]
         """
         kwargs: Dict[str, Any] = {}
         if current_only is not unset:
             kwargs["current_only"] = current_only
+
+        if with_creator is not unset:
+            kwargs["with_creator"] = with_creator
 
         return self._list_downtimes_endpoint.call_with_http_info(**kwargs)
 

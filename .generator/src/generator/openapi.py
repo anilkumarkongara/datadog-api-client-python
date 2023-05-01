@@ -37,7 +37,10 @@ def type_to_python_helper(type_, schema, alternative_name=None, in_list=False):
     elif type_ == "boolean":
         return "bool"
     elif type_ == "array":
-        return "[{}]".format(type_to_python(schema["items"], in_list=True))
+        subtype = type_to_python(schema["items"], in_list=True)
+        if schema["items"].get("nullable"):
+             subtype += ", none_type"
+        return "[{}]".format(subtype)
     elif type_ == "object":
         if "additionalProperties" in schema:
             nested_schema = schema["additionalProperties"]
@@ -231,9 +234,6 @@ def child_models(schema, alternative_name=None, seen=None, in_list=False):
     if "oneOf" in schema:
         has_sub_models = True
         for child in schema["oneOf"]:
-            # Don't generate models for nested primitive types
-            if in_list and child.get("type") in PRIMITIVE_TYPES:
-                return
             yield from child_models(child, seen=seen)
     if "anyOf" in schema:
         has_sub_models = True
@@ -693,6 +693,7 @@ def get_type_at_path(operation, attribute_path):
                 break
     if content is None:
         raise RuntimeError("Default response not found")
+    content = content["schema"]
     for attr in attribute_path.split("."):
-        content = content["schema"]["properties"][attr]
+        content = content["properties"][attr]
     return get_type_for_items(content)

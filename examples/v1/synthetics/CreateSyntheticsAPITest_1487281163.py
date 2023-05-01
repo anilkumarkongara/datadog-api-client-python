@@ -4,7 +4,6 @@ Create an API HTTP test returns "OK - Returns the created test details." respons
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_api_test import SyntheticsAPITest
 from datadog_api_client.v1.model.synthetics_api_test_config import SyntheticsAPITestConfig
 from datadog_api_client.v1.model.synthetics_api_test_type import SyntheticsAPITestType
@@ -19,11 +18,17 @@ from datadog_api_client.v1.model.synthetics_assertion_type import SyntheticsAsse
 from datadog_api_client.v1.model.synthetics_assertion_x_path_operator import SyntheticsAssertionXPathOperator
 from datadog_api_client.v1.model.synthetics_assertion_x_path_target import SyntheticsAssertionXPathTarget
 from datadog_api_client.v1.model.synthetics_assertion_x_path_target_target import SyntheticsAssertionXPathTargetTarget
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_client import SyntheticsBasicAuthOauthClient
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_client_type import SyntheticsBasicAuthOauthClientType
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_token_api_authentication import (
+    SyntheticsBasicAuthOauthTokenApiAuthentication,
+)
 from datadog_api_client.v1.model.synthetics_config_variable import SyntheticsConfigVariable
 from datadog_api_client.v1.model.synthetics_config_variable_type import SyntheticsConfigVariableType
 from datadog_api_client.v1.model.synthetics_test_details_sub_type import SyntheticsTestDetailsSubType
 from datadog_api_client.v1.model.synthetics_test_headers import SyntheticsTestHeaders
 from datadog_api_client.v1.model.synthetics_test_options import SyntheticsTestOptions
+from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
 from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
 from datadog_api_client.v1.model.synthetics_test_request import SyntheticsTestRequest
 from datadog_api_client.v1.model.synthetics_test_request_certificate import SyntheticsTestRequestCertificate
@@ -85,14 +90,24 @@ body = SyntheticsAPITest(
                 ),
             ),
             headers=SyntheticsTestHeaders(
-                unique="examplecreateanapihttptestreturnsokreturnsthecreatedtestdetailsresponse",
+                unique="examplesynthetic",
             ),
-            method=HTTPMethod.GET,
+            method="GET",
             timeout=10.0,
             url="https://datadoghq.com",
             proxy=SyntheticsTestRequestProxy(
                 url="https://datadoghq.com",
                 headers=SyntheticsTestHeaders(),
+            ),
+            basic_auth=SyntheticsBasicAuthOauthClient(
+                access_token_url="https://datadog-token.com",
+                audience="audience",
+                client_id="client-id",
+                client_secret="client-secret",
+                resource="resource",
+                scope="yoyo",
+                token_api_authentication=SyntheticsBasicAuthOauthTokenApiAuthentication.HEADER,
+                type=SyntheticsBasicAuthOauthClientType.OAUTH_CLIENT,
             ),
         ),
     ),
@@ -100,20 +115,21 @@ body = SyntheticsAPITest(
         "aws:us-east-2",
     ],
     message="BDD test payload: synthetics_api_http_test_payload.json",
-    name="Example-Create_an_API_HTTP_test_returns_OK_Returns_the_created_test_details_response",
+    name="Example-Synthetic",
     options=SyntheticsTestOptions(
         accept_self_signed=False,
         allow_insecure=True,
         follow_redirects=True,
         min_failure_duration=10,
         min_location_failed=1,
-        monitor_name="Example-Create_an_API_HTTP_test_returns_OK_Returns_the_created_test_details_response",
+        monitor_name="Example-Synthetic",
         monitor_priority=5,
         retry=SyntheticsTestOptionsRetry(
             count=3,
             interval=10.0,
         ),
         tick_every=60,
+        http_version=SyntheticsTestOptionsHTTPVersion.HTTP2,
     ),
     subtype=SyntheticsTestDetailsSubType.HTTP,
     tags=[

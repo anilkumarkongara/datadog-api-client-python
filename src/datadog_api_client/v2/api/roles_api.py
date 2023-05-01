@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
@@ -38,7 +39,7 @@ class RolesApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._add_permission_to_role_endpoint = _Endpoint(
@@ -555,7 +556,7 @@ class RolesApi:
 
         Returns all roles, including their names and their unique identifiers.
 
-        :param page_size: Size for a given page.
+        :param page_size: Size for a given page. The maximum allowed value is 5000.
         :type page_size: int, optional
         :param page_number: Specific page number to return.
         :type page_number: int, optional
@@ -597,7 +598,7 @@ class RolesApi:
 
         :param role_id: The unique identifier of the role.
         :type role_id: str
-        :param page_size: Size for a given page.
+        :param page_size: Size for a given page. The maximum allowed value is 5000.
         :type page_size: int, optional
         :param page_number: Specific page number to return.
         :type page_number: int, optional

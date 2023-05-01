@@ -4,7 +4,6 @@ Create a browser test returns "OK - Returns the created test details." response
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_browser_test import SyntheticsBrowserTest
 from datadog_api_client.v1.model.synthetics_browser_test_config import SyntheticsBrowserTestConfig
 from datadog_api_client.v1.model.synthetics_browser_test_type import SyntheticsBrowserTestType
@@ -26,10 +25,11 @@ body = SyntheticsBrowserTest(
                 name="PROPERTY",
                 pattern="content-type",
                 type=SyntheticsConfigVariableType.TEXT,
+                secure=True,
             ),
         ],
         request=SyntheticsTestRequest(
-            method=HTTPMethod.GET,
+            method="GET",
             url="https://datadoghq.com",
         ),
         set_cookie="name:test",
@@ -38,7 +38,7 @@ body = SyntheticsBrowserTest(
         "aws:us-east-2",
     ],
     message="Test message",
-    name="Example-Create_a_browser_test_returns_OK_Returns_the_created_test_details_response",
+    name="Example-Synthetic",
     options=SyntheticsTestOptions(
         accept_self_signed=False,
         allow_insecure=True,

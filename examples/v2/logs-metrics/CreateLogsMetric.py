@@ -13,11 +13,13 @@ from datadog_api_client.v2.model.logs_metric_type import LogsMetricType
 
 body = LogsMetricCreateRequest(
     data=LogsMetricCreateData(
-        id="Example-Create_a_log_based_metric_returns_OK_response",
+        id="ExampleLogsMetric",
         type=LogsMetricType.LOGS_METRICS,
         attributes=LogsMetricCreateAttributes(
             compute=LogsMetricCompute(
-                aggregation_type=LogsMetricComputeAggregationType.COUNT,
+                aggregation_type=LogsMetricComputeAggregationType.DISTRIBUTION,
+                include_percentiles=True,
+                path="@duration",
             ),
         ),
     ),

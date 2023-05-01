@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
@@ -24,7 +25,7 @@ class IncidentServicesApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._create_incident_service_endpoint = _Endpoint(
@@ -242,7 +243,7 @@ class IncidentServicesApi:
 
         :param include: Specifies which types of related objects should be included in the response.
         :type include: IncidentRelatedObject, optional
-        :param page_size: Size for a given page.
+        :param page_size: Size for a given page. The maximum allowed value is 5000.
         :type page_size: int, optional
         :param page_offset: Specific offset to use as the beginning of the returned page.
         :type page_offset: int, optional

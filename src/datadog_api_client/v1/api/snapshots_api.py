@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
@@ -20,7 +21,7 @@ class SnapshotsApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._get_graph_snapshot_endpoint = _Endpoint(
@@ -101,9 +102,9 @@ class SnapshotsApi:
         Take graph snapshots.
         **Note** : When a snapshot is created, there is some delay before it is available.
 
-        :param start: The POSIX timestamp of the start of the query.
+        :param start: The POSIX timestamp of the start of the query in seconds.
         :type start: int
-        :param end: The POSIX timestamp of the end of the query.
+        :param end: The POSIX timestamp of the end of the query in seconds.
         :type end: int
         :param metric_query: The metric query.
         :type metric_query: str, optional

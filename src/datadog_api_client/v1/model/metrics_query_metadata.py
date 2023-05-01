@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import List, TYPE_CHECKING, Union
+from typing import List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -45,7 +45,7 @@ class MetricsQueryMetadata(ModelNormal):
             "scope": (str,),
             "start": (int,),
             "tag_set": ([str],),
-            "unit": ([MetricsQueryUnit],),
+            "unit": ([MetricsQueryUnit, none_type],),
         }
 
     attribute_map = {
@@ -111,7 +111,7 @@ class MetricsQueryMetadata(ModelNormal):
         :param expression: Metric expression.
         :type expression: str, optional
 
-        :param interval: Number of seconds between data samples.
+        :param interval: Number of milliseconds between data samples.
         :type interval: int, optional
 
         :param length: Number of data samples.
@@ -120,7 +120,7 @@ class MetricsQueryMetadata(ModelNormal):
         :param metric: Metric name.
         :type metric: str, optional
 
-        :param pointlist: List of points of the time series.
+        :param pointlist: List of points of the time series in milliseconds.
         :type pointlist: [Point], optional
 
         :param query_index: The index of the series' query within the request.
@@ -136,9 +136,10 @@ class MetricsQueryMetadata(ModelNormal):
         :type tag_set: [str], optional
 
         :param unit: Detailed information about the metric unit.
-            First element describes the "primary unit" (for example, ``bytes`` in ``bytes per second`` ),
-            second describes the "per unit" (for example, ``second`` in ``bytes per second`` ).
-        :type unit: [MetricsQueryUnit], optional
+            The first element describes the "primary unit" (for example, ``bytes`` in ``bytes per second`` ).
+            The second element describes the "per unit" (for example, ``second`` in ``bytes per second`` ).
+            If the second element is not present, the API returns null.
+        :type unit: [MetricsQueryUnit, none_type], optional
         """
         if aggr is not unset:
             kwargs["aggr"] = aggr

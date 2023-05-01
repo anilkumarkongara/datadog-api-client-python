@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import Dict, List, TYPE_CHECKING, Union
+from typing import Dict, List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -17,6 +17,7 @@ from datadog_api_client.model_utils import (
 if TYPE_CHECKING:
     from datadog_api_client.v1.model.monitor_options_aggregation import MonitorOptionsAggregation
     from datadog_api_client.v1.model.monitor_device_id import MonitorDeviceID
+    from datadog_api_client.v1.model.monitor_options_notification_presets import MonitorOptionsNotificationPresets
     from datadog_api_client.v1.model.on_missing_data_option import OnMissingDataOption
     from datadog_api_client.v1.model.monitor_renotify_status_type import MonitorRenotifyStatusType
     from datadog_api_client.v1.model.monitor_options_scheduling_options import MonitorOptionsSchedulingOptions
@@ -42,6 +43,7 @@ class MonitorOptions(ModelNormal):
     def openapi_types(_):
         from datadog_api_client.v1.model.monitor_options_aggregation import MonitorOptionsAggregation
         from datadog_api_client.v1.model.monitor_device_id import MonitorDeviceID
+        from datadog_api_client.v1.model.monitor_options_notification_presets import MonitorOptionsNotificationPresets
         from datadog_api_client.v1.model.on_missing_data_option import OnMissingDataOption
         from datadog_api_client.v1.model.monitor_renotify_status_type import MonitorRenotifyStatusType
         from datadog_api_client.v1.model.monitor_options_scheduling_options import MonitorOptionsSchedulingOptions
@@ -55,6 +57,7 @@ class MonitorOptions(ModelNormal):
             "aggregation": (MonitorOptionsAggregation,),
             "device_ids": ([MonitorDeviceID],),
             "enable_logs_sample": (bool,),
+            "enable_samples": (bool,),
             "escalation_message": (str,),
             "evaluation_delay": (int, none_type),
             "group_retention_duration": (str,),
@@ -66,6 +69,7 @@ class MonitorOptions(ModelNormal):
             "new_group_delay": (int, none_type),
             "new_host_delay": (int, none_type),
             "no_data_timeframe": (int, none_type),
+            "notification_preset_name": (MonitorOptionsNotificationPresets,),
             "notify_audit": (bool,),
             "notify_by": ([str],),
             "notify_no_data": (bool,),
@@ -94,6 +98,7 @@ class MonitorOptions(ModelNormal):
         "aggregation": "aggregation",
         "device_ids": "device_ids",
         "enable_logs_sample": "enable_logs_sample",
+        "enable_samples": "enable_samples",
         "escalation_message": "escalation_message",
         "evaluation_delay": "evaluation_delay",
         "group_retention_duration": "group_retention_duration",
@@ -105,6 +110,7 @@ class MonitorOptions(ModelNormal):
         "new_group_delay": "new_group_delay",
         "new_host_delay": "new_host_delay",
         "no_data_timeframe": "no_data_timeframe",
+        "notification_preset_name": "notification_preset_name",
         "notify_audit": "notify_audit",
         "notify_by": "notify_by",
         "notify_no_data": "notify_no_data",
@@ -131,6 +137,7 @@ class MonitorOptions(ModelNormal):
         aggregation: Union[MonitorOptionsAggregation, UnsetType] = unset,
         device_ids: Union[List[MonitorDeviceID], UnsetType] = unset,
         enable_logs_sample: Union[bool, UnsetType] = unset,
+        enable_samples: Union[bool, UnsetType] = unset,
         escalation_message: Union[str, UnsetType] = unset,
         evaluation_delay: Union[int, none_type, UnsetType] = unset,
         group_retention_duration: Union[str, UnsetType] = unset,
@@ -142,6 +149,7 @@ class MonitorOptions(ModelNormal):
         new_group_delay: Union[int, none_type, UnsetType] = unset,
         new_host_delay: Union[int, none_type, UnsetType] = unset,
         no_data_timeframe: Union[int, none_type, UnsetType] = unset,
+        notification_preset_name: Union[MonitorOptionsNotificationPresets, UnsetType] = unset,
         notify_audit: Union[bool, UnsetType] = unset,
         notify_by: Union[List[str], UnsetType] = unset,
         notify_no_data: Union[bool, UnsetType] = unset,
@@ -173,6 +181,9 @@ class MonitorOptions(ModelNormal):
 
         :param enable_logs_sample: Whether or not to send a log sample when the log monitor triggers.
         :type enable_logs_sample: bool, optional
+
+        :param enable_samples: Whether or not to send a list of samples when the monitor triggers. This is only used by CI Test and Pipeline monitors.
+        :type enable_samples: bool, optional
 
         :param escalation_message: We recommend using the `is_renotify <https://docs.datadoghq.com/monitors/notify/?tab=is_alert#renotify>`_ ,
             block in the original message instead.
@@ -231,6 +242,9 @@ class MonitorOptions(ModelNormal):
             Datadog recommends at least 2x the monitor timeframe for query alerts or 2 minutes for service checks.
             If omitted, 2x the evaluation timeframe is used for query alerts, and 24 hours is used for service checks.
         :type no_data_timeframe: int, none_type, optional
+
+        :param notification_preset_name: Toggles the display of additional content sent in the monitor notification.
+        :type notification_preset_name: MonitorOptionsNotificationPresets, optional
 
         :param notify_audit: A Boolean indicating whether tagged users is notified on changes to this monitor.
         :type notify_audit: bool, optional
@@ -295,6 +309,8 @@ class MonitorOptions(ModelNormal):
             kwargs["device_ids"] = device_ids
         if enable_logs_sample is not unset:
             kwargs["enable_logs_sample"] = enable_logs_sample
+        if enable_samples is not unset:
+            kwargs["enable_samples"] = enable_samples
         if escalation_message is not unset:
             kwargs["escalation_message"] = escalation_message
         if evaluation_delay is not unset:
@@ -317,6 +333,8 @@ class MonitorOptions(ModelNormal):
             kwargs["new_host_delay"] = new_host_delay
         if no_data_timeframe is not unset:
             kwargs["no_data_timeframe"] = no_data_timeframe
+        if notification_preset_name is not unset:
+            kwargs["notification_preset_name"] = notification_preset_name
         if notify_audit is not unset:
             kwargs["notify_audit"] = notify_audit
         if notify_by is not unset:

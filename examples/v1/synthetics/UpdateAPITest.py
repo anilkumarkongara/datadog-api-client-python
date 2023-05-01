@@ -5,7 +5,6 @@ Edit an API test returns "OK" response
 from os import environ
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_api_test import SyntheticsAPITest
 from datadog_api_client.v1.model.synthetics_api_test_config import SyntheticsAPITestConfig
 from datadog_api_client.v1.model.synthetics_api_test_type import SyntheticsAPITestType
@@ -75,9 +74,9 @@ body = SyntheticsAPITest(
                 ),
             ),
             headers=SyntheticsTestHeaders(
-                unique="exampleeditanapitestreturnsokresponse",
+                unique="examplesynthetic",
             ),
-            method=HTTPMethod.GET,
+            method="GET",
             timeout=10.0,
             url="https://datadoghq.com",
         ),
@@ -86,7 +85,7 @@ body = SyntheticsAPITest(
         "aws:us-east-2",
     ],
     message="BDD test payload: synthetics_api_test_payload.json",
-    name="Example-Edit_an_API_test_returns_OK_response-updated",
+    name="Example-Synthetic-updated",
     options=SyntheticsTestOptions(
         accept_self_signed=False,
         allow_insecure=True,

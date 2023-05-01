@@ -23,6 +23,7 @@ class UsageSummaryDateOrg(ModelNormal):
             "apm_host_top99p": (int,),
             "appsec_fargate_count_avg": (int,),
             "audit_logs_lines_indexed_sum": (int,),
+            "audit_trail_enabled_hwm": (int,),
             "avg_profiled_fargate_tasks": (int,),
             "aws_host_top99p": (int,),
             "aws_lambda_func_count": (int,),
@@ -36,13 +37,16 @@ class UsageSummaryDateOrg(ModelNormal):
             "ci_test_indexed_spans_sum": (int,),
             "ci_visibility_pipeline_committers_hwm": (int,),
             "ci_visibility_test_committers_hwm": (int,),
+            "cloud_cost_management_host_count_avg": (int,),
             "container_avg": (int,),
+            "container_excl_agent_avg": (int,),
             "container_hwm": (int,),
             "cspm_aas_host_top99p": (int,),
             "cspm_aws_host_top99p": (int,),
             "cspm_azure_host_top99p": (int,),
             "cspm_container_avg": (int,),
             "cspm_container_hwm": (int,),
+            "cspm_gcp_host_top99p": (int,),
             "cspm_host_top99p": (int,),
             "custom_ts_avg": (int,),
             "cws_container_count_avg": (int,),
@@ -51,6 +55,7 @@ class UsageSummaryDateOrg(ModelNormal):
             "dbm_queries_avg_sum": (int,),
             "fargate_tasks_count_avg": (int,),
             "fargate_tasks_count_hwm": (int,),
+            "forwarding_events_bytes_sum": (int,),
             "gcp_host_top99p": (int,),
             "heroku_host_top99p": (int,),
             "id": (str,),
@@ -62,6 +67,7 @@ class UsageSummaryDateOrg(ModelNormal):
             "iot_device_top99p_sum": (int,),
             "mobile_rum_lite_session_count_sum": (int,),
             "mobile_rum_session_count_android_sum": (int,),
+            "mobile_rum_session_count_flutter_sum": (int,),
             "mobile_rum_session_count_ios_sum": (int,),
             "mobile_rum_session_count_reactnative_sum": (int,),
             "mobile_rum_session_count_sum": (int,),
@@ -71,6 +77,7 @@ class UsageSummaryDateOrg(ModelNormal):
             "npm_host_top99p": (int,),
             "observability_pipelines_bytes_processed_sum": (int,),
             "online_archive_events_count_sum": (int,),
+            "opentelemetry_apm_host_top99p": (int,),
             "opentelemetry_host_top99p": (int,),
             "profiling_host_top99p": (int,),
             "public_id": (str,),
@@ -86,8 +93,10 @@ class UsageSummaryDateOrg(ModelNormal):
             "sds_total_scanned_bytes_sum": (int,),
             "synthetics_browser_check_calls_count_sum": (int,),
             "synthetics_check_calls_count_sum": (int,),
+            "synthetics_parallel_testing_max_slots_hwm": (int,),
             "trace_search_indexed_events_count_sum": (int,),
             "twol_ingested_events_bytes_sum": (int,),
+            "universal_service_monitoring_host_top99p": (int,),
             "vsphere_host_top99p": (int,),
         }
 
@@ -98,6 +107,7 @@ class UsageSummaryDateOrg(ModelNormal):
         "apm_host_top99p": "apm_host_top99p",
         "appsec_fargate_count_avg": "appsec_fargate_count_avg",
         "audit_logs_lines_indexed_sum": "audit_logs_lines_indexed_sum",
+        "audit_trail_enabled_hwm": "audit_trail_enabled_hwm",
         "avg_profiled_fargate_tasks": "avg_profiled_fargate_tasks",
         "aws_host_top99p": "aws_host_top99p",
         "aws_lambda_func_count": "aws_lambda_func_count",
@@ -111,13 +121,16 @@ class UsageSummaryDateOrg(ModelNormal):
         "ci_test_indexed_spans_sum": "ci_test_indexed_spans_sum",
         "ci_visibility_pipeline_committers_hwm": "ci_visibility_pipeline_committers_hwm",
         "ci_visibility_test_committers_hwm": "ci_visibility_test_committers_hwm",
+        "cloud_cost_management_host_count_avg": "cloud_cost_management_host_count_avg",
         "container_avg": "container_avg",
+        "container_excl_agent_avg": "container_excl_agent_avg",
         "container_hwm": "container_hwm",
         "cspm_aas_host_top99p": "cspm_aas_host_top99p",
         "cspm_aws_host_top99p": "cspm_aws_host_top99p",
         "cspm_azure_host_top99p": "cspm_azure_host_top99p",
         "cspm_container_avg": "cspm_container_avg",
         "cspm_container_hwm": "cspm_container_hwm",
+        "cspm_gcp_host_top99p": "cspm_gcp_host_top99p",
         "cspm_host_top99p": "cspm_host_top99p",
         "custom_ts_avg": "custom_ts_avg",
         "cws_container_count_avg": "cws_container_count_avg",
@@ -126,6 +139,7 @@ class UsageSummaryDateOrg(ModelNormal):
         "dbm_queries_avg_sum": "dbm_queries_avg_sum",
         "fargate_tasks_count_avg": "fargate_tasks_count_avg",
         "fargate_tasks_count_hwm": "fargate_tasks_count_hwm",
+        "forwarding_events_bytes_sum": "forwarding_events_bytes_sum",
         "gcp_host_top99p": "gcp_host_top99p",
         "heroku_host_top99p": "heroku_host_top99p",
         "id": "id",
@@ -137,6 +151,7 @@ class UsageSummaryDateOrg(ModelNormal):
         "iot_device_top99p_sum": "iot_device_top99p_sum",
         "mobile_rum_lite_session_count_sum": "mobile_rum_lite_session_count_sum",
         "mobile_rum_session_count_android_sum": "mobile_rum_session_count_android_sum",
+        "mobile_rum_session_count_flutter_sum": "mobile_rum_session_count_flutter_sum",
         "mobile_rum_session_count_ios_sum": "mobile_rum_session_count_ios_sum",
         "mobile_rum_session_count_reactnative_sum": "mobile_rum_session_count_reactnative_sum",
         "mobile_rum_session_count_sum": "mobile_rum_session_count_sum",
@@ -146,6 +161,7 @@ class UsageSummaryDateOrg(ModelNormal):
         "npm_host_top99p": "npm_host_top99p",
         "observability_pipelines_bytes_processed_sum": "observability_pipelines_bytes_processed_sum",
         "online_archive_events_count_sum": "online_archive_events_count_sum",
+        "opentelemetry_apm_host_top99p": "opentelemetry_apm_host_top99p",
         "opentelemetry_host_top99p": "opentelemetry_host_top99p",
         "profiling_host_top99p": "profiling_host_top99p",
         "public_id": "public_id",
@@ -161,8 +177,10 @@ class UsageSummaryDateOrg(ModelNormal):
         "sds_total_scanned_bytes_sum": "sds_total_scanned_bytes_sum",
         "synthetics_browser_check_calls_count_sum": "synthetics_browser_check_calls_count_sum",
         "synthetics_check_calls_count_sum": "synthetics_check_calls_count_sum",
+        "synthetics_parallel_testing_max_slots_hwm": "synthetics_parallel_testing_max_slots_hwm",
         "trace_search_indexed_events_count_sum": "trace_search_indexed_events_count_sum",
         "twol_ingested_events_bytes_sum": "twol_ingested_events_bytes_sum",
+        "universal_service_monitoring_host_top99p": "universal_service_monitoring_host_top99p",
         "vsphere_host_top99p": "vsphere_host_top99p",
     }
 
@@ -174,6 +192,7 @@ class UsageSummaryDateOrg(ModelNormal):
         apm_host_top99p: Union[int, UnsetType] = unset,
         appsec_fargate_count_avg: Union[int, UnsetType] = unset,
         audit_logs_lines_indexed_sum: Union[int, UnsetType] = unset,
+        audit_trail_enabled_hwm: Union[int, UnsetType] = unset,
         avg_profiled_fargate_tasks: Union[int, UnsetType] = unset,
         aws_host_top99p: Union[int, UnsetType] = unset,
         aws_lambda_func_count: Union[int, UnsetType] = unset,
@@ -187,13 +206,16 @@ class UsageSummaryDateOrg(ModelNormal):
         ci_test_indexed_spans_sum: Union[int, UnsetType] = unset,
         ci_visibility_pipeline_committers_hwm: Union[int, UnsetType] = unset,
         ci_visibility_test_committers_hwm: Union[int, UnsetType] = unset,
+        cloud_cost_management_host_count_avg: Union[int, UnsetType] = unset,
         container_avg: Union[int, UnsetType] = unset,
+        container_excl_agent_avg: Union[int, UnsetType] = unset,
         container_hwm: Union[int, UnsetType] = unset,
         cspm_aas_host_top99p: Union[int, UnsetType] = unset,
         cspm_aws_host_top99p: Union[int, UnsetType] = unset,
         cspm_azure_host_top99p: Union[int, UnsetType] = unset,
         cspm_container_avg: Union[int, UnsetType] = unset,
         cspm_container_hwm: Union[int, UnsetType] = unset,
+        cspm_gcp_host_top99p: Union[int, UnsetType] = unset,
         cspm_host_top99p: Union[int, UnsetType] = unset,
         custom_ts_avg: Union[int, UnsetType] = unset,
         cws_container_count_avg: Union[int, UnsetType] = unset,
@@ -202,6 +224,7 @@ class UsageSummaryDateOrg(ModelNormal):
         dbm_queries_avg_sum: Union[int, UnsetType] = unset,
         fargate_tasks_count_avg: Union[int, UnsetType] = unset,
         fargate_tasks_count_hwm: Union[int, UnsetType] = unset,
+        forwarding_events_bytes_sum: Union[int, UnsetType] = unset,
         gcp_host_top99p: Union[int, UnsetType] = unset,
         heroku_host_top99p: Union[int, UnsetType] = unset,
         id: Union[str, UnsetType] = unset,
@@ -213,6 +236,7 @@ class UsageSummaryDateOrg(ModelNormal):
         iot_device_top99p_sum: Union[int, UnsetType] = unset,
         mobile_rum_lite_session_count_sum: Union[int, UnsetType] = unset,
         mobile_rum_session_count_android_sum: Union[int, UnsetType] = unset,
+        mobile_rum_session_count_flutter_sum: Union[int, UnsetType] = unset,
         mobile_rum_session_count_ios_sum: Union[int, UnsetType] = unset,
         mobile_rum_session_count_reactnative_sum: Union[int, UnsetType] = unset,
         mobile_rum_session_count_sum: Union[int, UnsetType] = unset,
@@ -222,6 +246,7 @@ class UsageSummaryDateOrg(ModelNormal):
         npm_host_top99p: Union[int, UnsetType] = unset,
         observability_pipelines_bytes_processed_sum: Union[int, UnsetType] = unset,
         online_archive_events_count_sum: Union[int, UnsetType] = unset,
+        opentelemetry_apm_host_top99p: Union[int, UnsetType] = unset,
         opentelemetry_host_top99p: Union[int, UnsetType] = unset,
         profiling_host_top99p: Union[int, UnsetType] = unset,
         public_id: Union[str, UnsetType] = unset,
@@ -237,8 +262,10 @@ class UsageSummaryDateOrg(ModelNormal):
         sds_total_scanned_bytes_sum: Union[int, UnsetType] = unset,
         synthetics_browser_check_calls_count_sum: Union[int, UnsetType] = unset,
         synthetics_check_calls_count_sum: Union[int, UnsetType] = unset,
+        synthetics_parallel_testing_max_slots_hwm: Union[int, UnsetType] = unset,
         trace_search_indexed_events_count_sum: Union[int, UnsetType] = unset,
         twol_ingested_events_bytes_sum: Union[int, UnsetType] = unset,
+        universal_service_monitoring_host_top99p: Union[int, UnsetType] = unset,
         vsphere_host_top99p: Union[int, UnsetType] = unset,
         **kwargs,
     ):
@@ -260,8 +287,11 @@ class UsageSummaryDateOrg(ModelNormal):
         :param appsec_fargate_count_avg: Shows the average of all Application Security Monitoring ECS Fargate tasks over all hours in the current months for the given org.
         :type appsec_fargate_count_avg: int, optional
 
-        :param audit_logs_lines_indexed_sum: Shows the sum of all audit logs lines indexed over all hours in the current date for the given org.
+        :param audit_logs_lines_indexed_sum: Shows the sum of all audit logs lines indexed over all hours in the current date for the given org. **Deprecated**.
         :type audit_logs_lines_indexed_sum: int, optional
+
+        :param audit_trail_enabled_hwm: Shows whether Audit Trail is enabled for the current date for the given org.
+        :type audit_trail_enabled_hwm: int, optional
 
         :param avg_profiled_fargate_tasks: The average profiled task count for Fargate Profiling.
         :type avg_profiled_fargate_tasks: int, optional
@@ -302,8 +332,14 @@ class UsageSummaryDateOrg(ModelNormal):
         :param ci_visibility_test_committers_hwm: Shows the high-water mark of all CI visibility test committers over all hours in the current date for the given org.
         :type ci_visibility_test_committers_hwm: int, optional
 
+        :param cloud_cost_management_host_count_avg: Host count average of Cloud Cost Management for the given date and given org.
+        :type cloud_cost_management_host_count_avg: int, optional
+
         :param container_avg: Shows the average of all distinct containers over all hours in the current date for the given org.
         :type container_avg: int, optional
+
+        :param container_excl_agent_avg: Shows the average of containers without the Datadog Agent over all hours in the current date for the given organization.
+        :type container_excl_agent_avg: int, optional
 
         :param container_hwm: Shows the high-water mark of all distinct containers over all hours in the current date for the given org.
         :type container_hwm: int, optional
@@ -322,6 +358,9 @@ class UsageSummaryDateOrg(ModelNormal):
 
         :param cspm_container_hwm: Shows the high-water mark of Cloud Security Posture Management containers over all hours in the current date for the given org.
         :type cspm_container_hwm: int, optional
+
+        :param cspm_gcp_host_top99p: Shows the 99th percentile of all Cloud Security Posture Management GCP hosts over all hours in the current date for the given org.
+        :type cspm_gcp_host_top99p: int, optional
 
         :param cspm_host_top99p: Shows the 99th percentile of all Cloud Security Posture Management hosts over all hours in the current date for the given org.
         :type cspm_host_top99p: int, optional
@@ -346,6 +385,9 @@ class UsageSummaryDateOrg(ModelNormal):
 
         :param fargate_tasks_count_hwm: Shows the high-water mark of all Fargate tasks over all hours in the current date for the given org.
         :type fargate_tasks_count_hwm: int, optional
+
+        :param forwarding_events_bytes_sum: Shows the sum of all log bytes forwarded over all hours in the current date for the given org.
+        :type forwarding_events_bytes_sum: int, optional
 
         :param gcp_host_top99p: Shows the 99th percentile of all GCP hosts over all hours in the current date for the given org.
         :type gcp_host_top99p: int, optional
@@ -380,6 +422,9 @@ class UsageSummaryDateOrg(ModelNormal):
         :param mobile_rum_session_count_android_sum: Shows the sum of all mobile RUM Sessions on Android over all hours in the current date for the given org.
         :type mobile_rum_session_count_android_sum: int, optional
 
+        :param mobile_rum_session_count_flutter_sum: Shows the sum of all mobile RUM Sessions on Flutter over all hours in the current date for the given org.
+        :type mobile_rum_session_count_flutter_sum: int, optional
+
         :param mobile_rum_session_count_ios_sum: Shows the sum of all mobile RUM Sessions on iOS over all hours in the current date for the given org.
         :type mobile_rum_session_count_ios_sum: int, optional
 
@@ -406,6 +451,9 @@ class UsageSummaryDateOrg(ModelNormal):
 
         :param online_archive_events_count_sum: Sum of all online archived events over all hours in the current date for the given org.
         :type online_archive_events_count_sum: int, optional
+
+        :param opentelemetry_apm_host_top99p: Shows the 99th percentile of APM hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for the given org.
+        :type opentelemetry_apm_host_top99p: int, optional
 
         :param opentelemetry_host_top99p: Shows the 99th percentile of all hosts reported by the Datadog exporter for the OpenTelemetry Collector over all hours in the current date for the given org.
         :type opentelemetry_host_top99p: int, optional
@@ -452,11 +500,17 @@ class UsageSummaryDateOrg(ModelNormal):
         :param synthetics_check_calls_count_sum: Shows the sum of all Synthetic API tests over all hours in the current date for the given org.
         :type synthetics_check_calls_count_sum: int, optional
 
+        :param synthetics_parallel_testing_max_slots_hwm: Shows the high-water mark of used synthetics parallel testing slots over all hours in the current date for the given org.
+        :type synthetics_parallel_testing_max_slots_hwm: int, optional
+
         :param trace_search_indexed_events_count_sum: Shows the sum of all Indexed Spans indexed over all hours in the current date for the given org.
         :type trace_search_indexed_events_count_sum: int, optional
 
         :param twol_ingested_events_bytes_sum: Shows the sum of all ingested APM span bytes over all hours in the current date for the given org.
         :type twol_ingested_events_bytes_sum: int, optional
+
+        :param universal_service_monitoring_host_top99p: Shows the 99th percentile of all Universal Service Monitoring hosts over all hours in the current date for the given org.
+        :type universal_service_monitoring_host_top99p: int, optional
 
         :param vsphere_host_top99p: Shows the 99th percentile of all vSphere hosts over all hours in the current date for the given org.
         :type vsphere_host_top99p: int, optional
@@ -473,6 +527,8 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["appsec_fargate_count_avg"] = appsec_fargate_count_avg
         if audit_logs_lines_indexed_sum is not unset:
             kwargs["audit_logs_lines_indexed_sum"] = audit_logs_lines_indexed_sum
+        if audit_trail_enabled_hwm is not unset:
+            kwargs["audit_trail_enabled_hwm"] = audit_trail_enabled_hwm
         if avg_profiled_fargate_tasks is not unset:
             kwargs["avg_profiled_fargate_tasks"] = avg_profiled_fargate_tasks
         if aws_host_top99p is not unset:
@@ -499,8 +555,12 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["ci_visibility_pipeline_committers_hwm"] = ci_visibility_pipeline_committers_hwm
         if ci_visibility_test_committers_hwm is not unset:
             kwargs["ci_visibility_test_committers_hwm"] = ci_visibility_test_committers_hwm
+        if cloud_cost_management_host_count_avg is not unset:
+            kwargs["cloud_cost_management_host_count_avg"] = cloud_cost_management_host_count_avg
         if container_avg is not unset:
             kwargs["container_avg"] = container_avg
+        if container_excl_agent_avg is not unset:
+            kwargs["container_excl_agent_avg"] = container_excl_agent_avg
         if container_hwm is not unset:
             kwargs["container_hwm"] = container_hwm
         if cspm_aas_host_top99p is not unset:
@@ -513,6 +573,8 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["cspm_container_avg"] = cspm_container_avg
         if cspm_container_hwm is not unset:
             kwargs["cspm_container_hwm"] = cspm_container_hwm
+        if cspm_gcp_host_top99p is not unset:
+            kwargs["cspm_gcp_host_top99p"] = cspm_gcp_host_top99p
         if cspm_host_top99p is not unset:
             kwargs["cspm_host_top99p"] = cspm_host_top99p
         if custom_ts_avg is not unset:
@@ -529,6 +591,8 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["fargate_tasks_count_avg"] = fargate_tasks_count_avg
         if fargate_tasks_count_hwm is not unset:
             kwargs["fargate_tasks_count_hwm"] = fargate_tasks_count_hwm
+        if forwarding_events_bytes_sum is not unset:
+            kwargs["forwarding_events_bytes_sum"] = forwarding_events_bytes_sum
         if gcp_host_top99p is not unset:
             kwargs["gcp_host_top99p"] = gcp_host_top99p
         if heroku_host_top99p is not unset:
@@ -551,6 +615,8 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["mobile_rum_lite_session_count_sum"] = mobile_rum_lite_session_count_sum
         if mobile_rum_session_count_android_sum is not unset:
             kwargs["mobile_rum_session_count_android_sum"] = mobile_rum_session_count_android_sum
+        if mobile_rum_session_count_flutter_sum is not unset:
+            kwargs["mobile_rum_session_count_flutter_sum"] = mobile_rum_session_count_flutter_sum
         if mobile_rum_session_count_ios_sum is not unset:
             kwargs["mobile_rum_session_count_ios_sum"] = mobile_rum_session_count_ios_sum
         if mobile_rum_session_count_reactnative_sum is not unset:
@@ -569,6 +635,8 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["observability_pipelines_bytes_processed_sum"] = observability_pipelines_bytes_processed_sum
         if online_archive_events_count_sum is not unset:
             kwargs["online_archive_events_count_sum"] = online_archive_events_count_sum
+        if opentelemetry_apm_host_top99p is not unset:
+            kwargs["opentelemetry_apm_host_top99p"] = opentelemetry_apm_host_top99p
         if opentelemetry_host_top99p is not unset:
             kwargs["opentelemetry_host_top99p"] = opentelemetry_host_top99p
         if profiling_host_top99p is not unset:
@@ -599,10 +667,14 @@ class UsageSummaryDateOrg(ModelNormal):
             kwargs["synthetics_browser_check_calls_count_sum"] = synthetics_browser_check_calls_count_sum
         if synthetics_check_calls_count_sum is not unset:
             kwargs["synthetics_check_calls_count_sum"] = synthetics_check_calls_count_sum
+        if synthetics_parallel_testing_max_slots_hwm is not unset:
+            kwargs["synthetics_parallel_testing_max_slots_hwm"] = synthetics_parallel_testing_max_slots_hwm
         if trace_search_indexed_events_count_sum is not unset:
             kwargs["trace_search_indexed_events_count_sum"] = trace_search_indexed_events_count_sum
         if twol_ingested_events_bytes_sum is not unset:
             kwargs["twol_ingested_events_bytes_sum"] = twol_ingested_events_bytes_sum
+        if universal_service_monitoring_host_top99p is not unset:
+            kwargs["universal_service_monitoring_host_top99p"] = universal_service_monitoring_host_top99p
         if vsphere_host_top99p is not unset:
             kwargs["vsphere_host_top99p"] = vsphere_host_top99p
         super().__init__(kwargs)

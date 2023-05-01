@@ -7,6 +7,7 @@ from typing import Any, Dict, Union
 import warnings
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     datetime,
     UnsetType,
@@ -37,7 +38,7 @@ class UsageMeteringApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._get_cost_by_org_endpoint = _Endpoint(
@@ -180,6 +181,11 @@ class UsageMeteringApi:
                 "filter_include_descendants": {
                     "openapi_types": (bool,),
                     "attribute": "filter[include_descendants]",
+                    "location": "query",
+                },
+                "filter_include_breakdown": {
+                    "openapi_types": (bool,),
+                    "attribute": "filter[include_breakdown]",
                     "location": "query",
                 },
                 "filter_versions": {
@@ -412,6 +418,7 @@ class UsageMeteringApi:
         *,
         filter_timestamp_end: Union[datetime, UnsetType] = unset,
         filter_include_descendants: Union[bool, UnsetType] = unset,
+        filter_include_breakdown: Union[bool, UnsetType] = unset,
         filter_versions: Union[str, UnsetType] = unset,
         page_limit: Union[int, UnsetType] = unset,
         page_next_record_id: Union[str, UnsetType] = unset,
@@ -423,16 +430,20 @@ class UsageMeteringApi:
         :param filter_timestamp_start: Datetime in ISO-8601 format, UTC, precise to hour: [YYYY-MM-DDThh] for usage beginning at this hour.
         :type filter_timestamp_start: datetime
         :param filter_product_families: Comma separated list of product families to retrieve. Available families are ``all`` , ``analyzed_logs`` ,
-            ``application_security`` , ``audit_logs`` , ``serverless`` , ``ci_app`` , ``cspm`` , ``custom_events`` , ``cws`` , ``dbm`` , ``fargate`` ,
+            ``application_security`` , ``audit_trail`` , ``serverless`` , ``ci_app`` , ``cloud_cost_management`` ,
+            ``cspm`` , ``custom_events`` , ``cws`` , ``dbm`` , ``fargate`` ,
             ``infra_hosts`` , ``incident_management`` , ``indexed_logs`` , ``indexed_spans`` , ``ingested_spans`` , ``iot`` ,
             ``lambda_traced_invocations`` , ``logs`` , ``network_flows`` , ``network_hosts`` , ``observability_pipelines`` ,
             ``online_archive`` , ``profiling`` , ``rum`` , ``rum_browser_sessions`` , ``rum_mobile_sessions`` , ``sds`` , ``snmp`` ,
-            ``synthetics_api`` , ``synthetics_browser`` , and ``timeseries``.
+            ``synthetics_api`` , ``synthetics_browser`` , ``synthetics_parallel_testing`` , and ``timeseries``.
+            The following product family has been **deprecated** : ``audit_logs``.
         :type filter_product_families: str
         :param filter_timestamp_end: Datetime in ISO-8601 format, UTC, precise to hour: [YYYY-MM-DDThh] for usage ending **before** this hour.
         :type filter_timestamp_end: datetime, optional
         :param filter_include_descendants: Include child org usage in the response. Defaults to false.
         :type filter_include_descendants: bool, optional
+        :param filter_include_breakdown: Include breakdown of usage by subcategories where applicable (for product family logs only). Defaults to false.
+        :type filter_include_breakdown: bool, optional
         :param filter_versions: Comma separated list of product family versions to use in the format ``product_family:version``. For example,
             ``infra_hosts:1.0.0``. If this parameter is not used, the API will use the latest version of each requested
             product family. Currently all families have one version ``1.0.0``.
@@ -453,6 +464,9 @@ class UsageMeteringApi:
 
         if filter_include_descendants is not unset:
             kwargs["filter_include_descendants"] = filter_include_descendants
+
+        if filter_include_breakdown is not unset:
+            kwargs["filter_include_breakdown"] = filter_include_breakdown
 
         if filter_versions is not unset:
             kwargs["filter_versions"] = filter_versions

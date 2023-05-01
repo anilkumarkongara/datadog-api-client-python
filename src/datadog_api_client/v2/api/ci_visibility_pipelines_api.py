@@ -7,6 +7,7 @@ import collections
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     datetime,
     set_attribute_from_path,
@@ -31,13 +32,13 @@ class CIVisibilityPipelinesApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._aggregate_ci_app_pipeline_events_endpoint = _Endpoint(
             settings={
                 "response_type": (CIAppPipelinesAnalyticsAggregateResponse,),
-                "auth": ["apiKeyAuth", "appKeyAuth", "AuthZ"],
+                "auth": ["apiKeyAuth", "appKeyAuth"],
                 "endpoint_path": "/api/v2/ci/pipelines/analytics/aggregate",
                 "operation_id": "aggregate_ci_app_pipeline_events",
                 "http_method": "POST",
@@ -58,7 +59,7 @@ class CIVisibilityPipelinesApi:
         self._list_ci_app_pipeline_events_endpoint = _Endpoint(
             settings={
                 "response_type": (CIAppPipelineEventsResponse,),
-                "auth": ["apiKeyAuth", "appKeyAuth", "AuthZ"],
+                "auth": ["apiKeyAuth", "appKeyAuth"],
                 "endpoint_path": "/api/v2/ci/pipelines/events",
                 "operation_id": "list_ci_app_pipeline_events",
                 "http_method": "GET",
@@ -110,7 +111,7 @@ class CIVisibilityPipelinesApi:
         self._search_ci_app_pipeline_events_endpoint = _Endpoint(
             settings={
                 "response_type": (CIAppPipelineEventsResponse,),
-                "auth": ["apiKeyAuth", "appKeyAuth", "AuthZ"],
+                "auth": ["apiKeyAuth", "appKeyAuth"],
                 "endpoint_path": "/api/v2/ci/pipelines/events/search",
                 "operation_id": "search_ci_app_pipeline_events",
                 "http_method": "POST",

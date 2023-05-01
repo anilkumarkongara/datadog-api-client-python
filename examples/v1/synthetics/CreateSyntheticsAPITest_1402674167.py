@@ -4,7 +4,6 @@ Create an API GRPC test returns "OK - Returns the created test details." respons
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_api_test import SyntheticsAPITest
 from datadog_api_client.v1.model.synthetics_api_test_config import SyntheticsAPITestConfig
 from datadog_api_client.v1.model.synthetics_api_test_type import SyntheticsAPITestType
@@ -25,12 +24,23 @@ body = SyntheticsAPITest(
                 target=1,
                 type=SyntheticsAssertionType.GRPC_HEALTHCHECK_STATUS,
             ),
+            SyntheticsAssertionTarget(
+                operator=SyntheticsAssertionOperator.IS,
+                target="proto target",
+                type=SyntheticsAssertionType.GRPC_PROTO,
+            ),
+            SyntheticsAssertionTarget(
+                operator=SyntheticsAssertionOperator.IS,
+                target="123",
+                _property="property",
+                type=SyntheticsAssertionType.GRPC_METADATA,
+            ),
         ],
         request=SyntheticsTestRequest(
             host="localhost",
             port=50051,
             service="Hello",
-            method=HTTPMethod.GET,
+            method="GET",
             message="",
             metadata=SyntheticsTestMetadata(),
         ),
@@ -39,14 +49,14 @@ body = SyntheticsAPITest(
         "aws:us-east-2",
     ],
     message="BDD test payload: synthetics_api_grpc_test_payload.json",
-    name="Example-Create_an_API_GRPC_test_returns_OK_Returns_the_created_test_details_response",
+    name="Example-Synthetic",
     options=SyntheticsTestOptions(
         min_failure_duration=0,
         min_location_failed=1,
         monitor_options=SyntheticsTestOptionsMonitorOptions(
             renotify_interval=0,
         ),
-        monitor_name="Example-Create_an_API_GRPC_test_returns_OK_Returns_the_created_test_details_response",
+        monitor_name="Example-Synthetic",
         tick_every=60,
     ),
     subtype=SyntheticsTestDetailsSubType.GRPC,

@@ -4,7 +4,6 @@ Create a browser test returns "OK - Returns saved rumSettings." response
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_browser_test import SyntheticsBrowserTest
 from datadog_api_client.v1.model.synthetics_browser_test_config import SyntheticsBrowserTestConfig
 from datadog_api_client.v1.model.synthetics_browser_test_rum_settings import SyntheticsBrowserTestRumSettings
@@ -32,7 +31,7 @@ body = SyntheticsBrowserTest(
             ),
         ],
         request=SyntheticsTestRequest(
-            method=HTTPMethod.GET,
+            method="GET",
             url="https://datadoghq.com",
             certificate_domains=[
                 "https://datadoghq.com",
@@ -44,7 +43,7 @@ body = SyntheticsBrowserTest(
         "aws:us-east-2",
     ],
     message="Test message",
-    name="Example-Create_a_browser_test_returns_OK_Returns_saved_rumSettings_response",
+    name="Example-Synthetic",
     options=SyntheticsTestOptions(
         accept_self_signed=False,
         allow_insecure=True,

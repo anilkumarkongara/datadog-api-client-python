@@ -4,7 +4,6 @@ Create an API test with multi subtype returns "OK - Returns the created test det
 
 from datadog_api_client import ApiClient, Configuration
 from datadog_api_client.v1.api.synthetics_api import SyntheticsApi
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.synthetics_api_step import SyntheticsAPIStep
 from datadog_api_client.v1.model.synthetics_api_step_subtype import SyntheticsAPIStepSubtype
 from datadog_api_client.v1.model.synthetics_api_test import SyntheticsAPITest
@@ -59,7 +58,7 @@ body = SyntheticsAPITest(
                 is_critical=True,
                 name="request is sent",
                 request=SyntheticsTestRequest(
-                    method=HTTPMethod.GET,
+                    method="GET",
                     timeout=10.0,
                     url="https://datadoghq.com",
                 ),
@@ -75,14 +74,14 @@ body = SyntheticsAPITest(
         "aws:us-east-2",
     ],
     message="BDD test payload: synthetics_api_test_multi_step_payload.json",
-    name="Example-Create_an_API_test_with_multi_subtype_returns_OK_Returns_the_created_test_details_response",
+    name="Example-Synthetic",
     options=SyntheticsTestOptions(
         accept_self_signed=False,
         allow_insecure=True,
         follow_redirects=True,
         min_failure_duration=10,
         min_location_failed=1,
-        monitor_name="Example-Create_an_API_test_with_multi_subtype_returns_OK_Returns_the_created_test_details_response",
+        monitor_name="Example-Synthetic",
         monitor_priority=5,
         retry=SyntheticsTestOptionsRetry(
             count=3,

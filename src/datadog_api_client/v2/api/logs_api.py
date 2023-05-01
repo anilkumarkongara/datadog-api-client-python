@@ -7,6 +7,7 @@ import collections
 from typing import Any, Dict, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     datetime,
     set_attribute_from_path,
@@ -32,7 +33,7 @@ class LogsApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._aggregate_logs_endpoint = _Endpoint(
@@ -157,6 +158,7 @@ class LogsApi:
                                     "datadoghq.com",
                                     "us3.datadoghq.com",
                                     "us5.datadoghq.com",
+                                    "ap1.datadoghq.com",
                                     "datadoghq.eu",
                                     "ddog-gov.com",
                                 ],
@@ -458,6 +460,7 @@ class LogsApi:
 
         Datadog recommends sending your logs compressed.
         Add the ``Content-Encoding: gzip`` header to the request when sending compressed logs.
+        Log events can be submitted up to 18 hours in the past and 2 hours in the future.
 
         The status codes answered by the HTTP API are:
 

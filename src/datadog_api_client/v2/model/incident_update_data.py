@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Union
+from typing import Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -54,7 +54,7 @@ class IncidentUpdateData(ModelNormal):
         :param attributes: The incident's attributes for an update request.
         :type attributes: IncidentUpdateAttributes, optional
 
-        :param id: The team's ID.
+        :param id: The incident's ID.
         :type id: str
 
         :param relationships: The incident's relationships for an update request.

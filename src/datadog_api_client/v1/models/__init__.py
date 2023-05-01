@@ -52,6 +52,9 @@ from datadog_api_client.v1.model.dashboard_bulk_action_data import DashboardBulk
 from datadog_api_client.v1.model.dashboard_bulk_action_data_list import DashboardBulkActionDataList
 from datadog_api_client.v1.model.dashboard_bulk_delete_request import DashboardBulkDeleteRequest
 from datadog_api_client.v1.model.dashboard_delete_response import DashboardDeleteResponse
+from datadog_api_client.v1.model.dashboard_global_time import DashboardGlobalTime
+from datadog_api_client.v1.model.dashboard_global_time_live_span import DashboardGlobalTimeLiveSpan
+from datadog_api_client.v1.model.dashboard_invite_type import DashboardInviteType
 from datadog_api_client.v1.model.dashboard_layout_type import DashboardLayoutType
 from datadog_api_client.v1.model.dashboard_list import DashboardList
 from datadog_api_client.v1.model.dashboard_list_delete_response import DashboardListDeleteResponse
@@ -59,13 +62,17 @@ from datadog_api_client.v1.model.dashboard_list_list_response import DashboardLi
 from datadog_api_client.v1.model.dashboard_reflow_type import DashboardReflowType
 from datadog_api_client.v1.model.dashboard_resource_type import DashboardResourceType
 from datadog_api_client.v1.model.dashboard_restore_request import DashboardRestoreRequest
+from datadog_api_client.v1.model.dashboard_share_type import DashboardShareType
 from datadog_api_client.v1.model.dashboard_summary import DashboardSummary
 from datadog_api_client.v1.model.dashboard_summary_definition import DashboardSummaryDefinition
 from datadog_api_client.v1.model.dashboard_template_variable import DashboardTemplateVariable
 from datadog_api_client.v1.model.dashboard_template_variable_preset import DashboardTemplateVariablePreset
 from datadog_api_client.v1.model.dashboard_template_variable_preset_value import DashboardTemplateVariablePresetValue
+from datadog_api_client.v1.model.dashboard_type import DashboardType
+from datadog_api_client.v1.model.delete_shared_dashboard_response import DeleteSharedDashboardResponse
 from datadog_api_client.v1.model.deleted_monitor import DeletedMonitor
 from datadog_api_client.v1.model.distribution_point import DistributionPoint
+from datadog_api_client.v1.model.distribution_point_data import DistributionPointData
 from datadog_api_client.v1.model.distribution_points_content_encoding import DistributionPointsContentEncoding
 from datadog_api_client.v1.model.distribution_points_payload import DistributionPointsPayload
 from datadog_api_client.v1.model.distribution_points_series import DistributionPointsSeries
@@ -164,7 +171,6 @@ from datadog_api_client.v1.model.group_widget_definition_type import GroupWidget
 from datadog_api_client.v1.model.http_log import HTTPLog
 from datadog_api_client.v1.model.http_log_error import HTTPLogError
 from datadog_api_client.v1.model.http_log_item import HTTPLogItem
-from datadog_api_client.v1.model.http_method import HTTPMethod
 from datadog_api_client.v1.model.heat_map_widget_definition import HeatMapWidgetDefinition
 from datadog_api_client.v1.model.heat_map_widget_definition_type import HeatMapWidgetDefinitionType
 from datadog_api_client.v1.model.heat_map_widget_request import HeatMapWidgetRequest
@@ -193,6 +199,7 @@ from datadog_api_client.v1.model.ip_prefixes_api import IPPrefixesAPI
 from datadog_api_client.v1.model.ip_prefixes_apm import IPPrefixesAPM
 from datadog_api_client.v1.model.ip_prefixes_agents import IPPrefixesAgents
 from datadog_api_client.v1.model.ip_prefixes_logs import IPPrefixesLogs
+from datadog_api_client.v1.model.ip_prefixes_orchestrator import IPPrefixesOrchestrator
 from datadog_api_client.v1.model.ip_prefixes_process import IPPrefixesProcess
 from datadog_api_client.v1.model.ip_prefixes_synthetics import IPPrefixesSynthetics
 from datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations import IPPrefixesSyntheticsPrivateLocations
@@ -205,6 +212,9 @@ from datadog_api_client.v1.model.image_widget_definition_type import ImageWidget
 from datadog_api_client.v1.model.intake_payload_accepted import IntakePayloadAccepted
 from datadog_api_client.v1.model.list_stream_column import ListStreamColumn
 from datadog_api_client.v1.model.list_stream_column_width import ListStreamColumnWidth
+from datadog_api_client.v1.model.list_stream_compute_aggregation import ListStreamComputeAggregation
+from datadog_api_client.v1.model.list_stream_compute_items import ListStreamComputeItems
+from datadog_api_client.v1.model.list_stream_group_by_items import ListStreamGroupByItems
 from datadog_api_client.v1.model.list_stream_query import ListStreamQuery
 from datadog_api_client.v1.model.list_stream_response_format import ListStreamResponseFormat
 from datadog_api_client.v1.model.list_stream_source import ListStreamSource
@@ -315,6 +325,7 @@ from datadog_api_client.v1.model.monitor_group_search_response_counts import Mon
 from datadog_api_client.v1.model.monitor_group_search_result import MonitorGroupSearchResult
 from datadog_api_client.v1.model.monitor_options import MonitorOptions
 from datadog_api_client.v1.model.monitor_options_aggregation import MonitorOptionsAggregation
+from datadog_api_client.v1.model.monitor_options_notification_presets import MonitorOptionsNotificationPresets
 from datadog_api_client.v1.model.monitor_options_scheduling_options import MonitorOptionsSchedulingOptions
 from datadog_api_client.v1.model.monitor_options_scheduling_options_evaluation_window import (
     MonitorOptionsSchedulingOptionsEvaluationWindow,
@@ -414,7 +425,11 @@ from datadog_api_client.v1.model.query_sort_order import QuerySortOrder
 from datadog_api_client.v1.model.query_value_widget_definition import QueryValueWidgetDefinition
 from datadog_api_client.v1.model.query_value_widget_definition_type import QueryValueWidgetDefinitionType
 from datadog_api_client.v1.model.query_value_widget_request import QueryValueWidgetRequest
+from datadog_api_client.v1.model.reference_table_logs_lookup_processor import ReferenceTableLogsLookupProcessor
 from datadog_api_client.v1.model.response_meta_attributes import ResponseMetaAttributes
+from datadog_api_client.v1.model.run_workflow_widget_definition import RunWorkflowWidgetDefinition
+from datadog_api_client.v1.model.run_workflow_widget_definition_type import RunWorkflowWidgetDefinitionType
+from datadog_api_client.v1.model.run_workflow_widget_input import RunWorkflowWidgetInput
 from datadog_api_client.v1.model.slo_bulk_delete import SLOBulkDelete
 from datadog_api_client.v1.model.slo_bulk_delete_error import SLOBulkDeleteError
 from datadog_api_client.v1.model.slo_bulk_delete_response import SLOBulkDeleteResponse
@@ -460,6 +475,8 @@ from datadog_api_client.v1.model.slo_overall_statuses import SLOOverallStatuses
 from datadog_api_client.v1.model.slo_raw_error_budget_remaining import SLORawErrorBudgetRemaining
 from datadog_api_client.v1.model.slo_response import SLOResponse
 from datadog_api_client.v1.model.slo_response_data import SLOResponseData
+from datadog_api_client.v1.model.slo_state import SLOState
+from datadog_api_client.v1.model.slo_status import SLOStatus
 from datadog_api_client.v1.model.slo_threshold import SLOThreshold
 from datadog_api_client.v1.model.slo_timeframe import SLOTimeframe
 from datadog_api_client.v1.model.slo_type import SLOType
@@ -493,6 +510,7 @@ from datadog_api_client.v1.model.search_slo_timeframe import SearchSLOTimeframe
 from datadog_api_client.v1.model.search_service_level_objective import SearchServiceLevelObjective
 from datadog_api_client.v1.model.search_service_level_objective_attributes import SearchServiceLevelObjectiveAttributes
 from datadog_api_client.v1.model.search_service_level_objective_data import SearchServiceLevelObjectiveData
+from datadog_api_client.v1.model.selectable_template_variable_items import SelectableTemplateVariableItems
 from datadog_api_client.v1.model.series import Series
 from datadog_api_client.v1.model.service_check import ServiceCheck
 from datadog_api_client.v1.model.service_check_status import ServiceCheckStatus
@@ -504,6 +522,21 @@ from datadog_api_client.v1.model.service_map_widget_definition import ServiceMap
 from datadog_api_client.v1.model.service_map_widget_definition_type import ServiceMapWidgetDefinitionType
 from datadog_api_client.v1.model.service_summary_widget_definition import ServiceSummaryWidgetDefinition
 from datadog_api_client.v1.model.service_summary_widget_definition_type import ServiceSummaryWidgetDefinitionType
+from datadog_api_client.v1.model.shared_dashboard import SharedDashboard
+from datadog_api_client.v1.model.shared_dashboard_author import SharedDashboardAuthor
+from datadog_api_client.v1.model.shared_dashboard_invites import SharedDashboardInvites
+from datadog_api_client.v1.model.shared_dashboard_invites_data import SharedDashboardInvitesData
+from datadog_api_client.v1.model.shared_dashboard_invites_data_list import SharedDashboardInvitesDataList
+from datadog_api_client.v1.model.shared_dashboard_invites_data_object import SharedDashboardInvitesDataObject
+from datadog_api_client.v1.model.shared_dashboard_invites_data_object_attributes import (
+    SharedDashboardInvitesDataObjectAttributes,
+)
+from datadog_api_client.v1.model.shared_dashboard_invites_meta import SharedDashboardInvitesMeta
+from datadog_api_client.v1.model.shared_dashboard_invites_meta_page import SharedDashboardInvitesMetaPage
+from datadog_api_client.v1.model.shared_dashboard_update_request import SharedDashboardUpdateRequest
+from datadog_api_client.v1.model.shared_dashboard_update_request_global_time import (
+    SharedDashboardUpdateRequestGlobalTime,
+)
 from datadog_api_client.v1.model.signal_archive_reason import SignalArchiveReason
 from datadog_api_client.v1.model.signal_assignee_update_request import SignalAssigneeUpdateRequest
 from datadog_api_client.v1.model.signal_state_update_request import SignalStateUpdateRequest
@@ -551,6 +584,13 @@ from datadog_api_client.v1.model.synthetics_basic_auth_digest import SyntheticsB
 from datadog_api_client.v1.model.synthetics_basic_auth_digest_type import SyntheticsBasicAuthDigestType
 from datadog_api_client.v1.model.synthetics_basic_auth_ntlm import SyntheticsBasicAuthNTLM
 from datadog_api_client.v1.model.synthetics_basic_auth_ntlm_type import SyntheticsBasicAuthNTLMType
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_client import SyntheticsBasicAuthOauthClient
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_client_type import SyntheticsBasicAuthOauthClientType
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop import SyntheticsBasicAuthOauthROP
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop_type import SyntheticsBasicAuthOauthROPType
+from datadog_api_client.v1.model.synthetics_basic_auth_oauth_token_api_authentication import (
+    SyntheticsBasicAuthOauthTokenApiAuthentication,
+)
 from datadog_api_client.v1.model.synthetics_basic_auth_sigv4 import SyntheticsBasicAuthSigv4
 from datadog_api_client.v1.model.synthetics_basic_auth_sigv4_type import SyntheticsBasicAuthSigv4Type
 from datadog_api_client.v1.model.synthetics_basic_auth_web import SyntheticsBasicAuthWeb
@@ -599,6 +639,7 @@ from datadog_api_client.v1.model.synthetics_get_browser_test_latest_results_resp
 )
 from datadog_api_client.v1.model.synthetics_global_variable import SyntheticsGlobalVariable
 from datadog_api_client.v1.model.synthetics_global_variable_attributes import SyntheticsGlobalVariableAttributes
+from datadog_api_client.v1.model.synthetics_global_variable_options import SyntheticsGlobalVariableOptions
 from datadog_api_client.v1.model.synthetics_global_variable_parse_test_options import (
     SyntheticsGlobalVariableParseTestOptions,
 )
@@ -606,6 +647,9 @@ from datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_t
     SyntheticsGlobalVariableParseTestOptionsType,
 )
 from datadog_api_client.v1.model.synthetics_global_variable_parser_type import SyntheticsGlobalVariableParserType
+from datadog_api_client.v1.model.synthetics_global_variable_totp_parameters import (
+    SyntheticsGlobalVariableTOTPParameters,
+)
 from datadog_api_client.v1.model.synthetics_global_variable_value import SyntheticsGlobalVariableValue
 from datadog_api_client.v1.model.synthetics_list_global_variables_response import SyntheticsListGlobalVariablesResponse
 from datadog_api_client.v1.model.synthetics_list_tests_response import SyntheticsListTestsResponse
@@ -637,6 +681,7 @@ from datadog_api_client.v1.model.synthetics_step import SyntheticsStep
 from datadog_api_client.v1.model.synthetics_step_detail import SyntheticsStepDetail
 from datadog_api_client.v1.model.synthetics_step_detail_warning import SyntheticsStepDetailWarning
 from datadog_api_client.v1.model.synthetics_step_type import SyntheticsStepType
+from datadog_api_client.v1.model.synthetics_test_call_type import SyntheticsTestCallType
 from datadog_api_client.v1.model.synthetics_test_ci_options import SyntheticsTestCiOptions
 from datadog_api_client.v1.model.synthetics_test_config import SyntheticsTestConfig
 from datadog_api_client.v1.model.synthetics_test_details import SyntheticsTestDetails
@@ -647,8 +692,13 @@ from datadog_api_client.v1.model.synthetics_test_headers import SyntheticsTestHe
 from datadog_api_client.v1.model.synthetics_test_metadata import SyntheticsTestMetadata
 from datadog_api_client.v1.model.synthetics_test_monitor_status import SyntheticsTestMonitorStatus
 from datadog_api_client.v1.model.synthetics_test_options import SyntheticsTestOptions
+from datadog_api_client.v1.model.synthetics_test_options_http_version import SyntheticsTestOptionsHTTPVersion
 from datadog_api_client.v1.model.synthetics_test_options_monitor_options import SyntheticsTestOptionsMonitorOptions
 from datadog_api_client.v1.model.synthetics_test_options_retry import SyntheticsTestOptionsRetry
+from datadog_api_client.v1.model.synthetics_test_options_scheduling import SyntheticsTestOptionsScheduling
+from datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe import (
+    SyntheticsTestOptionsSchedulingTimeframe,
+)
 from datadog_api_client.v1.model.synthetics_test_pause_status import SyntheticsTestPauseStatus
 from datadog_api_client.v1.model.synthetics_test_process_status import SyntheticsTestProcessStatus
 from datadog_api_client.v1.model.synthetics_test_request import SyntheticsTestRequest
@@ -822,6 +872,7 @@ from datadog_api_client.v1.model.widget_event_size import WidgetEventSize
 from datadog_api_client.v1.model.widget_field_sort import WidgetFieldSort
 from datadog_api_client.v1.model.widget_formula import WidgetFormula
 from datadog_api_client.v1.model.widget_formula_limit import WidgetFormulaLimit
+from datadog_api_client.v1.model.widget_formula_style import WidgetFormulaStyle
 from datadog_api_client.v1.model.widget_grouping import WidgetGrouping
 from datadog_api_client.v1.model.widget_horizontal_align import WidgetHorizontalAlign
 from datadog_api_client.v1.model.widget_image_sizing import WidgetImageSizing

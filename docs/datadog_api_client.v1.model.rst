@@ -379,6 +379,27 @@ dashboard\_delete\_response
    :members:
    :show-inheritance:
 
+dashboard\_global\_time
+-----------------------
+
+.. automodule:: datadog_api_client.v1.model.dashboard_global_time
+   :members:
+   :show-inheritance:
+
+dashboard\_global\_time\_live\_span
+-----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.dashboard_global_time_live_span
+   :members:
+   :show-inheritance:
+
+dashboard\_invite\_type
+-----------------------
+
+.. automodule:: datadog_api_client.v1.model.dashboard_invite_type
+   :members:
+   :show-inheritance:
+
 dashboard\_layout\_type
 -----------------------
 
@@ -428,6 +449,13 @@ dashboard\_restore\_request
    :members:
    :show-inheritance:
 
+dashboard\_share\_type
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.dashboard_share_type
+   :members:
+   :show-inheritance:
+
 dashboard\_summary
 ------------------
 
@@ -463,6 +491,20 @@ dashboard\_template\_variable\_preset\_value
    :members:
    :show-inheritance:
 
+dashboard\_type
+---------------
+
+.. automodule:: datadog_api_client.v1.model.dashboard_type
+   :members:
+   :show-inheritance:
+
+delete\_shared\_dashboard\_response
+-----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.delete_shared_dashboard_response
+   :members:
+   :show-inheritance:
+
 deleted\_monitor
 ----------------
 
@@ -474,6 +516,13 @@ distribution\_point
 -------------------
 
 .. automodule:: datadog_api_client.v1.model.distribution_point
+   :members:
+   :show-inheritance:
+
+distribution\_point\_data
+-------------------------
+
+.. automodule:: datadog_api_client.v1.model.distribution_point_data
    :members:
    :show-inheritance:
 
@@ -1107,13 +1156,6 @@ http\_log\_item
    :members:
    :show-inheritance:
 
-http\_method
-------------
-
-.. automodule:: datadog_api_client.v1.model.http_method
-   :members:
-   :show-inheritance:
-
 i\_frame\_widget\_definition
 ----------------------------
 
@@ -1191,6 +1233,13 @@ ip\_prefixes\_logs
    :members:
    :show-inheritance:
 
+ip\_prefixes\_orchestrator
+--------------------------
+
+.. automodule:: datadog_api_client.v1.model.ip_prefixes_orchestrator
+   :members:
+   :show-inheritance:
+
 ip\_prefixes\_process
 ---------------------
 
@@ -1237,6 +1286,27 @@ list\_stream\_column\_width
 ---------------------------
 
 .. automodule:: datadog_api_client.v1.model.list_stream_column_width
+   :members:
+   :show-inheritance:
+
+list\_stream\_compute\_aggregation
+----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_compute_aggregation
+   :members:
+   :show-inheritance:
+
+list\_stream\_compute\_items
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_compute_items
+   :members:
+   :show-inheritance:
+
+list\_stream\_group\_by\_items
+------------------------------
+
+.. automodule:: datadog_api_client.v1.model.list_stream_group_by_items
    :members:
    :show-inheritance:
 
@@ -1898,6 +1968,13 @@ monitor\_options\_aggregation
    :members:
    :show-inheritance:
 
+monitor\_options\_notification\_presets
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.monitor_options_notification_presets
+   :members:
+   :show-inheritance:
+
 monitor\_options\_scheduling\_options
 -------------------------------------
 
@@ -2535,10 +2612,38 @@ query\_value\_widget\_request
    :members:
    :show-inheritance:
 
+reference\_table\_logs\_lookup\_processor
+-----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.reference_table_logs_lookup_processor
+   :members:
+   :show-inheritance:
+
 response\_meta\_attributes
 --------------------------
 
 .. automodule:: datadog_api_client.v1.model.response_meta_attributes
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_definition
+---------------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_definition
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_definition\_type
+---------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_definition_type
+   :members:
+   :show-inheritance:
+
+run\_workflow\_widget\_input
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.run_workflow_widget_input
    :members:
    :show-inheritance:
 
@@ -2703,6 +2808,13 @@ search\_slo\_timeframe
    :members:
    :show-inheritance:
 
+selectable\_template\_variable\_items
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.selectable_template_variable_items
+   :members:
+   :show-inheritance:
+
 series
 ------
 
@@ -2777,6 +2889,83 @@ service\_summary\_widget\_definition\_type
 ------------------------------------------
 
 .. automodule:: datadog_api_client.v1.model.service_summary_widget_definition_type
+   :members:
+   :show-inheritance:
+
+shared\_dashboard
+-----------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_author
+-------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_author
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites
+--------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_data
+--------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_data
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_data\_list
+--------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_data_list
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_data\_object
+----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_data_object
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_data\_object\_attributes
+----------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_data_object_attributes
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_meta
+--------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_meta
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_invites\_meta\_page
+--------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_invites_meta_page
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_update\_request
+----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_update_request
+   :members:
+   :show-inheritance:
+
+shared\_dashboard\_update\_request\_global\_time
+------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.shared_dashboard_update_request_global_time
    :members:
    :show-inheritance:
 
@@ -3130,6 +3319,20 @@ slo\_response\_data
    :members:
    :show-inheritance:
 
+slo\_state
+----------
+
+.. automodule:: datadog_api_client.v1.model.slo_state
+   :members:
+   :show-inheritance:
+
+slo\_status
+-----------
+
+.. automodule:: datadog_api_client.v1.model.slo_status
+   :members:
+   :show-inheritance:
+
 slo\_threshold
 --------------
 
@@ -3421,6 +3624,41 @@ synthetics\_basic\_auth\_ntlm\_type
 -----------------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_ntlm_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_client
+--------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_client
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_client\_type
+--------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_client_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_rop
+-----------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_rop\_type
+-----------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop_type
+   :members:
+   :show-inheritance:
+
+synthetics\_basic\_auth\_oauth\_token\_api\_authentication
+----------------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_basic_auth_oauth_token_api_authentication
    :members:
    :show-inheritance:
 
@@ -3718,6 +3956,13 @@ synthetics\_global\_variable\_attributes
    :members:
    :show-inheritance:
 
+synthetics\_global\_variable\_options
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_global_variable_options
+   :members:
+   :show-inheritance:
+
 synthetics\_global\_variable\_parse\_test\_options
 --------------------------------------------------
 
@@ -3736,6 +3981,13 @@ synthetics\_global\_variable\_parser\_type
 ------------------------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_global_variable_parser_type
+   :members:
+   :show-inheritance:
+
+synthetics\_global\_variable\_totp\_parameters
+----------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_global_variable_totp_parameters
    :members:
    :show-inheritance:
 
@@ -3900,6 +4152,13 @@ synthetics\_step\_type
    :members:
    :show-inheritance:
 
+synthetics\_test\_call\_type
+----------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_call_type
+   :members:
+   :show-inheritance:
+
 synthetics\_test\_ci\_options
 -----------------------------
 
@@ -3981,6 +4240,20 @@ synthetics\_test\_options\_retry
 --------------------------------
 
 .. automodule:: datadog_api_client.v1.model.synthetics_test_options_retry
+   :members:
+   :show-inheritance:
+
+synthetics\_test\_options\_scheduling
+-------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_options_scheduling
+   :members:
+   :show-inheritance:
+
+synthetics\_test\_options\_scheduling\_timeframe
+------------------------------------------------
+
+.. automodule:: datadog_api_client.v1.model.synthetics_test_options_scheduling_timeframe
    :members:
    :show-inheritance:
 
@@ -5122,6 +5395,13 @@ widget\_formula\_limit
 ----------------------
 
 .. automodule:: datadog_api_client.v1.model.widget_formula_limit
+   :members:
+   :show-inheritance:
+
+widget\_formula\_style
+----------------------
+
+.. automodule:: datadog_api_client.v1.model.widget_formula_style
    :members:
    :show-inheritance:
 

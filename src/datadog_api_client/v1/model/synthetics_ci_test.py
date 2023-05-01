@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import Dict, List, TYPE_CHECKING, Union
+from typing import Dict, List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -23,6 +23,8 @@ if TYPE_CHECKING:
     from datadog_api_client.v1.model.synthetics_basic_auth_sigv4 import SyntheticsBasicAuthSigv4
     from datadog_api_client.v1.model.synthetics_basic_auth_ntlm import SyntheticsBasicAuthNTLM
     from datadog_api_client.v1.model.synthetics_basic_auth_digest import SyntheticsBasicAuthDigest
+    from datadog_api_client.v1.model.synthetics_basic_auth_oauth_client import SyntheticsBasicAuthOauthClient
+    from datadog_api_client.v1.model.synthetics_basic_auth_oauth_rop import SyntheticsBasicAuthOauthROP
 
 
 class SyntheticsCITest(ModelNormal):
@@ -78,6 +80,8 @@ class SyntheticsCITest(ModelNormal):
             SyntheticsBasicAuthSigv4,
             SyntheticsBasicAuthNTLM,
             SyntheticsBasicAuthDigest,
+            SyntheticsBasicAuthOauthClient,
+            SyntheticsBasicAuthOauthROP,
             UnsetType,
         ] = unset,
         body: Union[str, UnsetType] = unset,

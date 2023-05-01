@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import List, TYPE_CHECKING, Union
+from typing import List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -62,7 +62,7 @@ class ServiceCheck(ModelNormal):
         :param message: Message containing check status.
         :type message: str, optional
 
-        :param status: The status of a service check.
+        :param status: The status of a service check. Set to ``0`` for OK, ``1`` for warning, ``2`` for critical, and ``3`` for unknown.
         :type status: ServiceCheckStatus
 
         :param tags: Tags related to a check.

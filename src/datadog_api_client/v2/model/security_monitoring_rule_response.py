@@ -18,11 +18,17 @@ class SecurityMonitoringRuleResponse(ModelComposed):
         :param cases: Cases for generating signals.
         :type cases: [SecurityMonitoringRuleCase], optional
 
+        :param compliance_signal_options: How to generate compliance signals. Useful for cloud_configuration rules only.
+        :type compliance_signal_options: CloudConfigurationRuleComplianceSignalOptions, optional
+
         :param created_at: When the rule was created, timestamp in milliseconds.
         :type created_at: int, optional
 
         :param creation_author_id: User ID of the user who created the rule.
         :type creation_author_id: int, optional
+
+        :param deprecation_date: When the rule will be deprecated, timestamp in milliseconds.
+        :type deprecation_date: int, optional
 
         :param filters: Additional queries to filter matched events before they are processed.
         :type filters: [SecurityMonitoringFilter], optional

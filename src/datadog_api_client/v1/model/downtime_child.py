@@ -3,7 +3,7 @@
 # Copyright 2019-Present Datadog, Inc.
 from __future__ import annotations
 
-from typing import List, TYPE_CHECKING, Union
+from typing import List, Union, TYPE_CHECKING
 
 from datadog_api_client.model_utils import (
     ModelNormal,
@@ -44,7 +44,7 @@ class DowntimeChild(ModelNormal):
             "downtime_type": (int,),
             "end": (int, none_type),
             "id": (int,),
-            "message": (str,),
+            "message": (str, none_type),
             "monitor_id": (int, none_type),
             "monitor_tags": ([str],),
             "mute_first_recovery_notification": (bool,),
@@ -93,7 +93,7 @@ class DowntimeChild(ModelNormal):
         downtime_type: Union[int, UnsetType] = unset,
         end: Union[int, none_type, UnsetType] = unset,
         id: Union[int, UnsetType] = unset,
-        message: Union[str, UnsetType] = unset,
+        message: Union[str, none_type, UnsetType] = unset,
         monitor_id: Union[int, none_type, UnsetType] = unset,
         monitor_tags: Union[List[str], UnsetType] = unset,
         mute_first_recovery_notification: Union[bool, UnsetType] = unset,
@@ -135,7 +135,7 @@ class DowntimeChild(ModelNormal):
 
         :param message: A message to include with notifications for this downtime.
             Email notifications can be sent to specific users by using the same ``@username`` notation as events.
-        :type message: str, optional
+        :type message: str, none_type, optional
 
         :param monitor_id: A single monitor to which the downtime applies.
             If not provided, the downtime applies to all monitors.
@@ -156,7 +156,7 @@ class DowntimeChild(ModelNormal):
         :param recurrence: An object defining the recurrence of the downtime.
         :type recurrence: DowntimeRecurrence, none_type, optional
 
-        :param scope: The scope(s) to which the downtime applies. For example, ``host:app2``.
+        :param scope: The scope(s) to which the downtime applies and must be in ``key:value`` format. For example, ``host:app2``.
             Provide multiple scopes as a comma-separated list like ``env:dev,env:prod``.
             The resulting downtime applies to sources that matches ALL provided scopes ( ``env:dev`` **AND** ``env:prod`` ).
         :type scope: [str], optional

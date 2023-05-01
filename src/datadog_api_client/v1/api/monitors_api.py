@@ -6,6 +6,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Union
 
 from datadog_api_client.api_client import ApiClient, Endpoint as _Endpoint
+from datadog_api_client.configuration import Configuration
 from datadog_api_client.model_utils import (
     UnsetType,
     unset,
@@ -28,7 +29,7 @@ class MonitorsApi:
 
     def __init__(self, api_client=None):
         if api_client is None:
-            api_client = ApiClient()
+            api_client = ApiClient(Configuration())
         self.api_client = api_client
 
         self._check_can_delete_monitor_endpoint = _Endpoint(
@@ -403,6 +404,8 @@ class MonitorsApi:
         * audit: ``audit alert``
         * error-tracking: ``error-tracking alert``
 
+        **Note** : Synthetic monitors are created through the Synthetics API. See the [Synthetics API] (https://docs.datadoghq.com/api/latest/synthetics/) documentation for more information.
+
         **Query Types**
 
         **Metric Alert Query**
@@ -520,7 +523,7 @@ class MonitorsApi:
         * ``operator`` ``<`` , ``<=`` , ``>`` , ``>=`` , ``==`` , or ``!=``.
         * ``#`` an integer or decimal number used to set the threshold.
 
-        **NOTE** Only available on US1-FED and in closed beta on US1, EU, US3, and US5.
+        **NOTE** Only available on US1-FED and in closed beta on US1, EU, AP1, US3, and US5.
 
         **CI Pipelines Alert Query**
 
@@ -533,7 +536,7 @@ class MonitorsApi:
         * ``operator`` ``<`` , ``<=`` , ``>`` , ``>=`` , ``==`` , or ``!=``.
         * ``#`` an integer or decimal number used to set the threshold.
 
-        **NOTE** CI Pipeline monitors are in alpha on US1, EU, US3 and US5.
+        **NOTE** CI Pipeline monitors are in alpha on US1, EU, AP1, US3, and US5.
 
         **CI Tests Alert Query**
 
@@ -546,7 +549,7 @@ class MonitorsApi:
         * ``operator`` ``<`` , ``<=`` , ``>`` , ``>=`` , ``==`` , or ``!=``.
         * ``#`` an integer or decimal number used to set the threshold.
 
-        **NOTE** CI Test monitors are available only in closed beta on US1, EU, US3 and US5.
+        **NOTE** CI Test monitors are available only in closed beta on US1, EU, AP1, US3, and US5.
 
         **Error Tracking Alert Query**
 
