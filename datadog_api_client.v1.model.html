@@ -2336,6 +2336,30 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_state" class="md-nav__link">notify_end_state</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_state.NotifyEndState" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndState</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_states" class="md-nav__link">notify_end_states</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_states.NotifyEndStates" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndStates</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_type" class="md-nav__link">notify_end_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_type.NotifyEndType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_types" class="md-nav__link">notify_end_types</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_types.NotifyEndTypes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndTypes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.on_missing_data_option" class="md-nav__link">on_missing_data_option</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OnMissingDataOption</span></code></a>
@@ -7557,6 +7581,30 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_state" class="md-nav__link">notify_end_state</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_state.NotifyEndState" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndState</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_states" class="md-nav__link">notify_end_states</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_states.NotifyEndStates" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndStates</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_type" class="md-nav__link">notify_end_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_type.NotifyEndType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.notify_end_types" class="md-nav__link">notify_end_types</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.notify_end_types.NotifyEndTypes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">NotifyEndTypes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.on_missing_data_option" class="md-nav__link">on_missing_data_option</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.on_missing_data_option.OnMissingDataOption" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">OnMissingDataOption</span></code></a>
@@ -12120,6 +12168,11 @@ not tags that are used in monitor queries (which are filtered by the scope param
 The resulting downtime applies to monitors that match ALL provided monitor tags.
 For example, <code class="docutils literal notranslate"><span class="pre">service:postgres</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">team:frontend</span></code>.</p></li>
 <li><p><strong>mute_first_recovery_notification</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the first recovery notification during a downtime should be muted.</p></li>
+<li><p><strong>notify_end_states</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notify_end_states.NotifyEndStates" title="datadog_api_client.v1.model.notify_end_states.NotifyEndStates"><em>NotifyEndStates</em></a><em>, </em><em>optional</em>) – States for which <code class="docutils literal notranslate"><span class="pre">notify_end_types</span></code> sends out notifications for.</p></li>
+<li><p><strong>notify_end_types</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notify_end_types.NotifyEndTypes" title="datadog_api_client.v1.model.notify_end_types.NotifyEndTypes"><em>NotifyEndTypes</em></a><em>, </em><em>optional</em>) – If set, notifies if a monitor is in an alert-worthy state ( <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> )
+when this downtime expires or is canceled. Applied to monitors that change states during
+the downtime (such as from <code class="docutils literal notranslate"><span class="pre">OK</span></code> to <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> ), and to monitors that
+already have an alert-worthy state when downtime begins.</p></li>
 <li><p><strong>parent_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the parent Downtime.</p></li>
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
 <li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies and must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
@@ -12164,6 +12217,11 @@ not tags that are used in monitor queries (which are filtered by the scope param
 The resulting downtime applies to monitors that match ALL provided monitor tags.
 For example, <code class="docutils literal notranslate"><span class="pre">service:postgres</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">team:frontend</span></code>.</p></li>
 <li><p><strong>mute_first_recovery_notification</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the first recovery notification during a downtime should be muted.</p></li>
+<li><p><strong>notify_end_states</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notify_end_states.NotifyEndStates" title="datadog_api_client.v1.model.notify_end_states.NotifyEndStates"><em>NotifyEndStates</em></a><em>, </em><em>optional</em>) – States for which <code class="docutils literal notranslate"><span class="pre">notify_end_types</span></code> sends out notifications for.</p></li>
+<li><p><strong>notify_end_types</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.notify_end_types.NotifyEndTypes" title="datadog_api_client.v1.model.notify_end_types.NotifyEndTypes"><em>NotifyEndTypes</em></a><em>, </em><em>optional</em>) – If set, notifies if a monitor is in an alert-worthy state ( <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> )
+when this downtime expires or is canceled. Applied to monitors that change states during
+the downtime (such as from <code class="docutils literal notranslate"><span class="pre">OK</span></code> to <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> ), and to monitors that
+already have an alert-worthy state when downtime begins.</p></li>
 <li><p><strong>parent_id</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ID of the parent Downtime.</p></li>
 <li><p><strong>recurrence</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence" title="datadog_api_client.v1.model.downtime_recurrence.DowntimeRecurrence"><em>DowntimeRecurrence</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – An object defining the recurrence of the downtime.</p></li>
 <li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies and must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
@@ -18076,6 +18134,119 @@ To delete existing cell(s), simply omit it from the list of cells.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>total_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of notebooks that would be returned if the request was not filtered by <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code> parameters.</p></li>
 <li><p><strong>total_filtered_count</strong> (<em>int</em><em>, </em><em>optional</em>) – The total number of notebooks returned.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.notify_end_state">
+<span id="notify-end-state"></span><h2 id="module-datadog_api_client.v1.model.notify_end_state">notify_end_state<a class="headerlink" href="#module-datadog_api_client.v1.model.notify_end_state" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.notify_end_state.NotifyEndState">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifyEndState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notify_end_state.NotifyEndState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>A notification end state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“alert”, “no data”, “warn”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.notify_end_states">
+<span id="notify-end-states"></span><h2 id="module-datadog_api_client.v1.model.notify_end_states">notify_end_states<a class="headerlink" href="#module-datadog_api_client.v1.model.notify_end_states" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.notify_end_states.NotifyEndStates">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifyEndStates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notify_end_states.NotifyEndStates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>States for which <code class="docutils literal notranslate"><span class="pre">notify_end_types</span></code> sends out notifications for.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.notify_end_state.NotifyEndState" title="datadog_api_client.v1.model.notify_end_state.NotifyEndState"><em>NotifyEndState</em></a><em>]</em>) – If omitted defaults to “[‘alert’, ‘no data’, ‘warn’]”.</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.notify_end_type">
+<span id="notify-end-type"></span><h2 id="module-datadog_api_client.v1.model.notify_end_type">notify_end_type<a class="headerlink" href="#module-datadog_api_client.v1.model.notify_end_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.notify_end_type.NotifyEndType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifyEndType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notify_end_type.NotifyEndType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>A notification end type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“canceled”, “expired”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v1.model.notify_end_types">
+<span id="notify-end-types"></span><h2 id="module-datadog_api_client.v1.model.notify_end_types">notify_end_types<a class="headerlink" href="#module-datadog_api_client.v1.model.notify_end_types" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.notify_end_types.NotifyEndTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">NotifyEndTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.notify_end_types.NotifyEndTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<dl class="simple">
+<dt>If set, notifies if a monitor is in an alert-worthy state ( <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> )</dt><dd><p>when this downtime expires or is canceled. Applied to monitors that change states during
+the downtime (such as from <code class="docutils literal notranslate"><span class="pre">OK</span></code> to <code class="docutils literal notranslate"><span class="pre">ALERT</span></code> , <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> , or <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">DATA</span></code> ), and to monitors that
+already have an alert-worthy state when downtime begins.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.notify_end_type.NotifyEndType" title="datadog_api_client.v1.model.notify_end_type.NotifyEndType"><em>NotifyEndType</em></a><em>]</em>) – If omitted defaults to “[‘expired’]”.</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.html#datadog_api_client.configuration.Configuration" title="datadog_api_client.configuration.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
