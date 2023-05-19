@@ -20997,7 +20997,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsAPIStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_api_step.SyntheticsAPIStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>The steps used in a Synthetics multistep API test.</p>
+<p>The steps used in a Synthetic multistep API test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -21135,7 +21135,7 @@ type conversion is done.</p></li>
 <li><p><strong>response_headers</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Response headers returned for the API test.</p></li>
 <li><p><strong>response_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Global size in byte of the API test response.</p></li>
 <li><p><strong>timings</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming" title="datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming"><em>SyntheticsTiming</em></a><em>, </em><em>optional</em>) – Object containing all metrics and their values collected for a Synthetic API test.
-Learn more about those metrics in <a class="reference external" href="https://docs.datadoghq.com/synthetics/#metrics">Synthetics documentation</a>.</p></li>
+See the <a class="reference external" href="https://docs.datadoghq.com/synthetics/metrics/">Synthetic Monitoring Metrics documentation</a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -21238,7 +21238,7 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>passed</strong> (<em>bool</em><em>, </em><em>optional</em>) – Describes if the test run has passed or failed.</p></li>
 <li><p><strong>timings</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming" title="datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming"><em>SyntheticsTiming</em></a><em>, </em><em>optional</em>) – <p>Object containing all metrics and their values collected for a Synthetic API test.
-Learn more about those metrics in <a class="reference external" href="https://docs.datadoghq.com/synthetics/#metrics">Synthetics documentation</a>.</p>
+See the <a class="reference external" href="https://docs.datadoghq.com/synthetics/metrics/">Synthetic Monitoring Metrics documentation</a>.</p>
 </p></li>
 </ul>
 </dd>
@@ -21863,7 +21863,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetics tests run.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetic tests run.</p></li>
 <li><p><strong>results</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_batch_result.SyntheticsBatchResult" title="datadog_api_client.v1.model.synthetics_batch_result.SyntheticsBatchResult"><em>SyntheticsBatchResult</em></a><em>]</em><em>, </em><em>optional</em>) – List of results for the batch.</p></li>
 <li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_status.SyntheticsStatus" title="datadog_api_client.v1.model.synthetics_status.SyntheticsStatus"><em>SyntheticsStatus</em></a><em>, </em><em>optional</em>) – Determines whether or not the batch has passed, failed, or is in progress.</p></li>
 </ul>
@@ -21877,13 +21877,13 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_batch_result.SyntheticsBatchResult">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsBatchResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_batch_result.SyntheticsBatchResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Object with the results of a Synthetics batch.</p>
+<p>Object with the results of a Synthetic batch.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>device</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID" title="datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID"><em>SyntheticsDeviceID</em></a><em>, </em><em>optional</em>) – The device ID.</p></li>
 <li><p><strong>duration</strong> (<em>float</em><em>, </em><em>optional</em>) – Total duration in millisecond of the test.</p></li>
-<li><p><strong>execution_rule</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule" title="datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule"><em>SyntheticsTestExecutionRule</em></a><em>, </em><em>optional</em>) – Execution rule for a Synthetics test.</p></li>
+<li><p><strong>execution_rule</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule" title="datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule"><em>SyntheticsTestExecutionRule</em></a><em>, </em><em>optional</em>) – Execution rule for a Synthetic test.</p></li>
 <li><p><strong>location</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the location.</p></li>
 <li><p><strong>result_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The ID of the result to get.</p></li>
 <li><p><strong>retries</strong> (<em>float</em><em>, </em><em>optional</em>) – Number of times this result has been retried.</p></li>
@@ -22208,7 +22208,7 @@ type conversion is done.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsBrowserVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_browser_variable.SyntheticsBrowserVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
 <p>Object defining a variable that can be used in your browser test.
-Learn more in the <a class="reference external" href="https://docs.datadoghq.com/synthetics/browser_tests/actions#variable">Browser test Actions documentation</a>.</p>
+See the <a class="reference external" href="https://docs.datadoghq.com/synthetics/browser_tests/actions/?tab=testanelementontheactivepage#variables">Recording Steps documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -22216,6 +22216,7 @@ Learn more in the <a class="reference external" href="https://docs.datadoghq.com
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID for the variable. Global variables require an ID.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Name of the variable.</p></li>
 <li><p><strong>pattern</strong> (<em>str</em><em>, </em><em>optional</em>) – Pattern of the variable.</p></li>
+<li><p><strong>secure</strong> (<em>bool</em><em>, </em><em>optional</em>) – Determines whether or not the browser test variable is obfuscated. Can only be used with browser variables of type <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_browser_variable_type.SyntheticsBrowserVariableType" title="datadog_api_client.v1.model.synthetics_browser_variable_type.SyntheticsBrowserVariableType"><em>SyntheticsBrowserVariableType</em></a>) – Type of browser test variable.</p></li>
 </ul>
 </dd>
@@ -22282,7 +22283,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsCIBatchMetadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Metadata for the Synthetics tests run.</p>
+<p>Metadata for the Synthetic tests run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -22361,21 +22362,21 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_ci_test.SyntheticsCITest">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsCITest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_ci_test.SyntheticsCITest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Test configuration for Synthetics CI</p>
+<p>Configuration for Continuous Testing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>allow_insecure_certificates</strong> (<em>bool</em><em>, </em><em>optional</em>) – Disable certificate checks in API tests.</p></li>
 <li><p><strong>basic_auth</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth" title="datadog_api_client.v1.model.synthetics_basic_auth.SyntheticsBasicAuth"><em>SyntheticsBasicAuth</em></a><em>, </em><em>optional</em>) – Object to handle basic authentication when performing the test.</p></li>
 <li><p><strong>body</strong> (<em>str</em><em>, </em><em>optional</em>) – Body to include in the test.</p></li>
-<li><p><strong>body_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of the data sent in a synthetics API test.</p></li>
+<li><p><strong>body_type</strong> (<em>str</em><em>, </em><em>optional</em>) – Type of the data sent in a Synthetic API test.</p></li>
 <li><p><strong>cookies</strong> (<em>str</em><em>, </em><em>optional</em>) – Cookies for the request.</p></li>
 <li><p><strong>device_ids</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID" title="datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID"><em>SyntheticsDeviceID</em></a><em>]</em><em>, </em><em>optional</em>) – For browser test, array with the different device IDs used to run the test.</p></li>
 <li><p><strong>follow_redirects</strong> (<em>bool</em><em>, </em><em>optional</em>) – For API HTTP test, whether or not the test should follow redirects.</p></li>
 <li><p><strong>headers</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_headers.SyntheticsTestHeaders" title="datadog_api_client.v1.model.synthetics_test_headers.SyntheticsTestHeaders"><em>SyntheticsTestHeaders</em></a><em>, </em><em>optional</em>) – Headers to include when performing the test.</p></li>
 <li><p><strong>locations</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Array of locations used to run the test.</p></li>
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetics tests run.</p></li>
-<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the Synthetics test to trigger.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetic tests run.</p></li>
+<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the Synthetic test to trigger.</p></li>
 <li><p><strong>retry</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_options_retry.SyntheticsTestOptionsRetry" title="datadog_api_client.v1.model.synthetics_test_options_retry.SyntheticsTestOptionsRetry"><em>SyntheticsTestOptionsRetry</em></a><em>, </em><em>optional</em>) – Object describing the retry strategy to apply to a Synthetic test.</p></li>
 <li><p><strong>start_url</strong> (<em>str</em><em>, </em><em>optional</em>) – Starting URL for the browser test.</p></li>
 <li><p><strong>variables</strong> (<em>{str:</em><em> (</em><em>str</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Variables to replace in the test.</p></li>
@@ -22599,15 +22600,15 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_global_variable.SyntheticsGlobalVariable">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsGlobalVariable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_global_variable.SyntheticsGlobalVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Synthetics global variable.</p>
+<p>Synthetic global variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_attributes.SyntheticsGlobalVariableAttributes" title="datadog_api_client.v1.model.synthetics_global_variable_attributes.SyntheticsGlobalVariableAttributes"><em>SyntheticsGlobalVariableAttributes</em></a><em>, </em><em>optional</em>) – Attributes of the global variable.</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – Description of the global variable.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – Unique identifier of the global variable.</p></li>
-<li><p><strong>name</strong> (<em>str</em>) – Name of the global variable. Unique across Synthetics global variables.</p></li>
-<li><p><strong>parse_test_options</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions"><em>SyntheticsGlobalVariableParseTestOptions</em></a><em>, </em><em>optional</em>) – Parser options to use for retrieving a Synthetics global variable from a Synthetics Test. Used in conjunction with <code class="docutils literal notranslate"><span class="pre">parse_test_public_id</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the global variable. Unique across Synthetic global variables.</p></li>
+<li><p><strong>parse_test_options</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions"><em>SyntheticsGlobalVariableParseTestOptions</em></a><em>, </em><em>optional</em>) – Parser options to use for retrieving a Synthetic global variable from a Synthetic test. Used in conjunction with <code class="docutils literal notranslate"><span class="pre">parse_test_public_id</span></code>.</p></li>
 <li><p><strong>parse_test_public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – A Synthetic test ID to use as a test to generate the variable value.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em>) – Tags of the global variable.</p></li>
 <li><p><strong>value</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_value.SyntheticsGlobalVariableValue" title="datadog_api_client.v1.model.synthetics_global_variable_value.SyntheticsGlobalVariableValue"><em>SyntheticsGlobalVariableValue</em></a>) – Value of the global variable.</p></li>
@@ -22650,14 +22651,14 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsGlobalVariableParseTestOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options.SyntheticsGlobalVariableParseTestOptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Parser options to use for retrieving a Synthetics global variable from a Synthetics Test. Used in conjunction with <code class="docutils literal notranslate"><span class="pre">parse_test_public_id</span></code>.</p>
+<p>Parser options to use for retrieving a Synthetic global variable from a Synthetic test. Used in conjunction with <code class="docutils literal notranslate"><span class="pre">parse_test_public_id</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code> , name of the header to use to extract the value.</p></li>
 <li><p><strong>local_variable_name</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">local_variable</span></code> , name of the local variable to use to extract the value.</p></li>
 <li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a><em>, </em><em>optional</em>) – Details of the parser to use for the global variable.</p></li>
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a>) – Property of the Synthetics Test Response to use for a Synthetics global variable.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a>) – Property of the Synthetic Test Response to use for a Synthetic global variable.</p></li>
 </ul>
 </dd>
 </dl>
@@ -22669,7 +22670,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsGlobalVariableParseTestOptionsType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
-<p>Property of the Synthetics Test Response to use for a Synthetics global variable.</p>
+<p>Property of the Synthetic Test Response to use for a Synthetic global variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -22696,7 +22697,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsGlobalVariableParserType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
-<p>Type of parser for a Synthetics global variable from a synthetics test.</p>
+<p>Type of parser for a Synthetic global variable from a synthetics test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -22805,10 +22806,10 @@ test.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_locations.SyntheticsLocations">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsLocations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_locations.SyntheticsLocations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>List of Synthetics locations.</p>
+<p>List of Synthetic locations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>locations</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_location.SyntheticsLocation" title="datadog_api_client.v1.model.synthetics_location.SyntheticsLocation"><em>SyntheticsLocation</em></a><em>]</em><em>, </em><em>optional</em>) – List of Synthetics locations.</p>
+<dd class="field-odd"><p><strong>locations</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_location.SyntheticsLocation" title="datadog_api_client.v1.model.synthetics_location.SyntheticsLocation"><em>SyntheticsLocation</em></a><em>]</em><em>, </em><em>optional</em>) – List of Synthetic locations.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -22826,7 +22827,7 @@ test.</p>
 <li><p><strong>field</strong> (<em>str</em><em>, </em><em>optional</em>) – When type is <code class="docutils literal notranslate"><span class="pre">http_header</span></code> , name of the header to use to extract the value.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the variable to extract.</p></li>
 <li><p><strong>parser</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser" title="datadog_api_client.v1.model.synthetics_variable_parser.SyntheticsVariableParser"><em>SyntheticsVariableParser</em></a><em>, </em><em>optional</em>) – Details of the parser to use for the global variable.</p></li>
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a><em>, </em><em>optional</em>) – Property of the Synthetics Test Response to use for a Synthetics global variable.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType" title="datadog_api_client.v1.model.synthetics_global_variable_parse_test_options_type.SyntheticsGlobalVariableParseTestOptionsType"><em>SyntheticsGlobalVariableParseTestOptionsType</em></a><em>, </em><em>optional</em>) – Property of the Synthetic Test Response to use for a Synthetic global variable.</p></li>
 </ul>
 </dd>
 </dl>
@@ -23080,7 +23081,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_step.SyntheticsStep">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_step.SyntheticsStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>The steps used in a Synthetics browser test.</p>
+<p>The steps used in a Synthetic browser test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -23116,7 +23117,7 @@ type conversion is done.</p></li>
 <li><p><strong>skipped</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not to skip this step.</p></li>
 <li><p><strong>snapshot_bucket_key</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not snapshots where collected by the test.</p></li>
 <li><p><strong>step_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The step ID.</p></li>
-<li><p><strong>sub_test_step_details</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step_detail.SyntheticsStepDetail" title="datadog_api_client.v1.model.synthetics_step_detail.SyntheticsStepDetail"><em>SyntheticsStepDetail</em></a><em>]</em><em>, </em><em>optional</em>) – If this steps include a sub-test.
+<li><p><strong>sub_test_step_details</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step_detail.SyntheticsStepDetail" title="datadog_api_client.v1.model.synthetics_step_detail.SyntheticsStepDetail"><em>SyntheticsStepDetail</em></a><em>]</em><em>, </em><em>optional</em>) – If this step includes a sub-test.
 <a class="reference external" href="https://docs.datadoghq.com/synthetics/browser_tests/advanced_options/#subtests">Subtests documentation</a>.</p></li>
 <li><p><strong>time_to_interactive</strong> (<em>float</em><em>, </em><em>optional</em>) – Time before starting the step.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType" title="datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType"><em>SyntheticsStepType</em></a><em>, </em><em>optional</em>) – Step type used in your Synthetic test.</p></li>
@@ -23209,7 +23210,7 @@ type conversion is done.</p></li>
 <p>CI/CD options for a Synthetic test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>execution_rule</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule" title="datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule"><em>SyntheticsTestExecutionRule</em></a><em>, </em><em>optional</em>) – Execution rule for a Synthetics test.</p>
+<dd class="field-odd"><p><strong>execution_rule</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule" title="datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule"><em>SyntheticsTestExecutionRule</em></a><em>, </em><em>optional</em>) – Execution rule for a Synthetic test.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -23326,7 +23327,7 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTestExecutionRule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_test_execution_rule.SyntheticsTestExecutionRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
-<p>Execution rule for a Synthetics test.</p>
+<p>Execution rule for a Synthetic test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -23703,7 +23704,7 @@ type conversion is done.</p></li>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTiming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
 <p>Object containing all metrics and their values collected for a Synthetic API test.
-Learn more about those metrics in <a class="reference external" href="https://docs.datadoghq.com/synthetics/#metrics">Synthetics documentation</a>.</p>
+See the <a class="reference external" href="https://docs.datadoghq.com/synthetics/metrics/">Synthetic Monitoring Metrics documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -23727,10 +23728,10 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_trigger_body.SyntheticsTriggerBody">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTriggerBody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_trigger_body.SyntheticsTriggerBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Object describing the synthetics tests to trigger.</p>
+<p>Object describing the Synthetic tests to trigger.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tests</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_trigger_test.SyntheticsTriggerTest" title="datadog_api_client.v1.model.synthetics_trigger_test.SyntheticsTriggerTest"><em>SyntheticsTriggerTest</em></a><em>]</em>) – Individual synthetics test.</p>
+<dd class="field-odd"><p><strong>tests</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_trigger_test.SyntheticsTriggerTest" title="datadog_api_client.v1.model.synthetics_trigger_test.SyntheticsTriggerTest"><em>SyntheticsTriggerTest</em></a><em>]</em>) – Individual Synthetic test.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -23741,7 +23742,7 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SyntheticsTriggerCITestLocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Synthetics location.</p>
+<p>Synthetic location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -23764,7 +23765,7 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>device</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID" title="datadog_api_client.v1.model.synthetics_device_id.SyntheticsDeviceID"><em>SyntheticsDeviceID</em></a><em>, </em><em>optional</em>) – The device ID.</p></li>
 <li><p><strong>location</strong> (<em>int</em><em>, </em><em>optional</em>) – The location ID of the test run.</p></li>
-<li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The public ID of the Synthetics test.</p></li>
+<li><p><strong>public_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The public ID of the Synthetic test.</p></li>
 <li><p><strong>result_id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the result.</p></li>
 </ul>
 </dd>
@@ -23782,9 +23783,9 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>batch_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The public ID of the batch triggered.</p></li>
-<li><p><strong>locations</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation" title="datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation"><em>SyntheticsTriggerCITestLocation</em></a><em>]</em><em>, </em><em>optional</em>) – List of Synthetics locations.</p></li>
+<li><p><strong>locations</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation" title="datadog_api_client.v1.model.synthetics_trigger_ci_test_location.SyntheticsTriggerCITestLocation"><em>SyntheticsTriggerCITestLocation</em></a><em>]</em><em>, </em><em>optional</em>) – List of Synthetic locations.</p></li>
 <li><p><strong>results</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_trigger_ci_test_run_result.SyntheticsTriggerCITestRunResult" title="datadog_api_client.v1.model.synthetics_trigger_ci_test_run_result.SyntheticsTriggerCITestRunResult"><em>SyntheticsTriggerCITestRunResult</em></a><em>]</em><em>, </em><em>optional</em>) – Information about the tests runs.</p></li>
-<li><p><strong>triggered_check_ids</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The public IDs of the Synthetics test triggered.</p></li>
+<li><p><strong>triggered_check_ids</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The public IDs of the Synthetic test triggered.</p></li>
 </ul>
 </dd>
 </dl>
@@ -23800,8 +23801,8 @@ Learn more about those metrics in <a class="reference external" href="https://do
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetics tests run.</p></li>
-<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the Synthetics test to trigger.</p></li>
+<li><p><strong>metadata</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata" title="datadog_api_client.v1.model.synthetics_ci_batch_metadata.SyntheticsCIBatchMetadata"><em>SyntheticsCIBatchMetadata</em></a><em>, </em><em>optional</em>) – Metadata for the Synthetic tests run.</p></li>
+<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the Synthetic test to trigger.</p></li>
 </ul>
 </dd>
 </dl>
@@ -23832,7 +23833,7 @@ Synthetic test.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType" title="datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType"><em>SyntheticsGlobalVariableParserType</em></a>) – Type of parser for a Synthetics global variable from a synthetics test.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType" title="datadog_api_client.v1.model.synthetics_global_variable_parser_type.SyntheticsGlobalVariableParserType"><em>SyntheticsGlobalVariableParserType</em></a>) – Type of parser for a Synthetic global variable from a synthetics test.</p></li>
 <li><p><strong>value</strong> (<em>str</em><em>, </em><em>optional</em>) – Regex or JSON path used for the parser. Not used with type <code class="docutils literal notranslate"><span class="pre">raw</span></code>.</p></li>
 </ul>
 </dd>
