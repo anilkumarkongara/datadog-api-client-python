@@ -1766,6 +1766,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.matching_downtime" class="md-nav__link">matching_downtime</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.matching_downtime.MatchingDowntime" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MatchingDowntime</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.metric_content_encoding" class="md-nav__link">metric_content_encoding</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.metric_content_encoding.MetricContentEncoding" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MetricContentEncoding</span></code></a>
@@ -6942,6 +6948,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.logs_user_agent_parser_type" class="md-nav__link">logs_user_agent_parser_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.logs_user_agent_parser_type.LogsUserAgentParserType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsUserAgentParserType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.matching_downtime" class="md-nav__link">matching_downtime</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.matching_downtime.MatchingDowntime" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">MatchingDowntime</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -15902,6 +15914,27 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.matching_downtime">
+<span id="matching-downtime"></span><h2 id="module-datadog_api_client.v1.model.matching_downtime">matching_downtime<a class="headerlink" href="#module-datadog_api_client.v1.model.matching_downtime" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.matching_downtime.MatchingDowntime">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MatchingDowntime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.matching_downtime.MatchingDowntime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object describing a downtime that matches this monitor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>end</strong> (<em>int</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – POSIX timestamp to end the downtime.</p></li>
+<li><p><strong>id</strong> (<em>int</em>) – The downtime ID.</p></li>
+<li><p><strong>scope</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The scope(s) to which the downtime applies. Must be in <code class="docutils literal notranslate"><span class="pre">key:value</span></code> format. For example, <code class="docutils literal notranslate"><span class="pre">host:app2</span></code>.
+Provide multiple scopes as a comma-separated list like <code class="docutils literal notranslate"><span class="pre">env:dev,env:prod</span></code>.
+The resulting downtime applies to sources that matches ALL provided scopes ( <code class="docutils literal notranslate"><span class="pre">env:dev</span></code> <strong>AND</strong> <code class="docutils literal notranslate"><span class="pre">env:prod</span></code> ).</p></li>
+<li><p><strong>start</strong> (<em>int</em><em>, </em><em>optional</em>) – POSIX timestamp to start the downtime.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.metric_content_encoding">
 <span id="metric-content-encoding"></span><h2 id="module-datadog_api_client.v1.model.metric_content_encoding">metric_content_encoding<a class="headerlink" href="#module-datadog_api_client.v1.model.metric_content_encoding" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -16099,6 +16132,7 @@ If the second element is not present, the API returns null.</p></li>
 <li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.creator.Creator" title="datadog_api_client.v1.model.creator.Creator"><em>Creator</em></a><em>, </em><em>optional</em>) – Object describing the creator of the shared element.</p></li>
 <li><p><strong>deleted</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the monitor is deleted. (Always <code class="docutils literal notranslate"><span class="pre">null</span></code> )</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – ID of this monitor.</p></li>
+<li><p><strong>matching_downtimes</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.matching_downtime.MatchingDowntime" title="datadog_api_client.v1.model.matching_downtime.MatchingDowntime"><em>MatchingDowntime</em></a><em>]</em><em>, </em><em>optional</em>) – A list of active downtimes that match this monitor.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – A message to include with notifications for this monitor.</p></li>
 <li><p><strong>modified</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Last timestamp when the monitor was edited.</p></li>
 <li><p><strong>multi</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the monitor is broken down on different groups.</p></li>
