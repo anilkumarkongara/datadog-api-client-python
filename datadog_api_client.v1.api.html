@@ -3747,6 +3747,7 @@ notifies your team when a defined threshold has exceeded.</p>
 <li><p>event-v2: <code class="docutils literal notranslate"><span class="pre">event-v2</span> <span class="pre">alert</span></code></p></li>
 <li><p>audit: <code class="docutils literal notranslate"><span class="pre">audit</span> <span class="pre">alert</span></code></p></li>
 <li><p>error-tracking: <code class="docutils literal notranslate"><span class="pre">error-tracking</span> <span class="pre">alert</span></code></p></li>
+<li><p>database-monitoring: <code class="docutils literal notranslate"><span class="pre">database-monitoring</span> <span class="pre">alert</span></code></p></li>
 </ul>
 <p><strong>Note</strong> : Synthetic monitors are created through the Synthetics API. See the [Synthetics API] (<a class="reference external" href="https://docs.datadoghq.com/api/latest/synthetics/">https://docs.datadoghq.com/api/latest/synthetics/</a>) documentation for more information.</p>
 <p><strong>Query Types</strong></p>
@@ -3888,6 +3889,17 @@ Example(APM Traces): <code class="docutils literal notranslate"><span class="pre
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
+<p><strong>Database Monitoring Alert Query</strong></p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">database-monitoring(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> The search query - following the <a class="reference external" href="https://docs.datadoghq.com/logs/search_syntax/">Log search syntax</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> The stats roll-up method - supports <code class="docutils literal notranslate"><span class="pre">count</span></code> , <code class="docutils literal notranslate"><span class="pre">avg</span></code> , and <code class="docutils literal notranslate"><span class="pre">cardinality</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> For <code class="docutils literal notranslate"><span class="pre">avg</span></code> and cardinality <code class="docutils literal notranslate"><span class="pre">rollup_method</span></code> - specify the measure or the facet name you want to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> #m (between 1 and 2880), #h (between 1 and 48).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
+</ul>
+<p><strong>NOTE</strong> Database Monitoring monitors are in alpha on US1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.monitor.Monitor" title="datadog_api_client.v1.model.monitor.Monitor"><em>Monitor</em></a>) – Create a monitor request body.</p>
