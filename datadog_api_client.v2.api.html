@@ -296,6 +296,8 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.create_ci_app_pipeline_event" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.create_ci_app_pipeline_event()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.list_ci_app_pipeline_events" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.list_ci_app_pipeline_events()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.list_ci_app_pipeline_events_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.list_ci_app_pipeline_events_with_pagination()</span></code></a>
@@ -1515,6 +1517,8 @@
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.create_ci_app_pipeline_event" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.create_ci_app_pipeline_event()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.list_ci_app_pipeline_events" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.list_ci_app_pipeline_events()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.list_ci_app_pipeline_events_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIVisibilityPipelinesApi.list_ci_app_pipeline_events_with_pagination()</span></code></a>
@@ -2483,7 +2487,7 @@ sent from Identity Providers.</p>
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CIVisibilityPipelinesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Search or aggregate your CI Visibility pipeline events over HTTP.</p>
+<p>Search or aggregate your CI Visibility pipeline events and send them to your Datadog site over HTTP.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events">
 <span class="sig-name descname"><span class="pre">aggregate_ci_app_pipeline_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ci_app_pipelines_aggregate_request.CIAppPipelinesAggregateRequest" title="datadog_api_client.v2.model.ci_app_pipelines_aggregate_request.CIAppPipelinesAggregateRequest"><span class="pre">CIAppPipelinesAggregateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ci_app_pipelines_analytics_aggregate_response.CIAppPipelinesAnalyticsAggregateResponse" title="datadog_api_client.v2.model.ci_app_pipelines_analytics_aggregate_response.CIAppPipelinesAnalyticsAggregateResponse"><span class="pre">CIAppPipelinesAnalyticsAggregateResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.aggregate_ci_app_pipeline_events" title="Permalink to this definition">¶</a></dt>
@@ -2492,6 +2496,17 @@ sent from Identity Providers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ci_app_pipelines_analytics_aggregate_response.CIAppPipelinesAnalyticsAggregateResponse" title="datadog_api_client.v2.model.ci_app_pipelines_analytics_aggregate_response.CIAppPipelinesAnalyticsAggregateResponse">CIAppPipelinesAnalyticsAggregateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.create_ci_app_pipeline_event">
+<span class="sig-name descname"><span class="pre">create_ci_app_pipeline_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.ci_app_create_pipeline_event_request.CIAppCreatePipelineEventRequest" title="datadog_api_client.v2.model.ci_app_create_pipeline_event_request.CIAppCreatePipelineEventRequest"><span class="pre">CIAppCreatePipelineEventRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.ci_visibility_pipelines_api.CIVisibilityPipelinesApi.create_ci_app_pipeline_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send pipeline event.</p>
+<p>Send your pipeline event to your Datadog platform over HTTP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
