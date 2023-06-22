@@ -988,12 +988,6 @@
         </li></ul>
             </nav>
         </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.ci_app_user_info" class="md-nav__link">ci_app_user_info</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIAppUserInfo</span></code></a>
-        </li></ul>
-            </nav>
-        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.ci_app_warning" class="md-nav__link">ci_app_warning</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.ci_app_warning.CIAppWarning" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIAppWarning</span></code></a>
@@ -7559,12 +7553,6 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.ci_app_tests_query_filter" class="md-nav__link">ci_app_tests_query_filter</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.ci_app_tests_query_filter.CIAppTestsQueryFilter" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIAppTestsQueryFilter</span></code></a>
-        </li></ul>
-            </nav>
-        </li>
-        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.ci_app_user_info" class="md-nav__link">ci_app_user_info</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">CIAppUserInfo</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -14323,7 +14311,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>end</strong> (<em>datetime</em>) – Time when the pipeline run finished. The time format must be RFC3339.</p></li>
 <li><p><strong>error</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError" title="datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError"><em>CIAppCIError</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains information of the CI error.</p></li>
-<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
+<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
 Note that either <cite>tag</cite> or <cite>branch</cite> has to be provided, but not both.</p></li>
 <li><p><strong>is_manual</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the pipeline was triggered manually by the user.</p></li>
 <li><p><strong>is_resumed</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the pipeline was resumed after being blocked.</p></li>
@@ -14345,8 +14333,6 @@ If the <cite>pipeline_id</cite> is unique, then both <cite>unique_id</cite> and 
 <li><p><strong>unique_id</strong> (<em>str</em>) – UUID of the pipeline run. The ID has to be unique across retries and pipelines,
 including partial retries.</p></li>
 <li><p><strong>url</strong> (<em>str</em>) – The URL to look at the pipeline in the CI provider UI.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo"><em>CIAppUserInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p></li>
 <li><p><strong>dependencies</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of stage IDs that this stage depends on.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – UUID for the stage. It has to be unique at least in the pipeline scope.</p></li>
 <li><p><strong>pipeline_name</strong> (<em>str</em>) – The parent pipeline name.</p></li>
@@ -14542,7 +14528,7 @@ At most, 100 buckets are allowed, the number of buckets is <code class="docutils
 <li><p><strong>dependencies</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of job IDs that this job depends on.</p></li>
 <li><p><strong>end</strong> (<em>datetime</em>) – Time when the job run finished. The time format must be RFC3339.</p></li>
 <li><p><strong>error</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError" title="datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError"><em>CIAppCIError</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains information of the CI error.</p></li>
-<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
+<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
 Note that either <code class="docutils literal notranslate"><span class="pre">tag</span></code> or <code class="docutils literal notranslate"><span class="pre">branch</span></code> has to be provided, but not both.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The UUID for the job. It has to be unique within each pipeline execution.</p></li>
 <li><p><strong>level</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_pipeline_event_job_level.CIAppPipelineEventJobLevel" title="datadog_api_client.v2.model.ci_app_pipeline_event_job_level.CIAppPipelineEventJobLevel"><em>CIAppPipelineEventJobLevel</em></a>) – Used to distinguish between pipelines, stages, jobs, and steps.</p></li>
@@ -14559,8 +14545,6 @@ Note that either <code class="docutils literal notranslate"><span class="pre">ta
 <li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_pipeline_event_job_status.CIAppPipelineEventJobStatus" title="datadog_api_client.v2.model.ci_app_pipeline_event_job_status.CIAppPipelineEventJobStatus"><em>CIAppPipelineEventJobStatus</em></a>) – The final status of the job.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of user-defined tags. The tags must follow the <code class="docutils literal notranslate"><span class="pre">key:value</span></code> pattern.</p></li>
 <li><p><strong>url</strong> (<em>str</em>) – The URL to look at the job in the CI provider UI.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo"><em>CIAppUserInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p></li>
 </ul>
 </dd>
 </dl>
@@ -14658,7 +14642,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>end</strong> (<em>datetime</em>) – Time when the pipeline run finished. The time format must be RFC3339.</p></li>
 <li><p><strong>error</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError" title="datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError"><em>CIAppCIError</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains information of the CI error.</p></li>
-<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
+<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
 Note that either <code class="docutils literal notranslate"><span class="pre">tag</span></code> or <code class="docutils literal notranslate"><span class="pre">branch</span></code> has to be provided, but not both.</p></li>
 <li><p><strong>is_manual</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the pipeline was triggered manually by the user.</p></li>
 <li><p><strong>is_resumed</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether or not the pipeline was resumed after being blocked.</p></li>
@@ -14680,8 +14664,6 @@ If the <code class="docutils literal notranslate"><span class="pre">pipeline_id<
 <li><p><strong>unique_id</strong> (<em>str</em>) – UUID of the pipeline run. The ID has to be unique across retries and pipelines,
 including partial retries.</p></li>
 <li><p><strong>url</strong> (<em>str</em>) – The URL to look at the pipeline in the CI provider UI.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo"><em>CIAppUserInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p></li>
 </ul>
 </dd>
 </dl>
@@ -14771,7 +14753,7 @@ type conversion is done.</p></li>
 <li><p><strong>dependencies</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of stage IDs that this stage depends on.</p></li>
 <li><p><strong>end</strong> (<em>datetime</em>) – Time when the stage run finished. The time format must be RFC3339.</p></li>
 <li><p><strong>error</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError" title="datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError"><em>CIAppCIError</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains information of the CI error.</p></li>
-<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
+<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
 Note that either <code class="docutils literal notranslate"><span class="pre">tag</span></code> or <code class="docutils literal notranslate"><span class="pre">branch</span></code> has to be provided, but not both.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – UUID for the stage. It has to be unique at least in the pipeline scope.</p></li>
 <li><p><strong>level</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_pipeline_event_stage_level.CIAppPipelineEventStageLevel" title="datadog_api_client.v2.model.ci_app_pipeline_event_stage_level.CIAppPipelineEventStageLevel"><em>CIAppPipelineEventStageLevel</em></a>) – Used to distinguish between pipelines, stages, jobs and steps.</p></li>
@@ -14785,8 +14767,6 @@ Note that either <code class="docutils literal notranslate"><span class="pre">ta
 <li><p><strong>start</strong> (<em>datetime</em>) – Time when the stage run started (it should not include any queue time). The time format must be RFC3339.</p></li>
 <li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_pipeline_event_stage_status.CIAppPipelineEventStageStatus" title="datadog_api_client.v2.model.ci_app_pipeline_event_stage_status.CIAppPipelineEventStageStatus"><em>CIAppPipelineEventStageStatus</em></a>) – The final status of the stage.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of user-defined tags. The tags must follow the <code class="docutils literal notranslate"><span class="pre">key:value</span></code> pattern.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo"><em>CIAppUserInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p></li>
 </ul>
 </dd>
 </dl>
@@ -14858,7 +14838,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>end</strong> (<em>datetime</em>) – Time when the step run finished. The time format must be RFC3339.</p></li>
 <li><p><strong>error</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError" title="datadog_api_client.v2.model.ci_app_ci_error.CIAppCIError"><em>CIAppCIError</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Contains information of the CI error.</p></li>
-<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
+<li><p><strong>git</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo" title="datadog_api_client.v2.model.ci_app_git_info.CIAppGitInfo"><em>CIAppGitInfo</em></a><em>, </em><em>none_type</em>) – If pipelines are triggered due to actions to a Git repository, then all payloads must contain this.
 Note that either <code class="docutils literal notranslate"><span class="pre">tag</span></code> or <code class="docutils literal notranslate"><span class="pre">branch</span></code> has to be provided, but not both.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – UUID for the step. It has to be unique within each pipeline execution.</p></li>
 <li><p><strong>job_id</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The parent job UUID (if applicable).</p></li>
@@ -14876,8 +14856,6 @@ Note that either <code class="docutils literal notranslate"><span class="pre">ta
 <li><p><strong>status</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_pipeline_event_step_status.CIAppPipelineEventStepStatus" title="datadog_api_client.v2.model.ci_app_pipeline_event_step_status.CIAppPipelineEventStepStatus"><em>CIAppPipelineEventStepStatus</em></a>) – The final status of the step.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – A list of user-defined tags. The tags must follow the <code class="docutils literal notranslate"><span class="pre">key:value</span></code> pattern.</p></li>
 <li><p><strong>url</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The URL to look at the step in the CI provider UI.</p></li>
-<li><p><strong>user</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo"><em>CIAppUserInfo</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p></li>
 </ul>
 </dd>
 </dl>
@@ -15484,24 +15462,6 @@ At most, 100 buckets are allowed, the number of buckets is <code class="docutils
 <li><p><strong>_from</strong> (<em>str</em><em>, </em><em>optional</em>) – The minimum time for the requested events; supports date, math, and regular timestamps (in milliseconds).</p></li>
 <li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – The search query following the Log search syntax.</p></li>
 <li><p><strong>to</strong> (<em>str</em><em>, </em><em>optional</em>) – The maximum time for the requested events, supports date, math, and regular timestamps (in milliseconds).</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-</section>
-<section id="module-datadog_api_client.v2.model.ci_app_user_info">
-<span id="ci-app-user-info"></span><h2 id="module-datadog_api_client.v2.model.ci_app_user_info">ci_app_user_info<a class="headerlink" href="#module-datadog_api_client.v2.model.ci_app_user_info" title="Permalink to this heading">¶</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CIAppUserInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.ci_app_user_info.CIAppUserInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Used to specify user-related information when the payload does not have Git information.
-For example, if Git information is missing for manually triggered pipelines, this field can be used instead.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – Email of the user.</p></li>
-<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the user.</p></li>
 </ul>
 </dd>
 </dl>
