@@ -958,6 +958,24 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.spans_api" class="md-nav__link">spans_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.aggregate_spans" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.aggregate_spans()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_get()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_get_with_pagination()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_with_pagination()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.spans_metrics_api" class="md-nav__link">spans_metrics_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_metrics_api.SpansMetricsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansMetricsApi</span></code></a><nav class="md-nav">
@@ -2174,6 +2192,24 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.service_definition_api.ServiceDefinitionApi.list_service_definitions" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionApi.list_service_definitions()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.service_definition_api.ServiceDefinitionApi.list_service_definitions_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionApi.list_service_definitions_with_pagination()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.spans_api" class="md-nav__link">spans_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.aggregate_spans" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.aggregate_spans()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_get()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_get_with_pagination()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansApi.list_spans_with_pagination()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -6315,6 +6351,100 @@ attribute with a minus sign.</p></li>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.service_definition_data.ServiceDefinitionData" title="datadog_api_client.v2.model.service_definition_data.ServiceDefinitionData">ServiceDefinitionData</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.spans_api">
+<span id="spans-api"></span><h2 id="module-datadog_api_client.v2.api.spans_api">spans_api<a class="headerlink" href="#module-datadog_api_client.v2.api.spans_api" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpansApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Search and aggregate your spans from your Datadog platform over HTTP.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi.aggregate_spans">
+<span class="sig-name descname"><span class="pre">aggregate_spans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_aggregate_request.SpansAggregateRequest" title="datadog_api_client.v2.model.spans_aggregate_request.SpansAggregateRequest"><span class="pre">SpansAggregateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_aggregate_response.SpansAggregateResponse" title="datadog_api_client.v2.model.spans_aggregate_response.SpansAggregateResponse"><span class="pre">SpansAggregateResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi.aggregate_spans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aggregate spans.</p>
+<p>The API endpoint to aggregate spans into buckets and compute metrics and timeseries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_aggregate_response.SpansAggregateResponse" title="datadog_api_client.v2.model.spans_aggregate_response.SpansAggregateResponse">SpansAggregateResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi.list_spans">
+<span class="sig-name descname"><span class="pre">list_spans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_request.SpansListRequest" title="datadog_api_client.v2.model.spans_list_request.SpansListRequest"><span class="pre">SpansListRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_response.SpansListResponse" title="datadog_api_client.v2.model.spans_list_response.SpansListResponse"><span class="pre">SpansListResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search spans.</p>
+<p>List endpoint returns spans that match a span search query.
+[Results are paginated][1].</p>
+<p>Use this endpoint to build complex spans filtering and search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_response.SpansListResponse" title="datadog_api_client.v2.model.spans_list_response.SpansListResponse">SpansListResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get">
+<span class="sig-name descname"><span class="pre">list_spans_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_sort.SpansSort" title="datadog_api_client.v2.model.spans_sort.SpansSort"><span class="pre">SpansSort</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_response.SpansListResponse" title="datadog_api_client.v2.model.spans_list_response.SpansListResponse"><span class="pre">SpansListResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of spans.</p>
+<p>List endpoint returns spans that match a span search query.
+[Results are paginated][1].</p>
+<p>Use this endpoint to see your latest spans.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following spans syntax.</p></li>
+<li><p><strong>filter_from</strong> (<em>str</em><em>, </em><em>optional</em>) – Minimum timestamp for requested spans. Supports date-time ISO8601, date math, and regular timestamps (milliseconds).</p></li>
+<li><p><strong>filter_to</strong> (<em>str</em><em>, </em><em>optional</em>) – Maximum timestamp for requested spans. Supports date-time ISO8601, date math, and regular timestamps (milliseconds).</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_sort.SpansSort" title="datadog_api_client.v2.model.spans_sort.SpansSort"><em>SpansSort</em></a><em>, </em><em>optional</em>) – Order of spans in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of spans in the response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_response.SpansListResponse" title="datadog_api_client.v2.model.spans_list_response.SpansListResponse">SpansListResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get_with_pagination">
+<span class="sig-name descname"><span class="pre">list_spans_get_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_sort.SpansSort" title="datadog_api_client.v2.model.spans_sort.SpansSort"><span class="pre">SpansSort</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.span.Span" title="datadog_api_client.v2.model.span.Span"><span class="pre">Span</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of spans.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get" title="datadog_api_client.v2.api.spans_api.SpansApi.list_spans_get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_spans_get()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_query</strong> (<em>str</em><em>, </em><em>optional</em>) – Search query following spans syntax.</p></li>
+<li><p><strong>filter_from</strong> (<em>str</em><em>, </em><em>optional</em>) – Minimum timestamp for requested spans. Supports date-time ISO8601, date math, and regular timestamps (milliseconds).</p></li>
+<li><p><strong>filter_to</strong> (<em>str</em><em>, </em><em>optional</em>) – Maximum timestamp for requested spans. Supports date-time ISO8601, date math, and regular timestamps (milliseconds).</p></li>
+<li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_sort.SpansSort" title="datadog_api_client.v2.model.spans_sort.SpansSort"><em>SpansSort</em></a><em>, </em><em>optional</em>) – Order of spans in results.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – List following results with a cursor provided in the previous query.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of spans in the response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.span.Span" title="datadog_api_client.v2.model.span.Span">Span</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.spans_api.SpansApi.list_spans_with_pagination">
+<span class="sig-name descname"><span class="pre">list_spans_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.spans_list_request.SpansListRequest" title="datadog_api_client.v2.model.spans_list_request.SpansListRequest"><span class="pre">SpansListRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.span.Span" title="datadog_api_client.v2.model.span.Span"><span class="pre">Span</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans_with_pagination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search spans.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.spans_api.SpansApi.list_spans" title="datadog_api_client.v2.api.spans_api.SpansApi.list_spans"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_spans()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.span.Span" title="datadog_api_client.v2.model.span.Span">Span</a>]</p>
 </dd>
 </dl>
 </dd></dl>
