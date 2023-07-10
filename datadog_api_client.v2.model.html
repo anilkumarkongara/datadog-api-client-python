@@ -18325,7 +18325,7 @@ provided, the downtime will begin immediately and never end.</p></li>
 <li><p><strong>recurrences</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.downtime_schedule_recurrence_create_update_request.DowntimeScheduleRecurrenceCreateUpdateRequest" title="datadog_api_client.v2.model.downtime_schedule_recurrence_create_update_request.DowntimeScheduleRecurrenceCreateUpdateRequest"><em>DowntimeScheduleRecurrenceCreateUpdateRequest</em></a><em>]</em>) – A list of downtime recurrences.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone in which to schedule the downtime.</p></li>
 <li><p><strong>end</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to end the downtime. Must include a UTC offset of zero. If not provided, the
-downtime starts the moment it is created.</p></li>
+downtime continues forever.</p></li>
 <li><p><strong>start</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to start the downtime. Must include a UTC offset of zero. If not provided, the
 downtime starts the moment it is created.</p></li>
 </ul>
@@ -18363,7 +18363,7 @@ downtimes it is the upcoming downtime.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>end</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to end the downtime. Must include a UTC offset of zero. If not provided, the
-downtime starts the moment it is created.</p></li>
+downtime continues forever.</p></li>
 <li><p><strong>start</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to start the downtime. Must include a UTC offset of zero. If not provided, the
 downtime starts the moment it is created.</p></li>
 </ul>
@@ -18529,7 +18529,7 @@ Must match <cite>display_timezone</cite>.</p></li>
 <li><p><strong>recurrences</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.downtime_schedule_recurrence_create_update_request.DowntimeScheduleRecurrenceCreateUpdateRequest" title="datadog_api_client.v2.model.downtime_schedule_recurrence_create_update_request.DowntimeScheduleRecurrenceCreateUpdateRequest"><em>DowntimeScheduleRecurrenceCreateUpdateRequest</em></a><em>]</em><em>, </em><em>optional</em>) – A list of downtime recurrences.</p></li>
 <li><p><strong>timezone</strong> (<em>str</em><em>, </em><em>optional</em>) – The timezone in which to schedule the downtime.</p></li>
 <li><p><strong>end</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to end the downtime. Must include a UTC offset of zero. If not provided, the
-downtime starts the moment it is created.</p></li>
+downtime continues forever.</p></li>
 <li><p><strong>start</strong> (<em>datetime</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – ISO-8601 Datetime to start the downtime. Must include a UTC offset of zero. If not provided, the
 downtime starts the moment it is created.</p></li>
 </ul>
