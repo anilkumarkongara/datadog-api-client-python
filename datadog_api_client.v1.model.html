@@ -10519,7 +10519,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “st”. Must be one of [“st”, “adm”, “ro”, “ERROR”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“st”, “adm”, “ro”, “ERROR”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
@@ -18693,7 +18693,7 @@ type conversion is done.</p></li>
 <li><p><strong>private_widget_share</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the organization users can share widgets outside of Datadog.</p></li>
 <li><p><strong>saml</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml.OrganizationSettingsSaml" title="datadog_api_client.v1.model.organization_settings_saml.OrganizationSettingsSaml"><em>OrganizationSettingsSaml</em></a><em>, </em><em>optional</em>) – Set the boolean property enabled to enable or disable single sign on with SAML.
 See the SAML documentation for more information about all SAML settings.</p></li>
-<li><p><strong>saml_autocreate_access_role</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.access_role.AccessRole" title="datadog_api_client.v1.model.access_role.AccessRole"><em>AccessRole</em></a><em>, </em><em>optional</em>) – The access role of the user. Options are <strong>st</strong> (standard user), <strong>adm</strong> (admin user), or <strong>ro</strong> (read-only user).</p></li>
+<li><p><strong>saml_autocreate_access_role</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.access_role.AccessRole" title="datadog_api_client.v1.model.access_role.AccessRole"><em>AccessRole</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The access role of the user. Options are <strong>st</strong> (standard user), <strong>adm</strong> (admin user), or <strong>ro</strong> (read-only user).</p></li>
 <li><p><strong>saml_autocreate_users_domains</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains" title="datadog_api_client.v1.model.organization_settings_saml_autocreate_users_domains.OrganizationSettingsSamlAutocreateUsersDomains"><em>OrganizationSettingsSamlAutocreateUsersDomains</em></a><em>, </em><em>optional</em>) – Has two properties, <code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) and <code class="docutils literal notranslate"><span class="pre">domains</span></code> , which is a list of domains without the @ symbol.</p></li>
 <li><p><strong>saml_can_be_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not SAML can be enabled for this organization.</p></li>
 <li><p><strong>saml_idp_endpoint</strong> (<em>str</em><em>, </em><em>optional</em>) – Identity provider endpoint for SAML authentication.</p></li>
@@ -27371,7 +27371,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>access_role</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.access_role.AccessRole" title="datadog_api_client.v1.model.access_role.AccessRole"><em>AccessRole</em></a><em>, </em><em>optional</em>) – The access role of the user. Options are <strong>st</strong> (standard user), <strong>adm</strong> (admin user), or <strong>ro</strong> (read-only user).</p></li>
+<li><p><strong>access_role</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.access_role.AccessRole" title="datadog_api_client.v1.model.access_role.AccessRole"><em>AccessRole</em></a><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The access role of the user. Options are <strong>st</strong> (standard user), <strong>adm</strong> (admin user), or <strong>ro</strong> (read-only user).</p></li>
 <li><p><strong>disabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – The new disabled status of the user.</p></li>
 <li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – The new email of the user.</p></li>
 <li><p><strong>handle</strong> (<em>str</em><em>, </em><em>optional</em>) – The user handle, must be a valid email.</p></li>
