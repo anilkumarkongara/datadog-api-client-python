@@ -18771,6 +18771,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.event_attributes.EventAttributes" title="datadog_api_client.v2.model.event_attributes.EventAttributes"><em>EventAttributes</em></a><em>, </em><em>optional</em>) – Object description of attributes from your event.</p></li>
+<li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – The message of the event.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of tags associated with the event.</p></li>
 <li><p><strong>timestamp</strong> (<em>datetime</em><em>, </em><em>optional</em>) – The timestamp of the event.</p></li>
 </ul>
@@ -19090,6 +19091,7 @@ otherwise the query fails.</p>
 <li><p><strong>elapsed</strong> (<em>int</em><em>, </em><em>optional</em>) – The time elapsed in milliseconds.</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.events_response_metadata_page.EventsResponseMetadataPage" title="datadog_api_client.v2.model.events_response_metadata_page.EventsResponseMetadataPage"><em>EventsResponseMetadataPage</em></a><em>, </em><em>optional</em>) – Pagination attributes.</p></li>
 <li><p><strong>request_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The identifier of the request.</p></li>
+<li><p><strong>status</strong> (<em>str</em><em>, </em><em>optional</em>) – The request status.</p></li>
 <li><p><strong>warnings</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.events_warning.EventsWarning" title="datadog_api_client.v2.model.events_warning.EventsWarning"><em>EventsWarning</em></a><em>]</em><em>, </em><em>optional</em>) – A list of warnings (non-fatal errors) encountered. Partial results might be returned if
 warnings are present in the response.</p></li>
 </ul>
