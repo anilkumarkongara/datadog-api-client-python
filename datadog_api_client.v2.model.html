@@ -16733,7 +16733,9 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>agent_constraint</strong> (<em>str</em><em>, </em><em>optional</em>) – The version of the agent.</p></li>
 <li><p><strong>category</strong> (<em>str</em><em>, </em><em>optional</em>) – The category of the Agent rule.</p></li>
+<li><p><strong>creation_author_uu_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The ID of the user who created the rule.</p></li>
 <li><p><strong>creation_date</strong> (<em>int</em><em>, </em><em>optional</em>) – When the Agent rule was created, timestamp in milliseconds.</p></li>
 <li><p><strong>creator</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_workload_security_agent_rule_creator_attributes.CloudWorkloadSecurityAgentRuleCreatorAttributes" title="datadog_api_client.v2.model.cloud_workload_security_agent_rule_creator_attributes.CloudWorkloadSecurityAgentRuleCreatorAttributes"><em>CloudWorkloadSecurityAgentRuleCreatorAttributes</em></a><em>, </em><em>optional</em>) – The attributes of the user who created the Agent rule.</p></li>
 <li><p><strong>default_rule</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the rule is included by default.</p></li>
@@ -16741,6 +16743,8 @@ type conversion is done.</p></li>
 <li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether the Agent rule is enabled.</p></li>
 <li><p><strong>expression</strong> (<em>str</em><em>, </em><em>optional</em>) – The SECL expression of the Agent rule.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the Agent rule.</p></li>
+<li><p><strong>update_author_uu_id</strong> (<em>str</em><em>, </em><em>optional</em>) – The ID of the user who updated the rule.</p></li>
+<li><p><strong>update_date</strong> (<em>int</em><em>, </em><em>optional</em>) – Timestamp in milliseconds when the Agent rule was last updated.</p></li>
 <li><p><strong>updated_at</strong> (<em>int</em><em>, </em><em>optional</em>) – When the Agent rule was last updated, timestamp in milliseconds.</p></li>
 <li><p><strong>updater</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.cloud_workload_security_agent_rule_updater_attributes.CloudWorkloadSecurityAgentRuleUpdaterAttributes" title="datadog_api_client.v2.model.cloud_workload_security_agent_rule_updater_attributes.CloudWorkloadSecurityAgentRuleUpdaterAttributes"><em>CloudWorkloadSecurityAgentRuleUpdaterAttributes</em></a><em>, </em><em>optional</em>) – The attributes of the user who last updated the Agent rule.</p></li>
 <li><p><strong>version</strong> (<em>int</em><em>, </em><em>optional</em>) – The version of the Agent rule.</p></li>
