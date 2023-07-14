@@ -6091,6 +6091,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_attributes" class="md-nav__link">spans_aggregate_bucket_attributes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucketAttributes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_type" class="md-nav__link">spans_aggregate_bucket_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucketType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_value" class="md-nav__link">spans_aggregate_bucket_value</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket_value.SpansAggregateBucketValue" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucketValue</span></code></a>
@@ -13227,6 +13239,18 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket" class="md-nav__link">spans_aggregate_bucket</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket.SpansAggregateBucket" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucket</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_attributes" class="md-nav__link">spans_aggregate_bucket_attributes</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucketAttributes</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_type" class="md-nav__link">spans_aggregate_bucket_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SpansAggregateBucketType</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -32828,12 +32852,58 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.spans_aggregate_bucket.SpansAggregateBucket">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpansAggregateBucket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.spans_aggregate_bucket.SpansAggregateBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Spans aggregate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes" title="datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes"><em>SpansAggregateBucketAttributes</em></a><em>, </em><em>optional</em>) – A bucket values.</p></li>
+<li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the spans aggregate.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType" title="datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType"><em>SpansAggregateBucketType</em></a><em>, </em><em>optional</em>) – The spans aggregate bucket type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.spans_aggregate_bucket_attributes">
+<span id="spans-aggregate-bucket-attributes"></span><h2 id="module-datadog_api_client.v2.model.spans_aggregate_bucket_attributes">spans_aggregate_bucket_attributes<a class="headerlink" href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_attributes" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpansAggregateBucketAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.spans_aggregate_bucket_attributes.SpansAggregateBucketAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
 <p>A bucket values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>by</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – The key, value pairs for each group by.</p></li>
+<li><p><strong>compute</strong> (<em>dict</em><em>, </em><em>optional</em>) – The compute data.</p></li>
 <li><p><strong>computes</strong> (<em>{str:</em><em> (</em><a class="reference internal" href="#datadog_api_client.v2.model.spans_aggregate_bucket_value.SpansAggregateBucketValue" title="datadog_api_client.v2.model.spans_aggregate_bucket_value.SpansAggregateBucketValue"><em>SpansAggregateBucketValue</em></a><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – A map of the metric name -&gt; value for regular compute or list of values for a timeseries.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.spans_aggregate_bucket_type">
+<span id="spans-aggregate-bucket-type"></span><h2 id="module-datadog_api_client.v2.model.spans_aggregate_bucket_type">spans_aggregate_bucket_type<a class="headerlink" href="#module-datadog_api_client.v2.model.spans_aggregate_bucket_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SpansAggregateBucketType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.spans_aggregate_bucket_type.SpansAggregateBucketType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The spans aggregate bucket type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “bucket”. Must be one of [“bucket”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.v2.html#datadog_api_client.v2.Configuration" title="datadog_api_client.v2.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
 </ul>
 </dd>
 </dl>
@@ -33091,6 +33161,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>attributes</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – JSON object of attributes from your span.</p></li>
+<li><p><strong>custom</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – JSON object of custom spans data.</p></li>
 <li><p><strong>end_timestamp</strong> (<em>datetime</em><em>, </em><em>optional</em>) – End timestamp of your span.</p></li>
 <li><p><strong>env</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the environment from where the spans are being sent.</p></li>
 <li><p><strong>host</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the machine from where the spans are being sent.</p></li>
