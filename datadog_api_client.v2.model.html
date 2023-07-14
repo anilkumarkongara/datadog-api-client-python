@@ -5821,6 +5821,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.service_definition_meta_warnings" class="md-nav__link">service_definition_meta_warnings</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionMetaWarnings</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.service_definition_schema" class="md-nav__link">service_definition_schema</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.service_definition_schema.ServiceDefinitionSchema" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionSchema</span></code></a>
@@ -12951,6 +12957,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.service_definition_meta" class="md-nav__link">service_definition_meta</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.service_definition_meta.ServiceDefinitionMeta" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionMeta</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.service_definition_meta_warnings" class="md-nav__link">service_definition_meta_warnings</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ServiceDefinitionMetaWarnings</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -31819,6 +31831,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.service_definition_data_attributes.ServiceDefinitionDataAttributes" title="datadog_api_client.v2.model.service_definition_data_attributes.ServiceDefinitionDataAttributes"><em>ServiceDefinitionDataAttributes</em></a><em>, </em><em>optional</em>) – Service definition attributes.</p></li>
+<li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – Service definition id.</p></li>
 <li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – Service definition type.</p></li>
 </ul>
 </dd>
@@ -31870,6 +31883,27 @@ type conversion is done.</p></li>
 <li><p><strong>ingested_schema_version</strong> (<em>str</em><em>, </em><em>optional</em>) – Ingestion schema version.</p></li>
 <li><p><strong>ingestion_source</strong> (<em>str</em><em>, </em><em>optional</em>) – Ingestion source of the service definition.</p></li>
 <li><p><strong>last_modified_time</strong> (<em>str</em><em>, </em><em>optional</em>) – Last modified time of the service definition.</p></li>
+<li><p><strong>origin</strong> (<em>str</em><em>, </em><em>optional</em>) – User defined origin of the service definition.</p></li>
+<li><p><strong>origin_detail</strong> (<em>str</em><em>, </em><em>optional</em>) – User defined origin’s detail of the service definition.</p></li>
+<li><p><strong>warnings</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings" title="datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings"><em>ServiceDefinitionMetaWarnings</em></a><em>]</em><em>, </em><em>optional</em>) – A list of schema validation warnings.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.service_definition_meta_warnings">
+<span id="service-definition-meta-warnings"></span><h2 id="module-datadog_api_client.v2.model.service_definition_meta_warnings">service_definition_meta_warnings<a class="headerlink" href="#module-datadog_api_client.v2.model.service_definition_meta_warnings" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceDefinitionMetaWarnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.service_definition_meta_warnings.ServiceDefinitionMetaWarnings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Schema validation warnings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>instance_location</strong> (<em>str</em><em>, </em><em>optional</em>) – The warning instance location.</p></li>
+<li><p><strong>keyword_location</strong> (<em>str</em><em>, </em><em>optional</em>) – The warning keyword location.</p></li>
+<li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – The warning message.</p></li>
 </ul>
 </dd>
 </dl>
