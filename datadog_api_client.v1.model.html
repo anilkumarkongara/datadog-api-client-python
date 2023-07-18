@@ -1352,6 +1352,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_remote_configuration" class="md-nav__link">ip_prefixes_remote_configuration</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesRemoteConfiguration</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics" class="md-nav__link">ip_prefixes_synthetics</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_synthetics.IPPrefixesSynthetics" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesSynthetics</span></code></a>
@@ -6784,6 +6790,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_process" class="md-nav__link">ip_prefixes_process</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_process.IPPrefixesProcess" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesProcess</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_remote_configuration" class="md-nav__link">ip_prefixes_remote_configuration</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesRemoteConfiguration</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -14686,6 +14698,23 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.ip_prefixes_remote_configuration">
+<span id="ip-prefixes-remote-configuration"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_remote_configuration">ip_prefixes_remote_configuration<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_remote_configuration" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IPPrefixesRemoteConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Available prefix information for the Remote Configuration endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefixes_ipv4</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv4 prefixes.</p></li>
+<li><p><strong>prefixes_ipv6</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv6 prefixes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.ip_prefixes_synthetics">
 <span id="ip-prefixes-synthetics"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_synthetics">ip_prefixes_synthetics<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_synthetics" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -14756,6 +14785,7 @@ type conversion is done.</p></li>
 <li><p><strong>modified</strong> (<em>str</em><em>, </em><em>optional</em>) – Date when last updated, in the form <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-hh-mm-ss</span></code>.</p></li>
 <li><p><strong>orchestrator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_orchestrator.IPPrefixesOrchestrator" title="datadog_api_client.v1.model.ip_prefixes_orchestrator.IPPrefixesOrchestrator"><em>IPPrefixesOrchestrator</em></a><em>, </em><em>optional</em>) – Available prefix information for the Orchestrator endpoints.</p></li>
 <li><p><strong>process</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_process.IPPrefixesProcess" title="datadog_api_client.v1.model.ip_prefixes_process.IPPrefixesProcess"><em>IPPrefixesProcess</em></a><em>, </em><em>optional</em>) – Available prefix information for the Process endpoints.</p></li>
+<li><p><strong>remote_configuration</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration" title="datadog_api_client.v1.model.ip_prefixes_remote_configuration.IPPrefixesRemoteConfiguration"><em>IPPrefixesRemoteConfiguration</em></a><em>, </em><em>optional</em>) – Available prefix information for the Remote Configuration endpoints.</p></li>
 <li><p><strong>synthetics</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_synthetics.IPPrefixesSynthetics" title="datadog_api_client.v1.model.ip_prefixes_synthetics.IPPrefixesSynthetics"><em>IPPrefixesSynthetics</em></a><em>, </em><em>optional</em>) – Available prefix information for the Synthetics endpoints.</p></li>
 <li><p><strong>synthetics_private_locations</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations" title="datadog_api_client.v1.model.ip_prefixes_synthetics_private_locations.IPPrefixesSyntheticsPrivateLocations"><em>IPPrefixesSyntheticsPrivateLocations</em></a><em>, </em><em>optional</em>) – Available prefix information for the Synthetics Private Locations endpoints.</p></li>
 <li><p><strong>version</strong> (<em>int</em><em>, </em><em>optional</em>) – Version of the IP list.</p></li>
@@ -28020,7 +28050,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“area”, “bars”, “line”].</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – Must be one of [“area”, “bars”, “line”, “overlay”].</p></li>
 <li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
 will be type checked and a TypeError will be raised if the wrong type is input.
 Defaults to True.</p></li>
