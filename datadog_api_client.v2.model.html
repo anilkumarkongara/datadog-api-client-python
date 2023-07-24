@@ -30960,6 +30960,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Attributes of the Sensitive Data configuration.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the configuration.</p></li>
 <li><p><strong>relationships</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.sensitive_data_scanner_configuration_relationships.SensitiveDataScannerConfigurationRelationships" title="datadog_api_client.v2.model.sensitive_data_scanner_configuration_relationships.SensitiveDataScannerConfigurationRelationships"><em>SensitiveDataScannerConfigurationRelationships</em></a><em>, </em><em>optional</em>) – Relationships of the configuration.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.sensitive_data_scanner_configuration_type.SensitiveDataScannerConfigurationType" title="datadog_api_client.v2.model.sensitive_data_scanner_configuration_type.SensitiveDataScannerConfigurationType"><em>SensitiveDataScannerConfigurationType</em></a><em>, </em><em>optional</em>) – Sensitive Data Scanner configuration type.</p></li>
@@ -31258,6 +31259,7 @@ type conversion is done.</p></li>
 <li><p><strong>count_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of scanning rules allowed for the org.</p></li>
 <li><p><strong>group_count_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of scanning groups allowed for the org.</p></li>
 <li><p><strong>has_highlight_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not scanned events are highlighted in Logs or RUM for the org.</p></li>
+<li><p><strong>has_multi_pass_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not scanned events have multi-pass enabled.</p></li>
 <li><p><strong>is_pci_compliant</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether or not the org is compliant to the payment card industry standard.</p></li>
 <li><p><strong>version</strong> (<em>int</em><em>, </em><em>optional</em>) – Version of the API.</p></li>
 </ul>
@@ -31615,6 +31617,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of the standard pattern.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the standard pattern.</p></li>
 <li><p><strong>pattern</strong> (<em>str</em><em>, </em><em>optional</em>) – Regex to match.</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of tags.</p></li>
