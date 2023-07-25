@@ -19818,7 +19818,8 @@ type conversion is done.</p></li>
 <dt class="sig sig-object py" id="datadog_api_client.v2.model.formula_limit.FormulaLimit">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FormulaLimit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.formula_limit.FormulaLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
-<p>Message for specifying limits to the number of values returned by a query.</p>
+<p>Message for specifying limits to the number of values returned by a query.
+This limit is only for scalar queries and has no effect on timeseries queries.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -27020,7 +27021,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>formula</strong> (<em>str</em>) – Formula string, referencing one or more queries with their name property.</p></li>
-<li><p><strong>limit</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.formula_limit.FormulaLimit" title="datadog_api_client.v2.model.formula_limit.FormulaLimit"><em>FormulaLimit</em></a><em>, </em><em>optional</em>) – Message for specifying limits to the number of values returned by a query.</p></li>
+<li><p><strong>limit</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.formula_limit.FormulaLimit" title="datadog_api_client.v2.model.formula_limit.FormulaLimit"><em>FormulaLimit</em></a><em>, </em><em>optional</em>) – Message for specifying limits to the number of values returned by a query.
+This limit is only for scalar queries and has no effect on timeseries queries.</p></li>
 </ul>
 </dd>
 </dl>
