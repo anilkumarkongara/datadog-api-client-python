@@ -47,11 +47,11 @@
   
   
     <title>datadog-api-client-python &#8212; Datadog API Client for Python  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/material.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e7352e39" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -746,6 +746,13 @@
     <li class="md-nav__item">
     
     
+      <a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ClientRetry</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
       <a href="datadog_api_client.html#datadog_api_client.ApiClient" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiClient</span></code></a>
       
     
@@ -806,6 +813,8 @@
         <li class="md-nav__item"><a href="#disable-compressed-payloads" class="md-nav__link">Disable compressed payloads</a>
         </li>
         <li class="md-nav__item"><a href="#enable-requests-logging" class="md-nav__link">Enable requests logging</a>
+        </li>
+        <li class="md-nav__item"><a href="#enable-retry" class="md-nav__link">Enable retry</a>
         </li>
         <li class="md-nav__item"><a href="#configure-proxy" class="md-nav__link">Configure proxy</a>
         </li>
@@ -915,6 +924,17 @@ on your configuration object:</p>
 <h3 id="enable-requests-logging">Enable requests logging<a class="headerlink" href="#enable-requests-logging" title="Permalink to this heading">¶</a></h3>
 <p>If you want to enable requests logging, set the <code class="docutils literal notranslate"><span class="pre">debug</span></code> flag on your configuration object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</section>
+<section id="enable-retry">
+<h3 id="enable-retry">Enable retry<a class="headerlink" href="#enable-retry" title="Permalink to this heading">¶</a></h3>
+<p>If you want to enable retry when getting status code <code class="docutils literal notranslate"><span class="pre">429</span></code> rate-limited, set <code class="docutils literal notranslate"><span class="pre">enable_retry</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">enable_retry</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>The default max retry is <code class="docutils literal notranslate"><span class="pre">3</span></code>, you can change it with <code class="docutils literal notranslate"><span class="pre">max_retries</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">max_retries</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
 </div>
 </section>
@@ -1054,7 +1074,7 @@ For example, to retrieve all your incidents:</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>

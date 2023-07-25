@@ -46,11 +46,11 @@
   
   
     <title>Index &#8212; Datadog API Client for Python  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/material.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e7352e39" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
@@ -744,6 +744,13 @@
     <li class="md-nav__item">
     
     
+      <a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ClientRetry</span></code></a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
       <a href="datadog_api_client.html#datadog_api_client.ApiClient" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ApiClient</span></code></a>
       
     
@@ -1270,6 +1277,8 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.ci_visibility_tests_api.CIVisibilityTestsApi">CIVisibilityTestsApi (class in datadog_api_client.v2.api.ci_visibility_tests_api)</a>
 </li>
+      <li><a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry">ClientRetry (class in datadog_api_client.rest)</a>
+</li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi.clone_role">clone_role() (RolesApi method)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_configuration_compliance_rule_options.CloudConfigurationComplianceRuleOptions">CloudConfigurationComplianceRuleOptions (class in datadog_api_client.v2.model.cloud_configuration_compliance_rule_options)</a>
@@ -1310,10 +1319,10 @@
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.cloudflare_integration_api.CloudflareIntegrationApi">CloudflareIntegrationApi (class in datadog_api_client.v2.api.cloudflare_integration_api)</a>
 </li>
-      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_attributes.CloudWorkloadSecurityAgentRuleAttributes">CloudWorkloadSecurityAgentRuleAttributes (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_attributes)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_attributes.CloudWorkloadSecurityAgentRuleAttributes">CloudWorkloadSecurityAgentRuleAttributes (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_attributes)</a>
+</li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_create_attributes.CloudWorkloadSecurityAgentRuleCreateAttributes">CloudWorkloadSecurityAgentRuleCreateAttributes (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_create_attributes)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.cloud_workload_security_agent_rule_create_data.CloudWorkloadSecurityAgentRuleCreateData">CloudWorkloadSecurityAgentRuleCreateData (class in datadog_api_client.v2.model.cloud_workload_security_agent_rule_create_data)</a>
@@ -15681,6 +15690,8 @@
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.Configuration.debug">debug (Configuration property)</a>, <a href="datadog_api_client.html#datadog_api_client.configuration.Configuration.debug">[1]</a>, <a href="datadog_api_client.v1.html#datadog_api_client.v1.Configuration.debug">[2]</a>, <a href="datadog_api_client.v2.html#datadog_api_client.v2.Configuration.debug">[3]</a>
 </li>
+      <li><a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry.DEFAULT_ALLOWED_METHODS">DEFAULT_ALLOWED_METHODS (ClientRetry attribute)</a>
+</li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.key_management_api.KeyManagementApi.delete_api_key">delete_api_key() (KeyManagementApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.key_management_api.KeyManagementApi.delete_api_key">[1]</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.key_management_api.KeyManagementApi.delete_application_key">delete_application_key() (KeyManagementApi method)</a>, <a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.key_management_api.KeyManagementApi.delete_application_key">[1]</a>
@@ -16373,10 +16384,10 @@
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.monitors_api.MonitorsApi.get_monitor">get_monitor() (MonitorsApi method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.monitors_api.MonitorsApi.get_monitor_config_policy">get_monitor_config_policy() (MonitorsApi method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_monthly_custom_reports">get_monthly_custom_reports() (UsageMeteringApi method)</a>
 </li>
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.usage_metering_api.UsageMeteringApi.get_monthly_usage_attribution">get_monthly_usage_attribution() (UsageMeteringApi method)</a>
@@ -16406,6 +16417,8 @@
       <li><a href="datadog_api_client.html#datadog_api_client.model_utils.get_required_type_classes">get_required_type_classes() (in module datadog_api_client.model_utils)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.restriction_policies_api.RestrictionPoliciesApi.get_restriction_policy">get_restriction_policy() (RestrictionPoliciesApi method)</a>
+</li>
+      <li><a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry.get_retry_after">get_retry_after() (ClientRetry method)</a>
 </li>
       <li><a href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.roles_api.RolesApi.get_role">get_role() (RolesApi method)</a>
 </li>
@@ -16942,6 +16955,8 @@
       <li><a href="datadog_api_client.v1.api.html#datadog_api_client.v1.api.ip_ranges_api.IPRangesApi">IPRangesApi (class in datadog_api_client.v1.api.ip_ranges_api)</a>
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.model_utils.is_json_validation_enabled">is_json_validation_enabled() (in module datadog_api_client.model_utils)</a>
+</li>
+      <li><a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry.is_retry">is_retry() (ClientRetry method)</a>
 </li>
       <li><a href="datadog_api_client.html#datadog_api_client.model_utils.is_type_nullable">is_type_nullable() (in module datadog_api_client.model_utils)</a>
 </li>
@@ -22236,6 +22251,8 @@
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.restriction_policy_update_request.RestrictionPolicyUpdateRequest">RestrictionPolicyUpdateRequest (class in datadog_api_client.v2.model.restriction_policy_update_request)</a>
 </li>
+      <li><a href="datadog_api_client.html#datadog_api_client.rest.ClientRetry.RETRY_AFTER_STATUS_CODES">RETRY_AFTER_STATUS_CODES (ClientRetry attribute)</a>
+</li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role.Role">Role (class in datadog_api_client.v2.model.role)</a>
 </li>
       <li><a href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.role_attributes.RoleAttributes">RoleAttributes (class in datadog_api_client.v2.model.role_attributes)</a>
@@ -24299,7 +24316,7 @@
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
