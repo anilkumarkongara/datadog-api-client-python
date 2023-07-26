@@ -5311,6 +5311,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_metadata_type" class="md-nav__link">security_monitoring_signal_metadata_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalMetadataType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_response" class="md-nav__link">security_monitoring_signal_response</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_response.SecurityMonitoringSignalResponse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalResponse</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload" class="md-nav__link">security_monitoring_signal_rule_create_payload</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload.SecurityMonitoringSignalRuleCreatePayload" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleCreatePayload</span></code></a>
@@ -12493,6 +12505,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_metadata_type" class="md-nav__link">security_monitoring_signal_metadata_type</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalMetadataType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_response" class="md-nav__link">security_monitoring_signal_response</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_response.SecurityMonitoringSignalResponse" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalResponse</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload" class="md-nav__link">security_monitoring_signal_rule_create_payload</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload.SecurityMonitoringSignalRuleCreatePayload" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringSignalRuleCreatePayload</span></code></a>
@@ -16742,6 +16766,8 @@ Must be set to true if <code class="docutils literal notranslate"><span class="p
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>default_activation_status</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The default activation status.</p></li>
+<li><p><strong>default_group_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The default group by fields.</p></li>
 <li><p><strong>user_activation_status</strong> (<em>bool</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Whether signals will be sent.</p></li>
 <li><p><strong>user_group_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Fields to use to group findings by when sending signals.</p></li>
 </ul>
@@ -29959,7 +29985,7 @@ This time is calculated from the first seen timestamp.</p></li>
 aggregations. <cite>metrics</cite> field should be used instead.</p></li>
 <li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the sum, max, geo data, or new value aggregations. The sum, max, and geo data aggregations only accept one value in this list, whereas the new value aggregation accepts up to five values.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
-<li><p><strong>query</strong> (<em>str</em>) – Query to run on logs.</p></li>
+<li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Query to run on logs.</p></li>
 <li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
 <li><p><strong>correlated_query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of the rule query used to retrieve the correlated field.</p></li>
 <li><p><strong>rule_id</strong> (<em>str</em>) – Rule ID to match on signals.</p></li>
@@ -30371,6 +30397,47 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v2.model.security_monitoring_signal_metadata_type">
+<span id="security-monitoring-signal-metadata-type"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_signal_metadata_type">security_monitoring_signal_metadata_type<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_signal_metadata_type" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringSignalMetadataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSimple</span></code></a></p>
+<p>The type of event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>str</em>) – If omitted defaults to “signal_metadata”. Must be one of [“signal_metadata”].</p></li>
+<li><p><strong>_check_type</strong> (<em>bool</em>) – If True, values for parameters in openapi_types
+will be type checked and a TypeError will be raised if the wrong type is input.
+Defaults to True.</p></li>
+<li><p><strong>_path_to_item</strong> (<em>tuple/list</em>) – This is a list of keys or values to drill down to
+the model in received_data when deserializing a response.</p></li>
+<li><p><strong>_spec_property_naming</strong> (<em>bool</em>) – True if the variable names in the input
+data are serialized names, as specified in the OpenAPI document.  False if the
+variable names in the input data are pythonic names, e.g. snake case (default).</p></li>
+<li><p><strong>_configuration</strong> (<a class="reference internal" href="datadog_api_client.v2.html#datadog_api_client.v2.Configuration" title="datadog_api_client.v2.Configuration"><em>Configuration</em></a>) – The instance to use when deserializing a
+file_type parameter.  If passed, type conversion is attempted If omitted no
+type conversion is done.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.model.security_monitoring_signal_response">
+<span id="security-monitoring-signal-response"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_signal_response">security_monitoring_signal_response<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_signal_response" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.model.security_monitoring_signal_response.SecurityMonitoringSignalResponse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SecurityMonitoringSignalResponse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.security_monitoring_signal_response.SecurityMonitoringSignalResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Security Signal response data object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal" title="datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal"><em>SecurityMonitoringSignal</em></a><em>, </em><em>optional</em>) – Object description of a security signal.</p>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload">
 <span id="security-monitoring-signal-rule-create-payload"></span><h2 id="module-datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload">security_monitoring_signal_rule_create_payload<a class="headerlink" href="#module-datadog_api_client.v2.model.security_monitoring_signal_rule_create_payload" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
@@ -30461,9 +30528,11 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>aggregation</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation" title="datadog_api_client.v2.model.security_monitoring_rule_query_aggregation.SecurityMonitoringRuleQueryAggregation"><em>SecurityMonitoringRuleQueryAggregation</em></a><em>, </em><em>optional</em>) – The aggregation type.</p></li>
-<li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
+<li><p><strong>correlated_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to correlate by.</p></li>
 <li><p><strong>correlated_query_index</strong> (<em>int</em><em>, </em><em>optional</em>) – Index of the rule query used to retrieve the correlated field.</p></li>
 <li><p><strong>default_rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Default Rule ID to match on signals.</p></li>
+<li><p><strong>distinct_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Field for which the cardinality is measured. Sent as an array.</p></li>
+<li><p><strong>group_by_fields</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Fields to group by.</p></li>
 <li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
 <li><p><strong>rule_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Rule ID to match on signals.</p></li>
@@ -30554,7 +30623,11 @@ type conversion is done.</p></li>
 <p>Data containing the patch for changing the state of a signal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_state_update_attributes.SecurityMonitoringSignalStateUpdateAttributes" title="datadog_api_client.v2.model.security_monitoring_signal_state_update_attributes.SecurityMonitoringSignalStateUpdateAttributes"><em>SecurityMonitoringSignalStateUpdateAttributes</em></a>) – Attributes describing the change of state of a security signal.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_state_update_attributes.SecurityMonitoringSignalStateUpdateAttributes" title="datadog_api_client.v2.model.security_monitoring_signal_state_update_attributes.SecurityMonitoringSignalStateUpdateAttributes"><em>SecurityMonitoringSignalStateUpdateAttributes</em></a>) – Attributes describing the change of state of a security signal.</p></li>
+<li><p><strong>id</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The unique ID of the security signal.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType" title="datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType"><em>SecurityMonitoringSignalMetadataType</em></a><em>, </em><em>optional</em>) – The type of event.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -30606,7 +30679,11 @@ type conversion is done.</p></li>
 <p>Data containing the updated triage attributes of the signal.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_triage_attributes.SecurityMonitoringSignalTriageAttributes" title="datadog_api_client.v2.model.security_monitoring_signal_triage_attributes.SecurityMonitoringSignalTriageAttributes"><em>SecurityMonitoringSignalTriageAttributes</em></a><em>, </em><em>optional</em>) – Attributes describing a triage state update operation over a security signal.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_triage_attributes.SecurityMonitoringSignalTriageAttributes" title="datadog_api_client.v2.model.security_monitoring_signal_triage_attributes.SecurityMonitoringSignalTriageAttributes"><em>SecurityMonitoringSignalTriageAttributes</em></a><em>, </em><em>optional</em>) – Attributes describing a triage state update operation over a security signal.</p></li>
+<li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – The unique ID of the security signal.</p></li>
+<li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType" title="datadog_api_client.v2.model.security_monitoring_signal_metadata_type.SecurityMonitoringSignalMetadataType"><em>SecurityMonitoringSignalMetadataType</em></a><em>, </em><em>optional</em>) – The type of event.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -30784,7 +30861,7 @@ type conversion is done.</p></li>
 aggregations. <code class="docutils literal notranslate"><span class="pre">metrics</span></code> field should be used instead. <strong>Deprecated</strong>.</p></li>
 <li><p><strong>metrics</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Group of target fields to aggregate over when using the sum, max, geo data, or new value aggregations. The sum, max, and geo data aggregations only accept one value in this list, whereas the new value aggregation accepts up to five values.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the query.</p></li>
-<li><p><strong>query</strong> (<em>str</em>) – Query to run on logs.</p></li>
+<li><p><strong>query</strong> (<em>str</em><em>, </em><em>optional</em>) – Query to run on logs.</p></li>
 </ul>
 </dd>
 </dl>
@@ -30835,6 +30912,7 @@ aggregations. <code class="docutils literal notranslate"><span class="pre">metri
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>handle</strong> (<em>str</em><em>, </em><em>optional</em>) – The handle for this user account.</p></li>
+<li><p><strong>icon</strong> (<em>str</em><em>, </em><em>optional</em>) – Gravatar icon associated to the user.</p></li>
 <li><p><strong>id</strong> (<em>int</em><em>, </em><em>optional</em>) – Numerical ID assigned by Datadog to this user account.</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The name for this user account.</p></li>
 <li><p><strong>uuid</strong> (<em>str</em>) – UUID assigned by Datadog to this user account.</p></li>
