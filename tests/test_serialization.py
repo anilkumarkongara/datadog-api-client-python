@@ -1,3 +1,6 @@
+from datetime import datetime
+
+from datadog_api_client.model_utils import validate_and_convert_types
 from datadog_api_client.v1.model.monitor_thresholds import MonitorThresholds
 from datadog_api_client.v2.model.logs_group_by import LogsGroupBy
 from datadog_api_client.v2.model.logs_group_by_missing import LogsGroupByMissing
@@ -27,3 +30,9 @@ def test_primitive_one_of():
     )
 
     assert group_by.missing == "miss"
+
+
+def test_datetime_conversion():
+    now = datetime.now()
+    data = validate_and_convert_types(now, (str,), ["item"], spec_property_naming=False, check_type=True)
+    assert data == now.isoformat()[:-3] + "Z"

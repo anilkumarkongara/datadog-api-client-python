@@ -578,6 +578,7 @@ COERCION_INDEX_BY_TYPE = {
 # to another type
 UPCONVERSION_TYPE_PAIRS = (
     (str, datetime),
+    (datetime, str),
     (str, date),
     (int, float),  # A float may be serialized as an integer, e.g. '3' is a valid serialized float.
     (list, ModelComposed),
@@ -1044,6 +1045,10 @@ def deserialize_primitive(data, klass, path_to_item):
                 if len(data) < 8:
                     raise ValueError("This is not a date")
                 return parse(data).date()
+        elif klass == str and isinstance(data, datetime):
+            if getattr(data, "tzinfo", None) is not None:
+                return data.isoformat()
+            return "{}Z".format(data.strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3])
         else:
             converted_value = klass(data)
             if isinstance(data, str) and klass == float:
