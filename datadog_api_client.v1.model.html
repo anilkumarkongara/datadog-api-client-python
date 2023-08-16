@@ -11239,9 +11239,13 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>app_service_plan_filters</strong> (<em>str</em><em>, </em><em>optional</em>) – Limit the Azure app service plans that are pulled into Datadog using tags.
+Only app service plans that match one of the defined tags are imported into Datadog.</p></li>
 <li><p><strong>automute</strong> (<em>bool</em><em>, </em><em>optional</em>) – Silence monitors for expected Azure VM shutdowns.</p></li>
 <li><p><strong>client_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your Azure web application ID.</p></li>
 <li><p><strong>client_secret</strong> (<em>str</em><em>, </em><em>optional</em>) – Your Azure web application secret key.</p></li>
+<li><p><strong>cspm_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Enable Cloud Security Management Misconfigurations for your organization.</p></li>
+<li><p><strong>custom_metrics_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Enable custom metrics for your organization.</p></li>
 <li><p><strong>errors</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Errors in your configuration.</p></li>
 <li><p><strong>host_filters</strong> (<em>str</em><em>, </em><em>optional</em>) – Limit the Azure instances that are pulled into Datadog by using tags.
 Only hosts that match one of the defined tags are imported into Datadog.</p></li>
