@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
@@ -49,9 +49,9 @@
     <title>datadog-api-client-python &#8212; Datadog API Client for Python  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=83e35b93" />
     <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -384,7 +384,7 @@
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.api_client" class="md-nav__link">api_client</a>
+      <a href="datadog_api_client.html#api-client" class="md-nav__link">api_client</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
     
@@ -419,7 +419,7 @@
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.configuration" class="md-nav__link">configuration</a>
+      <a href="datadog_api_client.html#configuration" class="md-nav__link">configuration</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
     
@@ -433,7 +433,7 @@
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.exceptions" class="md-nav__link">exceptions</a>
+      <a href="datadog_api_client.html#exceptions" class="md-nav__link">exceptions</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
     
@@ -517,7 +517,7 @@
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.model_utils" class="md-nav__link">model_utils</a>
+      <a href="datadog_api_client.html#model-utils" class="md-nav__link">model_utils</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
     
@@ -741,7 +741,7 @@
     <li class="md-nav__item">
     
     
-      <a href="datadog_api_client.html#module-datadog_api_client.rest" class="md-nav__link">rest</a>
+      <a href="datadog_api_client.html#rest" class="md-nav__link">rest</a>
       <ul class="md-nav__list"> 
     <li class="md-nav__item">
     
@@ -851,21 +851,21 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="datadog-api-client-python">
-<h1 id="index--page-root">datadog-api-client-python<a class="headerlink" href="#index--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="index--page-root">datadog-api-client-python<a class="headerlink" href="#index--page-root" title="Link to this heading">¶</a></h1>
 <p>This repository contains a Python API client for the <a class="reference external" href="https://docs.datadoghq.com/api/">Datadog API</a>.</p>
 <section id="requirements">
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>Building and using the API client library requires <a class="reference external" href="https://www.python.org/downloads/">Python 3.7+</a>.</p>
 </section>
 <section id="installation">
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
 <p>To install the API client library, simply execute:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>datadog-api-client
 </pre></div>
 </div>
 </section>
 <section id="getting-started">
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h2>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h2>
 <p>Please follow the <a class="reference external" href="#installation">installation</a> instruction and execute the following Python code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">ApiClient</span><span class="p">,</span> <span class="n">Configuration</span>
 <span class="kn">from</span> <span class="nn">datadog_api_client.v1.api.monitors_api</span> <span class="kn">import</span> <span class="n">MonitorsApi</span>
@@ -889,7 +889,7 @@
 </pre></div>
 </div>
 <section id="authentication">
-<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permalink to this heading">¶</a></h3>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Link to this heading">¶</a></h3>
 <p>By default the library will use the <code class="docutils literal notranslate"><span class="pre">DD_API_KEY</span></code> and <code class="docutils literal notranslate"><span class="pre">DD_APP_KEY</span></code> environment variables to authenticate against the Datadog API.
 To provide your own set of credentials, you need to set some keys on the configuration:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">api_key</span><span class="p">[</span><span class="s2">"apiKeyAuth"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"&lt;API KEY&gt;"</span>
@@ -898,7 +898,7 @@ To provide your own set of credentials, you need to set some keys on the configu
 </div>
 </section>
 <section id="unstable-endpoints">
-<h3 id="unstable-endpoints">Unstable Endpoints<a class="headerlink" href="#unstable-endpoints" title="Permalink to this heading">¶</a></h3>
+<h3 id="unstable-endpoints">Unstable Endpoints<a class="headerlink" href="#unstable-endpoints" title="Link to this heading">¶</a></h3>
 <p>This client includes access to Datadog API endpoints while they are in an unstable state and may undergo breaking changes. An extra configuration step is required to enable these endpoints:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">unstable_operations</span><span class="p">[</span><span class="s2">"&lt;OperationName&gt;"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -906,14 +906,14 @@ To provide your own set of credentials, you need to set some keys on the configu
 <p>where <code class="docutils literal notranslate"><span class="pre">&lt;OperationName&gt;</span></code> is the name of the method used to interact with that endpoint. For example: <code class="docutils literal notranslate"><span class="pre">list_log_indexes</span></code>, or <code class="docutils literal notranslate"><span class="pre">get_logs_index</span></code></p>
 </section>
 <section id="changing-server">
-<h3 id="changing-server">Changing Server<a class="headerlink" href="#changing-server" title="Permalink to this heading">¶</a></h3>
+<h3 id="changing-server">Changing Server<a class="headerlink" href="#changing-server" title="Link to this heading">¶</a></h3>
 <p>When talking to a different server, like the <code class="docutils literal notranslate"><span class="pre">eu</span></code> instance, change the <code class="docutils literal notranslate"><span class="pre">server_variables</span></code> on your configuration object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">server_variables</span><span class="p">[</span><span class="s2">"site"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"datadoghq.eu"</span>
 </pre></div>
 </div>
 </section>
 <section id="disable-compressed-payloads">
-<h3 id="disable-compressed-payloads">Disable compressed payloads<a class="headerlink" href="#disable-compressed-payloads" title="Permalink to this heading">¶</a></h3>
+<h3 id="disable-compressed-payloads">Disable compressed payloads<a class="headerlink" href="#disable-compressed-payloads" title="Link to this heading">¶</a></h3>
 <p>If you want to disable GZIP compressed responses, set the <code class="docutils literal notranslate"><span class="pre">compress</span></code> flag
 on your configuration object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">compress</span> <span class="o">=</span> <span class="kc">False</span>
@@ -921,14 +921,14 @@ on your configuration object:</p>
 </div>
 </section>
 <section id="enable-requests-logging">
-<h3 id="enable-requests-logging">Enable requests logging<a class="headerlink" href="#enable-requests-logging" title="Permalink to this heading">¶</a></h3>
+<h3 id="enable-requests-logging">Enable requests logging<a class="headerlink" href="#enable-requests-logging" title="Link to this heading">¶</a></h3>
 <p>If you want to enable requests logging, set the <code class="docutils literal notranslate"><span class="pre">debug</span></code> flag on your configuration object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </section>
 <section id="enable-retry">
-<h3 id="enable-retry">Enable retry<a class="headerlink" href="#enable-retry" title="Permalink to this heading">¶</a></h3>
+<h3 id="enable-retry">Enable retry<a class="headerlink" href="#enable-retry" title="Link to this heading">¶</a></h3>
 <p>If you want to enable retry when getting status code <code class="docutils literal notranslate"><span class="pre">429</span></code> rate-limited, set <code class="docutils literal notranslate"><span class="pre">enable_retry</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">enable_retry</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
@@ -939,14 +939,14 @@ on your configuration object:</p>
 </div>
 </section>
 <section id="configure-proxy">
-<h3 id="configure-proxy">Configure proxy<a class="headerlink" href="#configure-proxy" title="Permalink to this heading">¶</a></h3>
+<h3 id="configure-proxy">Configure proxy<a class="headerlink" href="#configure-proxy" title="Link to this heading">¶</a></h3>
 <p>You can configure the client to use proxy by setting the <code class="docutils literal notranslate"><span class="pre">proxy</span></code> key on configuration object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">proxy</span> <span class="o">=</span> <span class="s2">"http://127.0.0.1:80"</span>
 </pre></div>
 </div>
 </section>
 <section id="threads-support">
-<h3 id="threads-support">Threads support<a class="headerlink" href="#threads-support" title="Permalink to this heading">¶</a></h3>
+<h3 id="threads-support">Threads support<a class="headerlink" href="#threads-support" title="Link to this heading">¶</a></h3>
 <p>You can run API calls in a thread by using <code class="docutils literal notranslate"><span class="pre">ThreadedApiClient</span></code> in place of <code class="docutils literal notranslate"><span class="pre">ApiClient</span></code>. API calls will then
 return a <code class="docutils literal notranslate"><span class="pre">AsyncResult</span></code> instance on which you can call get to retrieve the result:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">Configuration</span><span class="p">,</span> <span class="n">ThreadedApiClient</span>
@@ -962,7 +962,7 @@ return a <code class="docutils literal notranslate"><span class="pre">AsyncResul
 </div>
 </section>
 <section id="asyncio-support">
-<h3 id="asyncio-support">Asyncio support<a class="headerlink" href="#asyncio-support" title="Permalink to this heading">¶</a></h3>
+<h3 id="asyncio-support">Asyncio support<a class="headerlink" href="#asyncio-support" title="Link to this heading">¶</a></h3>
 <p>The library supports asynchronous operations when using <code class="docutils literal notranslate"><span class="pre">AsyncApiClient</span></code> for the transport. When that client is used,
 the API methods will then return coroutines that you can wait for.</p>
 <p>To make async support available, you need to install the extra <code class="docutils literal notranslate"><span class="pre">async</span></code> qualifiers during installation: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">datadog-api-client[async]</span></code>.</p>
@@ -983,7 +983,7 @@ the API methods will then return coroutines that you can wait for.</p>
 </div>
 </section>
 <section id="pagination">
-<h3 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permalink to this heading">¶</a></h3>
+<h3 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Link to this heading">¶</a></h3>
 <p>Several listing operations have a pagination method to help consume all the items available.
 For example, to retrieve all your incidents:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datadog_api_client</span> <span class="kn">import</span> <span class="n">ApiClient</span><span class="p">,</span> <span class="n">Configuration</span>
@@ -1000,11 +1000,11 @@ For example, to retrieve all your incidents:</p>
 </section>
 </section>
 <section id="documentation-for-api-endpoints-and-models">
-<h2 id="documentation-for-api-endpoints-and-models">Documentation for API Endpoints and Models<a class="headerlink" href="#documentation-for-api-endpoints-and-models" title="Permalink to this heading">¶</a></h2>
+<h2 id="documentation-for-api-endpoints-and-models">Documentation for API Endpoints and Models<a class="headerlink" href="#documentation-for-api-endpoints-and-models" title="Link to this heading">¶</a></h2>
 <p>Documentation for API endpoints and models are available on <a class="reference external" href="https://datadog-api-client.readthedocs.io/">readthedocs</a>.</p>
 </section>
 <section id="documentation-for-authorization">
-<h2 id="documentation-for-authorization">Documentation for Authorization<a class="headerlink" href="#documentation-for-authorization" title="Permalink to this heading">¶</a></h2>
+<h2 id="documentation-for-authorization">Documentation for Authorization<a class="headerlink" href="#documentation-for-authorization" title="Link to this heading">¶</a></h2>
 <p>Authenticate with the API by providing your API and Application keys in the configuration:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">configuration</span><span class="o">.</span><span class="n">api_key</span><span class="p">[</span><span class="s2">"apiKeyAuth"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"YOUR_API_KEY"</span>
 <span class="n">configuration</span><span class="o">.</span><span class="n">api_key</span><span class="p">[</span><span class="s2">"appKeyAuth"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"YOUR_APPLICATION_KEY"</span>
@@ -1012,7 +1012,7 @@ For example, to retrieve all your incidents:</p>
 </div>
 </section>
 <section id="author">
-<h2 id="author">Author<a class="headerlink" href="#author" title="Permalink to this heading">¶</a></h2>
+<h2 id="author">Author<a class="headerlink" href="#author" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="mailto:support%40datadoghq.com">support<span>@</span>datadoghq<span>.</span>com</a></p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
@@ -1020,11 +1020,11 @@ For example, to retrieve all your incidents:</p>
 <li class="toctree-l1"><a class="reference internal" href="datadog_api_client.html">datadog_api_client</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v1.html">datadog_api_client.v1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.html">datadog_api_client.v2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#module-datadog_api_client.api_client">api_client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#module-datadog_api_client.configuration">configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#module-datadog_api_client.exceptions">exceptions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#module-datadog_api_client.model_utils">model_utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#module-datadog_api_client.rest">rest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#api-client">api_client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#configuration">configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#exceptions">exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#model-utils">model_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.html#rest">rest</a></li>
 </ul>
 </li>
 </ul>
@@ -1032,7 +1032,7 @@ For example, to retrieve all your incidents:</p>
 </section>
 </section>
 <section id="indices-and-tables">
-<h1 id="indices-and-tables">Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<h1 id="indices-and-tables">Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -1074,7 +1074,7 @@ For example, to retrieve all your incidents:</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
