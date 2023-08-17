@@ -23300,7 +23300,7 @@ type conversion is done.</p></li>
 <li><p><strong>filter</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_query_filter.LogsQueryFilter" title="datadog_api_client.v2.model.logs_query_filter.LogsQueryFilter"><em>LogsQueryFilter</em></a><em>, </em><em>optional</em>) – The search and filter query settings</p></li>
 <li><p><strong>group_by</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v2.model.logs_group_by.LogsGroupBy" title="datadog_api_client.v2.model.logs_group_by.LogsGroupBy"><em>LogsGroupBy</em></a><em>]</em><em>, </em><em>optional</em>) – The rules for the group by</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_query_options.LogsQueryOptions" title="datadog_api_client.v2.model.logs_query_options.LogsQueryOptions"><em>LogsQueryOptions</em></a><em>, </em><em>optional</em>) – Global query options that are used during the query.
-Note: You should only supply timezone or time offset but not both otherwise the query will fail.</p></li>
+Note: you should supply either timezone or time offset, but not both. Otherwise, the query will fail.</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_aggregate_request_page.LogsAggregateRequestPage" title="datadog_api_client.v2.model.logs_aggregate_request_page.LogsAggregateRequestPage"><em>LogsAggregateRequestPage</em></a><em>, </em><em>optional</em>) – Paging settings</p></li>
 </ul>
 </dd>
@@ -23316,7 +23316,7 @@ Note: You should only supply timezone or time offset but not both otherwise the 
 <p>Paging settings</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – The returned paging point to use to get the next results</p>
+<dd class="field-odd"><p><strong>cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – The returned paging point to use to get the next results. Note: at most 1000 results can be paged.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -23968,8 +23968,9 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>facet</strong> (<em>str</em>) – The name of the facet to use (required)</p></li>
 <li><p><strong>histogram</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_group_by_histogram.LogsGroupByHistogram" title="datadog_api_client.v2.model.logs_group_by_histogram.LogsGroupByHistogram"><em>LogsGroupByHistogram</em></a><em>, </em><em>optional</em>) – Used to perform a histogram computation (only for measure facets).
-Note: At most 100 buckets are allowed, the number of buckets is (max - min)/interval.</p></li>
-<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum buckets to return for this group by</p></li>
+Note: at most 100 buckets are allowed, the number of buckets is (max - min)/interval.</p></li>
+<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum buckets to return for this group by. Note: at most 10000 buckets are allowed.
+If grouping by multiple facets, the product of limits must not exceed 10000.</p></li>
 <li><p><strong>missing</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_group_by_missing.LogsGroupByMissing" title="datadog_api_client.v2.model.logs_group_by_missing.LogsGroupByMissing"><em>LogsGroupByMissing</em></a><em>, </em><em>optional</em>) – The value to use for logs that don’t have the facet used to group by</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_aggregate_sort.LogsAggregateSort" title="datadog_api_client.v2.model.logs_aggregate_sort.LogsAggregateSort"><em>LogsAggregateSort</em></a><em>, </em><em>optional</em>) – A sort rule</p></li>
 <li><p><strong>total</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_group_by_total.LogsGroupByTotal" title="datadog_api_client.v2.model.logs_group_by_total.LogsGroupByTotal"><em>LogsGroupByTotal</em></a><em>, </em><em>optional</em>) – A resulting object to put the given computes in over all the matching records.</p></li>
@@ -23985,7 +23986,7 @@ Note: At most 100 buckets are allowed, the number of buckets is (max - min)/inte
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsGroupByHistogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.logs_group_by_histogram.LogsGroupByHistogram" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
 <p>Used to perform a histogram computation (only for measure facets).
-Note: At most 100 buckets are allowed, the number of buckets is (max - min)/interval.</p>
+Note: at most 100 buckets are allowed, the number of buckets is (max - min)/interval.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -24029,7 +24030,7 @@ Note: At most 100 buckets are allowed, the number of buckets is (max - min)/inte
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filter</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_query_filter.LogsQueryFilter" title="datadog_api_client.v2.model.logs_query_filter.LogsQueryFilter"><em>LogsQueryFilter</em></a><em>, </em><em>optional</em>) – The search and filter query settings</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_query_options.LogsQueryOptions" title="datadog_api_client.v2.model.logs_query_options.LogsQueryOptions"><em>LogsQueryOptions</em></a><em>, </em><em>optional</em>) – Global query options that are used during the query.
-Note: You should only supply timezone or time offset but not both otherwise the query will fail.</p></li>
+Note: you should supply either timezone or time offset, but not both. Otherwise, the query will fail.</p></li>
 <li><p><strong>page</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_list_request_page.LogsListRequestPage" title="datadog_api_client.v2.model.logs_list_request_page.LogsListRequestPage"><em>LogsListRequestPage</em></a><em>, </em><em>optional</em>) – Paging attributes for listing logs.</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="#datadog_api_client.v2.model.logs_sort.LogsSort" title="datadog_api_client.v2.model.logs_sort.LogsSort"><em>LogsSort</em></a><em>, </em><em>optional</em>) – Sort parameters when querying logs.</p></li>
 </ul>
@@ -24473,7 +24474,7 @@ Only present when the <code class="docutils literal notranslate"><span class="pr
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsQueryOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.model.logs_query_options.LogsQueryOptions" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
 <p>Global query options that are used during the query.
-Note: You should only supply timezone or time offset but not both otherwise the query will fail.</p>
+Note: you should supply either timezone or time offset, but not both. Otherwise, the query will fail.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -24514,7 +24515,7 @@ warnings are present in the response.</p></li>
 <p>Paging attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>after</strong> (<em>str</em><em>, </em><em>optional</em>) – The cursor to use to get the next results, if any. To make the next request, use the same.
+<dd class="field-odd"><p><strong>after</strong> (<em>str</em><em>, </em><em>optional</em>) – The cursor to use to get the next results, if any. To make the next request, use the same
 parameters with the addition of the <code class="docutils literal notranslate"><span class="pre">page[cursor]</span></code>.</p>
 </dd>
 </dl>
