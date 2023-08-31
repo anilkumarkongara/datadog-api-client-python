@@ -781,6 +781,8 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests_with_pagination()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_ci_tests()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_tests()</span></code></a>
@@ -2069,6 +2071,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_locations" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_locations()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests_with_pagination()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_ci_tests()</span></code></a>
         </li>
@@ -5432,18 +5436,38 @@ tests. No arguments required.</p>
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests">
-<span class="sig-name descname"><span class="pre">list_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse" title="datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse"><span class="pre">SyntheticsListTestsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">list_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse" title="datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse"><span class="pre">SyntheticsListTestsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" title="Link to this definition">¶</a></dt>
 <dd><p>Get the list of all Synthetic tests.</p>
 <p>Get the list of all Synthetic tests.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>page_size</strong> (<em>str</em><em>, </em><em>optional</em>) – Used for pagination. The number of tests returned in the page.</p></li>
-<li><p><strong>page_number</strong> (<em>str</em><em>, </em><em>optional</em>) – Used for pagination. Which page you want to retrieve. Starts at zero.</p></li>
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Used for pagination. The number of tests returned in the page.</p></li>
+<li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Used for pagination. Which page you want to retrieve. Starts at zero.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse" title="datadog_api_client.v1.model.synthetics_list_tests_response.SyntheticsListTestsResponse">SyntheticsListTestsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination">
+<span class="sig-name descname"><span class="pre">list_tests_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails" title="datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails"><span class="pre">SyntheticsTestDetails</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination" title="Link to this definition">¶</a></dt>
+<dd><p>Get the list of all Synthetic tests.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" title="datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_tests()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Used for pagination. The number of tests returned in the page.</p></li>
+<li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Used for pagination. Which page you want to retrieve. Starts at zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails" title="datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails">SyntheticsTestDetails</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -6682,7 +6706,7 @@ response payload.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.4.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 7.2.5.
              and
             <a href="https://github.com/bashtage/sphinx-material/">Material for
               Sphinx</a>
