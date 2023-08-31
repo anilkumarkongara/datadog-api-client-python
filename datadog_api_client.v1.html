@@ -282,6 +282,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.logger_file" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.logger_format" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_format</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.retry_backoff_factor" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.retry_backoff_factor</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -928,6 +930,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.logger_file" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_file</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.logger_format" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.logger_format</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.Configuration.retry_backoff_factor" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">Configuration.retry_backoff_factor</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -4956,7 +4960,7 @@ on the data received from the server. Default is True.</p></li>
 <li><p><strong>enable_retry</strong> (<em>bool</em>) – If set, the client will retry requests on backend errors (5xx status codes), and 429.
 On 429 if will use the returned headers to wait until the next requests, otherwise it will retry using
 the backoff factor.</p></li>
-<li><p><strong>retry_backoff_factor</strong> (<em>int</em>) – Factor used to space out retried requests on backend errors.</p></li>
+<li><p><strong>retry_backoff_factor</strong> (<em>float</em>) – Factor used to space out retried requests on backend errors.</p></li>
 <li><p><strong>max_retries</strong> (<em>int</em>) – The maximum number of times a single request can be retried.</p></li>
 </ul>
 </dd>
@@ -5069,6 +5073,19 @@ handler. Otherwise, add file handler and remove stream handler.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="datadog_api_client.v1.Configuration.retry_backoff_factor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retry_backoff_factor</span></span><a class="headerlink" href="#datadog_api_client.v1.Configuration.retry_backoff_factor" title="Link to this definition">¶</a></dt>
+<dd><p>Retry backoff factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The backoff factor, float</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
