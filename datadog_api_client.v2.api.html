@@ -1173,6 +1173,8 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.list_users" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.list_users()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.list_users_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.list_users_with_pagination()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.send_invitations" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.send_invitations()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.update_user" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.update_user()</span></code></a>
@@ -2533,6 +2535,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.list_user_permissions" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.list_user_permissions()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.list_users" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.list_users()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.list_users_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.list_users_with_pagination()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.users_api.UsersApi.send_invitations" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">UsersApi.send_invitations()</span></code></a>
         </li>
@@ -7477,6 +7481,35 @@ Defaults to no filtering.</p></li>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.users_response.UsersResponse" title="datadog_api_client.v2.model.users_response.UsersResponse">UsersResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.users_api.UsersApi.list_users_with_pagination">
+<span class="sig-name descname"><span class="pre">list_users_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><span class="pre">QuerySortOrder</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User"><span class="pre">User</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.users_api.UsersApi.list_users_with_pagination" title="Link to this definition">¶</a></dt>
+<dd><p>List all users.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.users_api.UsersApi.list_users" title="datadog_api_client.v2.api.users_api.UsersApi.list_users"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_users()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page. The maximum allowed value is 100.</p></li>
+<li><p><strong>page_number</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific page number to return.</p></li>
+<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – User attribute to order results by. Sort order is ascending by default.
+Sort order is descending if the field
+is prefixed by a negative sign, for example <code class="docutils literal notranslate"><span class="pre">sort=-name</span></code>. Options: <code class="docutils literal notranslate"><span class="pre">name</span></code> ,
+<code class="docutils literal notranslate"><span class="pre">modified_at</span></code> , <code class="docutils literal notranslate"><span class="pre">user_count</span></code>.</p></li>
+<li><p><strong>sort_dir</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.query_sort_order.QuerySortOrder" title="datadog_api_client.v2.model.query_sort_order.QuerySortOrder"><em>QuerySortOrder</em></a><em>, </em><em>optional</em>) – Direction of sort. Options: <code class="docutils literal notranslate"><span class="pre">asc</span></code> , <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><strong>filter</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter all users by the given string. Defaults to no filtering.</p></li>
+<li><p><strong>filter_status</strong> (<em>str</em><em>, </em><em>optional</em>) – Filter on status attribute.
+Comma separated list, with possible values <code class="docutils literal notranslate"><span class="pre">Active</span></code> , <code class="docutils literal notranslate"><span class="pre">Pending</span></code> , and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.
+Defaults to no filtering.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.user.User" title="datadog_api_client.v2.model.user.User">User</a>]</p>
 </dd>
 </dl>
 </dd></dl>
