@@ -4393,11 +4393,9 @@ the included attribute will contain the users related to these incident teams.</
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>query</strong> (<em>str</em>) – <p>Specifies which incidents should be returned. After entering a search query in your <a class="reference external" href="https://app.datadoghq.com/incidents">Incidents page</a> ,
-use the query parameter value in the URL of the page as the value for this parameter.</p>
-<p>The query can contain any number of incident facets joined by <code class="docutils literal notranslate"><span class="pre">ANDs</span></code> , along with multiple values for each of
-those facets joined by <code class="docutils literal notranslate"><span class="pre">OR</span></code> s, for instance: <code class="docutils literal notranslate"><span class="pre">query="state:active</span> <span class="pre">AND</span> <span class="pre">severity:(SEV-2</span> <span class="pre">OR</span> <span class="pre">SEV-1)"</span></code>.</p>
-</p></li>
+<li><p><strong>query</strong> (<em>str</em>) – Specifies which incidents should be returned. The query can contain any number of incident facets
+joined by <code class="docutils literal notranslate"><span class="pre">ANDs</span></code> , along with multiple values for each of those facets joined by <code class="docutils literal notranslate"><span class="pre">OR</span></code> s. For
+example: <code class="docutils literal notranslate"><span class="pre">state:active</span> <span class="pre">AND</span> <span class="pre">severity:(SEV-2</span> <span class="pre">OR</span> <span class="pre">SEV-1)</span></code>.</p></li>
 <li><p><strong>include</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><em>IncidentRelatedObject</em></a><em>, </em><em>optional</em>) – Specifies which types of related objects should be included in the response.</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder" title="datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder"><em>IncidentSearchSortOrder</em></a><em>, </em><em>optional</em>) – Specifies the order of returned incidents.</p></li>
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page. The maximum allowed value is 100.</p></li>
@@ -4417,11 +4415,9 @@ those facets joined by <code class="docutils literal notranslate"><span class="p
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>query</strong> (<em>str</em>) – <p>Specifies which incidents should be returned. After entering a search query in your <a class="reference external" href="https://app.datadoghq.com/incidents">Incidents page</a> ,
-use the query parameter value in the URL of the page as the value for this parameter.</p>
-<p>The query can contain any number of incident facets joined by <code class="docutils literal notranslate"><span class="pre">ANDs</span></code> , along with multiple values for each of
-those facets joined by <code class="docutils literal notranslate"><span class="pre">OR</span></code> s, for instance: <code class="docutils literal notranslate"><span class="pre">query="state:active</span> <span class="pre">AND</span> <span class="pre">severity:(SEV-2</span> <span class="pre">OR</span> <span class="pre">SEV-1)"</span></code>.</p>
-</p></li>
+<li><p><strong>query</strong> (<em>str</em>) – Specifies which incidents should be returned. The query can contain any number of incident facets
+joined by <code class="docutils literal notranslate"><span class="pre">ANDs</span></code> , along with multiple values for each of those facets joined by <code class="docutils literal notranslate"><span class="pre">OR</span></code> s. For
+example: <code class="docutils literal notranslate"><span class="pre">state:active</span> <span class="pre">AND</span> <span class="pre">severity:(SEV-2</span> <span class="pre">OR</span> <span class="pre">SEV-1)</span></code>.</p></li>
 <li><p><strong>include</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject" title="datadog_api_client.v2.model.incident_related_object.IncidentRelatedObject"><em>IncidentRelatedObject</em></a><em>, </em><em>optional</em>) – Specifies which types of related objects should be included in the response.</p></li>
 <li><p><strong>sort</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder" title="datadog_api_client.v2.model.incident_search_sort_order.IncidentSearchSortOrder"><em>IncidentSearchSortOrder</em></a><em>, </em><em>optional</em>) – Specifies the order of returned incidents.</p></li>
 <li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Size for a given page. The maximum allowed value is 100.</p></li>
@@ -5850,7 +5846,7 @@ The restriction policy determines who is authorized to perform what actions on t
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v2.api.roles_api">
-<span id="id15"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Link to this heading">¶</a></h2>
+<span id="id14"></span><h2 id="module-datadog_api_client.v2.api.roles_api">roles_api<a class="headerlink" href="#module-datadog_api_client.v2.api.roles_api" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.roles_api.RolesApi">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RolesApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.roles_api.RolesApi" title="Link to this definition">¶</a></dt>
