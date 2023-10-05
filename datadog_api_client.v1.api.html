@@ -3998,20 +3998,7 @@ For example, if you’ve specified to notify on 1 critical, 3 ok, and 2 warn sta
 For example, Postgres integration monitors are tagged by <code class="docutils literal notranslate"><span class="pre">db</span></code> , <code class="docutils literal notranslate"><span class="pre">host</span></code> , and <code class="docutils literal notranslate"><span class="pre">port</span></code> , and Network monitors by <code class="docutils literal notranslate"><span class="pre">host</span></code> , <code class="docutils literal notranslate"><span class="pre">instance</span></code> , and <code class="docutils literal notranslate"><span class="pre">url</span></code>. See <a class="reference external" href="https://docs.datadoghq.com/api/latest/service-checks/">Service Checks</a> documentation for more information.</p></li>
 </ul>
 <p><strong>Event Alert Query</strong></p>
-<p>Example: <code class="docutils literal notranslate"><span class="pre">events('sources:nagios</span> <span class="pre">status:error,warning</span> <span class="pre">priority:normal</span> <span class="pre">tags:</span> <span class="pre">"string</span> <span class="pre">query"').rollup("count").last("1h")"</span></code></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code> , the event query string:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">string_query</span></code> free text query to match against event title and text.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sources</span></code> event sources (comma-separated).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> event statuses (comma-separated). Valid options: error, warn, and info.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> event priorities (comma-separated). Valid options: low, normal, all.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> event reporting host (comma-separated).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> event tags (comma-separated).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">excluded_tags</span></code> excluded event tags (comma-separated).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rollup</span></code> the stats roll-up method. <code class="docutils literal notranslate"><span class="pre">count</span></code> is the only supported method now.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> the timeframe to roll up the counts. Examples: 45m, 4h. Supported timeframes: m, h and d. This value should not exceed 48 hours.</p></li>
-</ul>
-<p><strong>NOTE</strong> The Event Alert Query is being deprecated and replaced by the Event V2 Alert Query. For more information, see the <a class="reference external" href="https://docs.datadoghq.com/events/guides/migrating_to_new_events_features/">Event Migration guide</a>.</p>
+<p><strong>Note:</strong> The Event Alert Query has been replaced by the Event V2 Alert Query. For more information, see the <a class="reference external" href="https://docs.datadoghq.com/service_management/events/guides/migrating_to_new_events_features/">Event Migration guide</a>.</p>
 <p><strong>Event V2 Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">events(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
@@ -4070,7 +4057,6 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
-<p><strong>NOTE</strong> Only available on US1-FED and in closed beta on US1, EU, AP1, US3, and US5.</p>
 <p><strong>CI Pipelines Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">ci-pipelines(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
@@ -4081,7 +4067,6 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
-<p><strong>NOTE</strong> CI Pipeline monitors are in alpha on US1, EU, AP1, US3, and US5.</p>
 <p><strong>CI Tests Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">ci-tests(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
 <ul class="simple">
@@ -4092,7 +4077,6 @@ It is only available via the API and isn’t visible or editable in the Datadog 
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> , <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> , <code class="docutils literal notranslate"><span class="pre">==</span></code> , or <code class="docutils literal notranslate"><span class="pre">!=</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> an integer or decimal number used to set the threshold.</p></li>
 </ul>
-<p><strong>NOTE</strong> CI Test monitors are available only in closed beta on US1, EU, AP1, US3, and US5.</p>
 <p><strong>Error Tracking Alert Query</strong></p>
 <p>Example(RUM): <code class="docutils literal notranslate"><span class="pre">error-tracking-rum(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code>
 Example(APM Traces): <code class="docutils literal notranslate"><span class="pre">error-tracking-traces(query).rollup(rollup_method[,</span> <span class="pre">measure]).last(time_window)</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
