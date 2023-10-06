@@ -1282,8 +1282,8 @@
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi"><code class="docutils literal notranslate"><span class="pre">PowerpackApi</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.create_powerpack"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.create_powerpack()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.delete_powerpack"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.delete_powerpack()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.get_all_powerpacks"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.get_all_powerpacks()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.get_powerpack"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.get_powerpack()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.list_powerpacks"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.list_powerpacks()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="datadog_api_client.v2.api.html#datadog_api_client.v2.api.powerpack_api.PowerpackApi.update_powerpack"><code class="docutils literal notranslate"><span class="pre">PowerpackApi.update_powerpack()</span></code></a></li>
 </ul>
 </li>
@@ -2725,10 +2725,6 @@
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.gcpsts_service_accounts_response.GCPSTSServiceAccountsResponse"><code class="docutils literal notranslate"><span class="pre">GCPSTSServiceAccountsResponse</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_all_powerpacks_response">get_all_powerpacks_response</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_all_powerpacks_response.GetAllPowerpacksResponse"><code class="docutils literal notranslate"><span class="pre">GetAllPowerpacksResponse</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.get_finding_response">get_finding_response</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.get_finding_response.GetFindingResponse"><code class="docutils literal notranslate"><span class="pre">GetFindingResponse</span></code></a></li>
 </ul>
@@ -3319,6 +3315,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_findings_response">list_findings_response</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.list_findings_response.ListFindingsResponse"><code class="docutils literal notranslate"><span class="pre">ListFindingsResponse</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_powerpacks_response">list_powerpacks_response</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.list_powerpacks_response.ListPowerpacksResponse"><code class="docutils literal notranslate"><span class="pre">ListPowerpacksResponse</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.list_teams_include">list_teams_include</a><ul>
@@ -4139,6 +4139,26 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_data">powerpack_data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_data.PowerpackData"><code class="docutils literal notranslate"><span class="pre">PowerpackData</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_group_widget">powerpack_group_widget</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_group_widget.PowerpackGroupWidget"><code class="docutils literal notranslate"><span class="pre">PowerpackGroupWidget</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_group_widget_definition">powerpack_group_widget_definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_group_widget_definition.PowerpackGroupWidgetDefinition"><code class="docutils literal notranslate"><span class="pre">PowerpackGroupWidgetDefinition</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_group_widget_layout">powerpack_group_widget_layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_group_widget_layout.PowerpackGroupWidgetLayout"><code class="docutils literal notranslate"><span class="pre">PowerpackGroupWidgetLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_inner_widget_layout">powerpack_inner_widget_layout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_inner_widget_layout.PowerpackInnerWidgetLayout"><code class="docutils literal notranslate"><span class="pre">PowerpackInnerWidgetLayout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_inner_widgets">powerpack_inner_widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.powerpack_inner_widgets.PowerpackInnerWidgets"><code class="docutils literal notranslate"><span class="pre">PowerpackInnerWidgets</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="datadog_api_client.v2.model.html#module-datadog_api_client.v2.model.powerpack_relationships">powerpack_relationships</a><ul>
