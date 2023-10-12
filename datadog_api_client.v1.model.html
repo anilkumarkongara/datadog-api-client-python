@@ -1328,6 +1328,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_global" class="md-nav__link">ip_prefixes_global</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesGlobal</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_logs" class="md-nav__link">ip_prefixes_logs</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_logs.IPPrefixesLogs" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesLogs</span></code></a>
@@ -6869,6 +6875,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_apm" class="md-nav__link">ip_prefixes_apm</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_apm.IPPrefixesAPM" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesAPM</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.ip_prefixes_global" class="md-nav__link">ip_prefixes_global</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">IPPrefixesGlobal</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -14828,6 +14840,23 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.ip_prefixes_global">
+<span id="ip-prefixes-global"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_global">ip_prefixes_global<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_global" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">IPPrefixesGlobal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Available prefix information for all Datadog endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefixes_ipv4</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv4 prefixes.</p></li>
+<li><p><strong>prefixes_ipv6</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – List of IPv6 prefixes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.ip_prefixes_logs">
 <span id="ip-prefixes-logs"></span><h2 id="module-datadog_api_client.v1.model.ip_prefixes_logs">ip_prefixes_logs<a class="headerlink" href="#module-datadog_api_client.v1.model.ip_prefixes_logs" title="Link to this heading">¶</a></h2>
 <dl class="py class">
@@ -14962,6 +14991,7 @@ type conversion is done.</p></li>
 <li><p><strong>agents</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_agents.IPPrefixesAgents" title="datadog_api_client.v1.model.ip_prefixes_agents.IPPrefixesAgents"><em>IPPrefixesAgents</em></a><em>, </em><em>optional</em>) – Available prefix information for the Agent endpoints.</p></li>
 <li><p><strong>api</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_api.IPPrefixesAPI" title="datadog_api_client.v1.model.ip_prefixes_api.IPPrefixesAPI"><em>IPPrefixesAPI</em></a><em>, </em><em>optional</em>) – Available prefix information for the API endpoints.</p></li>
 <li><p><strong>apm</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_apm.IPPrefixesAPM" title="datadog_api_client.v1.model.ip_prefixes_apm.IPPrefixesAPM"><em>IPPrefixesAPM</em></a><em>, </em><em>optional</em>) – Available prefix information for the APM endpoints.</p></li>
+<li><p><strong>_global</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal" title="datadog_api_client.v1.model.ip_prefixes_global.IPPrefixesGlobal"><em>IPPrefixesGlobal</em></a><em>, </em><em>optional</em>) – Available prefix information for all Datadog endpoints.</p></li>
 <li><p><strong>logs</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_logs.IPPrefixesLogs" title="datadog_api_client.v1.model.ip_prefixes_logs.IPPrefixesLogs"><em>IPPrefixesLogs</em></a><em>, </em><em>optional</em>) – Available prefix information for the Logs endpoints.</p></li>
 <li><p><strong>modified</strong> (<em>str</em><em>, </em><em>optional</em>) – Date when last updated, in the form <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-hh-mm-ss</span></code>.</p></li>
 <li><p><strong>orchestrator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.ip_prefixes_orchestrator.IPPrefixesOrchestrator" title="datadog_api_client.v1.model.ip_prefixes_orchestrator.IPPrefixesOrchestrator"><em>IPPrefixesOrchestrator</em></a><em>, </em><em>optional</em>) – Available prefix information for the Orchestrator endpoints.</p></li>
