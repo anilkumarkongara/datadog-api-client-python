@@ -489,6 +489,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.containers_api" class="md-nav__link">containers_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi.list_containers()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi.list_containers_with_pagination()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.dashboard_lists_api" class="md-nav__link">dashboard_lists_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DashboardListsApi</span></code></a><nav class="md-nav">
@@ -1901,6 +1913,18 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.container_images_api.ContainerImagesApi.list_container_images" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainerImagesApi.list_container_images()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.container_images_api.ContainerImagesApi.list_container_images_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainerImagesApi.list_container_images_with_pagination()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.containers_api" class="md-nav__link">containers_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi.list_containers()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">ContainersApi.list_containers_with_pagination()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -3509,6 +3533,60 @@ This key is provided with each valid response from the API in <code class="docut
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.container_image_item.ContainerImageItem" title="datadog_api_client.v2.model.container_image_item.ContainerImageItem">ContainerImageItem</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.containers_api">
+<span id="containers-api"></span><h2 id="module-datadog_api_client.v2.api.containers_api">containers_api<a class="headerlink" href="#module-datadog_api_client.v2.api.containers_api" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.containers_api.ContainersApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ContainersApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.containers_api.ContainersApi" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Containers API allows you to query container data for your organization.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.containers_api.ContainersApi.list_containers">
+<span class="sig-name descname"><span class="pre">list_containers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.containers_response.ContainersResponse" title="datadog_api_client.v2.model.containers_response.ContainersResponse"><span class="pre">ContainersResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers" title="Link to this definition">¶</a></dt>
+<dd><p>Get All Containers.</p>
+<p>Get all containers for your organization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_tags</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to filter containers by.</p></li>
+<li><p><strong>group_by</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to group containers by.</p></li>
+<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – Attribute to sort containers by.</p></li>
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of results returned.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – String to query the next page of results.
+This key is provided with each valid response from the API in <code class="docutils literal notranslate"><span class="pre">meta.pagination.next_cursor</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.containers_response.ContainersResponse" title="datadog_api_client.v2.model.containers_response.ContainersResponse">ContainersResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.containers_api.ContainersApi.list_containers_with_pagination">
+<span class="sig-name descname"><span class="pre">list_containers_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_tags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_cursor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.container_item.ContainerItem" title="datadog_api_client.v2.model.container_item.ContainerItem"><span class="pre">ContainerItem</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers_with_pagination" title="Link to this definition">¶</a></dt>
+<dd><p>Get All Containers.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.containers_api.ContainersApi.list_containers" title="datadog_api_client.v2.api.containers_api.ContainersApi.list_containers"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_containers()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_tags</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to filter containers by.</p></li>
+<li><p><strong>group_by</strong> (<em>str</em><em>, </em><em>optional</em>) – Comma-separated list of tags to group containers by.</p></li>
+<li><p><strong>sort</strong> (<em>str</em><em>, </em><em>optional</em>) – Attribute to sort containers by.</p></li>
+<li><p><strong>page_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of results returned.</p></li>
+<li><p><strong>page_cursor</strong> (<em>str</em><em>, </em><em>optional</em>) – String to query the next page of results.
+This key is provided with each valid response from the API in <code class="docutils literal notranslate"><span class="pre">meta.pagination.next_cursor</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.container_item.ContainerItem" title="datadog_api_client.v2.model.container_item.ContainerItem">ContainerItem</a>]</p>
 </dd>
 </dl>
 </dd></dl>
