@@ -4015,7 +4015,11 @@ notifies your team when a defined threshold has exceeded.</p>
 <li><p>error-tracking: <code class="docutils literal notranslate"><span class="pre">error-tracking</span> <span class="pre">alert</span></code></p></li>
 <li><p>database-monitoring: <code class="docutils literal notranslate"><span class="pre">database-monitoring</span> <span class="pre">alert</span></code></p></li>
 </ul>
-<p><strong>Note</strong> : Synthetic monitors are created through the Synthetics API. See the [Synthetics API] (<a class="reference external" href="https://docs.datadoghq.com/api/latest/synthetics/">https://docs.datadoghq.com/api/latest/synthetics/</a>) documentation for more information.</p>
+<p><strong>Notes</strong> :</p>
+<ul class="simple">
+<li><p>Synthetic monitors are created through the Synthetics API. See the [Synthetics API] (<a class="reference external" href="https://docs.datadoghq.com/api/latest/synthetics/">https://docs.datadoghq.com/api/latest/synthetics/</a>) documentation for more information.</p></li>
+<li><p>Log monitors require an unscoped App Key.</p></li>
+</ul>
 <p><strong>Query Types</strong></p>
 <p><strong>Metric Alert Query</strong></p>
 <p>Example: <code class="docutils literal notranslate"><span class="pre">time_aggr(time_window):space_aggr:metric{tags}</span> <span class="pre">[by</span> <span class="pre">{key}]</span> <span class="pre">operator</span> <span class="pre">#</span></code></p>
@@ -4346,6 +4350,7 @@ page to learn more.</p>
 <span class="sig-name descname"><span class="pre">validate_monitor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.monitor.Monitor" title="datadog_api_client.v1.model.monitor.Monitor"><span class="pre">Monitor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#datadog_api_client.v1.api.monitors_api.MonitorsApi.validate_monitor" title="Link to this definition">¶</a></dt>
 <dd><p>Validate a monitor.</p>
 <p>Validate the monitor provided in the request.</p>
+<p><strong>Note</strong> : Log monitors require an unscoped App Key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.monitor.Monitor" title="datadog_api_client.v1.model.monitor.Monitor"><em>Monitor</em></a>) – Monitor request object</p>
