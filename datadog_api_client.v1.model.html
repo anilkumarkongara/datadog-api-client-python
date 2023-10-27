@@ -14649,18 +14649,18 @@ type conversion is done.</p></li>
 <li><p><strong>agent_checks</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.agent_check.AgentCheck" title="datadog_api_client.v1.model.agent_check.AgentCheck"><em>AgentCheck</em></a><em>]</em><em>, </em><em>optional</em>) – A list of Agent checks running on the host.</p></li>
 <li><p><strong>agent_version</strong> (<em>str</em><em>, </em><em>optional</em>) – The Datadog Agent version.</p></li>
 <li><p><strong>cpu_cores</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of cores.</p></li>
-<li><p><strong>fbsd_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
+<li><p><strong>fbsd_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
 <li><p><strong>gohai</strong> (<em>str</em><em>, </em><em>optional</em>) – JSON string containing system information.</p></li>
 <li><p><strong>install_method</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.host_meta_install_method.HostMetaInstallMethod" title="datadog_api_client.v1.model.host_meta_install_method.HostMetaInstallMethod"><em>HostMetaInstallMethod</em></a><em>, </em><em>optional</em>) – Agent install method.</p></li>
-<li><p><strong>mac_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
+<li><p><strong>mac_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Mac versions.</p></li>
 <li><p><strong>machine</strong> (<em>str</em><em>, </em><em>optional</em>) – The machine architecture.</p></li>
-<li><p><strong>nix_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – Array of Unix versions.</p></li>
+<li><p><strong>nix_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – Array of Unix versions.</p></li>
 <li><p><strong>platform</strong> (<em>str</em><em>, </em><em>optional</em>) – The OS platform.</p></li>
 <li><p><strong>processor</strong> (<em>str</em><em>, </em><em>optional</em>) – The processor.</p></li>
 <li><p><strong>python_v</strong> (<em>str</em><em>, </em><em>optional</em>) – The Python version.</p></li>
 <li><p><strong>socket_fqdn</strong> (<em>str</em><em>, </em><em>optional</em>) – The socket fqdn.</p></li>
 <li><p><strong>socket_hostname</strong> (<em>str</em><em>, </em><em>optional</em>) – The socket hostname.</p></li>
-<li><p><strong>win_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Windows versions.</p></li>
+<li><p><strong>win_v</strong> (<em>[</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>]</em><em>, </em><em>optional</em>) – An array of Windows versions.</p></li>
 </ul>
 </dd>
 </dl>
@@ -15574,7 +15574,7 @@ type conversion is done.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>attributes</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – JSON object of attributes from your log.</p></li>
+<li><p><strong>attributes</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – JSON object of attributes from your log.</p></li>
 <li><p><strong>host</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of the machine from where the logs are being sent.</p></li>
 <li><p><strong>message</strong> (<em>str</em><em>, </em><em>optional</em>) – <p>The message <a class="reference external" href="https://docs.datadoghq.com/logs/log_collection/#reserved-attributes">reserved attribute</a>
 of your log. By default, Datadog ingests the value of the message attribute as the body of the log entry.
@@ -17823,7 +17823,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>count</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of found monitors with the listed value.</p></li>
-<li><p><strong>name</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The facet value.</p></li>
+<li><p><strong>name</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The facet value.</p></li>
 </ul>
 </dd>
 </dl>
@@ -22782,7 +22782,7 @@ type conversion is done.</p></li>
 <li><p><strong>http_status_code</strong> (<em>int</em><em>, </em><em>optional</em>) – The API test HTTP status code.</p></li>
 <li><p><strong>request_headers</strong> (<em>{str:</em><em> (</em><em>dict</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Request header object used for the API test.</p></li>
 <li><p><strong>response_body</strong> (<em>str</em><em>, </em><em>optional</em>) – Response body returned for the API test.</p></li>
-<li><p><strong>response_headers</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Response headers returned for the API test.</p></li>
+<li><p><strong>response_headers</strong> (<em>{str:</em><em> (</em><em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>,</em><em>)</em><em>}</em><em>, </em><em>optional</em>) – Response headers returned for the API test.</p></li>
 <li><p><strong>response_size</strong> (<em>int</em><em>, </em><em>optional</em>) – Global size in byte of the API test response.</p></li>
 <li><p><strong>timings</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming" title="datadog_api_client.v1.model.synthetics_timing.SyntheticsTiming"><em>SyntheticsTiming</em></a><em>, </em><em>optional</em>) – Object containing all metrics and their values collected for a Synthetic API test.
 See the <a class="reference external" href="https://docs.datadoghq.com/synthetics/metrics/">Synthetic Monitoring Metrics documentation</a>.</p></li>
@@ -22935,7 +22935,7 @@ which property they apply, and upon which target.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>operator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_operator.SyntheticsAssertionOperator" title="datadog_api_client.v1.model.synthetics_assertion_operator.SyntheticsAssertionOperator"><em>SyntheticsAssertionOperator</em></a>) – Assertion operator to apply.</p></li>
 <li><p><strong>_property</strong> (<em>str</em><em>, </em><em>optional</em>) – The associated assertion property.</p></li>
-<li><p><strong>target</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em>) – Value used by the operator.</p></li>
+<li><p><strong>target</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em>) – Value used by the operator.</p></li>
 <li><p><strong>timings_scope</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_timings_scope.SyntheticsAssertionTimingsScope" title="datadog_api_client.v1.model.synthetics_assertion_timings_scope.SyntheticsAssertionTimingsScope"><em>SyntheticsAssertionTimingsScope</em></a><em>, </em><em>optional</em>) – Timings scope for response time assertions.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_type.SyntheticsAssertionType" title="datadog_api_client.v1.model.synthetics_assertion_type.SyntheticsAssertionType"><em>SyntheticsAssertionType</em></a>) – Type of the assertion.</p></li>
 </ul>
@@ -23001,7 +23001,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>json_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The JSON path to assert.</p></li>
 <li><p><strong>operator</strong> (<em>str</em><em>, </em><em>optional</em>) – The specific operator to use on the path.</p></li>
-<li><p><strong>target_value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The path target value to compare to.</p></li>
+<li><p><strong>target_value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The path target value to compare to.</p></li>
 </ul>
 </dd>
 </dl>
@@ -23046,7 +23046,7 @@ type conversion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>operator</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_operator.SyntheticsAssertionOperator" title="datadog_api_client.v1.model.synthetics_assertion_operator.SyntheticsAssertionOperator"><em>SyntheticsAssertionOperator</em></a>) – Assertion operator to apply.</p></li>
 <li><p><strong>_property</strong> (<em>str</em><em>, </em><em>optional</em>) – The associated assertion property.</p></li>
-<li><p><strong>target</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em>) – Value used by the operator.</p></li>
+<li><p><strong>target</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em>) – Value used by the operator.</p></li>
 <li><p><strong>timings_scope</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_timings_scope.SyntheticsAssertionTimingsScope" title="datadog_api_client.v1.model.synthetics_assertion_timings_scope.SyntheticsAssertionTimingsScope"><em>SyntheticsAssertionTimingsScope</em></a><em>, </em><em>optional</em>) – Timings scope for response time assertions.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_assertion_type.SyntheticsAssertionType" title="datadog_api_client.v1.model.synthetics_assertion_type.SyntheticsAssertionType"><em>SyntheticsAssertionType</em></a>) – Type of the assertion.</p></li>
 </ul>
@@ -23165,7 +23165,7 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>operator</strong> (<em>str</em><em>, </em><em>optional</em>) – The specific operator to use on the path.</p></li>
-<li><p><strong>target_value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The path target value to compare to.</p></li>
+<li><p><strong>target_value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – The path target value to compare to.</p></li>
 <li><p><strong>x_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The X path to assert.</p></li>
 </ul>
 </dd>
@@ -24828,7 +24828,7 @@ type conversion is done.</p></li>
 <li><p><strong>time_to_interactive</strong> (<em>float</em><em>, </em><em>optional</em>) – Time before starting the step.</p></li>
 <li><p><strong>type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType" title="datadog_api_client.v1.model.synthetics_step_type.SyntheticsStepType"><em>SyntheticsStepType</em></a><em>, </em><em>optional</em>) – Step type used in your Synthetic test.</p></li>
 <li><p><strong>url</strong> (<em>str</em><em>, </em><em>optional</em>) – URL to perform the step against.</p></li>
-<li><p><strong>value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Value for the step.</p></li>
+<li><p><strong>value</strong> (<em>bool</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><em>dict</em><em>, </em><em>float</em><em>, </em><em>int</em><em>, </em><em>list</em><em>, </em><em>str</em><em>, </em><em>UUID</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Value for the step.</p></li>
 <li><p><strong>vitals_metrics</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_core_web_vitals.SyntheticsCoreWebVitals" title="datadog_api_client.v1.model.synthetics_core_web_vitals.SyntheticsCoreWebVitals"><em>SyntheticsCoreWebVitals</em></a><em>]</em><em>, </em><em>optional</em>) – Array of Core Web Vitals metrics for the step.</p></li>
 <li><p><strong>warnings</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.synthetics_step_detail_warning.SyntheticsStepDetailWarning" title="datadog_api_client.v1.model.synthetics_step_detail_warning.SyntheticsStepDetailWarning"><em>SyntheticsStepDetailWarning</em></a><em>]</em><em>, </em><em>optional</em>) – Warning collected that didn’t failed the step.</p></li>
 </ul>

@@ -10620,7 +10620,7 @@ document).</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_variable</strong> (<em>str</em>) – The name of the input variable.</p></li>
-<li><p><strong>input_values</strong> (<em>list/str/int/float/date/datetime</em>) – The values that we are checking to see if they are in
+<li><p><strong>input_values</strong> (<em>list/str/int/float/date/datetime/uuid</em>) – The values that we are checking to see if they are in
 allowed_values.</p></li>
 </ul>
 </dd>
@@ -10635,7 +10635,7 @@ allowed_values.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>validations</strong> (<em>dict</em>) – The validation dictionary.</p></li>
 <li><p><strong>input_variable</strong> (<em>str</em>) – The name of the input variable.</p></li>
-<li><p><strong>input_values</strong> (<em>list/str/int/float/date/datetime</em>) – The values that we are checking.</p></li>
+<li><p><strong>input_values</strong> (<em>list/str/int/float/date/datetime/uuid</em>) – The values that we are checking.</p></li>
 <li><p><strong>configuration</strong> (<a class="reference internal" href="#datadog_api_client.Configuration" title="datadog_api_client.Configuration"><em>Configuration</em></a>) – The configuration instance.</p></li>
 </ul>
 </dd>
@@ -10704,7 +10704,7 @@ variable names in PEP-8 snake case.</p></li>
 <dd class="field-odd"><p><strong>klass</strong> (<em>str/class</em>) – The class to convert to.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>int, float, str, bool, date, datetime</p>
+<dd class="field-even"><p>int, float, str, bool, date, datetime, UUID</p>
 </dd>
 </dl>
 </dd></dl>
@@ -10737,7 +10737,7 @@ in the OpenAPI document.</p></li>
 <li><p><strong>constant_kwargs</strong> (<em>dict</em>) – var_name to var_value
 args that every model requires, including configuration, server
 and path to item.</p></li>
-<li><p><strong>model_arg</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>bool</em><em>, </em><em>str</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><a class="reference internal" href="#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><em>ModelSimple</em></a><em>, </em><em>None</em>) – The value to assign to a primitive class or ModelSimple class.
+<li><p><strong>model_arg</strong> (<em>int</em><em>, </em><em>float</em><em>, </em><em>bool</em><em>, </em><em>str</em><em>, </em><em>date</em><em>, </em><em>datetime</em><em>, </em><a class="reference internal" href="#datadog_api_client.model_utils.ModelSimple" title="datadog_api_client.model_utils.ModelSimple"><em>ModelSimple</em></a><em>, </em><em>UUID</em><em>, </em><em>None</em>) – The value to assign to a primitive class or ModelSimple class.
 Notes:
 - this is only passed in when oneOf includes types which are not object
 - None is used to suppress handling of model_arg, nullable models are handled in __new__</p></li>
