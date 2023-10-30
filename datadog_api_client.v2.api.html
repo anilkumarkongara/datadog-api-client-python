@@ -1029,11 +1029,11 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.list_security_monitoring_signals_with_pagination()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.mute_findings" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.mute_findings()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.search_security_monitoring_signals()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.search_security_monitoring_signals_with_pagination()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_finding" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.update_finding()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_filter" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.update_security_filter()</span></code></a>
         </li>
@@ -2458,11 +2458,11 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.list_security_monitoring_signals_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.list_security_monitoring_signals_with_pagination()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.mute_findings" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.mute_findings()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.search_security_monitoring_signals()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.search_security_monitoring_signals_with_pagination()</span></code></a>
-        </li>
-        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_finding" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.update_finding()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_security_filter" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SecurityMonitoringApi.update_security_filter()</span></code></a>
         </li>
@@ -6729,6 +6729,29 @@ security signals.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.mute_findings">
+<span class="sig-name descname"><span class="pre">mute_findings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.bulk_mute_findings_request.BulkMuteFindingsRequest" title="datadog_api_client.v2.model.bulk_mute_findings_request.BulkMuteFindingsRequest"><span class="pre">BulkMuteFindingsRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.bulk_mute_findings_response.BulkMuteFindingsResponse" title="datadog_api_client.v2.model.bulk_mute_findings_response.BulkMuteFindingsResponse"><span class="pre">BulkMuteFindingsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.mute_findings" title="Link to this definition">¶</a></dt>
+<dd><p>Mute or unmute a batch of findings.</p>
+<p>Mute or unmute findings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.bulk_mute_findings_request.BulkMuteFindingsRequest" title="datadog_api_client.v2.model.bulk_mute_findings_request.BulkMuteFindingsRequest"><em>BulkMuteFindingsRequest</em></a>) – <p><strong>Attributes</strong></p>
+<p>All findings are updated with the same attributes. The request body must include at least two attributes: <code class="docutils literal notranslate"><span class="pre">muted</span></code> and <code class="docutils literal notranslate"><span class="pre">reason</span></code>.
+The allowed reasons depend on whether the finding is being muted or unmuted:</p>
+<ul class="simple">
+<li><p>To mute a finding: <code class="docutils literal notranslate"><span class="pre">PENDING_FIX</span></code> , <code class="docutils literal notranslate"><span class="pre">FALSE_POSITIVE</span></code> , <code class="docutils literal notranslate"><span class="pre">ACCEPTED_RISK</span></code> , <code class="docutils literal notranslate"><span class="pre">OTHER</span></code>.</p></li>
+<li><p>To unmute a finding : <code class="docutils literal notranslate"><span class="pre">NO_PENDING_FIX</span></code> , <code class="docutils literal notranslate"><span class="pre">HUMAN_ERROR</span></code> , <code class="docutils literal notranslate"><span class="pre">NO_LONGER_ACCEPTED_RISK</span></code> , <code class="docutils literal notranslate"><span class="pre">OTHER</span></code>.</p></li>
+</ul>
+<p><strong>Meta</strong></p>
+<p>The request body must include a list of the finding IDs to be updated.</p>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.bulk_mute_findings_response.BulkMuteFindingsResponse" title="datadog_api_client.v2.model.bulk_mute_findings_response.BulkMuteFindingsResponse">BulkMuteFindingsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals">
 <span class="sig-name descname"><span class="pre">search_security_monitoring_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal_list_request.SecurityMonitoringSignalListRequest" title="datadog_api_client.v2.model.security_monitoring_signal_list_request.SecurityMonitoringSignalListRequest"><span class="pre">SecurityMonitoringSignalListRequest</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signals_list_response.SecurityMonitoringSignalsListResponse" title="datadog_api_client.v2.model.security_monitoring_signals_list_response.SecurityMonitoringSignalsListResponse"><span class="pre">SecurityMonitoringSignalsListResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.search_security_monitoring_signals" title="Link to this definition">¶</a></dt>
 <dd><p>Get a list of security signals.</p>
@@ -6752,29 +6775,6 @@ security signals.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal" title="datadog_api_client.v2.model.security_monitoring_signal.SecurityMonitoringSignal">SecurityMonitoringSignal</a>]</p>
-</dd>
-</dl>
-</dd></dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_finding">
-<span class="sig-name descname"><span class="pre">update_finding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.mute_finding_request.MuteFindingRequest" title="datadog_api_client.v2.model.mute_finding_request.MuteFindingRequest"><span class="pre">MuteFindingRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.mute_finding_response.MuteFindingResponse" title="datadog_api_client.v2.model.mute_finding_response.MuteFindingResponse"><span class="pre">MuteFindingResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.security_monitoring_api.SecurityMonitoringApi.update_finding" title="Link to this definition">¶</a></dt>
-<dd><p>Mute or unmute a finding.</p>
-<p>Mute or unmute a specific finding.
-The API returns the updated finding object when the request is successful.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>finding_id</strong> (<em>str</em>) – The ID of the finding.</p></li>
-<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.mute_finding_request.MuteFindingRequest" title="datadog_api_client.v2.model.mute_finding_request.MuteFindingRequest"><em>MuteFindingRequest</em></a>) – <p>To mute or unmute a finding, the request body should include at least two attributes: <code class="docutils literal notranslate"><span class="pre">muted</span></code> and <code class="docutils literal notranslate"><span class="pre">reason</span></code>. The allowed reasons depend on whether the finding is being muted or unmuted:</p>
-<ul>
-<li><p>To mute a finding: <code class="docutils literal notranslate"><span class="pre">PENDING_FIX</span></code> , <code class="docutils literal notranslate"><span class="pre">FALSE_POSITIVE</span></code> , <code class="docutils literal notranslate"><span class="pre">ACCEPTED_RISK</span></code> , <code class="docutils literal notranslate"><span class="pre">OTHER</span></code>.</p></li>
-<li><p>To unmute a finding : <code class="docutils literal notranslate"><span class="pre">NO_PENDING_FIX</span></code> , <code class="docutils literal notranslate"><span class="pre">HUMAN_ERROR</span></code> , <code class="docutils literal notranslate"><span class="pre">NO_LONGER_ACCEPTED_RISK</span></code> , <code class="docutils literal notranslate"><span class="pre">OTHER</span></code>.</p></li>
-</ul>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.mute_finding_response.MuteFindingResponse" title="datadog_api_client.v2.model.mute_finding_response.MuteFindingResponse">MuteFindingResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
