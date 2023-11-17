@@ -793,6 +793,8 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests_with_pagination()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.patch_test" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.patch_test()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_ci_tests()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_tests()</span></code></a>
@@ -2093,6 +2095,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.list_tests_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.list_tests_with_pagination()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.patch_test" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.patch_test()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">SyntheticsApi.trigger_ci_tests()</span></code></a>
         </li>
@@ -5574,6 +5578,23 @@ tests. No arguments required.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v1.api.synthetics_api.SyntheticsApi.patch_test">
+<span class="sig-name descname"><span class="pre">patch_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">public_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_patch_test_body.SyntheticsPatchTestBody" title="datadog_api_client.v1.model.synthetics_patch_test_body.SyntheticsPatchTestBody"><span class="pre">SyntheticsPatchTestBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails" title="datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails"><span class="pre">SyntheticsTestDetails</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.patch_test" title="Link to this definition">¶</a></dt>
+<dd><p>Patch a Synthetic test.</p>
+<p>Patch the configuration of a Synthetic test with partial data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the test to patch.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_patch_test_body.SyntheticsPatchTestBody" title="datadog_api_client.v1.model.synthetics_patch_test_body.SyntheticsPatchTestBody"><em>SyntheticsPatchTestBody</em></a>) – <a class="reference external" href="https://jsonpatch.com/">JSON Patch</a> compliant list of operations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails" title="datadog_api_client.v1.model.synthetics_test_details.SyntheticsTestDetails">SyntheticsTestDetails</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests">
 <span class="sig-name descname"><span class="pre">trigger_ci_tests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_ci_test_body.SyntheticsCITestBody" title="datadog_api_client.v1.model.synthetics_ci_test_body.SyntheticsCITestBody"><span class="pre">SyntheticsCITestBody</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_trigger_ci_tests_response.SyntheticsTriggerCITestsResponse" title="datadog_api_client.v1.model.synthetics_trigger_ci_tests_response.SyntheticsTriggerCITestsResponse"><span class="pre">SyntheticsTriggerCITestsResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.synthetics_api.SyntheticsApi.trigger_ci_tests" title="Link to this definition">¶</a></dt>
 <dd><p>Trigger tests from CI/CD pipelines.</p>
@@ -5626,7 +5647,7 @@ tests. No arguments required.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the test to get details from.</p></li>
+<li><p><strong>public_id</strong> (<em>str</em>) – The public ID of the test to edit.</p></li>
 <li><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.synthetics_browser_test.SyntheticsBrowserTest" title="datadog_api_client.v1.model.synthetics_browser_test.SyntheticsBrowserTest"><em>SyntheticsBrowserTest</em></a>) – New test details to be saved.</p></li>
 </ul>
 </dd>
