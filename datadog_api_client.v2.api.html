@@ -517,6 +517,18 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.dora_metrics_api" class="md-nav__link">dora_metrics_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_deployment" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi.create_dora_deployment()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_incident" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi.create_dora_incident()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.downtimes_api" class="md-nav__link">downtimes_api</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi</span></code></a><nav class="md-nav">
@@ -1969,6 +1981,18 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi.get_dashboard_list_items" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DashboardListsApi.get_dashboard_list_items()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dashboard_lists_api.DashboardListsApi.update_dashboard_list_items" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DashboardListsApi.update_dashboard_list_items()</span></code></a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v2.api.dora_metrics_api" class="md-nav__link">dora_metrics_api</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi</span></code></a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_deployment" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi.create_dora_deployment()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_incident" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DORAMetricsApi.create_dora_incident()</span></code></a>
         </li></ul>
             </nav>
         </li></ul>
@@ -3719,6 +3743,48 @@ organization.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dashboard_list_update_items_response.DashboardListUpdateItemsResponse" title="datadog_api_client.v2.model.dashboard_list_update_items_response.DashboardListUpdateItemsResponse">DashboardListUpdateItemsResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+</dd></dl>
+</section>
+<section id="module-datadog_api_client.v2.api.dora_metrics_api">
+<span id="dora-metrics-api"></span><h2 id="module-datadog_api_client.v2.api.dora_metrics_api">dora_metrics_api<a class="headerlink" href="#module-datadog_api_client.v2.api.dora_metrics_api" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DORAMetricsApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Send events for DORA Metrics to measure and improve software delivery.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_deployment">
+<span class="sig-name descname"><span class="pre">create_dora_deployment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_deployment_request.DORADeploymentRequest" title="datadog_api_client.v2.model.dora_deployment_request.DORADeploymentRequest"><span class="pre">DORADeploymentRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_deployment_response.DORADeploymentResponse" title="datadog_api_client.v2.model.dora_deployment_response.DORADeploymentResponse"><span class="pre">DORADeploymentResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_deployment" title="Link to this definition">¶</a></dt>
+<dd><p>Send a deployment event for DORA Metrics.</p>
+<p>Use this API endpoint to provide data about deployments for DORA metrics.</p>
+<p>This is necessary for:</p>
+<ul class="simple">
+<li><p>Deployment Frequency</p></li>
+<li><p>Change Lead Time</p></li>
+<li><p>Change Failure Rate</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_deployment_response.DORADeploymentResponse" title="datadog_api_client.v2.model.dora_deployment_response.DORADeploymentResponse">DORADeploymentResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_incident">
+<span class="sig-name descname"><span class="pre">create_dora_incident</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_incident_request.DORAIncidentRequest" title="datadog_api_client.v2.model.dora_incident_request.DORAIncidentRequest"><span class="pre">DORAIncidentRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_incident_response.DORAIncidentResponse" title="datadog_api_client.v2.model.dora_incident_response.DORAIncidentResponse"><span class="pre">DORAIncidentResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.dora_metrics_api.DORAMetricsApi.create_dora_incident" title="Link to this definition">¶</a></dt>
+<dd><p>Send an incident event for DORA Metrics.</p>
+<p>Use this API endpoint to provide data about incidents for DORA metrics.</p>
+<p>This is necessary for:</p>
+<ul class="simple">
+<li><p>Change Failure Rate</p></li>
+<li><p>Time to Restore</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.dora_incident_response.DORAIncidentResponse" title="datadog_api_client.v2.model.dora_incident_response.DORAIncidentResponse">DORAIncidentResponse</a></p>
 </dd>
 </dl>
 </dd></dl>
