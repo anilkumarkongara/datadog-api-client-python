@@ -14311,10 +14311,12 @@ where <code class="docutils literal notranslate"><span class="pre">$CLIENT_EMAIL
 <li><p><strong>errors</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of errors.</p></li>
 <li><p><strong>host_filters</strong> (<em>str</em><em>, </em><em>optional</em>) – Limit the GCE instances that are pulled into Datadog by using tags.
 Only hosts that match one of the defined tags are imported into Datadog.</p></li>
-<li><p><strong>is_cspm_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – When enabled, Datadog performs configuration checks across your Google Cloud environment by continuously scanning every resource.</p></li>
+<li><p><strong>is_cspm_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – When enabled, Datadog will activate the Cloud Security Monitoring product for this service account. Note: This requires resource_collection_enabled to be set to true.</p></li>
+<li><p><strong>is_security_command_center_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – When enabled, Datadog will attempt to collect Security Command Center Findings. Note: This requires additional permissions on the service account.</p></li>
 <li><p><strong>private_key</strong> (<em>str</em><em>, </em><em>optional</em>) – Your private key name found in your JSON service account key.</p></li>
 <li><p><strong>private_key_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your private key ID found in your JSON service account key.</p></li>
 <li><p><strong>project_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your Google Cloud project ID found in your JSON service account key.</p></li>
+<li><p><strong>resource_collection_enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – When enabled, Datadog scans for all resources in your GCP environment.</p></li>
 <li><p><strong>token_uri</strong> (<em>str</em><em>, </em><em>optional</em>) – Should be <code class="docutils literal notranslate"><span class="pre">https://accounts.google.com/o/oauth2/token</span></code>.</p></li>
 <li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – The value for service_account found in your JSON service account key.</p></li>
 </ul>
