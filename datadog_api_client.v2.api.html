@@ -5731,7 +5731,8 @@ The maximum payload size is 500 kilobytes (512000 bytes). Compressed payloads mu
 <p>Update the tag configuration of a metric or percentile aggregations of a distribution metric or custom aggregations
 of a count, rate, or gauge metric. By setting <code class="docutils literal notranslate"><span class="pre">exclude_tags_mode</span></code> to true the behavior is changed
 from an allow-list to a deny-list, and tags in the defined list will not be queryable.
-Can only be used with application keys from users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission.</p>
+Can only be used with application keys from users with the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Tags</span> <span class="pre">for</span> <span class="pre">Metrics</span></code> permission. This endpoint requires
+a tag configuration to be created first.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>metric_name</strong> (<em>str</em>) – The name of the metric.</p>
