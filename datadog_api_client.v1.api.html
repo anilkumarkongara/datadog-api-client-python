@@ -3044,8 +3044,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.cancel_downtime">
 <span class="sig-name descname"><span class="pre">cancel_downtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downtime_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.cancel_downtime" title="Link to this definition">¶</a></dt>
-<dd><p>Cancel a downtime.</p>
-<p>Cancel a downtime.</p>
+<dd><p>Cancel a downtime. <strong>Deprecated</strong>.</p>
+<p>Cancel a downtime. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>downtime_id</strong> (<em>int</em>) – ID of the downtime to cancel.</p>
@@ -3058,8 +3058,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.cancel_downtimes_by_scope">
 <span class="sig-name descname"><span class="pre">cancel_downtimes_by_scope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.cancel_downtimes_by_scope_request.CancelDowntimesByScopeRequest" title="datadog_api_client.v1.model.cancel_downtimes_by_scope_request.CancelDowntimesByScopeRequest"><span class="pre">CancelDowntimesByScopeRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.canceled_downtimes_ids.CanceledDowntimesIds" title="datadog_api_client.v1.model.canceled_downtimes_ids.CanceledDowntimesIds"><span class="pre">CanceledDowntimesIds</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.cancel_downtimes_by_scope" title="Link to this definition">¶</a></dt>
-<dd><p>Cancel downtimes by scope.</p>
-<p>Delete all downtimes that match the scope of <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+<dd><p>Cancel downtimes by scope. <strong>Deprecated</strong>.</p>
+<p>Delete all downtimes that match the scope of <code class="docutils literal notranslate"><span class="pre">X</span></code>. <strong>Note:</strong> This only interacts with Downtimes created using v1 endpoints. This endpoint has been deprecated and will not be replaced. Please use v2 endpoints to find and cancel downtimes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.cancel_downtimes_by_scope_request.CancelDowntimesByScopeRequest" title="datadog_api_client.v1.model.cancel_downtimes_by_scope_request.CancelDowntimesByScopeRequest"><em>CancelDowntimesByScopeRequest</em></a>) – Scope to cancel downtimes for.</p>
@@ -3072,8 +3072,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.create_downtime">
 <span class="sig-name descname"><span class="pre">create_downtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.create_downtime" title="Link to this definition">¶</a></dt>
-<dd><p>Schedule a downtime.</p>
-<p>Schedule a downtime.</p>
+<dd><p>Schedule a downtime. <strong>Deprecated</strong>.</p>
+<p>Schedule a downtime. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>body</strong> (<a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><em>Downtime</em></a>) – Schedule a downtime request body.</p>
@@ -3086,8 +3086,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.get_downtime">
 <span class="sig-name descname"><span class="pre">get_downtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downtime_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.get_downtime" title="Link to this definition">¶</a></dt>
-<dd><p>Get a downtime.</p>
-<p>Get downtime detail by <code class="docutils literal notranslate"><span class="pre">downtime_id</span></code>.</p>
+<dd><p>Get a downtime. <strong>Deprecated</strong>.</p>
+<p>Get downtime detail by <code class="docutils literal notranslate"><span class="pre">downtime_id</span></code>. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>downtime_id</strong> (<em>int</em>) – ID of the downtime to fetch.</p>
@@ -3100,8 +3100,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.list_downtimes">
 <span class="sig-name descname"><span class="pre">list_downtimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_creator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.list_downtimes" title="Link to this definition">¶</a></dt>
-<dd><p>Get all downtimes.</p>
-<p>Get all scheduled downtimes.</p>
+<dd><p>Get all downtimes. <strong>Deprecated</strong>.</p>
+<p>Get all scheduled downtimes. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -3117,8 +3117,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.list_monitor_downtimes">
 <span class="sig-name descname"><span class="pre">list_monitor_downtimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.list_monitor_downtimes" title="Link to this definition">¶</a></dt>
-<dd><p>Get active downtimes for a monitor.</p>
-<p>Get all active downtimes for the specified monitor.</p>
+<dd><p>Get active downtimes for a monitor. <strong>Deprecated</strong>.</p>
+<p>Get all active v1 downtimes for the specified monitor. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>monitor_id</strong> (<em>int</em>) – The id of the monitor</p>
@@ -3131,8 +3131,8 @@ end times, prevent all alerting related to specified Datadog tags.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.downtimes_api.DowntimesApi.update_downtime">
 <span class="sig-name descname"><span class="pre">update_downtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downtime_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.downtime.Downtime" title="datadog_api_client.v1.model.downtime.Downtime"><span class="pre">Downtime</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.downtimes_api.DowntimesApi.update_downtime" title="Link to this definition">¶</a></dt>
-<dd><p>Update a downtime.</p>
-<p>Update a single downtime by <code class="docutils literal notranslate"><span class="pre">downtime_id</span></code>.</p>
+<dd><p>Update a downtime. <strong>Deprecated</strong>.</p>
+<p>Update a single downtime by <code class="docutils literal notranslate"><span class="pre">downtime_id</span></code>. <strong>Note:</strong> This endpoint has been deprecated. Please use v2 endpoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
