@@ -573,6 +573,8 @@
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.list_monitor_downtimes()</span></code></a>
         </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.list_monitor_downtimes_with_pagination()</span></code></a>
+        </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.update_downtime" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.update_downtime()</span></code></a>
         </li></ul>
             </nav>
@@ -2087,6 +2089,8 @@
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_downtimes_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.list_downtimes_with_pagination()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.list_monitor_downtimes()</span></code></a>
+        </li>
+        <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes_with_pagination" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.list_monitor_downtimes_with_pagination()</span></code></a>
         </li>
         <li class="md-nav__item"><a href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.update_downtime" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">DowntimesApi.update_downtime()</span></code></a>
         </li></ul>
@@ -4118,15 +4122,40 @@ paths are <code class="docutils literal notranslate"><span class="pre">created_b
 </dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes">
-<span class="sig-name descname"><span class="pre">list_monitor_downtimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse" title="datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse"><span class="pre">MonitorDowntimeMatchResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">list_monitor_downtimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse" title="datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse"><span class="pre">MonitorDowntimeMatchResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes" title="Link to this definition">¶</a></dt>
 <dd><p>Get active downtimes for a monitor.</p>
 <p>Get all active downtimes for the specified monitor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>monitor_id</strong> (<em>int</em>) – The id of the monitor.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_id</strong> (<em>int</em>) – The id of the monitor.</p></li>
+<li><p><strong>page_offset</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific offset to use as the beginning of the returned page.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of downtimes in the response.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse" title="datadog_api_client.v2.model.monitor_downtime_match_response.MonitorDowntimeMatchResponse">MonitorDowntimeMatchResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes_with_pagination">
+<span class="sig-name descname"><span class="pre">list_monitor_downtimes_with_pagination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">monitor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.monitor_downtime_match_response_data.MonitorDowntimeMatchResponseData" title="datadog_api_client.v2.model.monitor_downtime_match_response_data.MonitorDowntimeMatchResponseData"><span class="pre">MonitorDowntimeMatchResponseData</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes_with_pagination" title="Link to this definition">¶</a></dt>
+<dd><p>Get active downtimes for a monitor.</p>
+<p>Provide a paginated version of <a class="reference internal" href="#datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes" title="datadog_api_client.v2.api.downtimes_api.DowntimesApi.list_monitor_downtimes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">list_monitor_downtimes()</span></code></a>, returning all items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>monitor_id</strong> (<em>int</em>) – The id of the monitor.</p></li>
+<li><p><strong>page_offset</strong> (<em>int</em><em>, </em><em>optional</em>) – Specific offset to use as the beginning of the returned page.</p></li>
+<li><p><strong>page_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of downtimes in the response.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A generator of paginated results.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>collections.abc.Iterable[<a class="reference internal" href="datadog_api_client.v2.model.html#datadog_api_client.v2.model.monitor_downtime_match_response_data.MonitorDowntimeMatchResponseData" title="datadog_api_client.v2.model.monitor_downtime_match_response_data.MonitorDowntimeMatchResponseData">MonitorDowntimeMatchResponseData</a>]</p>
 </dd>
 </dl>
 </dd></dl>
