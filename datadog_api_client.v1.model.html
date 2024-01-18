@@ -12290,14 +12290,18 @@ key performance metrics, which enable you to monitor the health of your infrastr
 <li><p><strong>created_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Creation date of the dashboard.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Description of the dashboard.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – ID of the dashboard.</p></li>
-<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether this dashboard is read-only. If True, only the author and admins can make changes to it. Prefer using <code class="docutils literal notranslate"><span class="pre">restricted_roles</span></code> to manage write authorization. <strong>Deprecated</strong>.</p></li>
+<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – <p>Whether this dashboard is read-only. If True, only the author and admins can make changes to it.</p>
+<p>This property is deprecated; please use the <a class="reference external" href="https://docs.datadoghq.com/api/latest/restriction-policies/">Restriction Policies API</a> instead to manage write authorization for individual dashboards. <strong>Deprecated</strong>.</p>
+</p></li>
 <li><p><strong>layout_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType" title="datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType"><em>DashboardLayoutType</em></a>) – Layout type of the dashboard.</p></li>
 <li><p><strong>modified_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Modification date of the dashboard.</p></li>
 <li><p><strong>notify_list</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – List of handles of users to notify when changes are made to this dashboard.</p></li>
 <li><p><strong>reflow_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.dashboard_reflow_type.DashboardReflowType" title="datadog_api_client.v1.model.dashboard_reflow_type.DashboardReflowType"><em>DashboardReflowType</em></a><em>, </em><em>optional</em>) – Reflow type for a <strong>new dashboard layout</strong> dashboard. Set this only when layout type is ‘ordered’.
 If set to ‘fixed’, the dashboard expects all widgets to have a layout, and if it’s set to ‘auto’,
 widgets should not have layouts.</p></li>
-<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – A list of role identifiers. Only the author and users associated with at least one of these roles can edit this dashboard.</p></li>
+<li><p><strong>restricted_roles</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – <p>A list of role identifiers. Only the author and users associated with at least one of these roles can edit this dashboard.</p>
+<p>This property is deprecated; please use the <a class="reference external" href="https://docs.datadoghq.com/api/latest/restriction-policies/">Restriction Policies API</a> instead to manage write authorization for individual dashboards. <strong>Deprecated</strong>.</p>
+</p></li>
 <li><p><strong>tags</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – List of team names representing ownership of a dashboard.</p></li>
 <li><p><strong>template_variable_presets</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.dashboard_template_variable_preset.DashboardTemplateVariablePreset" title="datadog_api_client.v1.model.dashboard_template_variable_preset.DashboardTemplateVariablePreset"><em>DashboardTemplateVariablePreset</em></a><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Array of template variables saved views.</p></li>
 <li><p><strong>template_variables</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.dashboard_template_variable.DashboardTemplateVariable" title="datadog_api_client.v1.model.dashboard_template_variable.DashboardTemplateVariable"><em>DashboardTemplateVariable</em></a><em>]</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – List of template variables for this dashboard.</p></li>
@@ -12653,7 +12657,9 @@ type conversion is done.</p></li>
 <li><p><strong>created_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Creation date of the dashboard.</p></li>
 <li><p><strong>description</strong> (<em>str</em><em>, </em><em>none_type</em><em>, </em><em>optional</em>) – Description of the dashboard.</p></li>
 <li><p><strong>id</strong> (<em>str</em><em>, </em><em>optional</em>) – Dashboard identifier.</p></li>
-<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether this dashboard is read-only. If True, only the author and admins can make changes to it.</p></li>
+<li><p><strong>is_read_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – <p>Whether this dashboard is read-only. If True, only the author and admins can make changes to it.</p>
+<p>This property is deprecated; please use the <a class="reference external" href="https://docs.datadoghq.com/api/latest/restriction-policies/">Restriction Policies API</a> instead to manage write authorization for individual dashboards. <strong>Deprecated</strong>.</p>
+</p></li>
 <li><p><strong>layout_type</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType" title="datadog_api_client.v1.model.dashboard_layout_type.DashboardLayoutType"><em>DashboardLayoutType</em></a><em>, </em><em>optional</em>) – Layout type of the dashboard.</p></li>
 <li><p><strong>modified_at</strong> (<em>datetime</em><em>, </em><em>optional</em>) – Modification date of the dashboard.</p></li>
 <li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title of the dashboard.</p></li>
@@ -17758,7 +17764,7 @@ type conversion is done.</p></li>
 </dd></dl>
 </section>
 <section id="module-datadog_api_client.v1.model.monitor_options">
-<span id="id10"></span><h2 id="module-datadog_api_client.v1.model.monitor_options">monitor_options<a class="headerlink" href="#module-datadog_api_client.v1.model.monitor_options" title="Link to this heading">¶</a></h2>
+<span id="id12"></span><h2 id="module-datadog_api_client.v1.model.monitor_options">monitor_options<a class="headerlink" href="#module-datadog_api_client.v1.model.monitor_options" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="datadog_api_client.v1.model.monitor_options.MonitorOptions">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MonitorOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.monitor_options.MonitorOptions" title="Link to this definition">¶</a></dt>
