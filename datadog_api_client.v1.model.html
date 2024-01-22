@@ -1628,6 +1628,12 @@
         </li></ul>
             </nav>
         </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.logs_daily_limit_reset" class="md-nav__link">logs_daily_limit_reset</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsDailyLimitReset</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.logs_date_remapper" class="md-nav__link">logs_date_remapper</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.logs_date_remapper.LogsDateRemapper" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsDateRemapper</span></code></a>
@@ -7337,6 +7343,12 @@
         <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.logs_category_processor_type" class="md-nav__link">logs_category_processor_type</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#datadog_api_client.v1.model.logs_category_processor_type.LogsCategoryProcessorType" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsCategoryProcessorType</span></code></a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#module-datadog_api_client.v1.model.logs_daily_limit_reset" class="md-nav__link">logs_daily_limit_reset</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset" class="md-nav__link"><code class="docutils literal notranslate"><span class="pre">LogsDailyLimitReset</span></code></a>
         </li></ul>
             </nav>
         </li>
@@ -16236,6 +16248,23 @@ type conversion is done.</p></li>
 </dl>
 </dd></dl>
 </section>
+<section id="module-datadog_api_client.v1.model.logs_daily_limit_reset">
+<span id="logs-daily-limit-reset"></span><h2 id="module-datadog_api_client.v1.model.logs_daily_limit_reset">logs_daily_limit_reset<a class="headerlink" href="#module-datadog_api_client.v1.model.logs_daily_limit_reset" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">LogsDailyLimitReset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.ModelNormal" title="datadog_api_client.model_utils.ModelNormal"><code class="xref py py-class docutils literal notranslate"><span class="pre">ModelNormal</span></code></a></p>
+<p>Object containing options to override the default daily limit reset time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reset_time</strong> (<em>str</em><em>, </em><em>optional</em>) – String in <code class="docutils literal notranslate"><span class="pre">HH:00</span></code> format representing the time of day the daily limit should be reset. The hours must be between 00 and 23 (inclusive).</p></li>
+<li><p><strong>reset_utc_offset</strong> (<em>str</em><em>, </em><em>optional</em>) – String in <code class="docutils literal notranslate"><span class="pre">(-|+)HH:00</span></code> format representing the UTC offset to apply to the given reset time. The hours must be between -12 and +14 (inclusive).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+</section>
 <section id="module-datadog_api_client.v1.model.logs_date_remapper">
 <span id="logs-date-remapper"></span><h2 id="module-datadog_api_client.v1.model.logs_date_remapper">logs_date_remapper<a class="headerlink" href="#module-datadog_api_client.v1.model.logs_date_remapper" title="Link to this heading">¶</a></h2>
 <dl class="py class">
@@ -16475,6 +16504,8 @@ type conversion is done.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>daily_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of log events you can send in this index per day before you are rate-limited.</p></li>
+<li><p><strong>daily_limit_reset</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset" title="datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset"><em>LogsDailyLimitReset</em></a><em>, </em><em>optional</em>) – Object containing options to override the default daily limit reset time.</p></li>
+<li><p><strong>daily_limit_warning_threshold_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – A percentage threshold of the daily quota at which a Datadog warning event is generated.</p></li>
 <li><p><strong>exclusion_filters</strong> (<em>[</em><a class="reference internal" href="#datadog_api_client.v1.model.logs_exclusion.LogsExclusion" title="datadog_api_client.v1.model.logs_exclusion.LogsExclusion"><em>LogsExclusion</em></a><em>]</em><em>, </em><em>optional</em>) – An array of exclusion objects. The logs are tested against the query of each filter,
 following the order of the array. Only the first matching active exclusion matters,
 others (if any) are ignored.</p></li>
@@ -16514,6 +16545,8 @@ retention plans specified in your organization’s contract/subscriptions.</p></
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>daily_limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of log events you can send in this index per day before you are rate-limited.</p></li>
+<li><p><strong>daily_limit_reset</strong> (<a class="reference internal" href="#datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset" title="datadog_api_client.v1.model.logs_daily_limit_reset.LogsDailyLimitReset"><em>LogsDailyLimitReset</em></a><em>, </em><em>optional</em>) – Object containing options to override the default daily limit reset time.</p></li>
+<li><p><strong>daily_limit_warning_threshold_percentage</strong> (<em>float</em><em>, </em><em>optional</em>) – A percentage threshold of the daily quota at which a Datadog warning event is generated.</p></li>
 <li><p><strong>disable_daily_limit</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true, sets the <code class="docutils literal notranslate"><span class="pre">daily_limit</span></code> value to null and the index is not limited on a daily basis (any
 specified <code class="docutils literal notranslate"><span class="pre">daily_limit</span></code> value in the request is ignored). If false or omitted, the index’s current
 <code class="docutils literal notranslate"><span class="pre">daily_limit</span></code> is maintained.</p></li>
