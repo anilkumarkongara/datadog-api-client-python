@@ -14410,6 +14410,8 @@ type conversion is done.</p></li>
 <li><p><strong>client_id</strong> (<em>str</em><em>, </em><em>optional</em>) – Your ID found in your JSON service account key.</p></li>
 <li><p><strong>client_x509_cert_url</strong> (<em>str</em><em>, </em><em>optional</em>) – Should be <code class="docutils literal notranslate"><span class="pre">https://www.googleapis.com/robot/v1/metadata/x509/$CLIENT_EMAIL</span></code>
 where <code class="docutils literal notranslate"><span class="pre">$CLIENT_EMAIL</span></code> is the email found in your JSON service account key.</p></li>
+<li><p><strong>cloud_run_revision_filters</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Limit the Cloud Run revisions that are pulled into Datadog by using tags.
+Only Cloud Run revision resources that apply to specified filters are imported into Datadog.</p></li>
 <li><p><strong>errors</strong> (<em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – An array of errors.</p></li>
 <li><p><strong>host_filters</strong> (<em>str</em><em>, </em><em>optional</em>) – Limit the GCE instances that are pulled into Datadog by using tags.
 Only hosts that match one of the defined tags are imported into Datadog.</p></li>
