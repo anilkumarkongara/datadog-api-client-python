@@ -4733,11 +4733,11 @@ containing more than 500 characters, only the first 500 characters are displayed
 are limited for checks with a Critical or Warning status, they are dropped for checks with
 an OK status.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/host/?tab=checkalert">Read more about Service Check monitors.</a></p></li>
-<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/process_check/?tab=checkalert">Read more about Process Check monitors.</a></p></li>
-<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/network/?tab=checkalert">Read more about Network Check monitors.</a></p></li>
-<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/custom_check/?tab=checkalert">Read more about Custom Check monitors.</a></p></li>
-<li><p><a class="reference external" href="https://docs.datadoghq.com/developers/service_checks/">Read more about Service Check and status codes.</a></p></li>
+<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/types/service_check/">Read more about Service Check monitors</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/process_check/?tab=checkalert">Read more about Process Check monitors</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/network/?tab=checkalert">Read more about Network monitors</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.datadoghq.com/monitors/create/types/custom_check/?tab=checkalert">Read more about Custom Check monitors</a>.</p></li>
+<li><p><a class="reference external" href="https://docs.datadoghq.com/developers/service_checks/">Read more about Service Checks and status codes</a>.</p></li>
 </ul>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.service_checks_api.ServiceChecksApi.submit_service_check">
@@ -4769,7 +4769,7 @@ an OK status.</p>
 <p>SLO Status Corrections allow you to prevent specific time periods from negatively impacting
 your SLO’s status and error budget. You can use Status Corrections for various purposes, such
 as removing planned maintenance windows, non-business hours, or other time periods that do
-not correspond to genuine issues.</p>
+not correspond to genuine issues. See <a class="reference external" href="https://docs.datadoghq.com/service_management/service_level_objectives/#slo-status-corrections">SLO status corrections</a> for more information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.service_level_objective_corrections_api.ServiceLevelObjectiveCorrectionsApi.create_slo_correction">
 <span class="sig-name descname"><span class="pre">create_slo_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.slo_correction_create_request.SLOCorrectionCreateRequest" title="datadog_api_client.v1.model.slo_correction_create_request.SLOCorrectionCreateRequest"><span class="pre">SLOCorrectionCreateRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.slo_correction_response.SLOCorrectionResponse" title="datadog_api_client.v1.model.slo_correction_response.SLOCorrectionResponse"><span class="pre">SLOCorrectionResponse</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.service_level_objective_corrections_api.ServiceLevelObjectiveCorrectionsApi.create_slo_correction" title="Link to this definition">¶</a></dt>
@@ -5702,8 +5702,7 @@ tags to a particular host.</p>
 <p>The component of your infrastructure responsible for a tag is identified
 by a source. For example, some valid sources include nagios, hudson, jenkins,
 users, feed, chef, puppet, git, bitbucket, fabric, capistrano, etc.</p>
-<p>Read more about tags on the dedicated
-<a class="reference external" href="https://docs.datadoghq.com/tagging">documentation page</a>.</p>
+<p>Read more about tags on <a class="reference external" href="https://docs.datadoghq.com/getting_started/tagging/">Getting Started with Tags</a>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.tags_api.TagsApi.create_host_tags">
 <span class="sig-name descname"><span class="pre">create_host_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.host_tags.HostTags" title="datadog_api_client.v1.model.host_tags.HostTags"><span class="pre">HostTags</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="datadog_api_client.html#datadog_api_client.model_utils.UnsetType" title="datadog_api_client.model_utils.UnsetType"><span class="pre">UnsetType</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">UnsetType.unset</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.host_tags.HostTags" title="datadog_api_client.v1.model.host_tags.HostTags"><span class="pre">HostTags</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.tags_api.TagsApi.create_host_tags" title="Link to this definition">¶</a></dt>
@@ -6653,8 +6652,7 @@ administrators.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WebhooksIntegrationApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_client</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Configure your Datadog-Webhooks integration directly through the Datadog API.
-For more information about the Datadog-Webhooks integration,
-see the <a class="reference external" href="https://docs.datadoghq.com/integrations/webhooks">integration page</a>.</p>
+See the <a class="reference external" href="https://docs.datadoghq.com/integrations/webhooks">Webhooks integration page</a> for more information.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.create_webhooks_integration">
 <span class="sig-name descname"><span class="pre">create_webhooks_integration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.webhooks_integration.WebhooksIntegration" title="datadog_api_client.v1.model.webhooks_integration.WebhooksIntegration"><span class="pre">WebhooksIntegration</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="datadog_api_client.v1.model.html#datadog_api_client.v1.model.webhooks_integration.WebhooksIntegration" title="datadog_api_client.v1.model.webhooks_integration.WebhooksIntegration"><span class="pre">WebhooksIntegration</span></a></span></span><a class="headerlink" href="#datadog_api_client.v1.api.webhooks_integration_api.WebhooksIntegrationApi.create_webhooks_integration" title="Link to this definition">¶</a></dt>
