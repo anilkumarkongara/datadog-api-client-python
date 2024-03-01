@@ -10,6 +10,27 @@ Feature: Cloud Workload Security
     And a valid "appKeyAuth" key in the system
     And an instance of "CloudWorkloadSecurity" API
 
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Create a CSM Threats Agent rule returns "Bad Request" response
+    Given new "CreateCSMThreatsAgentRule" request
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\"", "name": "my_agent_rule"}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 400 Bad Request
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Create a CSM Threats Agent rule returns "Conflict" response
+    Given new "CreateCSMThreatsAgentRule" request
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\"", "name": "my_agent_rule"}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 409 Conflict
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Create a CSM Threats Agent rule returns "OK" response
+    Given new "CreateCSMThreatsAgentRule" request
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\"", "name": "my_agent_rule"}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 200 OK
+
   @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
   Scenario: Create a Cloud Workload Security Agent rule returns "Bad Request" response
     Given new "CreateCloudWorkloadSecurityAgentRule" request
@@ -33,6 +54,20 @@ Feature: Cloud Workload Security
     And the response "data.type" is equal to "agent_rule"
     And the response "data.attributes.description" is equal to "Test Agent rule"
 
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Delete a CSM Threats Agent rule returns "Not Found" response
+    Given new "DeleteCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 404 Not Found
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Delete a CSM Threats Agent rule returns "OK" response
+    Given new "DeleteCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 204 OK
+
   @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
   Scenario: Delete a Cloud Workload Security Agent rule returns "Not Found" response
     Given new "DeleteCloudWorkloadSecurityAgentRule" request
@@ -47,6 +82,20 @@ Feature: Cloud Workload Security
     And request contains "agent_rule_id" parameter from "agent_rule.data.id"
     When the request is sent
     Then the response status is 204 OK
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Get a CSM Threats Agent rule returns "Not Found" response
+    Given new "GetCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 404 Not Found
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Get a CSM Threats Agent rule returns "OK" response
+    Given new "GetCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    When the request is sent
+    Then the response status is 200 OK
 
   @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
   Scenario: Get a Cloud Workload Security Agent rule returns "Not Found" response
@@ -65,6 +114,12 @@ Feature: Cloud Workload Security
     And the response "data.type" is equal to "agent_rule"
     And the response "data.attributes.description" is equal to "My Agent rule"
 
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Get all CSM Threats Agent rules returns "OK" response
+    Given new "ListCSMThreatsAgentRules" request
+    When the request is sent
+    Then the response status is 200 OK
+
   @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
   Scenario: Get all Cloud Workload Security Agent rules returns "OK" response
     Given there is a valid "agent_rule" in the system
@@ -73,9 +128,47 @@ Feature: Cloud Workload Security
     Then the response status is 200 OK
     And the response "data[0].type" is equal to "agent_rule"
 
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Get the latest CSM Threats policy returns "OK" response
+    Given new "DownloadCSMThreatsPolicy" request
+    When the request is sent
+    Then the response status is 200 OK
+
   @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
   Scenario: Get the latest Cloud Workload Security policy returns "OK" response
     Given new "DownloadCloudWorkloadPolicyFile" request
+    When the request is sent
+    Then the response status is 200 OK
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Update a CSM Threats Agent rule returns "Bad Request" response
+    Given new "UpdateCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\""}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 400 Bad Request
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Update a CSM Threats Agent rule returns "Concurrent Modification" response
+    Given new "UpdateCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\""}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 409 Concurrent Modification
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Update a CSM Threats Agent rule returns "Not Found" response
+    Given new "UpdateCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\""}, "type": "agent_rule"}}
+    When the request is sent
+    Then the response status is 404 Not Found
+
+  @generated @skip @team:DataDog/k9-cloud-security-platform @team:DataDog/k9-cws-backend
+  Scenario: Update a CSM Threats Agent rule returns "OK" response
+    Given new "UpdateCSMThreatsAgentRule" request
+    And request contains "agent_rule_id" parameter from "REPLACE.ME"
+    And body with value {"data": {"attributes": {"description": "My Agent rule", "enabled": true, "expression": "exec.file.name == \\\"sh\\\""}, "type": "agent_rule"}}
     When the request is sent
     Then the response status is 200 OK
 
